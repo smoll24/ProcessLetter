@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://cyajikvj7mg2n"]
+
+[ext_resource type="Script" uid="uid://44fmlfrqw4d" path="res://scripts/player.gd" id="1_e4abx"]
+[ext_resource type="Texture2D" uid="uid://djumbwqkjjbya" path="res://icon.svg" id="2_4ry5a"]
+[ext_resource type="Texture2D" uid="uid://bfdtk7mj8sthj" path="res://assets/characters/pink/IMG_1600.PNG" id="3_e4abx"]
+[ext_resource type="Texture2D" uid="uid://b2ualjqgt253q" path="res://assets/characters/pink/IMG_1599.PNG" id="4_4ry5a"]
+[ext_resource type="Texture2D" uid="uid://b78kuvmg18vdp" path="res://assets/characters/pink/IMG_1601.PNG" id="5_g3vva"]
+[ext_resource type="Texture2D" uid="uid://bx4oti7u3rd3k" path="res://assets/characters/pink/IMG_1602.PNG" id="6_3qrpf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ywdb4"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"back_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4ry5a")
+}],
+"loop": 1,
+"name": &"back_walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_e4abx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4ry5a")
+}],
+"loop": 1,
+"name": &"front_idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_e4abx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_g3vva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_e4abx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3qrpf")
+}],
+"loop": 1,
+"name": &"front_walk",
+"speed": 4.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"side_idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"side_walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ywdb4"]
+size = Vector2(127, 167)
+
+[node name="Pink" type="CharacterBody2D" unique_id=864046172]
+script = ExtResource("1_e4abx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1026202716]
+sprite_frames = SubResource("SpriteFrames_ywdb4")
+animation = &"front_walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1438348213]
+position = Vector2(0.5, 1.5)
+shape = SubResource("RectangleShape2D_ywdb4")
+
+[node name="Indicator" type="Label" parent="." unique_id=1632201780]
+visible = false
+offset_left = -20.0
+offset_top = -102.0
+offset_right = 20.0
+offset_bottom = -79.0
+text = "!"
+horizontal_alignment = 1

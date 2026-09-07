@@ -1,8 +1,34 @@
 [gd_scene format=3 uid="uid://i2rd2u4wh8c3"]
 
 [ext_resource type="PackedScene" uid="uid://r5j5r2hfjn43" path="res://src/characters/player.tscn" id="1_dpurt"]
+[ext_resource type="Texture2D" uid="uid://cyostt8afrjb1" path="res://assets/temp/alevel.png" id="1_oqaou"]
+[ext_resource type="PackedScene" uid="uid://doyphkina4b2k" path="res://src/characters/purple.tscn" id="2_waa7u"]
+[ext_resource type="PackedScene" uid="uid://bjuqqpsi7fd6y" path="res://src/characters/blue.tscn" id="3_sg781"]
+[ext_resource type="PackedScene" uid="uid://cyajikvj7mg2n" path="res://src/characters/pink.tscn" id="4_oqaou"]
+[ext_resource type="PackedScene" uid="uid://cfj0vcy0rlv7s" path="res://src/characters/teal.tscn" id="5_sr8mx"]
+[ext_resource type="PackedScene" uid="uid://c1vqjey38id0c" path="res://src/characters/violet.tscn" id="6_3dueu"]
 
-[node name="Main" type="Node2D" unique_id=1557939465]
+[node name="Level_A" type="Node2D" unique_id=1557939465]
+
+[node name="Alevel" type="Sprite2D" parent="." unique_id=1989980623]
+position = Vector2(-532, 3265)
+scale = Vector2(8.591731, 8.591732)
+texture = ExtResource("1_oqaou")
 
 [node name="Player" parent="." unique_id=864046172 instance=ExtResource("1_dpurt")]
 position = Vector2(472, 304)
+
+[node name="Purple" parent="." unique_id=626783985 instance=ExtResource("2_waa7u")]
+position = Vector2(599, 302)
+
+[node name="Purple2" parent="." unique_id=1379034531 instance=ExtResource("3_sg781")]
+position = Vector2(349, 302)
+
+[node name="Pink" parent="." unique_id=213673184 instance=ExtResource("4_oqaou")]
+position = Vector2(226, 306)
+
+[node name="Teal" parent="." unique_id=855263268 instance=ExtResource("5_sr8mx")]
+position = Vector2(725, 287)
+
+[node name="Violet" parent="." unique_id=1078976922 instance=ExtResource("6_3dueu")]
+position = Vector2(849, 298)

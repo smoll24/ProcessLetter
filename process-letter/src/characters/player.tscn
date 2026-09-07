@@ -2,6 +2,10 @@
 
 [ext_resource type="Script" uid="uid://44fmlfrqw4d" path="res://scripts/player.gd" id="1_3ikja"]
 [ext_resource type="Texture2D" uid="uid://djumbwqkjjbya" path="res://icon.svg" id="1_gx3j3"]
+[ext_resource type="Texture2D" uid="uid://4ru35l81iaoj" path="res://assets/characters/player/IMG_1583.PNG" id="3_8vhne"]
+[ext_resource type="Texture2D" uid="uid://bcf3brki85tds" path="res://assets/characters/player/IMG_1584.PNG" id="4_3abso"]
+[ext_resource type="Texture2D" uid="uid://bpb0d7qow6sgr" path="res://assets/characters/player/IMG_1585.PNG" id="5_tq5n8"]
+[ext_resource type="Texture2D" uid="uid://dkjbamxb4qqr0" path="res://assets/characters/player/IMG_1586.PNG" id="6_7f3cr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ywdb4"]
 animations = [{
@@ -18,15 +22,33 @@ animations = [{
 "name": &"back_walk",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_3abso")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8vhne")
+}],
 "loop": 1,
 "name": &"front_idle",
-"speed": 5.0
+"speed": 2.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_3abso")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tq5n8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3abso")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7f3cr")
+}],
 "loop": 1,
 "name": &"front_walk",
-"speed": 5.0
+"speed": 4.0
 }, {
 "frames": [],
 "loop": 1,
@@ -40,17 +62,17 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ywdb4"]
-size = Vector2(127, 127)
+size = Vector2(127, 167)
 
 [node name="Player" type="CharacterBody2D" unique_id=864046172]
 script = ExtResource("1_3ikja")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1026202716]
 sprite_frames = SubResource("SpriteFrames_ywdb4")
-animation = &"back_walk"
+animation = &"front_idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1438348213]
-position = Vector2(0.5, -0.5)
+position = Vector2(0.5, 1.5)
 shape = SubResource("RectangleShape2D_ywdb4")
 
 [node name="Indicator" type="Label" parent="." unique_id=1632201780]
