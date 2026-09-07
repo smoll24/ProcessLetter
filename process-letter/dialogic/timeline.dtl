@@ -1,0 +1,5 @@
+join green right [mirrored="true"]
+join purple left
+purple: Hello there! What are you up to?
+green: Not much, you?
+purple: Yeah nothing here either.

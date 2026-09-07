@@ -7,6 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://cyajikvj7mg2n" path="res://src/characters/pink.tscn" id="4_oqaou"]
 [ext_resource type="PackedScene" uid="uid://cfj0vcy0rlv7s" path="res://src/characters/teal.tscn" id="5_sr8mx"]
 [ext_resource type="PackedScene" uid="uid://c1vqjey38id0c" path="res://src/characters/violet.tscn" id="6_3dueu"]
+[ext_resource type="Script" uid="uid://df2ix0d14h2m3" path="res://scripts/test.gd" id="9_3dueu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rj60s"]
+size = Vector2(191.80891, 78.26666)
 
 [node name="Level_A" type="Node2D" unique_id=1557939465]
 
@@ -32,3 +36,14 @@ position = Vector2(725, 287)
 
 [node name="Violet" parent="." unique_id=1078976922 instance=ExtResource("6_3dueu")]
 position = Vector2(849, 298)
+
+[node name="Icon" type="Area2D" parent="." unique_id=1652851489]
+position = Vector2(226, 607)
+scale = Vector2(1.2265625, 1.171875)
+script = ExtResource("9_3dueu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Icon" unique_id=1359642502]
+position = Vector2(150.82803, -41.813324)
+shape = SubResource("RectangleShape2D_rj60s")
+
+[connection signal="body_entered" from="Icon" to="Player" method="_on_icon_body_entered"]

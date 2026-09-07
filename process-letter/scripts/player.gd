@@ -1,22 +1,18 @@
 extends CharacterBody2D
 
-@onready var indicator = $indicator
-
 const speed = 300
 var current_dir = 'none'
+var dialog = null
+var can_talk = true
 
 func _ready():
 	$AnimatedSprite2D.play('front_idle')
 	
-func _process(delta):
-		if Input.is_action_just_pressed('ui_accept'):
-			if indicator.visible:
-				pass
 				
 func _physics_process(delta):
 	player_movement(delta)
 	
-func player_movement(delta):
+func player_movement(_delta):
 	if Input.is_action_pressed('ui_right'):
 		current_dir = 'right'
 		play_anim(1)
@@ -71,3 +67,18 @@ func play_anim(movement):
 				anim.play('back_walk')
 			elif movement == 0:
 				anim.play('back_idle')
+				
+
+
+func _on_icon_body_entered(_body: Node2D) -> void:
+	if can_talk:
+		dialog = Dialogic.start("timeline")
+		get_tree().root.add_child(dialog)
+		Dialogic.timeline_ended.connect(dialog_end)
+		can_talk = false
+		Globals.can_move = false
+		
+func dialog_end():
+	await get_tree().create_timer(0.5).timeout
+	can_talk = true
+	Globals.can_move = true
