@@ -1,5 +1,6 @@
-join green right [mirrored="true"]
-join purple left
-purple: Hello there! What are you up to?
-green: Not much, you?
-purple: Yeah nothing here either.
+join green (Hesitant) left
+green: Hmmmmmmmmm
+update green (Thinking) [fade_length="0.0"]
+green: Think think think
+update green (Idea)
+green: Wowwowowow idea!!!

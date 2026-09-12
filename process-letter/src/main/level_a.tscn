@@ -15,8 +15,8 @@ size = Vector2(191.80891, 78.26666)
 [node name="Level_A" type="Node2D" unique_id=1557939465]
 
 [node name="Alevel" type="Sprite2D" parent="." unique_id=1989980623]
-position = Vector2(-532, 3265)
-scale = Vector2(8.591731, 8.591732)
+position = Vector2(-635.00006, 3573.9998)
+scale = Vector2(9.724805, 9.724806)
 texture = ExtResource("1_oqaou")
 
 [node name="Player" parent="." unique_id=864046172 instance=ExtResource("1_dpurt")]

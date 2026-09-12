@@ -8,9 +8,10 @@ var can_talk = true
 func _ready():
 	$AnimatedSprite2D.play('front_idle')
 	
-				
+	
 func _physics_process(delta):
-	player_movement(delta)
+	if Globals.can_move:
+		player_movement(delta)
 	
 func player_movement(_delta):
 	if Input.is_action_pressed('ui_right'):
@@ -42,7 +43,6 @@ func player_movement(_delta):
 func play_anim(movement):
 	var dir = current_dir
 	var anim = $AnimatedSprite2D
-	
 	if dir == 'right':
 		anim.flip_h = false
 		if movement == 1:
@@ -72,11 +72,12 @@ func play_anim(movement):
 
 func _on_icon_body_entered(_body: Node2D) -> void:
 	if can_talk:
+		can_talk = false
+		Globals.can_move = false
+		play_anim(0)
 		dialog = Dialogic.start("timeline")
 		get_tree().root.add_child(dialog)
 		Dialogic.timeline_ended.connect(dialog_end)
-		can_talk = false
-		Globals.can_move = false
 		
 func dialog_end():
 	await get_tree().create_timer(0.5).timeout

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcf3brki85tds"
-path="res://.godot/imported/IMG_1584.PNG-27813101cdf282daf4025b296ced5018.ctex"
+uid="uid://c3d2rqoy62au3"
+path="res://.godot/imported/greenexp1.png-452f2e207724955a3384ca69f301a0e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/player/IMG_1584.PNG"
-dest_files=["res://.godot/imported/IMG_1584.PNG-27813101cdf282daf4025b296ced5018.ctex"]
+source_file="res://assets/characters/green/emotes/greenexp1.png"
+dest_files=["res://.godot/imported/greenexp1.png-452f2e207724955a3384ca69f301a0e8.ctex"]
 
 [params]
 

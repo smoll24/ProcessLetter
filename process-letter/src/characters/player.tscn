@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://44fmlfrqw4d" path="res://scripts/player.gd" id="1_3ikja"]
 [ext_resource type="Texture2D" uid="uid://djumbwqkjjbya" path="res://icon.svg" id="1_gx3j3"]
-[ext_resource type="Texture2D" uid="uid://4ru35l81iaoj" path="res://assets/characters/player/IMG_1583.PNG" id="3_8vhne"]
-[ext_resource type="Texture2D" uid="uid://bcf3brki85tds" path="res://assets/characters/player/IMG_1584.PNG" id="4_3abso"]
-[ext_resource type="Texture2D" uid="uid://bpb0d7qow6sgr" path="res://assets/characters/player/IMG_1585.PNG" id="5_tq5n8"]
-[ext_resource type="Texture2D" uid="uid://dkjbamxb4qqr0" path="res://assets/characters/player/IMG_1586.PNG" id="6_7f3cr"]
+[ext_resource type="Texture2D" uid="uid://4ru35l81iaoj" path="res://assets/characters/green/front/IMG_1583.PNG" id="3_8vhne"]
+[ext_resource type="Texture2D" uid="uid://bcf3brki85tds" path="res://assets/characters/green/front/IMG_1584.PNG" id="4_3abso"]
+[ext_resource type="Texture2D" uid="uid://bpb0d7qow6sgr" path="res://assets/characters/green/front/IMG_1585.PNG" id="5_tq5n8"]
+[ext_resource type="Texture2D" uid="uid://dkjbamxb4qqr0" path="res://assets/characters/green/front/IMG_1586.PNG" id="6_7f3cr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ywdb4"]
 animations = [{
