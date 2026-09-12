@@ -23,8 +23,10 @@ Globals="*uid://c8finuspe0fya"
 [dialogic]
 
 directories/dch_directory={
+"blue": "res://dialogic/blue.dch",
 "green": "res://dialogic/green.dch",
-"purple": "res://dialogic/purple.dch"
+"purple": "res://dialogic/purple.dch",
+"violet": "res://dialogic/violet.dch"
 }
 directories/dtl_directory={
 "timeline": "res://dialogic/timeline.dtl"
@@ -42,9 +44,9 @@ text/text_reveal_skip_delay=0.1
 text/advance_delay=0.1
 text/autoadvance_per_character_delay=0.1
 text/autoadvance_ignored_characters_enabled=true
-animations/join_default_length=0.2
+animations/join_default_length=0.3
 animations/join_default_wait=true
-animations/leave_default_length=0.2
+animations/leave_default_length=0.3
 animations/leave_default_wait=true
 animations/cross_fade_default_length=0.0
 choices/autofocus_first=true
@@ -69,6 +71,7 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
+animations/leave_default="Fade Out Down"
 
 [display]
 

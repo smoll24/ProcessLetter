@@ -4,3 +4,26 @@ update green (Thinking) [fade_length="0.0"]
 green: Think think think
 update green (Idea)
 green: Wowwowowow idea!!!
+leave green
+join purple (Content) left
+purple: Wowie happy
+update purple (Curious)
+purple: What is that actually?
+update purple (Exhausted)
+purple: Gosh darn I'm so tired...
+update purple (Pissed)
+purple: Bruh wtf?????????????!
+leave purple
+join violet (Curious) left
+Woah, hi everyone!
+update violet (Enamoured)
+violet: My beloved <3333
+update violet (Stare)
+violet: ..............................
+leave violet
+join blue (Curious) left
+blue: What's going on, why is everyone gathering over here?
+update blue (Impressed)
+blue: Woah cool!!!
+update blue (Vexxed)
+blue: Wait you're using it for WHAT exactly???!

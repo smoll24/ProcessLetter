@@ -12,6 +12,8 @@ func _ready():
 func _physics_process(delta):
 	if Globals.can_move:
 		player_movement(delta)
+	else:
+		play_anim(0)
 	
 func player_movement(_delta):
 	if Input.is_action_pressed('ui_right'):
