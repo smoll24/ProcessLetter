@@ -1,3 +1,143 @@
 [gd_scene format=3 uid="uid://dh51ib38pbrq0"]
 
+[ext_resource type="Script" uid="uid://b28uybgt68d5r" path="res://scripts/network.gd" id="1_4oum5"]
+[ext_resource type="Texture2D" uid="uid://cdlhkhjrerxvn" path="res://assets/puzzles/sudoku/sud0.png" id="1_j7lo0"]
+[ext_resource type="Texture2D" uid="uid://bmn3pxg3a7vpv" path="res://assets/puzzles/sudoku/sud0hover.png" id="2_4oum5"]
+[ext_resource type="Texture2D" uid="uid://bniiyukx4ojmj" path="res://assets/puzzles/sudoku/sud0select.png" id="3_mvcmu"]
+
 [node name="Network" type="Node2D" unique_id=1872065222]
+script = ExtResource("1_4oum5")
+
+[node name="Button1" type="TextureButton" parent="." unique_id=1502552468]
+offset_left = 492.0
+offset_top = 84.0
+offset_right = 551.0
+offset_bottom = 143.0
+texture_normal = ExtResource("1_j7lo0")
+texture_hover = ExtResource("2_4oum5")
+texture_focused = ExtResource("3_mvcmu")
+
+[node name="Button2" type="TextureButton" parent="." unique_id=753675364]
+offset_left = 661.0
+offset_top = 81.0
+offset_right = 720.0
+offset_bottom = 140.0
+texture_normal = ExtResource("1_j7lo0")
+texture_hover = ExtResource("2_4oum5")
+texture_focused = ExtResource("3_mvcmu")
+
+[node name="Button3" type="TextureButton" parent="." unique_id=1360406289]
+offset_left = 390.0
+offset_top = 195.0
+offset_right = 449.0
+offset_bottom = 254.0
+texture_normal = ExtResource("1_j7lo0")
+texture_hover = ExtResource("2_4oum5")
+texture_focused = ExtResource("3_mvcmu")
+
+[node name="Button4" type="TextureButton" parent="." unique_id=1748501688]
+offset_left = 512.0
+offset_top = 191.0
+offset_right = 571.0
+offset_bottom = 250.0
+texture_normal = ExtResource("1_j7lo0")
+texture_hover = ExtResource("2_4oum5")
+texture_focused = ExtResource("3_mvcmu")
+
+[node name="Button5" type="TextureButton" parent="." unique_id=744058136]
+offset_left = 629.0
+offset_top = 190.0
+offset_right = 688.0
+offset_bottom = 249.0
+texture_normal = ExtResource("1_j7lo0")
+texture_hover = ExtResource("2_4oum5")
+texture_focused = ExtResource("3_mvcmu")
+
+[node name="Button6" type="TextureButton" parent="." unique_id=1239423356]
+offset_left = 757.0
+offset_top = 187.0
+offset_right = 816.0
+offset_bottom = 246.0
+texture_normal = ExtResource("1_j7lo0")
+texture_hover = ExtResource("2_4oum5")
+texture_focused = ExtResource("3_mvcmu")
+
+[node name="Button7" type="TextureButton" parent="." unique_id=957268622]
+offset_left = 868.0
+offset_top = 180.0
+offset_right = 927.0
+offset_bottom = 239.0
+texture_normal = ExtResource("1_j7lo0")
+texture_hover = ExtResource("2_4oum5")
+texture_focused = ExtResource("3_mvcmu")
+
+[node name="Button8" type="TextureButton" parent="." unique_id=1516447735]
+offset_left = 512.0
+offset_top = 309.0
+offset_right = 571.0
+offset_bottom = 368.0
+texture_normal = ExtResource("1_j7lo0")
+texture_hover = ExtResource("2_4oum5")
+texture_focused = ExtResource("3_mvcmu")
+
+[node name="Button9" type="TextureButton" parent="." unique_id=676662107]
+offset_left = 436.0
+offset_top = 422.0
+offset_right = 495.0
+offset_bottom = 481.0
+texture_normal = ExtResource("1_j7lo0")
+texture_hover = ExtResource("2_4oum5")
+texture_focused = ExtResource("3_mvcmu")
+
+[node name="Button10" type="TextureButton" parent="." unique_id=2100080301]
+offset_left = 581.0
+offset_top = 427.0
+offset_right = 640.0
+offset_bottom = 486.0
+texture_normal = ExtResource("1_j7lo0")
+texture_hover = ExtResource("2_4oum5")
+texture_focused = ExtResource("3_mvcmu")
+
+[node name="Button11" type="TextureButton" parent="." unique_id=671402021]
+offset_left = 757.0
+offset_top = 306.0
+offset_right = 816.0
+offset_bottom = 365.0
+texture_normal = ExtResource("1_j7lo0")
+texture_hover = ExtResource("2_4oum5")
+texture_focused = ExtResource("3_mvcmu")
+
+[node name="Check" type="Button" parent="." unique_id=1483293952]
+offset_left = 1007.0
+offset_top = 503.0
+offset_right = 1172.0
+offset_bottom = 569.0
+text = "Check Solution"
+
+[node name="Label" type="Label" parent="." unique_id=146377841]
+offset_left = 1015.0
+offset_top = 585.0
+offset_right = 1144.0
+offset_bottom = 656.0
+text = " "
+
+[node name="Reset" type="Button" parent="." unique_id=1859364623]
+offset_left = 1006.0
+offset_top = 100.0
+offset_right = 1166.0
+offset_bottom = 167.0
+text = "Reset Game"
+
+[connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="Button7" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="Button8" to="." method="_on_button_8_pressed"]
+[connection signal="pressed" from="Button9" to="." method="_on_button_9_pressed"]
+[connection signal="pressed" from="Button10" to="." method="_on_button_10_pressed"]
+[connection signal="pressed" from="Button11" to="." method="_on_button_11_pressed"]
+[connection signal="pressed" from="Check" to="." method="_on_check_pressed"]
+[connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]

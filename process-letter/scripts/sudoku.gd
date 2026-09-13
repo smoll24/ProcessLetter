@@ -12,9 +12,7 @@ extends Node2D
 @onready var button8 = $SelectGrid/Button8
 @onready var button9 = $SelectGrid/Button9
 
-
 @onready var label = $Label
-
 
 var normal_textures = [
 	preload("res://assets/puzzles/sudoku/sud0.png"),
@@ -60,7 +58,6 @@ var number_grid = []
 const GRID_SIZE = 9
 var selected_button:TextureButton
 var selected_pos:Vector2
-
 
 func _ready():
 	init_game()
@@ -129,7 +126,7 @@ func create_button(pos:Vector2):
 	return button
 
 
-func _check_solution() -> Array:
+func check_solution() -> Array:
 	var message
 	
 	var zero_count = 0
@@ -173,12 +170,13 @@ func _check_solution() -> Array:
 	message = "Correct!"
 	return [true, message]
 
-func _change_button_number(number):
-	number_grid[int(selected_pos[0])][int(selected_pos[1])] = number
-	selected_button.texture_normal = normal_textures[number]
-	selected_button.texture_hover = hover_textures[number]
-	selected_button.texture_focused = focus_textures[number]
-	
+func change_button_number(number):
+	if selected_button != null:
+		number_grid[int(selected_pos[0])][int(selected_pos[1])] = number
+		selected_button.texture_normal = normal_textures[number]
+		selected_button.texture_hover = hover_textures[number]
+		selected_button.texture_focused = focus_textures[number]
+		
 
 func _on_grid_button_pressed(pos, button):
 	button.grab_focus()
@@ -187,38 +185,38 @@ func _on_grid_button_pressed(pos, button):
 	print("Button pressed",pos)
 
 func _on_button_1_pressed() -> void:
-	_change_button_number(1)
+	change_button_number(1)
 
 func _on_button_2_pressed() -> void:
-	_change_button_number(2)
+	change_button_number(2)
 
 func _on_button_3_pressed() -> void:
-	_change_button_number(3)
+	change_button_number(3)
 
 func _on_button_4_pressed() -> void:
-	_change_button_number(4)
+	change_button_number(4)
 
 func _on_button_5_pressed() -> void:
-	_change_button_number(5)
+	change_button_number(5)
 	
 func _on_button_6_pressed() -> void:
-	_change_button_number(6)
+	change_button_number(6)
 	
 func _on_button_7_pressed() -> void:
-	_change_button_number(7)
+	change_button_number(7)
 	
 func _on_button_8_pressed() -> void:
-	_change_button_number(8)
+	change_button_number(8)
 	
 func _on_button_9_pressed() -> void:
-	_change_button_number(9)
+	change_button_number(9)
 
 func _on_button_0_pressed() -> void:
-	_change_button_number(0)
+	change_button_number(0)
 
 
 func _on_check_pressed() -> void:
-	var solution = _check_solution()
+	var solution = check_solution()
 	label.text = solution[1]
 
 func _on_reset_pressed() -> void:
