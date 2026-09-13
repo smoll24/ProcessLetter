@@ -2,22 +2,58 @@
 
 [ext_resource type="PackedScene" uid="uid://r5j5r2hfjn43" path="res://src/characters/player.tscn" id="1_dpurt"]
 [ext_resource type="Texture2D" uid="uid://cyostt8afrjb1" path="res://assets/temp/alevel.png" id="1_oqaou"]
+[ext_resource type="Texture2D" uid="uid://b5g8iqba7crp2" path="res://assets/temp/level1.png" id="2_cpgk1"]
 [ext_resource type="PackedScene" uid="uid://doyphkina4b2k" path="res://src/characters/purple.tscn" id="2_waa7u"]
+[ext_resource type="Texture2D" uid="uid://bbcjtdaguref" path="res://assets/temp/level2.png" id="3_7wt6k"]
 [ext_resource type="PackedScene" uid="uid://bjuqqpsi7fd6y" path="res://src/characters/blue.tscn" id="3_sg781"]
+[ext_resource type="Texture2D" uid="uid://c4nryu1tw13fp" path="res://assets/temp/level3.png" id="4_m4akb"]
 [ext_resource type="PackedScene" uid="uid://cyajikvj7mg2n" path="res://src/characters/pink.tscn" id="4_oqaou"]
 [ext_resource type="PackedScene" uid="uid://cfj0vcy0rlv7s" path="res://src/characters/teal.tscn" id="5_sr8mx"]
 [ext_resource type="PackedScene" uid="uid://c1vqjey38id0c" path="res://src/characters/violet.tscn" id="6_3dueu"]
 [ext_resource type="Script" uid="uid://df2ix0d14h2m3" path="res://scripts/test.gd" id="9_3dueu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rj60s"]
-size = Vector2(191.80891, 78.26666)
+size = Vector2(249.17834, 105.69333)
 
 [node name="Level_A" type="Node2D" unique_id=1557939465]
 
 [node name="Alevel" type="Sprite2D" parent="." unique_id=1989980623]
-position = Vector2(-635.00006, 3573.9998)
-scale = Vector2(9.724805, 9.724806)
+position = Vector2(-1419.0001, 3008.0002)
+rotation = 1.5707964
+scale = Vector2(12, 12)
 texture = ExtResource("1_oqaou")
+
+[node name="HCDLab" type="ColorRect" parent="." unique_id=184907614]
+offset_left = 165.0
+offset_top = 142.0
+offset_right = 682.0
+offset_bottom = 532.0
+color = Color(1, 1, 1, 0.5137255)
+
+[node name="JimOffice" type="ColorRect" parent="." unique_id=1707876579]
+offset_left = -3108.0
+offset_top = 4351.0
+offset_right = -2345.0
+offset_bottom = 5298.0
+color = Color(1, 1, 1, 0.5137255)
+
+[node name="Level1" type="Sprite2D" parent="." unique_id=90888846]
+visible = false
+position = Vector2(-941, 3305.0002)
+scale = Vector2(11.922581, 11.922582)
+texture = ExtResource("2_cpgk1")
+
+[node name="Level2" type="Sprite2D" parent="." unique_id=707602344]
+visible = false
+position = Vector2(-344, 3444.0002)
+scale = Vector2(11.884869, 11.88487)
+texture = ExtResource("3_7wt6k")
+
+[node name="Level3" type="Sprite2D" parent="." unique_id=680195181]
+visible = false
+position = Vector2(-425.99997, 3431.0002)
+scale = Vector2(10.132543, 10.132541)
+texture = ExtResource("4_m4akb")
 
 [node name="Player" parent="." unique_id=864046172 instance=ExtResource("1_dpurt")]
 position = Vector2(472, 304)
@@ -43,7 +79,7 @@ scale = Vector2(1.2265625, 1.171875)
 script = ExtResource("9_3dueu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Icon" unique_id=1359642502]
-position = Vector2(150.82803, -41.813324)
+position = Vector2(762.293, -640)
 shape = SubResource("RectangleShape2D_rj60s")
 
 [connection signal="body_entered" from="Icon" to="Player" method="_on_icon_body_entered"]

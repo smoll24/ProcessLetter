@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://52n5ipv4fyaj"
-path="res://.godot/imported/IMG_1604.PNG-467116860fbd5fc36b949fa7094188ec.ctex"
+uid="uid://c0t83qurw78u1"
+path="res://.godot/imported/sud1hover.png-9c33f08fd8b50f6b74aa5acd8143aae2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/teal/IMG_1604.PNG"
-dest_files=["res://.godot/imported/IMG_1604.PNG-467116860fbd5fc36b949fa7094188ec.ctex"]
+source_file="res://assets/puzzles/sudoku/sud1hover.png"
+dest_files=["res://.godot/imported/sud1hover.png-9c33f08fd8b50f6b74aa5acd8143aae2.ctex"]
 
 [params]
 

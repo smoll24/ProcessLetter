@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const speed = 300
+const speed = 400
 var current_dir = 'none'
 var dialog = null
 var can_talk = true

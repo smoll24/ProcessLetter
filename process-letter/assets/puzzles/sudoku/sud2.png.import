@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dq6fxdcyc8ucj"
-path="res://.godot/imported/IMG_1606.PNG-2875758d7318350590454337bfee6ad4.ctex"
+uid="uid://caped36bmvlvx"
+path="res://.godot/imported/sud2.png-6cf5cfa8d121c465d5b6af74925dbfe7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/teal/IMG_1606.PNG"
-dest_files=["res://.godot/imported/IMG_1606.PNG-2875758d7318350590454337bfee6ad4.ctex"]
+source_file="res://assets/puzzles/sudoku/sud2.png"
+dest_files=["res://.godot/imported/sud2.png-6cf5cfa8d121c465d5b6af74925dbfe7.ctex"]
 
 [params]
 

@@ -26,6 +26,7 @@ directories/dch_directory={
 "blue": "res://dialogic/blue.dch",
 "green": "res://dialogic/green.dch",
 "purple": "res://dialogic/purple.dch",
+"teal": "res://dialogic/teal.dch",
 "violet": "res://dialogic/violet.dch"
 }
 directories/dtl_directory={
@@ -33,9 +34,10 @@ directories/dtl_directory={
 }
 layout/style_directory={
 "": "res://dialogic/visnov_style.tres",
+"bubble_style": "res://dialogic/bubble_style.tres",
 "visnov_style": "res://dialogic/visnov_style.tres"
 }
-layout/style_list=["res://dialogic/visnov_style.tres"]
+layout/style_list=["res://dialogic/visnov_style.tres", "res://dialogic/bubble_style.tres"]
 layout/default_style="res://dialogic/visnov_style.tres"
 glossary/default_case_sensitive=true
 text/letter_speed=0.01
@@ -79,7 +81,6 @@ window/size/viewport_width=1280
 window/size/viewport_height=720
 window/size/mode=2
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 
 [editor_plugins]
 

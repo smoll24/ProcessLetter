@@ -1,0 +1,171 @@
+[gd_scene format=3 uid="uid://i1hf4jklbl1g"]
+
+[ext_resource type="Script" uid="uid://emyc6sagjy6m" path="res://scripts/sudoku.gd" id="1_c1wfx"]
+[ext_resource type="Texture2D" uid="uid://ca0ghuq2y1v23" path="res://assets/puzzles/sudoku/sud1.png" id="2_tf1j2"]
+[ext_resource type="Texture2D" uid="uid://c0t83qurw78u1" path="res://assets/puzzles/sudoku/sud1hover.png" id="3_6bora"]
+[ext_resource type="Texture2D" uid="uid://cdlhkhjrerxvn" path="res://assets/puzzles/sudoku/sud0.png" id="3_12v7p"]
+[ext_resource type="Texture2D" uid="uid://bmn3pxg3a7vpv" path="res://assets/puzzles/sudoku/sud0hover.png" id="4_2vqja"]
+[ext_resource type="Texture2D" uid="uid://bmxwyqs0ywg76" path="res://assets/puzzles/sudoku/sud1chosen.png" id="5_0f0gr"]
+[ext_resource type="Texture2D" uid="uid://caped36bmvlvx" path="res://assets/puzzles/sudoku/sud2.png" id="5_siw3q"]
+[ext_resource type="Texture2D" uid="uid://bxwk8aqncx8c5" path="res://assets/puzzles/sudoku/sud3.png" id="6_nj7ic"]
+[ext_resource type="Texture2D" uid="uid://dicsqaplrgpyf" path="res://assets/puzzles/sudoku/sud4.png" id="7_nj7ic"]
+[ext_resource type="Texture2D" uid="uid://oxjjg5b3grim" path="res://assets/puzzles/sudoku/sud5.png" id="8_g4g0s"]
+[ext_resource type="Texture2D" uid="uid://dh6v18ohksghl" path="res://assets/puzzles/sudoku/sud6.png" id="9_lhewo"]
+[ext_resource type="Texture2D" uid="uid://bmj8vbg1aweds" path="res://assets/puzzles/sudoku/sud7.png" id="10_4fga5"]
+[ext_resource type="Texture2D" uid="uid://cekc2amfx0k78" path="res://assets/puzzles/sudoku/sud8.png" id="11_jtyee"]
+[ext_resource type="Texture2D" uid="uid://dpbn3b4jfr2g2" path="res://assets/puzzles/sudoku/sud9.png" id="12_12v7p"]
+
+[node name="Sudoku" type="Node2D" unique_id=507427484]
+script = ExtResource("1_c1wfx")
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=817522832]
+offset_left = 344.0
+offset_top = 24.0
+offset_right = 907.0
+offset_bottom = 587.0
+columns = 9
+
+[node name="Button1" type="TextureButton" parent="GridContainer" unique_id=95356826]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("2_tf1j2")
+
+[node name="Button2" type="TextureButton" parent="GridContainer" unique_id=1317080958]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("2_tf1j2")
+
+[node name="Button3" type="TextureButton" parent="GridContainer" unique_id=1785914303]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("2_tf1j2")
+
+[node name="Button4" type="TextureButton" parent="GridContainer" unique_id=1567736580]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("2_tf1j2")
+
+[node name="Button5" type="TextureButton" parent="GridContainer" unique_id=79552754]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("2_tf1j2")
+
+[node name="Button6" type="TextureButton" parent="GridContainer" unique_id=2038389083]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("2_tf1j2")
+
+[node name="Button7" type="TextureButton" parent="GridContainer" unique_id=582570056]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("2_tf1j2")
+
+[node name="Button8" type="TextureButton" parent="GridContainer" unique_id=1795764947]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("2_tf1j2")
+
+[node name="Button9" type="TextureButton" parent="GridContainer" unique_id=51840701]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("2_tf1j2")
+
+[node name="SelectGrid" type="GridContainer" parent="." unique_id=698591237]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 342.0
+offset_top = 639.0
+offset_right = 945.0
+offset_bottom = 698.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/h_separation = 9
+columns = 10
+
+[node name="Button0" type="TextureButton" parent="SelectGrid" unique_id=2041001120]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("3_12v7p")
+texture_hover = ExtResource("4_2vqja")
+
+[node name="Button1" type="TextureButton" parent="SelectGrid" unique_id=143198966]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("2_tf1j2")
+texture_hover = ExtResource("3_6bora")
+texture_disabled = ExtResource("5_0f0gr")
+
+[node name="Button2" type="TextureButton" parent="SelectGrid" unique_id=656547880]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("5_siw3q")
+texture_hover = ExtResource("3_6bora")
+texture_disabled = ExtResource("5_0f0gr")
+
+[node name="Button3" type="TextureButton" parent="SelectGrid" unique_id=946447546]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("6_nj7ic")
+texture_hover = ExtResource("3_6bora")
+texture_disabled = ExtResource("5_0f0gr")
+
+[node name="Button4" type="TextureButton" parent="SelectGrid" unique_id=1265473786]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("7_nj7ic")
+texture_pressed = ExtResource("2_tf1j2")
+texture_hover = ExtResource("3_6bora")
+texture_disabled = ExtResource("5_0f0gr")
+
+[node name="Button5" type="TextureButton" parent="SelectGrid" unique_id=1112853777]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("8_g4g0s")
+texture_pressed = ExtResource("2_tf1j2")
+texture_hover = ExtResource("3_6bora")
+texture_disabled = ExtResource("5_0f0gr")
+
+[node name="Button6" type="TextureButton" parent="SelectGrid" unique_id=2051950509]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("9_lhewo")
+texture_pressed = ExtResource("2_tf1j2")
+texture_hover = ExtResource("3_6bora")
+texture_disabled = ExtResource("5_0f0gr")
+
+[node name="Button7" type="TextureButton" parent="SelectGrid" unique_id=1590312981]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("10_4fga5")
+texture_pressed = ExtResource("2_tf1j2")
+texture_hover = ExtResource("3_6bora")
+texture_disabled = ExtResource("5_0f0gr")
+
+[node name="Button8" type="TextureButton" parent="SelectGrid" unique_id=338970600]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("11_jtyee")
+texture_pressed = ExtResource("2_tf1j2")
+texture_hover = ExtResource("3_6bora")
+texture_disabled = ExtResource("5_0f0gr")
+
+[node name="Button9" type="TextureButton" parent="SelectGrid" unique_id=540320129]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("12_12v7p")
+texture_pressed = ExtResource("2_tf1j2")
+texture_hover = ExtResource("3_6bora")
+texture_disabled = ExtResource("5_0f0gr")
+
+[connection signal="pressed" from="SelectGrid/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="SelectGrid/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="SelectGrid/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="SelectGrid/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="SelectGrid/Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="SelectGrid/Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="SelectGrid/Button7" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="SelectGrid/Button8" to="." method="_on_button_8_pressed"]
+[connection signal="pressed" from="SelectGrid/Button9" to="." method="_on_button_9_pressed"]
