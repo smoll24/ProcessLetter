@@ -3,30 +3,30 @@ green: Hmmmmmmmmm
 update green (Thinking) [fade_length="0.0"]
 green: Think think think
 update green (Idea)
-green: Wowwowowow idea!!!
+green: Wowwowowow idea
 leave green
 join purple (Content) left
 purple: Wowie happy
 update purple (Curious)
-purple: What is that actually?
+purple: What is that actually
 update purple (Exhausted)
-purple: Gosh darn I'm so tired...
+purple: Gosh darn Im so tired...
 update purple (Pissed)
-purple: Bruh wtf?????????????!
+purple: Bruh wtf
 leave purple
 join violet (Curious) left
-violet: Woah, hi everyone!
+violet: Woah, hi everyone
 update violet (Enamoured)
-violet: My beloved <3333
+violet: My beloved
 update violet (Stare)
 violet: ..............................
 leave violet
 join blue (Curious) left
-blue: What's going on, why is everyone gathering over here?
+blue: Whats going on, why is everyone gathering over here
 update blue (Impressed)
-blue: Woah cool!!!
+blue: Woah cool
 update blue (Vexxed)
-blue: Wait you're using it for WHAT exactly???!
+blue: Wait youre using it for WHAT exactly
 leave blue
 join teal left
-teal: I'm not cut out for this...
+teal: Im not cut out for this...

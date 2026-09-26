@@ -17,6 +17,9 @@ scene = ExtResource("3_2i7n5")
 [sub_resource type="Resource" id="Resource_lxpbl"]
 script = ExtResource("2_cswsn")
 scene = ExtResource("4_kxgla")
+overrides = {
+"normal_font": "\"res://assets/fonts/process_script.ttf\""
+}
 
 [resource]
 script = ExtResource("5_v6p30")

@@ -78,7 +78,15 @@ scale = Vector2(1.2265625, 1.171875)
 script = ExtResource("9_3dueu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Icon" unique_id=1359642502]
-position = Vector2(762.293, -640)
+position = Vector2(-410.0891, 610.98663)
+shape = SubResource("RectangleShape2D_rj60s")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Icon" unique_id=971213264]
+position = Vector2(-410.0891, 610.98663)
+shape = SubResource("RectangleShape2D_rj60s")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Icon" unique_id=1477037424]
+position = Vector2(-410.0891, 610.98663)
 shape = SubResource("RectangleShape2D_rj60s")
 
 [connection signal="body_entered" from="Icon" to="Player" method="_on_icon_body_entered"]

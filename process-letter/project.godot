@@ -74,6 +74,7 @@ audio/channel_defaults={
 }
 }
 animations/leave_default="Fade Out Down"
+variables={}
 
 [display]
 
