@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://0bt647sxmiqx" path="res://assets/ui/workbench.png" id="1_ug4xo"]
 [ext_resource type="PackedScene" uid="uid://i1hf4jklbl1g" path="res://src/puzzles/sudoku.tscn" id="2_vavdi"]
+[ext_resource type="PackedScene" uid="uid://dh51ib38pbrq0" path="res://src/puzzles/network.tscn" id="3_ce7gv"]
 
 [node name="Workbench" type="Control" unique_id=213393927]
 layout_mode = 3
@@ -18,3 +19,6 @@ offset_bottom = 40.0
 texture = ExtResource("1_ug4xo")
 
 [node name="Sudoku" parent="." unique_id=507427484 instance=ExtResource("2_vavdi")]
+
+[node name="Network" parent="." unique_id=1872065222 instance=ExtResource("3_ce7gv")]
+visible = false
