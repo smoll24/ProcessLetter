@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyostt8afrjb1"
-path="res://.godot/imported/alevel.png-2556c15c38d7d117593b8babe922b4ed.ctex"
+uid="uid://da7dx2qnkga4"
+path="res://.godot/imported/alevel_black.png-94f39da1ab5041baac92e0e69036e7a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/temp/alevel.png"
-dest_files=["res://.godot/imported/alevel.png-2556c15c38d7d117593b8babe922b4ed.ctex"]
+source_file="res://assets/bg/alevel_black.png"
+dest_files=["res://.godot/imported/alevel_black.png-94f39da1ab5041baac92e0e69036e7a9.ctex"]
 
 [params]
 

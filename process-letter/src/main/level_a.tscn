@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://i2rd2u4wh8c3"]
 
 [ext_resource type="PackedScene" uid="uid://r5j5r2hfjn43" path="res://src/characters/player.tscn" id="1_dpurt"]
-[ext_resource type="Texture2D" uid="uid://cyostt8afrjb1" path="res://assets/temp/alevel.png" id="1_oqaou"]
+[ext_resource type="Texture2D" uid="uid://cyostt8afrjb1" path="res://assets/bg/alevel.png" id="1_oqaou"]
+[ext_resource type="Texture2D" uid="uid://da7dx2qnkga4" path="res://assets/bg/alevel_black.png" id="2_7wt6k"]
 [ext_resource type="Texture2D" uid="uid://b5g8iqba7crp2" path="res://assets/temp/level1.png" id="2_cpgk1"]
 [ext_resource type="PackedScene" uid="uid://doyphkina4b2k" path="res://src/characters/purple.tscn" id="2_waa7u"]
 [ext_resource type="Texture2D" uid="uid://bbcjtdaguref" path="res://assets/temp/level2.png" id="3_7wt6k"]
@@ -10,31 +11,48 @@
 [ext_resource type="PackedScene" uid="uid://cyajikvj7mg2n" path="res://src/characters/pink.tscn" id="4_oqaou"]
 [ext_resource type="PackedScene" uid="uid://cfj0vcy0rlv7s" path="res://src/characters/teal.tscn" id="5_sr8mx"]
 [ext_resource type="PackedScene" uid="uid://c1vqjey38id0c" path="res://src/characters/violet.tscn" id="6_3dueu"]
-[ext_resource type="Script" uid="uid://df2ix0d14h2m3" path="res://scripts/test.gd" id="9_3dueu"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rj60s"]
-size = Vector2(249.17834, 105.69333)
+[sub_resource type="Gradient" id="Gradient_7wt6k"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rj60s"]
+gradient = SubResource("Gradient_7wt6k")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.2, 0.2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ywdb4"]
+size = Vector2(1418, 1227)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cpgk1"]
+size = Vector2(1418, 1227)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f7x0w"]
+size = Vector2(609, 814)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7wt6k"]
+size = Vector2(1418, 1156.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m4akb"]
+size = Vector2(1418, 363.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yema0"]
+size = Vector2(1230, 4513.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4w7p0"]
+size = Vector2(2131, 1716)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bexj4"]
+size = Vector2(2159, 1218.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yvsej"]
+size = Vector2(966, 4730)
 
 [node name="Level_A" type="Node2D" unique_id=1557939465]
 
 [node name="Alevel" type="Sprite2D" parent="." unique_id=1989980623]
 position = Vector2(-1419.0001, 3008.0002)
 texture = ExtResource("1_oqaou")
-
-[node name="HCDLab" type="ColorRect" parent="." unique_id=184907614]
-visible = false
-offset_left = 165.0
-offset_top = 142.0
-offset_right = 682.0
-offset_bottom = 532.0
-color = Color(1, 1, 1, 0.5137255)
-
-[node name="JimOffice" type="ColorRect" parent="." unique_id=1707876579]
-offset_left = -3108.0
-offset_top = 4351.0
-offset_right = -2345.0
-offset_bottom = 5298.0
-color = Color(1, 1, 1, 0.5137255)
 
 [node name="Level1" type="Sprite2D" parent="." unique_id=90888846]
 visible = false
@@ -55,38 +73,116 @@ scale = Vector2(10.132543, 10.132541)
 texture = ExtResource("4_m4akb")
 
 [node name="Player" parent="." unique_id=864046172 instance=ExtResource("1_dpurt")]
-position = Vector2(472, 304)
+position = Vector2(300, 721)
 
 [node name="Purple" parent="." unique_id=626783985 instance=ExtResource("2_waa7u")]
-position = Vector2(599, 302)
+visible = false
+position = Vector2(427, 719)
 
 [node name="Purple2" parent="." unique_id=1379034531 instance=ExtResource("3_sg781")]
-position = Vector2(349, 302)
+visible = false
+position = Vector2(177, 719)
 
 [node name="Pink" parent="." unique_id=213673184 instance=ExtResource("4_oqaou")]
-position = Vector2(226, 306)
+visible = false
+position = Vector2(54, 723)
 
 [node name="Teal" parent="." unique_id=855263268 instance=ExtResource("5_sr8mx")]
-position = Vector2(725, 287)
+visible = false
+position = Vector2(553, 704)
 
 [node name="Violet" parent="." unique_id=1078976922 instance=ExtResource("6_3dueu")]
-position = Vector2(849, 298)
+visible = false
+position = Vector2(677, 715)
 
-[node name="Icon" type="Area2D" parent="." unique_id=1652851489]
-position = Vector2(226, 607)
-scale = Vector2(1.2265625, 1.171875)
-script = ExtResource("9_3dueu")
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1438018176]
+position = Vector2(18.999998, 347)
+scale = Vector2(6.109375, 4.7395887)
+texture = SubResource("GradientTexture2D_rj60s")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Icon" unique_id=1359642502]
-position = Vector2(-410.0891, 610.98663)
-shape = SubResource("RectangleShape2D_rj60s")
+[node name="Alevel_top" type="Sprite2D" parent="." unique_id=1289030025]
+modulate = Color(0.380189, 0.380189, 0.38018897, 1)
+position = Vector2(-1419.0001, 3008.0002)
+texture = ExtResource("2_7wt6k")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Icon" unique_id=971213264]
-position = Vector2(-410.0891, 610.98663)
-shape = SubResource("RectangleShape2D_rj60s")
+[node name="Coliisions" type="Node2D" parent="." unique_id=1046833520]
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Icon" unique_id=1477037424]
-position = Vector2(-410.0891, 610.98663)
-shape = SubResource("RectangleShape2D_rj60s")
+[node name="StaticBody2D" type="StaticBody2D" parent="Coliisions" unique_id=455011079]
 
-[connection signal="body_entered" from="Icon" to="Player" method="_on_icon_body_entered"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coliisions/StaticBody2D" unique_id=765979344]
+position = Vector2(-1150, 21.5)
+shape = SubResource("RectangleShape2D_ywdb4")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Coliisions" unique_id=1944555711]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coliisions/StaticBody2D2" unique_id=1384321668]
+position = Vector2(621, 22)
+shape = SubResource("RectangleShape2D_cpgk1")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Coliisions" unique_id=634329311]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coliisions/StaticBody2D3" unique_id=1545584955]
+position = Vector2(-269, -196)
+shape = SubResource("RectangleShape2D_f7x0w")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Coliisions" unique_id=1040210687]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coliisions/StaticBody2D4" unique_id=1889104135]
+position = Vector2(1703, 842.75)
+shape = SubResource("RectangleShape2D_7wt6k")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Coliisions" unique_id=252980851]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coliisions/StaticBody2D5" unique_id=196709389]
+position = Vector2(-2276, 746)
+shape = SubResource("RectangleShape2D_m4akb")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Coliisions" unique_id=1486457140]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coliisions/StaticBody2D6" unique_id=612707844]
+position = Vector2(1815, 3295.375)
+shape = SubResource("RectangleShape2D_yema0")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="Coliisions" unique_id=729692047]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Coliisions/StaticBody2D7" unique_id=1322951119]
+polygon = PackedVector2Array(-1775, 5147, -1224, 5147, -1014, 5290, -485, 5288, -488, 5274, -419, 5274, -418, 5331, -129, 5332, -127, 5282, -56, 5279, -59, 5287, 475, 5287, 666, 5148, 1264, 5148, 1288, 5610, -1777, 5630)
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Coliisions" unique_id=1857061565]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coliisions/StaticBody2D9" unique_id=780828953]
+position = Vector2(-2804.5, 4668)
+shape = SubResource("RectangleShape2D_4w7p0")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="Coliisions" unique_id=423870707]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coliisions/StaticBody2D8" unique_id=1019528110]
+position = Vector2(-2820, 2989.5)
+shape = SubResource("RectangleShape2D_bexj4")
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="Coliisions" unique_id=404228019]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coliisions/StaticBody2D10" unique_id=511401805]
+position = Vector2(-2821.5, 1548.75)
+shape = SubResource("RectangleShape2D_bexj4")
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="Coliisions" unique_id=1355850656]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coliisions/StaticBody2D11" unique_id=1976927402]
+position = Vector2(-4026, 3303)
+shape = SubResource("RectangleShape2D_yvsej")
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="Coliisions" unique_id=97583382]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Coliisions/StaticBody2D12" unique_id=1057045478]
+polygon = PackedVector2Array(-1830, 853, -1343, 860, -1341, 895, -1222, 894, -1219, 870, -422, 868, -419, 1254, -488, 1257, -487, 1239, -1022, 1229, -1219, 1436, -1846, 1434)
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="Coliisions" unique_id=845770110]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Coliisions/StaticBody2D13" unique_id=1744067934]
+polygon = PackedVector2Array(-129, 864, 1359, 860, 1366, 1427, 667, 1433, 472, 1236, -59, 1234, -60, 1260, -126, 1259)
+
+[node name="StaticBody2D17" type="StaticBody2D" parent="Coliisions" unique_id=647597329]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Coliisions/StaticBody2D17" unique_id=318811197]
+polygon = PackedVector2Array(-776, 1735, -618, 1639, -436, 1562, -249, 1543, -93, 1578, 81, 1645, 281, 1778, 397, 1944, 463, 2115, 487, 2265, 678, 2284, 875, 2405, 951, 2646, 957, 2812, 959, 3869, 906, 4069, 758, 4213, 577, 4263, 481, 4262, 430, 4509, 318, 4705, 157, 4841, -13, 4924, -246, 4983, -406, 4972, -594, 4907, -767, 4802, -883, 4670, -974, 4517, -1006, 4386, -1030, 4259, -1170, 4255, -1341, 4191, -1460, 4044, -1503, 3913, -1502, 3796, -1503, 2659, -1452, 2463, -1322, 2319, -1158, 2269, -1033, 2261, -986, 2049, -894, 1861)
