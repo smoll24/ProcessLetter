@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://r5j5r2hfjn43"]
 
 [ext_resource type="Script" uid="uid://44fmlfrqw4d" path="res://scripts/player.gd" id="1_3ikja"]
-[ext_resource type="Texture2D" uid="uid://djumbwqkjjbya" path="res://icon.svg" id="1_gx3j3"]
 [ext_resource type="Texture2D" uid="uid://4ru35l81iaoj" path="res://assets/characters/green/front/IMG_1583.PNG" id="3_8vhne"]
 [ext_resource type="Texture2D" uid="uid://bcf3brki85tds" path="res://assets/characters/green/front/IMG_1584.PNG" id="4_3abso"]
 [ext_resource type="Texture2D" uid="uid://bpb0d7qow6sgr" path="res://assets/characters/green/front/IMG_1585.PNG" id="5_tq5n8"]
@@ -14,10 +13,7 @@ animations = [{
 "name": &"back_idle",
 "speed": 5.0
 }, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_gx3j3")
-}],
+"frames": [],
 "loop": 1,
 "name": &"back_walk",
 "speed": 5.0
@@ -62,7 +58,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ywdb4"]
-size = Vector2(55, 51)
+size = Vector2(52, 51)
 
 [node name="Player" type="CharacterBody2D" unique_id=864046172]
 script = ExtResource("1_3ikja")
@@ -72,7 +68,7 @@ sprite_frames = SubResource("SpriteFrames_ywdb4")
 animation = &"front_idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1438348213]
-position = Vector2(1.5, 54.5)
+position = Vector2(1, 54.5)
 shape = SubResource("RectangleShape2D_ywdb4")
 
 [node name="Indicator" type="Label" parent="." unique_id=1632201780]

@@ -48,6 +48,9 @@ size = Vector2(2159, 1218.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yvsej"]
 size = Vector2(966, 4730)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rj60s"]
+size = Vector2(283, 9)
+
 [node name="Level_A" type="Node2D" unique_id=1557939465]
 
 [node name="Alevel" type="Sprite2D" parent="." unique_id=1989980623]
@@ -72,28 +75,23 @@ position = Vector2(-425.99997, 3431.0002)
 scale = Vector2(10.132543, 10.132541)
 texture = ExtResource("4_m4akb")
 
-[node name="Player" parent="." unique_id=864046172 instance=ExtResource("1_dpurt")]
-position = Vector2(300, 721)
-
 [node name="Purple" parent="." unique_id=626783985 instance=ExtResource("2_waa7u")]
-visible = false
-position = Vector2(427, 719)
+position = Vector2(189, 1512)
 
-[node name="Purple2" parent="." unique_id=1379034531 instance=ExtResource("3_sg781")]
-visible = false
-position = Vector2(177, 719)
+[node name="Blue" parent="." unique_id=1379034531 instance=ExtResource("3_sg781")]
+position = Vector2(345, 1245)
 
 [node name="Pink" parent="." unique_id=213673184 instance=ExtResource("4_oqaou")]
-visible = false
-position = Vector2(54, 723)
+position = Vector2(-895, 1258)
 
 [node name="Teal" parent="." unique_id=855263268 instance=ExtResource("5_sr8mx")]
-visible = false
-position = Vector2(553, 704)
+position = Vector2(-170, 512)
 
 [node name="Violet" parent="." unique_id=1078976922 instance=ExtResource("6_3dueu")]
-visible = false
-position = Vector2(677, 715)
+position = Vector2(-1325, 683)
+
+[node name="Player" parent="." unique_id=864046172 instance=ExtResource("1_dpurt")]
+position = Vector2(309, 749)
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1438018176]
 position = Vector2(18.999998, 347)
@@ -186,3 +184,12 @@ polygon = PackedVector2Array(-129, 864, 1359, 860, 1366, 1427, 667, 1433, 472, 1
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Coliisions/StaticBody2D17" unique_id=318811197]
 polygon = PackedVector2Array(-776, 1735, -618, 1639, -436, 1562, -249, 1543, -93, 1578, 81, 1645, 281, 1778, 397, 1944, 463, 2115, 487, 2265, 678, 2284, 875, 2405, 951, 2646, 957, 2812, 959, 3869, 906, 4069, 758, 4213, 577, 4263, 481, 4262, 430, 4509, 318, 4705, 157, 4841, -13, 4924, -246, 4983, -406, 4972, -594, 4907, -767, 4802, -883, 4670, -974, 4517, -1006, 4386, -1030, 4259, -1170, 4255, -1341, 4191, -1460, 4044, -1503, 3913, -1502, 3796, -1503, 2659, -1452, 2463, -1322, 2319, -1158, 2269, -1033, 2261, -986, 2049, -894, 1861)
+
+[node name="Icon" type="Area2D" parent="." unique_id=1028668035]
+position = Vector2(-264, 904)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Icon" unique_id=75887171]
+position = Vector2(-6.5, -30.5)
+shape = SubResource("RectangleShape2D_rj60s")
+
+[connection signal="body_entered" from="Icon" to="Player" method="_on_icon_body_entered"]

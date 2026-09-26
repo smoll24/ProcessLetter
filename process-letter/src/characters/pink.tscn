@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://cyajikvj7mg2n"]
 
-[ext_resource type="Script" uid="uid://44fmlfrqw4d" path="res://scripts/player.gd" id="1_e4abx"]
 [ext_resource type="Texture2D" uid="uid://djumbwqkjjbya" path="res://icon.svg" id="2_4ry5a"]
 [ext_resource type="Texture2D" uid="uid://bfdtk7mj8sthj" path="res://assets/characters/pink/front/IMG_1600.PNG" id="3_e4abx"]
 [ext_resource type="Texture2D" uid="uid://b2ualjqgt253q" path="res://assets/characters/pink/front/IMG_1599.PNG" id="4_4ry5a"]
@@ -62,17 +61,17 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ywdb4"]
-size = Vector2(127, 167)
+size = Vector2(65.5, 44.5)
 
 [node name="Pink" type="CharacterBody2D" unique_id=864046172]
-script = ExtResource("1_e4abx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1026202716]
 sprite_frames = SubResource("SpriteFrames_ywdb4")
-animation = &"front_walk"
+animation = &"front_idle"
+autoplay = "front_idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1438348213]
-position = Vector2(0.5, 1.5)
+position = Vector2(1.25, 58.25)
 shape = SubResource("RectangleShape2D_ywdb4")
 
 [node name="Indicator" type="Label" parent="." unique_id=1632201780]
