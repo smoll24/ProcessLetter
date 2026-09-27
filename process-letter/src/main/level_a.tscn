@@ -189,7 +189,7 @@ polygon = PackedVector2Array(-776, 1735, -618, 1639, -436, 1562, -249, 1543, -93
 position = Vector2(-264, 904)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Icon" unique_id=75887171]
-position = Vector2(-6.5, -30.5)
+position = Vector2(-1990, -476)
 shape = SubResource("RectangleShape2D_rj60s")
 
 [connection signal="body_entered" from="Icon" to="Player" method="_on_icon_body_entered"]

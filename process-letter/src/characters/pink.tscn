@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cyajikvj7mg2n"]
 
+[ext_resource type="Script" uid="uid://dqiqxcmja3uoy" path="res://scripts/pink.gd" id="1_0jq27"]
 [ext_resource type="Texture2D" uid="uid://cgasxnon3nc45" path="res://assets/characters/pink/pink.png" id="1_wh1jl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0jq27"]
@@ -152,7 +153,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ywdb4"]
 size = Vector2(65.5, 44.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hip6v"]
+size = Vector2(164, 211)
+
 [node name="Pink" type="CharacterBody2D" unique_id=864046172]
+script = ExtResource("1_0jq27")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1026202716]
 sprite_frames = SubResource("SpriteFrames_ywdb4")
@@ -171,3 +176,12 @@ offset_right = 20.0
 offset_bottom = -79.0
 text = "!"
 horizontal_alignment = 1
+
+[node name="Interact_area" type="Area2D" parent="." unique_id=205407811]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact_area" unique_id=1984519588]
+position = Vector2(-3, -0.5)
+shape = SubResource("RectangleShape2D_hip6v")
+
+[connection signal="body_entered" from="Interact_area" to="." method="_on_interact_area_body_entered"]
+[connection signal="body_exited" from="Interact_area" to="." method="_on_interact_area_body_exited"]

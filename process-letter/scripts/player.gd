@@ -7,7 +7,8 @@ var can_talk = true
 
 func _ready():
 	$AnimatedSprite2D.play('front_idle')
-	
+	Globals.can_move = true
+	Globals.can_talk = true
 	
 func _physics_process(delta):
 	if Globals.can_move:
@@ -71,17 +72,16 @@ func play_anim(movement):
 				anim.play('back_idle')
 				
 
-
-func _on_icon_body_entered(_body: Node2D) -> void:
-	if can_talk:
-		can_talk = false
-		Globals.can_move = false
-		play_anim(0)
-		dialog = Dialogic.start("purple_idle")
-		get_tree().root.add_child(dialog)
-		Dialogic.timeline_ended.connect(dialog_end)
-		
-func dialog_end():
-	await get_tree().create_timer(0.5).timeout
-	can_talk = true
-	Globals.can_move = true
+#func _on_icon_body_entered(_body: Node2D) -> void:
+	#if can_talk:
+		#can_talk = false
+		#Globals.can_move = false
+		#play_anim(0)
+		#dialog = Dialogic.start("purple_idle")
+		#get_tree().root.add_child(dialog)
+		#Dialogic.timeline_ended.connect(dialog_end)
+		#
+#func dialog_end():
+	#await get_tree().create_timer(0.5).timeout
+	#can_talk = true
+	#Globals.can_move = true

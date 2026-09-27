@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c1vqjey38id0c"]
 
 [ext_resource type="Texture2D" uid="uid://bq5oiqag1k1a6" path="res://assets/characters/violet/violet.png" id="1_brh3x"]
+[ext_resource type="Script" uid="uid://d2hmnytxs2tcv" path="res://scripts/violet.gd" id="1_ecic8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ecic8"]
 atlas = ExtResource("1_brh3x")
@@ -152,7 +153,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ywdb4"]
 size = Vector2(73.5, 52.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hptjb"]
+size = Vector2(164, 211)
+
 [node name="Violet" type="CharacterBody2D" unique_id=864046172]
+script = ExtResource("1_ecic8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1026202716]
 sprite_frames = SubResource("SpriteFrames_ywdb4")
@@ -171,3 +176,12 @@ offset_right = 20.0
 offset_bottom = -79.0
 text = "!"
 horizontal_alignment = 1
+
+[node name="Interact_area" type="Area2D" parent="." unique_id=1807325238]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact_area" unique_id=1221529453]
+position = Vector2(-3, -0.5)
+shape = SubResource("RectangleShape2D_hptjb")
+
+[connection signal="body_entered" from="Interact_area" to="." method="_on_interact_area_body_entered"]
+[connection signal="body_exited" from="Interact_area" to="." method="_on_interact_area_body_exited"]

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://doyphkina4b2k"]
 
 [ext_resource type="Texture2D" uid="uid://6pxlv7ifkv18" path="res://assets/characters/purple/purple.png" id="1_1x5lt"]
+[ext_resource type="Script" uid="uid://br7vxxuua7ebi" path="res://scripts/purple.gd" id="1_b3jmw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b3jmw"]
 atlas = ExtResource("1_1x5lt")
@@ -152,7 +153,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ywdb4"]
 size = Vector2(46, 61)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rj60s"]
+size = Vector2(164, 211)
+
 [node name="Purple" type="CharacterBody2D" unique_id=864046172]
+script = ExtResource("1_b3jmw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1026202716]
 sprite_frames = SubResource("SpriteFrames_ywdb4")
@@ -166,8 +171,17 @@ shape = SubResource("RectangleShape2D_ywdb4")
 [node name="Indicator" type="Label" parent="." unique_id=1632201780]
 visible = false
 offset_left = -20.0
-offset_top = -102.0
+offset_top = -110.0
 offset_right = 20.0
-offset_bottom = -79.0
+offset_bottom = -87.0
 text = "!"
 horizontal_alignment = 1
+
+[node name="Interact_area" type="Area2D" parent="." unique_id=385109861]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact_area" unique_id=1292931418]
+position = Vector2(-3, -0.5)
+shape = SubResource("RectangleShape2D_rj60s")
+
+[connection signal="body_entered" from="Interact_area" to="." method="_on_interact_area_body_entered"]
+[connection signal="body_exited" from="Interact_area" to="." method="_on_interact_area_body_exited"]

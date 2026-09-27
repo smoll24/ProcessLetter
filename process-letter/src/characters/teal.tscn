@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cfj0vcy0rlv7s"]
 
+[ext_resource type="Script" uid="uid://diolx4pn4dnav" path="res://scripts/teal.gd" id="1_mw68n"]
 [ext_resource type="Texture2D" uid="uid://f1gm587m4tw4" path="res://assets/characters/teal/teal.png" id="1_ttf2c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mw68n"]
@@ -152,7 +153,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ywdb4"]
 size = Vector2(44.5, 66.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_obkwi"]
+size = Vector2(164, 211)
+
 [node name="Teal" type="CharacterBody2D" unique_id=864046172]
+script = ExtResource("1_mw68n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1026202716]
 sprite_frames = SubResource("SpriteFrames_ywdb4")
@@ -171,3 +176,12 @@ offset_right = 20.0
 offset_bottom = -79.0
 text = "!"
 horizontal_alignment = 1
+
+[node name="Interact_area" type="Area2D" parent="." unique_id=1817894822]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact_area" unique_id=1196227904]
+position = Vector2(-3, -0.5)
+shape = SubResource("RectangleShape2D_obkwi")
+
+[connection signal="body_entered" from="Interact_area" to="." method="_on_interact_area_body_entered"]
+[connection signal="body_exited" from="Interact_area" to="." method="_on_interact_area_body_exited"]

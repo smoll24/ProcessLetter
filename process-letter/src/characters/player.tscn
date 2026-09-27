@@ -153,14 +153,14 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ywdb4"]
 size = Vector2(52, 51)
 
-[node name="Player" type="CharacterBody2D" unique_id=864046172]
+[node name="Player" type="CharacterBody2D" unique_id=864046172 groups=["player"]]
 script = ExtResource("1_3ikja")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1026202716]
 sprite_frames = SubResource("SpriteFrames_ywdb4")
 animation = &"side_walk"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1438348213]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1438348213 groups=["player"]]
 position = Vector2(1, 54.5)
 shape = SubResource("RectangleShape2D_ywdb4")
 

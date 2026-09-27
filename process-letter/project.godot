@@ -109,6 +109,10 @@ window/stretch/mode="canvas_items"
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
+[global_group]
+
+player=""
+
 [input]
 
 ui_accept={
