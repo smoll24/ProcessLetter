@@ -71,8 +71,8 @@ func _create_connections(buttons: Array, connections: Array):
 		var line = Line2D.new()
 		line.name = "Line_%d_%d" % [point_a, point_b]
 		line.width = 5.0
-		line.default_color = Color("#ffffff")
-		line.z_index = -1
+		line.default_color = Color("#C7E3C2")
+		line.z_index = 1
 		
 		line.add_point(button_a.position + button_a.size / 2)
 		line.add_point(button_b.position + button_b.size / 2)
@@ -101,7 +101,7 @@ func fill_connection(point_a: int, point_b: int):
 				return
 			
 			connection["filled"] = true
-			connection["line"].default_color = Color("#272727")
+			connection["line"].default_color = Color("#4A8540")
 			selected_point = point_b
 			buttons[selected_point-1].grab_focus()
 			return

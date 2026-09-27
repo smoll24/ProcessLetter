@@ -7,10 +7,15 @@ func _ready() -> void:
 	Globals.violet = false
 
 func _process(_delta):
-	interact_indicator.visible = Globals.violet
+	if Globals.status in Globals.interactions["violet"] \
+	and Globals.can_talk and Globals.violet:
+		interact_indicator.visible = true
+	else:
+		interact_indicator.visible = false
 	
 	if Globals.violet:
-		if Input.is_action_just_pressed("ui_accept") and Globals.can_talk:
+		if Input.is_action_just_pressed("ui_accept") \
+		and interact_indicator.visible:
 			Globals.can_move = false
 			Globals.can_talk = false
 			dialog = Dialogic.start("violet_idle")

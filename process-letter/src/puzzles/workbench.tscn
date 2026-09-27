@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cw41srtgpkoob"]
+
+[ext_resource type="Texture2D" uid="uid://sdlmwyfftmor" path="res://assets/ui/computer.png" id="1_4u13e"]
+[ext_resource type="PackedScene" uid="uid://dh51ib38pbrq0" path="res://src/puzzles/network.tscn" id="2_wo1xl"]
+
+[node name="Workbench" type="Node2D" unique_id=1004275490]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1472569020]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_4u13e")
+
+[node name="Network" parent="." unique_id=1872065222 instance=ExtResource("2_wo1xl")]

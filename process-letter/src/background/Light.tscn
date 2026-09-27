@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dyue8j0eesvj3"]
+
+[ext_resource type="Texture2D" uid="uid://cyostt8afrjb1" path="res://assets/bg/alevel.png" id="1_k5soo"]
+
+[sub_resource type="Gradient" id="Gradient_agk7f"]
+colors = PackedColorArray(0.38039216, 1, 0.48235294, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ywdb4"]
+gradient = SubResource("Gradient_agk7f")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 1)
+
+[node name="Light" type="Node2D" unique_id=392051107]
+
+[node name="PointLight2D2" type="PointLight2D" parent="." unique_id=1441279017]
+position = Vector2(1.4531155, 1.8437403)
+scale = Vector2(7.51416, 5.661133)
+texture = SubResource("GradientTexture2D_ywdb4")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1284547096]
+position = Vector2(17, 3.000002)
+scale = Vector2(2.7890625, 1.8945313)
+texture = SubResource("GradientTexture2D_ywdb4")
+
+[node name="PointLight2D3" type="PointLight2D" parent="." unique_id=993472149]
+position = Vector2(-1.0000014, 7.000002)
+scale = Vector2(10.187501, 8.197754)
+texture = SubResource("GradientTexture2D_ywdb4")
+
+[node name="Alevel" type="Sprite2D" parent="." unique_id=577795536]
+visible = false
+position = Vector2(-1432, 2661)
+texture = ExtResource("1_k5soo")
+metadata/_edit_lock_ = true

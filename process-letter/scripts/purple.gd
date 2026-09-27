@@ -2,15 +2,27 @@ extends CharacterBody2D
 
 var dialog = null
 @onready var interact_indicator = $Indicator
+@onready var indicator2 = $Indicator2
 
 func _ready() -> void:
 	Globals.purple = false
 
 func _process(_delta):
-	interact_indicator.visible = Globals.purple
+	if Globals.status in Globals.interactions["purple"] \
+	and Globals.can_talk and Globals.purple:
+		interact_indicator.visible = true
+	else:
+		interact_indicator.visible = false
+	
+	if Globals.status in Globals.interactions["purple"] \
+	and Globals.can_talk:
+		indicator2.visible = true
+	else:
+		indicator2.visible = false
 	
 	if Globals.purple:
-		if Input.is_action_just_pressed("ui_accept") and Globals.can_talk:
+		if Input.is_action_just_pressed("ui_accept") \
+		and interact_indicator.visible:
 			Globals.can_move = false
 			Globals.can_talk = false
 			dialog = Dialogic.start("purple_idle")
@@ -18,9 +30,9 @@ func _process(_delta):
 			Dialogic.timeline_ended.connect(dialog_end)
 		
 func dialog_end():
+	Globals.can_move = true
 	await get_tree().create_timer(0.5).timeout
 	Globals.can_talk = true
-	Globals.can_move = true
 
 
 func _on_interact_area_body_entered(body: Node2D) -> void:
