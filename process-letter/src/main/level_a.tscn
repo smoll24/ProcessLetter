@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cfj0vcy0rlv7s" path="res://src/characters/teal.tscn" id="5_sr8mx"]
 [ext_resource type="PackedScene" uid="uid://c1vqjey38id0c" path="res://src/characters/violet.tscn" id="6_3dueu"]
 [ext_resource type="PackedScene" uid="uid://dyue8j0eesvj3" path="res://src/background/Light.tscn" id="8_3dueu"]
+[ext_resource type="PackedScene" uid="uid://g3j5ixhfkttk" path="res://src/characters/bots.tscn" id="8_q05mi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ywdb4"]
 size = Vector2(1418, 1227)
@@ -61,6 +62,15 @@ position = Vector2(-170, 512)
 
 [node name="Violet" parent="." unique_id=1078976922 instance=ExtResource("6_3dueu")]
 position = Vector2(-1325, 683)
+
+[node name="Bots" parent="." unique_id=47230853 instance=ExtResource("8_q05mi")]
+position = Vector2(590, 638)
+
+[node name="Bots2" parent="." unique_id=1817324579 instance=ExtResource("8_q05mi")]
+position = Vector2(-715, 644)
+
+[node name="Bots3" parent="." unique_id=872997564 instance=ExtResource("8_q05mi")]
+position = Vector2(-597, 1246)
 
 [node name="Player" parent="." unique_id=864046172 instance=ExtResource("1_dpurt")]
 position = Vector2(309, 749)

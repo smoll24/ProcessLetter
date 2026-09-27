@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://g3j5ixhfkttk"]
+
+[ext_resource type="Script" uid="uid://brkw4aahc2l4p" path="res://scripts/bots.gd" id="1_b0rwi"]
+[ext_resource type="Texture2D" uid="uid://cmnxc3pvwha1p" path="res://assets/characters/bots/IMG_1721.PNG" id="1_dggjm"]
+[ext_resource type="Texture2D" uid="uid://dt65530bb4wq5" path="res://assets/characters/bots/IMG_1722.PNG" id="2_b0rwi"]
+[ext_resource type="Texture2D" uid="uid://bxb5wu3xw4yki" path="res://assets/characters/bots/IMG_1723.PNG" id="3_xkvqc"]
+[ext_resource type="Texture2D" uid="uid://ca3g05lm8lr1l" path="res://assets/characters/bots/IMG_1724.PNG" id="4_rygj1"]
+[ext_resource type="Texture2D" uid="uid://cje6kkt6ghsne" path="res://assets/characters/bots/IMG_1725.PNG" id="5_uehc6"]
+[ext_resource type="Texture2D" uid="uid://dlf1xmyx028ja" path="res://assets/characters/bots/IMG_1726.PNG" id="6_kmire"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rj60s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dggjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_b0rwi")
+}],
+"loop": 1,
+"name": &"1_front_idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_xkvqc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rygj1")
+}],
+"loop": 1,
+"name": &"2_front_idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_uehc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kmire")
+}],
+"loop": 1,
+"name": &"3_front_idle",
+"speed": 2.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ywdb4"]
+size = Vector2(77, 66)
+
+[node name="Bots" type="CharacterBody2D" unique_id=47230853]
+script = ExtResource("1_b0rwi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=143158568]
+sprite_frames = SubResource("SpriteFrames_rj60s")
+animation = &"1_front_idle"
+autoplay = "1_front_idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=781260810]
+position = Vector2(0.5, 5)
+shape = SubResource("RectangleShape2D_ywdb4")

@@ -1,12 +1,14 @@
 extends CharacterBody2D
 
+@onready var anim = $AnimatedSprite2D
+
 const speed = 400
 var current_dir = 'none'
 var dialog = null
 var can_talk = true
 
 func _ready():
-	$AnimatedSprite2D.play('front_idle')
+	anim.play('front_idle')
 	Globals.can_move = true
 	Globals.can_talk = true
 	
@@ -45,7 +47,6 @@ func player_movement(_delta):
 	
 func play_anim(movement):
 	var dir = current_dir
-	var anim = $AnimatedSprite2D
 	if dir == 'right':
 		anim.flip_h = false
 		if movement == 1:

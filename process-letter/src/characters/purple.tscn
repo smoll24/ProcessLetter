@@ -192,14 +192,6 @@ autoplay = "front_idle"
 position = Vector2(0, 53.5)
 shape = SubResource("RectangleShape2D_ywdb4")
 
-[node name="Indicator" type="Label" parent="." unique_id=1632201780]
-offset_left = -20.0
-offset_top = 26.0
-offset_right = 20.0
-offset_bottom = 49.0
-text = "[Talk]"
-horizontal_alignment = 1
-
 [node name="Interact_area" type="Area2D" parent="." unique_id=385109861]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interact_area" unique_id=1292931418]
@@ -210,7 +202,15 @@ shape = SubResource("RectangleShape2D_rj60s")
 position = Vector2(-3, -128)
 sprite_frames = SubResource("SpriteFrames_rj60s")
 autoplay = "default"
-frame_progress = 0.5405279
+frame_progress = 0.86240745
+
+[node name="Indicator" type="Label" parent="." unique_id=1632201780]
+offset_left = -20.0
+offset_top = 26.0
+offset_right = 23.0
+offset_bottom = 49.0
+text = "[Talk]"
+horizontal_alignment = 1
 
 [connection signal="body_entered" from="Interact_area" to="." method="_on_interact_area_body_entered"]
 [connection signal="body_exited" from="Interact_area" to="." method="_on_interact_area_body_exited"]

@@ -2,6 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://bgy10cwqoxxno" path="res://assets/characters/blue/blue.png" id="1_gwiru"]
 [ext_resource type="Script" uid="uid://b4car8lu5wcay" path="res://scripts/blue.gd" id="1_i7g7q"]
+[ext_resource type="Texture2D" uid="uid://ia5pvbbm51nv" path="res://assets/ui/speech1.png" id="3_bwq0g"]
+[ext_resource type="Texture2D" uid="uid://drnv5c3qwtft" path="res://assets/ui/speech2.png" id="4_6hgni"]
+[ext_resource type="Texture2D" uid="uid://cienvtrschr0s" path="res://assets/ui/speech3.png" id="5_tdksk"]
+[ext_resource type="Texture2D" uid="uid://dske6v8tow7vd" path="res://assets/ui/speech4.png" id="6_8h5oj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i7g7q"]
 atlas = ExtResource("1_gwiru")
@@ -156,6 +160,26 @@ size = Vector2(46.5, 51.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_35yet"]
 size = Vector2(164, 211)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_nfm80"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_bwq0g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6hgni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tdksk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8h5oj")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 4.0
+}]
+
 [node name="Blue" type="CharacterBody2D" unique_id=864046172]
 script = ExtResource("1_i7g7q")
 
@@ -168,20 +192,24 @@ autoplay = "front_idle"
 position = Vector2(1.75, 65.75)
 shape = SubResource("RectangleShape2D_ywdb4")
 
-[node name="Indicator" type="Label" parent="." unique_id=1632201780]
-visible = false
-offset_left = -20.0
-offset_top = -102.0
-offset_right = 20.0
-offset_bottom = -79.0
-text = "!"
-horizontal_alignment = 1
-
 [node name="Interact_area" type="Area2D" parent="." unique_id=1066289758]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interact_area" unique_id=1519066989]
 position = Vector2(-3, -0.5)
 shape = SubResource("RectangleShape2D_35yet")
+
+[node name="Indicator2" type="AnimatedSprite2D" parent="." unique_id=1448777660]
+position = Vector2(-3, -136)
+sprite_frames = SubResource("SpriteFrames_nfm80")
+autoplay = "default"
+
+[node name="Indicator" type="Label" parent="." unique_id=1690913703]
+offset_left = -20.0
+offset_top = 26.0
+offset_right = 23.0
+offset_bottom = 49.0
+text = "[Talk]"
+horizontal_alignment = 1
 
 [connection signal="body_entered" from="Interact_area" to="." method="_on_interact_area_body_entered"]
 [connection signal="body_exited" from="Interact_area" to="." method="_on_interact_area_body_exited"]

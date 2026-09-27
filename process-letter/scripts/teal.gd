@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 var dialog = null
 @onready var interact_indicator = $Indicator
+@onready var indicator2 = $Indicator2
 
 func _ready() -> void:
 	Globals.teal = false
@@ -12,6 +13,12 @@ func _process(_delta):
 		interact_indicator.visible = true
 	else:
 		interact_indicator.visible = false
+	
+	if Globals.status in Globals.interactions["teal"] \
+	and Globals.can_talk:
+		indicator2.visible = true
+	else:
+		indicator2.visible = false
 	
 	if Globals.teal:
 		if Input.is_action_just_pressed("ui_accept") \
