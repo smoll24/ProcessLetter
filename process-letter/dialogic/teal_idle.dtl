@@ -1,0 +1,18 @@
+if {State} == "prog3":
+	join teal left
+	teal: You see this, don't you!?
+elif {State} == "pre1":
+	join teal left
+	teal: Oh no, no, no!
+elif {State} == "prog1":
+	join teal left
+	teal: It’ll be fine... I hope...
+elif {State} == "pre2":
+	join teal left
+	teal: Thank God that's over!
+elif {State} == "prog2":
+	join teal left
+	teal: Just a bit more...
+elif {State} == "pre3":
+	join teal left
+	teal: Not good at all.

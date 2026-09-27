@@ -1,0 +1,9 @@
+if {State} == "prog3":
+	join blue (Vexxed) left
+	blue: We need to do something...
+elif {State} == "prog2":
+	join blue (Curious) left
+	blue: Need something?
+elif {State} == "pre3":
+	join blue (Curious) left
+	blue:  Huh. That’s odd.

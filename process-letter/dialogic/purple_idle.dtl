@@ -1,0 +1,18 @@
+if {State} == "prog3":
+	join purple (Pissed) left
+	purple: You can't seriously believe that!
+elif {State} == "pre1":
+	join purple (Pissed) left
+	purple: Worthless piece of junk.
+elif {State} == "prog1":
+	join purple (Exhausted) left
+	purple: I wish I hadn’t...
+elif {State} == "pre2":
+	join purple (Content) left
+	purple: ...
+elif {State} == "prog2":
+	join purple (Exhausted) left
+	purple: That's not right...
+elif {State} == "pre3":
+	join purple (Exhausted) left
+	purple: That’s not good.

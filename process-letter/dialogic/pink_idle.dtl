@@ -1,0 +1,6 @@
+if {State} == "prog3":
+	join pink center
+	pink: Are you done yet?
+elif {} == "pre3":
+	join pink center
+	pink: Not nearly enough.

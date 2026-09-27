@@ -77,7 +77,7 @@ func _on_icon_body_entered(_body: Node2D) -> void:
 		can_talk = false
 		Globals.can_move = false
 		play_anim(0)
-		dialog = Dialogic.start("timeline")
+		dialog = Dialogic.start("purple_idle")
 		get_tree().root.add_child(dialog)
 		Dialogic.timeline_ended.connect(dialog_end)
 		

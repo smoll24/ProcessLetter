@@ -1,0 +1,18 @@
+if {State} == "prog3":
+	join violet (Curious) left
+	violet: They.. they wouldn't do that...
+elif {State} == "pre1":
+	join violet (Stare) left
+	violet: My baby...
+elif {State} == "prog1":
+	join violet (Stare) left
+	violet: Maybe if I try...
+elif {State} == "pre2":
+	join violet (Enamoured) left
+	violet: Incredible!
+elif {State} == "prog2":
+	join violet (Curious) left
+	violet: Look at that!
+elif {State} == "pre3":
+	join violet (Curious) left
+	violet: ...

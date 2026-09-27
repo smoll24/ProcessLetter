@@ -25,19 +25,39 @@ Globals="*uid://c8finuspe0fya"
 directories/dch_directory={
 "blue": "res://dialogic/blue.dch",
 "green": "res://dialogic/green.dch",
+"pink": "res://dialogic/pink.dch",
 "purple": "res://dialogic/purple.dch",
 "teal": "res://dialogic/teal.dch",
 "violet": "res://dialogic/violet.dch"
 }
 directories/dtl_directory={
-"timeline": "res://dialogic/timeline.dtl"
+"blue_idle": "res://dialogic/blue_idle.dtl",
+"pink_idle": "res://dialogic/pink_idle.dtl",
+"purple_idle": "res://dialogic/purple_idle.dtl",
+"quest1": "res://dialogic/quest1.dtl",
+"quest1_completed": "res://dialogic/quest1_completed.dtl",
+"quest2": "res://dialogic/quest2.dtl",
+"quest3": "res://dialogic/quest3.dtl",
+"teal_idle": "res://dialogic/teal_idle.dtl",
+"timeline": "res://dialogic/timeline.dtl",
+"tree1_blue": "res://dialogic/tree1_blue.dtl",
+"tree2_purple": "res://dialogic/tree2_purple.dtl",
+"tree3_violet": "res://dialogic/tree3_violet.dtl",
+"tree4_pink": "res://dialogic/tree4_pink.dtl",
+"violet_idle": "res://dialogic/violet_idle.dtl"
 }
 layout/style_directory={
 "": "res://dialogic/visnov_style.tres",
+"blue": "res://dialogic/blue.tres",
 "bubble_style": "res://dialogic/bubble_style.tres",
+"green": "res://dialogic/green.tres",
+"pink": "res://dialogic/pink.tres",
+"purple": "res://dialogic/purple.tres",
+"teal": "res://dialogic/teal.tres",
+"violet": "res://dialogic/violet.tres",
 "visnov_style": "res://dialogic/visnov_style.tres"
 }
-layout/style_list=["res://dialogic/visnov_style.tres", "res://dialogic/bubble_style.tres"]
+layout/style_list=["res://dialogic/visnov_style.tres", "res://dialogic/bubble_style.tres", "res://dialogic/teal.tres", "res://dialogic/purple.tres", "res://dialogic/violet.tres", "res://dialogic/blue.tres", "res://dialogic/pink.tres", "res://dialogic/green.tres"]
 layout/default_style="res://dialogic/visnov_style.tres"
 glossary/default_case_sensitive=true
 text/letter_speed=0.01
@@ -74,7 +94,9 @@ audio/channel_defaults={
 }
 }
 animations/leave_default="Fade Out Down"
-variables={}
+variables={
+"State": ""
+}
 
 [display]
 
