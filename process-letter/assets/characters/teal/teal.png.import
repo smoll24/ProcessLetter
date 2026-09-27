@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chkonanhdt0q8"
-path="res://.godot/imported/IMG_1609.PNG-ad6832f06f54c41344b537d4a7bbc681.ctex"
+uid="uid://f1gm587m4tw4"
+path="res://.godot/imported/teal.png-00249ba0338632a6c92f6fa238944e57.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/violet/front/IMG_1609.PNG"
-dest_files=["res://.godot/imported/IMG_1609.PNG-ad6832f06f54c41344b537d4a7bbc681.ctex"]
+source_file="res://assets/characters/teal/teal.png"
+dest_files=["res://.godot/imported/teal.png-00249ba0338632a6c92f6fa238944e57.ctex"]
 
 [params]
 
