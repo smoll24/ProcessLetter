@@ -1,11 +1,14 @@
 extends Node2D
 
-@onready var level = $Alevel
+@onready var outer = $OuterLayer
+@onready var inner = $InnerLayer
 
 
 func _process(delta):
 	if Globals.in_room:
-		level.visible = false
+		outer.visible = false
+		inner.visible = true
 	else:
-		level.visible = true
+		outer.visible = true
+		inner.visible = false
 		

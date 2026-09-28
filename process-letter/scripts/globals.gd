@@ -1,5 +1,6 @@
 extends Node
 
+enum Enter {START, STAIR_TOP, STAIR_BOTTOM, ELEVATOR}
 
 var can_move = true
 var can_talk = true
@@ -7,6 +8,8 @@ var puzzle_phase = 0
 var status = "prog3"
 var phase = 0
 var in_room = true
+
+var entrance: Enter = Enter.START
 
 var interactions = {"purple":["prog3","pre1","prog1","pre2","prog2","pre3"],
 "pink":["prog3","pre3"], "blue":["prog3","prog2","pre3"],
@@ -23,7 +26,10 @@ var workbench = false
 var in_workbench = false
 var elevator = false
 var in_elevator = false
+var bot = false
 
+var can_capture = true
+var captured = 0
 
 func _process(delta):
 	Dialogic.VAR.set_variable("State", status)

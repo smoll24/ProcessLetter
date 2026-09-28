@@ -30,9 +30,9 @@ func _process(_delta):
 			Dialogic.timeline_ended.connect(dialog_end)
 		
 func dialog_end():
+	Globals.can_move = true
 	await get_tree().create_timer(0.5).timeout
 	Globals.can_talk = true
-	Globals.can_move = true
 
 
 func _on_interact_area_body_entered(body: Node2D) -> void:

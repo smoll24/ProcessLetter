@@ -3,6 +3,7 @@ extends CharacterBody2D
 var dialog = null
 @onready var interact_indicator = $Indicator
 @onready var indicator2 = $Indicator2
+@export var phase = ""
 
 func _ready() -> void:
 	Globals.blue = false
@@ -30,9 +31,9 @@ func _process(_delta):
 			Dialogic.timeline_ended.connect(dialog_end)
 		
 func dialog_end():
+	Globals.can_move = true
 	await get_tree().create_timer(0.5).timeout
 	Globals.can_talk = true
-	Globals.can_move = true
 
 func _on_interact_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):

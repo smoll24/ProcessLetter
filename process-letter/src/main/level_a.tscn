@@ -21,15 +21,6 @@
 [ext_resource type="PackedScene" uid="uid://dj3b8bc4ffmnv" path="res://src/ui/elevator_ui.tscn" id="18_q3b3h"]
 [ext_resource type="PackedScene" uid="uid://fc8spue341ep" path="res://src/ui/workbench_ui.tscn" id="18_yvsej"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ywdb4"]
-size = Vector2(1418, 552)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cpgk1"]
-size = Vector2(1418, 554.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_f7x0w"]
-size = Vector2(609, 814)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7wt6k"]
 size = Vector2(1418, 1156.5)
 
@@ -58,144 +49,142 @@ script = ExtResource("1_cpgk1")
 position = Vector2(-1419, 3008)
 texture = ExtResource("2_bexj4")
 
-[node name="Alevel" type="Sprite2D" parent="." unique_id=1989980623]
+[node name="OuterLayer" type="Node2D" parent="." unique_id=1467002887]
+
+[node name="Alevel" type="Sprite2D" parent="OuterLayer" unique_id=1989980623]
 position = Vector2(-1419.0001, 3008.0002)
 texture = ExtResource("1_oqaou")
 metadata/_edit_lock_ = true
 
-[node name="Wall" type="Node2D" parent="." unique_id=1333465863]
+[node name="Wall" type="Node2D" parent="OuterLayer" unique_id=1333465863]
 
-[node name="Img1734" type="Sprite2D" parent="Wall" unique_id=1743994147]
+[node name="Img1734" type="Sprite2D" parent="OuterLayer/Wall" unique_id=1743994147]
 position = Vector2(-891, 1058)
 texture = ExtResource("14_4w7p0")
 
-[node name="Img1735" type="Sprite2D" parent="Wall" unique_id=1880429891]
+[node name="Img1735" type="Sprite2D" parent="OuterLayer/Wall" unique_id=1880429891]
 position = Vector2(287, 1045)
 texture = ExtResource("15_bexj4")
 
-[node name="Img1736" type="Sprite2D" parent="Wall" unique_id=1240565447]
+[node name="Img1736" type="Sprite2D" parent="OuterLayer/Wall" unique_id=1240565447]
 position = Vector2(822, 1163)
 texture = ExtResource("16_yvsej")
 
-[node name="Img1737" type="Sprite2D" parent="Wall" unique_id=1822299127]
+[node name="Img1737" type="Sprite2D" parent="OuterLayer/Wall" unique_id=1822299127]
 position = Vector2(1062, 1241)
 texture = ExtResource("14_4w7p0")
 
-[node name="Img1738" type="Sprite2D" parent="Wall" unique_id=827911438]
+[node name="Img1738" type="Sprite2D" parent="OuterLayer/Wall" unique_id=827911438]
 position = Vector2(-1571, 1175)
 texture = ExtResource("15_bexj4")
 
-[node name="Img1739" type="Sprite2D" parent="Wall" unique_id=2135090568]
+[node name="Img1739" type="Sprite2D" parent="OuterLayer/Wall" unique_id=2135090568]
 position = Vector2(-1374, 1320)
 texture = ExtResource("16_yvsej")
 
-[node name="Img1740" type="Sprite2D" parent="Wall" unique_id=534981440]
+[node name="Img1740" type="Sprite2D" parent="OuterLayer/Wall" unique_id=534981440]
 position = Vector2(-1911, 1915)
 texture = ExtResource("14_4w7p0")
 
-[node name="Img1741" type="Sprite2D" parent="Wall" unique_id=37342258]
+[node name="Img1741" type="Sprite2D" parent="OuterLayer/Wall" unique_id=37342258]
 position = Vector2(-2379, 2030)
 texture = ExtResource("15_bexj4")
 
-[node name="Img1742" type="Sprite2D" parent="Wall" unique_id=1249392288]
+[node name="Img1742" type="Sprite2D" parent="OuterLayer/Wall" unique_id=1249392288]
 position = Vector2(-3261, 1919)
 texture = ExtResource("16_yvsej")
 
-[node name="Img1743" type="Sprite2D" parent="Wall" unique_id=1105621814]
+[node name="Img1743" type="Sprite2D" parent="OuterLayer/Wall" unique_id=1105621814]
 position = Vector2(-3239, 3373)
 texture = ExtResource("14_4w7p0")
 
-[node name="Img1744" type="Sprite2D" parent="Wall" unique_id=458823375]
+[node name="Img1744" type="Sprite2D" parent="OuterLayer/Wall" unique_id=458823375]
 position = Vector2(-2016, 3351)
 texture = ExtResource("15_bexj4")
 
-[node name="Img1745" type="Sprite2D" parent="Wall" unique_id=823216833]
+[node name="Img1745" type="Sprite2D" parent="OuterLayer/Wall" unique_id=823216833]
 position = Vector2(-2349, 3455)
 texture = ExtResource("16_yvsej")
 
-[node name="Props" type="Node2D" parent="." unique_id=1379142347]
+[node name="Props" type="Node2D" parent="OuterLayer" unique_id=1379142347]
 
-[node name="Plants1" parent="Props" unique_id=100185598 instance=ExtResource("3_m4akb")]
+[node name="Plants1" parent="OuterLayer/Props" unique_id=100185598 instance=ExtResource("3_m4akb")]
 position = Vector2(-1660, 1539)
 scale = Vector2(-1, 1)
 
-[node name="Plants2" parent="Props" unique_id=273945878 instance=ExtResource("3_m4akb")]
+[node name="Plants2" parent="OuterLayer/Props" unique_id=273945878 instance=ExtResource("3_m4akb")]
 position = Vector2(1106, 1525)
 
-[node name="Plants3" parent="Props" unique_id=568945762 instance=ExtResource("4_yema0")]
+[node name="Plants3" parent="OuterLayer/Props" unique_id=568945762 instance=ExtResource("4_yema0")]
 position = Vector2(348, 1232)
 scale = Vector2(-1, 1)
 
-[node name="Plants4" parent="Props" unique_id=69812795 instance=ExtResource("4_yema0")]
+[node name="Plants4" parent="OuterLayer/Props" unique_id=69812795 instance=ExtResource("4_yema0")]
 position = Vector2(-907, 1231)
 
-[node name="Plants5" parent="Props" unique_id=482035298 instance=ExtResource("3_m4akb")]
+[node name="Plants5" parent="OuterLayer/Props" unique_id=482035298 instance=ExtResource("3_m4akb")]
 position = Vector2(1102, 1944)
 
-[node name="Plants6" parent="Props" unique_id=993008632 instance=ExtResource("3_m4akb")]
+[node name="Plants6" parent="OuterLayer/Props" unique_id=993008632 instance=ExtResource("3_m4akb")]
 position = Vector2(-1661, 1938)
 scale = Vector2(-1, 1)
 
-[node name="Plants7" parent="Props" unique_id=1237729871 instance=ExtResource("4_yema0")]
-position = Vector2(-1211, 2172)
-
-[node name="Plants8" parent="Props" unique_id=1920641913 instance=ExtResource("4_yema0")]
-position = Vector2(656, 2173)
-
-[node name="Plants9" parent="Props" unique_id=1776719568 instance=ExtResource("4_yema0")]
+[node name="Plants9" parent="OuterLayer/Props" unique_id=1776719568 instance=ExtResource("4_yema0")]
 position = Vector2(-1388, 5055)
 
-[node name="Plants10" parent="Props" unique_id=299341588 instance=ExtResource("4_yema0")]
+[node name="Plants10" parent="OuterLayer/Props" unique_id=299341588 instance=ExtResource("4_yema0")]
 position = Vector2(862, 5051)
 scale = Vector2(-1, 1)
 
-[node name="Plants11" parent="Props" unique_id=788867097 instance=ExtResource("3_m4akb")]
+[node name="Plants11" parent="OuterLayer/Props" unique_id=788867097 instance=ExtResource("3_m4akb")]
 position = Vector2(-1663, 4526)
 scale = Vector2(-1, 1)
 
-[node name="Plants12" parent="Props" unique_id=1703785443 instance=ExtResource("3_m4akb")]
+[node name="Plants12" parent="OuterLayer/Props" unique_id=1703785443 instance=ExtResource("3_m4akb")]
 position = Vector2(-1664, 4925)
 scale = Vector2(-1, 1)
 
-[node name="Plants13" parent="Props" unique_id=839341094 instance=ExtResource("3_m4akb")]
+[node name="Plants13" parent="OuterLayer/Props" unique_id=839341094 instance=ExtResource("3_m4akb")]
 position = Vector2(1123, 4509)
 
-[node name="Plants14" parent="Props" unique_id=1556956451 instance=ExtResource("3_m4akb")]
+[node name="Plants14" parent="OuterLayer/Props" unique_id=1556956451 instance=ExtResource("3_m4akb")]
 position = Vector2(1119, 4928)
 
-[node name="Workbench" parent="Props" unique_id=1891796453 instance=ExtResource("9_bexj4")]
-position = Vector2(50, 324)
-
-[node name="Elevator" parent="Props" unique_id=902053519 instance=ExtResource("10_88hbs")]
+[node name="Elevator" parent="OuterLayer/Props" unique_id=902053519 instance=ExtResource("10_88hbs")]
 position = Vector2(-1278, 952)
 
-[node name="Characters" type="Node2D" parent="." unique_id=790197414]
+[node name="OutCharacters" type="Node2D" parent="OuterLayer" unique_id=790197414]
 
-[node name="Purple" parent="Characters" unique_id=626783985 instance=ExtResource("2_waa7u")]
+[node name="Purple" parent="OuterLayer/OutCharacters" unique_id=626783985 instance=ExtResource("2_waa7u")]
 position = Vector2(53, 1268)
 
-[node name="Blue" parent="Characters" unique_id=1379034531 instance=ExtResource("3_sg781")]
+[node name="Blue" parent="OuterLayer/OutCharacters" unique_id=1379034531 instance=ExtResource("3_sg781")]
 position = Vector2(360, 1623)
 
-[node name="Pink" parent="Characters" unique_id=213673184 instance=ExtResource("4_oqaou")]
+[node name="Pink" parent="OuterLayer/OutCharacters" unique_id=213673184 instance=ExtResource("4_oqaou")]
 position = Vector2(-609, 1265)
 
-[node name="Teal" parent="Characters" unique_id=855263268 instance=ExtResource("5_sr8mx")]
+[node name="Teal" parent="OuterLayer/OutCharacters" unique_id=855263268 instance=ExtResource("5_sr8mx")]
 position = Vector2(-170, 512)
 
-[node name="Violet" parent="Characters" unique_id=1078976922 instance=ExtResource("6_3dueu")]
+[node name="Violet" parent="OuterLayer/OutCharacters" unique_id=1078976922 instance=ExtResource("6_3dueu")]
 position = Vector2(-1382, 637)
 
-[node name="Bots" type="Node2D" parent="." unique_id=479377854]
+[node name="OutBots" type="Node2D" parent="OuterLayer" unique_id=479377854]
 
-[node name="Bots1" parent="Bots" unique_id=47230853 instance=ExtResource("8_q05mi")]
+[node name="Bots1" parent="OuterLayer/OutBots" unique_id=47230853 instance=ExtResource("8_q05mi")]
 position = Vector2(604, 646)
 
-[node name="Bots2" parent="Bots" unique_id=1817324579 instance=ExtResource("8_q05mi")]
+[node name="Bots2" parent="OuterLayer/OutBots" unique_id=1817324579 instance=ExtResource("8_q05mi")]
 position = Vector2(-715, 644)
 
-[node name="Bots3" parent="Bots" unique_id=872997564 instance=ExtResource("8_q05mi")]
+[node name="Bots3" parent="OuterLayer/OutBots" unique_id=872997564 instance=ExtResource("8_q05mi")]
 position = Vector2(-1073, 1418)
+
+[node name="InnerLayer" type="Node2D" parent="." unique_id=897240129]
+
+[node name="Workbench" parent="InnerLayer" unique_id=1891796453 instance=ExtResource("9_bexj4")]
+position = Vector2(50, 324)
 
 [node name="Player" parent="." unique_id=864046172 instance=ExtResource("1_dpurt")]
 position = Vector2(226, 344)
@@ -219,26 +208,12 @@ position = Vector2(193, 1070)
 position = Vector2(961, 1270)
 
 [node name="Coliisions" type="Node2D" parent="." unique_id=1046833520]
-visible = false
 metadata/_edit_lock_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Coliisions" unique_id=455011079]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Coliisions/StaticBody2D" unique_id=765979344]
-position = Vector2(-1150, -316)
-shape = SubResource("RectangleShape2D_ywdb4")
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="Coliisions" unique_id=1944555711]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Coliisions/StaticBody2D2" unique_id=1384321668]
-position = Vector2(621, -314.25)
-shape = SubResource("RectangleShape2D_cpgk1")
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="Coliisions" unique_id=634329311]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Coliisions/StaticBody2D3" unique_id=1545584955]
-position = Vector2(-269, -196)
-shape = SubResource("RectangleShape2D_f7x0w")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Coliisions/StaticBody2D" unique_id=1732225373]
+polygon = PackedVector2Array(1622, 634, 76, 639, 75, 602, 253, 602, 256, 413, -72, 411, -71, 601, -54, 600, -56, 640, -76, 642, -90, 635, -91, 400, -120, 383, -118, 206, -406, 208, -406, 382, -435, 401, -440, 640, -1885, 640, -1882, -634, 1610, -639)
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Coliisions" unique_id=1040210687]
 
@@ -290,7 +265,7 @@ shape = SubResource("RectangleShape2D_yvsej")
 [node name="StaticBody2D12" type="StaticBody2D" parent="Coliisions" unique_id=97583382]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Coliisions/StaticBody2D12" unique_id=1057045478]
-polygon = PackedVector2Array(-1830, 853, -1343, 860, -1341, 895, -1222, 894, -1219, 870, -422, 868, -419, 1254, -488, 1257, -487, 1239, -1022, 1229, -1219, 1436, -1846, 1434)
+polygon = PackedVector2Array(-1830, 853, -1343, 860, -1341, 894, -1539, 892, -1540, 1049, -1184, 1047, -1184, 894, -1222, 894, -1219, 870, -422, 868, -419, 1254, -488, 1257, -487, 1239, -1022, 1229, -1219, 1436, -1846, 1434)
 
 [node name="StaticBody2D13" type="StaticBody2D" parent="Coliisions" unique_id=845770110]
 
@@ -298,10 +273,14 @@ polygon = PackedVector2Array(-1830, 853, -1343, 860, -1341, 895, -1222, 894, -12
 polygon = PackedVector2Array(-129, 864, 1359, 860, 1366, 1427, 667, 1433, 472, 1236, -59, 1234, -60, 1260, -126, 1259)
 
 [node name="StaticBody2D17" type="StaticBody2D" parent="Coliisions" unique_id=647597329]
-visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Coliisions/StaticBody2D17" unique_id=318811197]
 polygon = PackedVector2Array(-776, 1735, -618, 1639, -436, 1562, -249, 1543, -93, 1578, 81, 1645, 281, 1778, 397, 1944, 463, 2115, 487, 2265, 678, 2284, 875, 2405, 951, 2646, 957, 2812, 959, 3869, 906, 4069, 758, 4213, 577, 4263, 481, 4262, 430, 4509, 318, 4705, 157, 4841, -13, 4924, -246, 4983, -406, 4972, -594, 4907, -767, 4802, -883, 4670, -974, 4517, -1006, 4386, -1030, 4259, -1170, 4255, -1341, 4191, -1460, 4044, -1503, 3913, -1502, 3796, -1503, 2659, -1452, 2463, -1322, 2319, -1158, 2269, -1033, 2261, -986, 2049, -894, 1861)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Coliisions" unique_id=1397742214]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Coliisions/StaticBody2D2" unique_id=838231144]
+polygon = PackedVector2Array(-3602, 3805, -2338, 3801, -2336, 3846, -2741, 3851, -2759, 4474, -1771, 4465, -1775, 3853, -2185, 3845, -2185, 3791, -1739, 3799, -1744, 4772, -3590, 4758)
 
 [node name="Icon" type="Area2D" parent="." unique_id=1028668035]
 visible = false
@@ -322,7 +301,7 @@ visible = false
 [node name="Area2D" type="Area2D" parent="Rooms" unique_id=852131100]
 
 [node name="Polygon2D" type="CollisionPolygon2D" parent="Rooms/Area2D" unique_id=445262668]
-polygon = PackedVector2Array(-263, 300, -68, 297, -72, 623, 1420, 609, 1346, 5765, -1821, 5713, -1769, 3817, -3996, 3823, -4115, 880, -1733, 619, -447, 626, -447, 309, -279, 302, -268, -530, -4739, -283, -4634, 6199, 2781, 6241, 1994, -608, -235, -532)
+polygon = PackedVector2Array(-263, 300, -68, 297, -72, 623, 1420, 609, 1346, 5765, -1821, 5713, -1769, 3817, -3996, 3823, -3589, 1409, -1976, 1388, -598, 1169, -688, 878, -1590, 874, -1597, 618, -447, 626, -447, 309, -279, 302, -268, -530, -4739, -283, -4634, 6199, 2781, 6241, 1994, -608, -235, -532)
 
 [node name="Elevator_ui" parent="." unique_id=1433977059 instance=ExtResource("18_q3b3h")]
 visible = false
