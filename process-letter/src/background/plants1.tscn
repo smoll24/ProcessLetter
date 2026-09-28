@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bc3xmnxig1sdp"]
+
+[ext_resource type="Script" uid="uid://d325ml4m7xu8y" path="res://scripts/plants.gd" id="1_ahtdm"]
+[ext_resource type="Texture2D" uid="uid://bytudwwi7s505" path="res://assets/bg/IMG_1737.PNG" id="2_67jid"]
+[ext_resource type="Texture2D" uid="uid://ci3v3qi35gu5s" path="res://assets/bg/IMG_1738.PNG" id="3_0gv4k"]
+[ext_resource type="Texture2D" uid="uid://bl7hc077y27gv" path="res://assets/bg/IMG_1739.PNG" id="4_pswkm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ecueg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_67jid")
+}],
+"loop": 1,
+"name": &"phase1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_0gv4k")
+}],
+"loop": 1,
+"name": &"phase2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_pswkm")
+}],
+"loop": 1,
+"name": &"phase3",
+"speed": 5.0
+}]
+
+[node name="Plants1" type="CharacterBody2D" unique_id=100185598]
+script = ExtResource("1_ahtdm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1143342621]
+sprite_frames = SubResource("SpriteFrames_ecueg")
+animation = &"phase3"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1807310337]
+polygon = PackedVector2Array(-118, -53, -157, 8, -157, 78, 168, 79, 167, 9, 129, -53)

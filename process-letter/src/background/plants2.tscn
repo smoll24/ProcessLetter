@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cujpuiv63mxyd"]
+
+[ext_resource type="Script" uid="uid://d325ml4m7xu8y" path="res://scripts/plants.gd" id="1_1pltu"]
+[ext_resource type="Texture2D" uid="uid://bf28lvfk2ow4" path="res://assets/bg/IMG_1740.PNG" id="2_iso3r"]
+[ext_resource type="Texture2D" uid="uid://bm4i0f4mv48g3" path="res://assets/bg/IMG_1741.PNG" id="3_fcie6"]
+[ext_resource type="Texture2D" uid="uid://cm23utpwjwpp7" path="res://assets/bg/IMG_1742.PNG" id="4_ox8ow"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_67jid"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_iso3r")
+}],
+"loop": 1,
+"name": &"phase1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_fcie6")
+}],
+"loop": 1,
+"name": &"phase2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ox8ow")
+}],
+"loop": 1,
+"name": &"phase3",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0gv4k"]
+size = Vector2(130, 361)
+
+[node name="Plants1" type="CharacterBody2D" unique_id=100185598]
+script = ExtResource("1_1pltu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1143342621]
+sprite_frames = SubResource("SpriteFrames_67jid")
+animation = &"phase3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=345346223]
+position = Vector2(-14, 21.5)
+shape = SubResource("RectangleShape2D_0gv4k")

@@ -6,6 +6,7 @@ var can_talk = true
 var puzzle_phase = 0
 var status = "prog3"
 var phase = 0
+var in_room = true
 
 var interactions = {"purple":["prog3","pre1","prog1","pre2","prog2","pre3"],
 "pink":["prog3","pre3"], "blue":["prog3","prog2","pre3"],
