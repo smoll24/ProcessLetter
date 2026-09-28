@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://fc8spue341ep"]
+
+[ext_resource type="Script" uid="uid://g1yicx3lbqc7" path="res://scripts/workbench_ui.gd" id="1_cldsk"]
+[ext_resource type="Texture2D" uid="uid://sdlmwyfftmor" path="res://assets/ui/computer.png" id="1_dpo3r"]
+[ext_resource type="PackedScene" uid="uid://i1hf4jklbl1g" path="res://src/puzzles/sudoku.tscn" id="2_cldsk"]
+[ext_resource type="PackedScene" uid="uid://dh51ib38pbrq0" path="res://src/puzzles/network.tscn" id="3_suigc"]
+
+[node name="Workbench" type="CanvasLayer" unique_id=1433977059]
+script = ExtResource("1_cldsk")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1609062932]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_dpo3r")
+
+[node name="Sudoku" parent="." unique_id=507427484 instance=ExtResource("2_cldsk")]
+visible = false
+
+[node name="Network" parent="." unique_id=1872065222 instance=ExtResource("3_suigc")]
+
+[node name="Button" type="Button" parent="." unique_id=1091397934]
+offset_left = 36.0
+offset_top = 22.0
+offset_right = 154.0
+offset_bottom = 106.0
+text = "[Exit]"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

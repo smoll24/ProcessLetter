@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bdincn4gbbh7k"]
+
+[ext_resource type="Script" uid="uid://dhetpp6b7pum6" path="res://scripts/elevator.gd" id="1_nw4mw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jgoxw"]
+size = Vector2(159, 207)
+
+[node name="Elevator" type="Node2D" unique_id=1891796453]
+script = ExtResource("1_nw4mw")
+
+[node name="Interact_area" type="Area2D" parent="." unique_id=1474680225]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact_area" unique_id=1020525234]
+position = Vector2(-5, -46)
+shape = SubResource("RectangleShape2D_jgoxw")
+
+[node name="Indicator" type="Label" parent="." unique_id=939208964]
+offset_left = -40.0
+offset_top = -41.0
+offset_right = 32.0
+offset_bottom = -18.0
+text = "[Interact]"
+horizontal_alignment = 1
+
+[connection signal="body_entered" from="Interact_area" to="." method="_on_interact_area_body_entered"]
+[connection signal="body_exited" from="Interact_area" to="." method="_on_interact_area_body_exited"]

@@ -1,5 +1,8 @@
 extends Node2D
 
+#Reset right now restarts the whole scene, but that makes
+#the game glitch so fix that later... same for the other games
+
 @onready var button1 = $Button1
 @onready var button2 = $Button2
 @onready var button3 = $Button3

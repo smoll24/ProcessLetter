@@ -11,13 +11,18 @@ var in_room = true
 var interactions = {"purple":["prog3","pre1","prog1","pre2","prog2","pre3"],
 "pink":["prog3","pre3"], "blue":["prog3","prog2","pre3"],
 "teal":["prog3","pre1","prog1","pre2","prog2","pre3"],
-"violet":["prog3","pre1","prog1","pre2","prog2","pre3"]}
+"violet":["prog3","pre1","prog1","pre2","prog2","pre3"],
+"workbench":["prog1","prog2","prog3"]}
 
 var purple = false
 var pink = false
 var teal = false
 var blue = false
 var violet = false
+var workbench = false
+var in_workbench = false
+var elevator = false
+var in_elevator = false
 
 
 func _process(delta):

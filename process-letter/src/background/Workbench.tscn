@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://c4ghcimyna5ur"]
+
+[ext_resource type="Script" uid="uid://c262rji5apn04" path="res://scripts/workbench.gd" id="1_mqkai"]
+[ext_resource type="Texture2D" uid="uid://ekbl1yctr65b" path="res://assets/ui/excalamation.png" id="1_u1evn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jgoxw"]
+size = Vector2(159, 207)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8d2bj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_u1evn")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="Workbench" type="Node2D" unique_id=1891796453]
+script = ExtResource("1_mqkai")
+
+[node name="Interact_area" type="Area2D" parent="." unique_id=1474680225]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact_area" unique_id=1020525234]
+position = Vector2(-3.5, 21.5)
+shape = SubResource("RectangleShape2D_jgoxw")
+
+[node name="Indicator2" type="AnimatedSprite2D" parent="." unique_id=710540108]
+position = Vector2(-3, -136)
+sprite_frames = SubResource("SpriteFrames_8d2bj")
+autoplay = "default"
+
+[node name="Indicator" type="Label" parent="." unique_id=939208964]
+offset_left = -40.0
+offset_top = -41.0
+offset_right = 32.0
+offset_bottom = -18.0
+text = "[Interact]"
+horizontal_alignment = 1
+
+[connection signal="body_entered" from="Interact_area" to="." method="_on_interact_area_body_entered"]
+[connection signal="body_exited" from="Interact_area" to="." method="_on_interact_area_body_exited"]

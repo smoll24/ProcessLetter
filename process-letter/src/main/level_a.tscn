@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cpsify10evtdv" path="res://scripts/level_a.gd" id="1_cpgk1"]
 [ext_resource type="PackedScene" uid="uid://r5j5r2hfjn43" path="res://src/characters/player.tscn" id="1_dpurt"]
 [ext_resource type="Texture2D" uid="uid://cyostt8afrjb1" path="res://assets/bg/alevel.png" id="1_oqaou"]
-[ext_resource type="Texture2D" uid="uid://da7dx2qnkga4" path="res://assets/bg/alevel_black.png" id="2_7wt6k"]
+[ext_resource type="Texture2D" uid="uid://b4dert0y1hjg1" path="res://assets/bg/alevel_rooms.png" id="2_bexj4"]
 [ext_resource type="PackedScene" uid="uid://doyphkina4b2k" path="res://src/characters/purple.tscn" id="2_waa7u"]
 [ext_resource type="PackedScene" uid="uid://cujpuiv63mxyd" path="res://src/background/plants2.tscn" id="3_m4akb"]
 [ext_resource type="PackedScene" uid="uid://bjuqqpsi7fd6y" path="res://src/characters/blue.tscn" id="3_sg781"]
@@ -13,9 +13,13 @@
 [ext_resource type="PackedScene" uid="uid://c1vqjey38id0c" path="res://src/characters/violet.tscn" id="6_3dueu"]
 [ext_resource type="PackedScene" uid="uid://dyue8j0eesvj3" path="res://src/background/Light.tscn" id="8_3dueu"]
 [ext_resource type="PackedScene" uid="uid://g3j5ixhfkttk" path="res://src/characters/bots.tscn" id="8_q05mi"]
+[ext_resource type="PackedScene" uid="uid://c4ghcimyna5ur" path="res://src/background/Workbench.tscn" id="9_bexj4"]
+[ext_resource type="PackedScene" uid="uid://bdincn4gbbh7k" path="res://src/background/Elevator.tscn" id="10_88hbs"]
 [ext_resource type="Texture2D" uid="uid://cq6v255cdh4bu" path="res://assets/bg/IMG_1734.PNG" id="14_4w7p0"]
 [ext_resource type="Texture2D" uid="uid://c46k4hlesdsh8" path="res://assets/bg/IMG_1735.PNG" id="15_bexj4"]
 [ext_resource type="Texture2D" uid="uid://pon5jb21air1" path="res://assets/bg/IMG_1736.PNG" id="16_yvsej"]
+[ext_resource type="PackedScene" uid="uid://dj3b8bc4ffmnv" path="res://src/ui/elevator_ui.tscn" id="18_q3b3h"]
+[ext_resource type="PackedScene" uid="uid://fc8spue341ep" path="res://src/ui/workbench_ui.tscn" id="18_yvsej"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ywdb4"]
 size = Vector2(1418, 552)
@@ -49,6 +53,10 @@ size = Vector2(283, 9)
 
 [node name="Level_A" type="Node2D" unique_id=1557939465]
 script = ExtResource("1_cpgk1")
+
+[node name="AlevelRooms" type="Sprite2D" parent="." unique_id=854602812]
+position = Vector2(-1419, 3008)
+texture = ExtResource("2_bexj4")
 
 [node name="Alevel" type="Sprite2D" parent="." unique_id=1989980623]
 position = Vector2(-1419.0001, 3008.0002)
@@ -155,6 +163,12 @@ position = Vector2(1123, 4509)
 [node name="Plants14" parent="Props" unique_id=1556956451 instance=ExtResource("3_m4akb")]
 position = Vector2(1119, 4928)
 
+[node name="Workbench" parent="Props" unique_id=1891796453 instance=ExtResource("9_bexj4")]
+position = Vector2(50, 324)
+
+[node name="Elevator" parent="Props" unique_id=902053519 instance=ExtResource("10_88hbs")]
+position = Vector2(-1278, 952)
+
 [node name="Characters" type="Node2D" parent="." unique_id=790197414]
 
 [node name="Purple" parent="Characters" unique_id=626783985 instance=ExtResource("2_waa7u")]
@@ -170,12 +184,12 @@ position = Vector2(-609, 1265)
 position = Vector2(-170, 512)
 
 [node name="Violet" parent="Characters" unique_id=1078976922 instance=ExtResource("6_3dueu")]
-position = Vector2(-1325, 683)
+position = Vector2(-1382, 637)
 
 [node name="Bots" type="Node2D" parent="." unique_id=479377854]
 
 [node name="Bots1" parent="Bots" unique_id=47230853 instance=ExtResource("8_q05mi")]
-position = Vector2(590, 638)
+position = Vector2(604, 646)
 
 [node name="Bots2" parent="Bots" unique_id=1817324579 instance=ExtResource("8_q05mi")]
 position = Vector2(-715, 644)
@@ -203,12 +217,6 @@ position = Vector2(193, 1070)
 
 [node name="Light5" parent="Lights" unique_id=419073303 instance=ExtResource("8_3dueu")]
 position = Vector2(961, 1270)
-
-[node name="Alevel_top" type="Sprite2D" parent="." unique_id=1289030025]
-modulate = Color(0.380189, 0.380189, 0.38018897, 1)
-position = Vector2(-1419.0001, 3008.0002)
-texture = ExtResource("2_7wt6k")
-metadata/_edit_lock_ = true
 
 [node name="Coliisions" type="Node2D" parent="." unique_id=1046833520]
 visible = false
@@ -315,6 +323,12 @@ visible = false
 
 [node name="Polygon2D" type="CollisionPolygon2D" parent="Rooms/Area2D" unique_id=445262668]
 polygon = PackedVector2Array(-263, 300, -68, 297, -72, 623, 1420, 609, 1346, 5765, -1821, 5713, -1769, 3817, -3996, 3823, -4115, 880, -1733, 619, -447, 626, -447, 309, -279, 302, -268, -530, -4739, -283, -4634, 6199, 2781, 6241, 1994, -608, -235, -532)
+
+[node name="Elevator_ui" parent="." unique_id=1433977059 instance=ExtResource("18_q3b3h")]
+visible = false
+
+[node name="Workbench" parent="." unique_id=213393927 instance=ExtResource("18_yvsej")]
+visible = false
 
 [connection signal="body_entered" from="Icon" to="Player" method="_on_icon_body_entered"]
 [connection signal="body_entered" from="Rooms/Area2D" to="Player" method="_on_area_2d_body_entered"]

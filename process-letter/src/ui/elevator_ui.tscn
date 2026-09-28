@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dj3b8bc4ffmnv"]
+
+[ext_resource type="Script" uid="uid://bvo8eonyp7hha" path="res://scripts/elevator_ui.gd" id="1_oca8a"]
+
+[node name="Elevator_ui" type="CanvasLayer" unique_id=1433977059]
+script = ExtResource("1_oca8a")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1158380198]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.5
+offset_top = -174.5
+offset_right = 98.5
+offset_bottom = 174.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="LevelA" type="Button" parent="VBoxContainer" unique_id=446714016]
+layout_mode = 2
+text = "Level A"
+
+[node name="Level1" type="Button" parent="VBoxContainer" unique_id=1846862309]
+layout_mode = 2
+text = "Level 1"
+
+[node name="Level2" type="Button" parent="VBoxContainer" unique_id=1650062191]
+layout_mode = 2
+text = "Level 2"
+
+[node name="Level3" type="Button" parent="VBoxContainer" unique_id=2050705395]
+layout_mode = 2
+text = "Level 3"
+
+[node name="Cancel" type="Button" parent="VBoxContainer" unique_id=1543620701]
+layout_mode = 2
+text = "Cancel"
+
+[connection signal="pressed" from="VBoxContainer/LevelA" to="." method="_on_level_a_pressed"]
+[connection signal="pressed" from="VBoxContainer/Level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/Level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Level3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/Cancel" to="." method="_on_cancel_pressed"]
