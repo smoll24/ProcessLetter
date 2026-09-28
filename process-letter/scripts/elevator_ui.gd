@@ -13,9 +13,11 @@ func _on_cancel_pressed() -> void:
 	Globals.can_move = true
 	Globals.can_talk = true
 
+#Switch scenes and tell Globals that starting at elevator
+#positon (also have option for stairs?)
 
 func _on_level_a_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://src/main/level_a.tscn")
 
 
 func _on_level_1_pressed() -> void:
