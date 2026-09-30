@@ -54,7 +54,6 @@ position = Vector2(-1419, 3008)
 texture = ExtResource("2_bexj4")
 
 [node name="OuterLayer" type="Node2D" parent="." unique_id=1467002887]
-visible = false
 
 [node name="Alevel" type="Sprite2D" parent="OuterLayer" unique_id=1989980623]
 position = Vector2(-1419.0001, 3008.0002)
@@ -220,6 +219,7 @@ position = Vector2(193, 1070)
 position = Vector2(961, 1270)
 
 [node name="Coliisions" type="Node2D" parent="." unique_id=1046833520]
+visible = false
 metadata/_edit_lock_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Coliisions" unique_id=455011079]
@@ -277,7 +277,7 @@ shape = SubResource("RectangleShape2D_yvsej")
 [node name="StaticBody2D12" type="StaticBody2D" parent="Coliisions" unique_id=97583382]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Coliisions/StaticBody2D12" unique_id=1057045478]
-polygon = PackedVector2Array(-1830, 853, -1343, 860, -1341, 894, -1539, 892, -1540, 1049, -1184, 1047, -1184, 894, -1222, 894, -1219, 870, -422, 868, -419, 1254, -488, 1257, -487, 1239, -1022, 1229, -1219, 1436, -1846, 1434)
+polygon = PackedVector2Array(-1830, 853, -1343, 860, -1341, 894, -1506, 891, -1506, 1131, -1166, 1127, -1166, 894, -1222, 894, -1219, 870, -422, 868, -419, 1254, -488, 1257, -487, 1239, -1022, 1229, -1219, 1436, -1846, 1434)
 
 [node name="StaticBody2D13" type="StaticBody2D" parent="Coliisions" unique_id=845770110]
 
@@ -313,7 +313,7 @@ visible = false
 [node name="Area2D" type="Area2D" parent="Rooms" unique_id=852131100]
 
 [node name="Polygon2D" type="CollisionPolygon2D" parent="Rooms/Area2D" unique_id=445262668]
-polygon = PackedVector2Array(-263, 300, -68, 297, -72, 623, 1420, 609, 1346, 5765, -1821, 5713, -1769, 3817, -3996, 3823, -3589, 1409, -1976, 1388, -598, 1169, -688, 878, -1590, 874, -1597, 618, -447, 626, -447, 309, -279, 302, -268, -530, -4739, -283, -4634, 6199, 2781, 6241, 1994, -608, -235, -532)
+polygon = PackedVector2Array(-251, 164, -76, 160, -72, 623, 1420, 609, 1346, 5765, -1821, 5713, -1769, 3817, -3996, 3823, -3589, 1409, -1976, 1388, -598, 1169, -688, 878, -1590, 874, -1597, 618, -447, 626, -437, 164, -277, 166, -268, -530, -4739, -283, -4634, 6199, 2781, 6241, 1994, -608, -235, -532)
 
 [node name="Elevator_ui" parent="." unique_id=1433977059 instance=ExtResource("18_q3b3h")]
 visible = false

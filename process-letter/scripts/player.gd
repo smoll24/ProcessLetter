@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var anim = $AnimatedSprite2D
 
-const speed = 400
+const speed = 500
 var current_dir = 'none'
 var dialog = null
 var can_talk = true

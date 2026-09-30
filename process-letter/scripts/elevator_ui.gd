@@ -23,6 +23,10 @@ func _on_cancel_pressed() -> void:
 
 func _on_level_a_pressed() -> void:
 	get_tree().change_scene_to_file("res://src/main/level_a.tscn")
+	Globals.in_elevator = false
+	Globals.can_move = true
+	Globals.can_talk = true
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 
 
 func _on_level_1_pressed() -> void:
@@ -34,4 +38,8 @@ func _on_level_2_pressed() -> void:
 
 
 func _on_level_3_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://src/main/level3.tscn")
+	Globals.in_elevator = false
+	Globals.can_move = true
+	Globals.can_talk = true
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
