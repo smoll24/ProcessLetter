@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bw3ljitjewcl4"]
+
+[ext_resource type="Script" uid="uid://mgh1cuvax0mp" path="res://scripts/pause_ui.gd" id="1_ndwa6"]
+
+[node name="Pause_ui" type="CanvasLayer" unique_id=1606086596]
+process_mode = 3
+script = ExtResource("1_ndwa6")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=855303453]
+custom_minimum_size = Vector2(1280, 720)
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 0.16862746)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1928322205]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -33.0
+offset_right = 38.5
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Unpause" type="Button" parent="VBoxContainer" unique_id=892601059]
+layout_mode = 2
+text = "Unpause"
+
+[node name="Options" type="Button" parent="VBoxContainer" unique_id=261357663]
+layout_mode = 2
+text = "Options"
+
+[connection signal="pressed" from="VBoxContainer/Unpause" to="." method="_on_unpause_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]

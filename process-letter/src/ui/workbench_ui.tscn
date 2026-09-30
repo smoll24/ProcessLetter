@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://fc8spue341ep"]
+[gd_scene format=3 uid="uid://c417vx6j6p730"]
 
-[ext_resource type="Script" uid="uid://g1yicx3lbqc7" path="res://scripts/workbench_ui.gd" id="1_cldsk"]
+[ext_resource type="Script" uid="uid://qsgjq80r5l2t" path="res://src/ui/workbench_ui.gd" id="1_cldsk"]
 [ext_resource type="Texture2D" uid="uid://sdlmwyfftmor" path="res://assets/ui/computer.png" id="1_dpo3r"]
 [ext_resource type="PackedScene" uid="uid://i1hf4jklbl1g" path="res://src/puzzles/sudoku.tscn" id="2_cldsk"]
 [ext_resource type="PackedScene" uid="uid://dh51ib38pbrq0" path="res://src/puzzles/network.tscn" id="3_suigc"]

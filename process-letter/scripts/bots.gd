@@ -25,14 +25,17 @@ func _process(_delta):
 		and interact_indicator.visible:
 			if Globals.can_capture:
 				Globals.captured += 1
-				Globals.bot = false
-				queue_free()
-
+				if Globals.current_bot_instance == self:
+					Globals.current_bot_instance.queue_free()
+					Globals.current_bot_instance = null
+					Globals.bot = false
+	
 
 func _on_interact_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
+		Globals.current_bot_instance = self
 		Globals.bot = true
-
+		
 
 func _on_interact_area_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):

@@ -19,7 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://c46k4hlesdsh8" path="res://assets/bg/IMG_1735.PNG" id="15_bexj4"]
 [ext_resource type="Texture2D" uid="uid://pon5jb21air1" path="res://assets/bg/IMG_1736.PNG" id="16_yvsej"]
 [ext_resource type="PackedScene" uid="uid://dj3b8bc4ffmnv" path="res://src/ui/elevator_ui.tscn" id="18_q3b3h"]
-[ext_resource type="PackedScene" uid="uid://fc8spue341ep" path="res://src/ui/workbench_ui.tscn" id="18_yvsej"]
+[ext_resource type="PackedScene" uid="uid://fc8spue341ep" path="res://src/ui/computer_ui.tscn" id="18_yvsej"]
+[ext_resource type="PackedScene" uid="uid://bw3ljitjewcl4" path="res://src/ui/pause_ui.tscn" id="21_dvcwm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7wt6k"]
 size = Vector2(1418, 1156.5)
@@ -50,6 +51,7 @@ position = Vector2(-1419, 3008)
 texture = ExtResource("2_bexj4")
 
 [node name="OuterLayer" type="Node2D" parent="." unique_id=1467002887]
+visible = false
 
 [node name="Alevel" type="Sprite2D" parent="OuterLayer" unique_id=1989980623]
 position = Vector2(-1419.0001, 3008.0002)
@@ -186,6 +188,10 @@ position = Vector2(-1073, 1418)
 [node name="Workbench" parent="InnerLayer" unique_id=1891796453 instance=ExtResource("9_bexj4")]
 position = Vector2(50, 324)
 
+[node name="Workbench2" parent="InnerLayer" unique_id=629053132 instance=ExtResource("9_bexj4")]
+position = Vector2(298, 483)
+type = 1
+
 [node name="Player" parent="." unique_id=864046172 instance=ExtResource("1_dpurt")]
 position = Vector2(226, 344)
 
@@ -307,6 +313,9 @@ polygon = PackedVector2Array(-263, 300, -68, 297, -72, 623, 1420, 609, 1346, 576
 visible = false
 
 [node name="Workbench" parent="." unique_id=213393927 instance=ExtResource("18_yvsej")]
+visible = false
+
+[node name="Pause_ui" parent="." unique_id=1606086596 instance=ExtResource("21_dvcwm")]
 visible = false
 
 [connection signal="body_entered" from="Icon" to="Player" method="_on_icon_body_entered"]
