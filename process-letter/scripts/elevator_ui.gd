@@ -1,8 +1,12 @@
 extends CanvasLayer
 
+@onready var level_a_button = $VBoxContainer/LevelA
+
+
 func _process(_delta):
 	if Globals.in_elevator:
 		self.visible = true
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	else:
 		self.visible = false
 		
@@ -12,7 +16,8 @@ func _on_cancel_pressed() -> void:
 	Globals.in_elevator = false
 	Globals.can_move = true
 	Globals.can_talk = true
-
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+	
 #Switch scenes and tell Globals that starting at elevator
 #positon (also have option for stairs?)
 

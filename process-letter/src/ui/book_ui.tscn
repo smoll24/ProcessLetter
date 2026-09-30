@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c0nax5i68tmxy"]
+
+[ext_resource type="Script" uid="uid://c4di53d53klm" path="res://scripts/book_ui.gd" id="1_1jgus"]
+[ext_resource type="Texture2D" uid="uid://sdlmwyfftmor" path="res://assets/ui/computer.png" id="2_g8rso"]
+
+[node name="Book_ui" type="CanvasLayer" unique_id=1433977059]
+script = ExtResource("1_1jgus")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1609062932]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_g8rso")
+
+[node name="Button" type="Button" parent="." unique_id=1091397934]
+offset_left = 36.0
+offset_top = 22.0
+offset_right = 154.0
+offset_bottom = 106.0
+text = "[Exit]"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

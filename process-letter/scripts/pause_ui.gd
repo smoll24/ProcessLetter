@@ -6,6 +6,10 @@ extends CanvasLayer
 
 func _ready():
 	visible = false
+	
+#func _process(delta: float) -> void:
+	#if self.visible:
+		#Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func _input(event):
 	if event.is_action_pressed("pause"):

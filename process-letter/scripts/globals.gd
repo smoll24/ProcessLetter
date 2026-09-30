@@ -35,6 +35,10 @@ var paused = false
 var can_capture = true
 var captured = 0
 
+var book = false
+var book_type = 0
+var in_book = false
+
 var current_bot_instance: CharacterBody2D = null
 
 func _process(delta):

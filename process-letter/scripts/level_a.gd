@@ -4,6 +4,9 @@ extends Node2D
 @onready var inner = $InnerLayer
 
 
+func _ready():
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+
 func _process(delta):
 	if Globals.in_room:
 		outer.visible = false
