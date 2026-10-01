@@ -30,7 +30,7 @@ func _on_level_a_pressed() -> void:
 
 
 func _on_level_1_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://src/main/level1.tscn")
 
 
 func _on_level_2_pressed() -> void:

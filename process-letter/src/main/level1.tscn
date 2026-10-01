@@ -1,0 +1,235 @@
+[gd_scene format=3 uid="uid://hstjm3ljjaok"]
+
+[ext_resource type="Script" uid="uid://cpsify10evtdv" path="res://scripts/level_a.gd" id="1_3vgrc"]
+[ext_resource type="Texture2D" uid="uid://lsl2wa56ft8e" path="res://assets/bg/level1_rooms.png" id="2_3vgrc"]
+[ext_resource type="Texture2D" uid="uid://b3hkrhfro5tpv" path="res://assets/bg/level1_outside.png" id="2_dyd7v"]
+[ext_resource type="Texture2D" uid="uid://dsu34gm1f3mrg" path="res://assets/bg/level1.png" id="3_3vgrc"]
+[ext_resource type="Texture2D" uid="uid://c46k4hlesdsh8" path="res://assets/bg/IMG_1735.PNG" id="4_paf3d"]
+[ext_resource type="Texture2D" uid="uid://pon5jb21air1" path="res://assets/bg/IMG_1736.PNG" id="5_jpkov"]
+[ext_resource type="Texture2D" uid="uid://cq6v255cdh4bu" path="res://assets/bg/IMG_1734.PNG" id="6_lrpvm"]
+[ext_resource type="PackedScene" uid="uid://bc3xmnxig1sdp" path="res://src/background/plants1.tscn" id="7_efemj"]
+[ext_resource type="PackedScene" uid="uid://cujpuiv63mxyd" path="res://src/background/plants2.tscn" id="8_4g1g5"]
+[ext_resource type="PackedScene" uid="uid://g3j5ixhfkttk" path="res://src/characters/bots.tscn" id="9_arvg8"]
+[ext_resource type="PackedScene" uid="uid://bdincn4gbbh7k" path="res://src/background/Elevator.tscn" id="10_n03gy"]
+[ext_resource type="PackedScene" uid="uid://dil5ewllsotai" path="res://src/background/Book.tscn" id="11_3sgqi"]
+[ext_resource type="PackedScene" uid="uid://r5j5r2hfjn43" path="res://src/characters/player.tscn" id="13_phllu"]
+[ext_resource type="PackedScene" uid="uid://dyue8j0eesvj3" path="res://src/background/Light.tscn" id="14_cc3hh"]
+[ext_resource type="PackedScene" uid="uid://dj3b8bc4ffmnv" path="res://src/ui/elevator_ui.tscn" id="15_cqbgt"]
+[ext_resource type="PackedScene" uid="uid://c417vx6j6p730" path="res://src/ui/workbench_ui.tscn" id="16_vviw6"]
+[ext_resource type="PackedScene" uid="uid://bw3ljitjewcl4" path="res://src/ui/pause_ui.tscn" id="17_6htyi"]
+[ext_resource type="PackedScene" uid="uid://c0nax5i68tmxy" path="res://src/ui/book_ui.tscn" id="18_6ok8q"]
+[ext_resource type="PackedScene" uid="uid://bjuqqpsi7fd6y" path="res://src/characters/blue.tscn" id="19_3vgrc"]
+[ext_resource type="PackedScene" uid="uid://fc8spue341ep" path="res://src/ui/computer_ui.tscn" id="19_lhbik"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ywdb4"]
+size = Vector2(370.25, 278.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f7x0w"]
+size = Vector2(509, 693)
+
+[node name="Level1" type="Node2D" unique_id=1557939465]
+script = ExtResource("1_3vgrc")
+
+[node name="1levelOuter" type="Sprite2D" parent="." unique_id=94140201]
+position = Vector2(-1419, 3008)
+texture = ExtResource("2_dyd7v")
+metadata/_edit_lock_ = true
+
+[node name="OuterLayer" type="Node2D" parent="." unique_id=1467002887]
+
+[node name="1level" type="Sprite2D" parent="OuterLayer" unique_id=1989980623]
+position = Vector2(-1419.0001, 3008.0002)
+texture = ExtResource("3_3vgrc")
+metadata/_edit_lock_ = true
+
+[node name="Wall" type="Node2D" parent="OuterLayer" unique_id=1333465863]
+
+[node name="Img1735" type="Sprite2D" parent="OuterLayer/Wall" unique_id=1880429891]
+position = Vector2(-795, 5171)
+texture = ExtResource("4_paf3d")
+
+[node name="Img1739" type="Sprite2D" parent="OuterLayer/Wall" unique_id=2135090568]
+position = Vector2(-472, 5072)
+texture = ExtResource("5_jpkov")
+
+[node name="Img1743" type="Sprite2D" parent="OuterLayer/Wall" unique_id=1105621814]
+position = Vector2(-2215, 5099)
+texture = ExtResource("6_lrpvm")
+
+[node name="Img1744" type="Sprite2D" parent="OuterLayer/Wall" unique_id=458823375]
+position = Vector2(-1875, 5091)
+texture = ExtResource("4_paf3d")
+
+[node name="Img1745" type="Sprite2D" parent="OuterLayer/Wall" unique_id=823216833]
+position = Vector2(-2563, 5197)
+texture = ExtResource("5_jpkov")
+
+[node name="Img1736" type="Sprite2D" parent="OuterLayer/Wall" unique_id=1951050202]
+position = Vector2(-491, 4329)
+texture = ExtResource("4_paf3d")
+
+[node name="Img1740" type="Sprite2D" parent="OuterLayer/Wall" unique_id=483449911]
+position = Vector2(-2557, 4321)
+texture = ExtResource("5_jpkov")
+
+[node name="Img1746" type="Sprite2D" parent="OuterLayer/Wall" unique_id=356614219]
+position = Vector2(-883, 577)
+texture = ExtResource("6_lrpvm")
+
+[node name="Img1737" type="Sprite2D" parent="OuterLayer/Wall" unique_id=1625311647]
+position = Vector2(-2134, 580)
+texture = ExtResource("4_paf3d")
+
+[node name="Img1741" type="Sprite2D" parent="OuterLayer/Wall" unique_id=1030855354]
+position = Vector2(-1157, 708)
+texture = ExtResource("5_jpkov")
+
+[node name="Props" type="Node2D" parent="OuterLayer" unique_id=1379142347]
+
+[node name="Plants4" parent="OuterLayer/Props" unique_id=100185598 instance=ExtResource("7_efemj")]
+position = Vector2(-560, 174)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Plants3" parent="OuterLayer/Props" unique_id=568945762 instance=ExtResource("7_efemj")]
+position = Vector2(-1003, 184)
+scale = Vector2(-1, 1)
+
+[node name="Plants12" parent="OuterLayer/Props" unique_id=1703785443 instance=ExtResource("8_4g1g5")]
+position = Vector2(-325, 4658)
+scale = Vector2(-1, 1)
+
+[node name="Plants5" parent="OuterLayer/Props" unique_id=294577213 instance=ExtResource("7_efemj")]
+position = Vector2(-555, 4536)
+scale = Vector2(-1, 1)
+
+[node name="Plants6" parent="OuterLayer/Props" unique_id=2048806363 instance=ExtResource("7_efemj")]
+position = Vector2(-2485, 4527)
+scale = Vector2(-1, 1)
+
+[node name="Plants13" parent="OuterLayer/Props" unique_id=1103079843 instance=ExtResource("8_4g1g5")]
+position = Vector2(-2728, 4652)
+
+[node name="Plants7" parent="OuterLayer/Props" unique_id=1137167643 instance=ExtResource("7_efemj")]
+position = Vector2(-932, 850)
+scale = Vector2(-1, 1)
+
+[node name="Plants8" parent="OuterLayer/Props" unique_id=1552174335 instance=ExtResource("7_efemj")]
+position = Vector2(-2121, 868)
+scale = Vector2(-1, 1)
+
+[node name="OutCharacters" type="Node2D" parent="OuterLayer" unique_id=790197414]
+
+[node name="OutBots" type="Node2D" parent="OuterLayer" unique_id=479377854]
+
+[node name="Bots1" parent="OuterLayer/OutBots" unique_id=47230853 instance=ExtResource("9_arvg8")]
+position = Vector2(-769, 322)
+
+[node name="Bots2" parent="OuterLayer/OutBots" unique_id=1817324579 instance=ExtResource("9_arvg8")]
+position = Vector2(-2360, 4786)
+
+[node name="Bots3" parent="OuterLayer/OutBots" unique_id=872997564 instance=ExtResource("9_arvg8")]
+position = Vector2(-539, 4796)
+
+[node name="InnerLayer" type="Node2D" parent="." unique_id=897240129]
+visible = false
+
+[node name="1levelRooms" type="Sprite2D" parent="InnerLayer" unique_id=854602812]
+position = Vector2(-1419, 3008)
+texture = ExtResource("2_3vgrc")
+metadata/_edit_lock_ = true
+
+[node name="Elevator" parent="InnerLayer" unique_id=902053519 instance=ExtResource("10_n03gy")]
+position = Vector2(-2461, 546)
+
+[node name="Book" parent="InnerLayer" unique_id=348016050 instance=ExtResource("11_3sgqi")]
+position = Vector2(-1009, 5646)
+
+[node name="Player" parent="." unique_id=864046172 instance=ExtResource("13_phllu")]
+position = Vector2(-2451, 511)
+
+[node name="Lights" type="Node2D" parent="." unique_id=2116302559]
+visible = false
+
+[node name="Light" parent="Lights" unique_id=392051107 instance=ExtResource("14_cc3hh")]
+position = Vector2(15, 355)
+
+[node name="Light2" parent="Lights" unique_id=288759062 instance=ExtResource("14_cc3hh")]
+position = Vector2(442, 354)
+
+[node name="Light3" parent="Lights" unique_id=1208578315 instance=ExtResource("14_cc3hh")]
+position = Vector2(908, 353)
+
+[node name="Light4" parent="Lights" unique_id=327980320 instance=ExtResource("14_cc3hh")]
+position = Vector2(193, 1070)
+
+[node name="Light5" parent="Lights" unique_id=419073303 instance=ExtResource("14_cc3hh")]
+position = Vector2(961, 1270)
+
+[node name="Outside" type="Node2D" parent="." unique_id=29916399]
+
+[node name="Area2D" type="Area2D" parent="Outside" unique_id=2109867778]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Outside/Area2D" unique_id=1311554806]
+position = Vector2(-13, 35)
+polygon = PackedVector2Array(-3496, 722, -2763, 739, -2729, 1198, -2340, 1199, -2061, 1359, -1006, 1357, -706, 1207, -372, 1067, -325, 867, -320, 722, 490, 725, 521, 4840, -230, 4823, -275, 4238, -900, 4213, -1033, 4027, -2128, 4182, -2327, 4278, -2771, 4538, -2855, 4574, -2885, 4782, -3098, 4871, -3580, 4802)
+
+[node name="Coliisions" type="Node2D" parent="." unique_id=1046833520]
+visible = false
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Coliisions" unique_id=455011079]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Coliisions/StaticBody2D" unique_id=1463548674]
+polygon = PackedVector2Array(-3497, -546, 445, -574, 1062, 818, 1134, 5415, 459, 5425, 458, 763, -314, 763, -308, 1221, -327, 1241, -671, 1238, -716, 1268, -758, 1243, -729, 1227, -761, 1192, -756, 861, -1307, 862, -1311, 880, -1382, 880, -1384, 420, -250, 412, -243, 185, -2802, 186, -2797, 411, -2575, 411, -2572, 447, -2721, 446, -2723, 682, -2371, 680, -2374, 448, -2451, 446, -2453, 416, -1702, 425, -1699, 876, -1768, 882, -1765, 868, -2328, 868, -2327, 1202, -2353, 1227, -2323, 1257, -2369, 1284, -2413, 1239, -2752, 1237, -2776, 1216, -2767, 762, -3436, 764, -3439, 4764, -2905, 4762, -2905, 5358, -3804, 5368, -3837, 4802, -3770, 708, -3522, -62)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Coliisions" unique_id=1010531115]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Coliisions/StaticBody2D2" unique_id=1295983335]
+polygon = PackedVector2Array(-2118, 1422, -2140, 1401, -2153, 1416, -2175, 1402, -2137, 1366, -2100, 1388, -2008, 1286, -1874, 1190, -1766, 1143, -1766, 1089, -1700, 1094, -1701, 1125, -1552, 1104, -1501, 1105, -1501, 1126, -1390, 1126, -1380, 1118, -1378, 1096, -1316, 1092, -1314, 1137, -1158, 1206, -1019, 1324, -972, 1379, -942, 1363, -918, 1403, -928, 1409, -936, 1401, -947, 1413, -868, 1567, -836, 1699, -826, 1914, -830, 2126, -864, 2337, -976, 2540, -1122, 2682, -1302, 2777, -1553, 2812, -1766, 2773, -1989, 2647, -2127, 2480, -2228, 2258, -2235, 2149, -2236, 1812, -2214, 1625, -2145, 1471)
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Coliisions" unique_id=1549527182]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Coliisions/StaticBody2D3" unique_id=239831102]
+polygon = PackedVector2Array(-3746, 6607, 522, 6608, 462, 4758, -160, 4758, -178, 4227, -292, 4155, -710, 4160, -839, 4065, -824, 3620, -885, 3362, -1022, 3157, -1253, 3002, -1502, 2942, -1769, 2989, -2016, 3133, -2181, 3376, -2236, 3638, -2236, 4006, -2158, 4395, -2113, 4360, -1895, 4554, -1787, 4599, -1730, 4659, -1672, 4663, -1667, 4642, -1526, 4656, -1408, 4635, -1402, 4664, -1392, 4666, -1391, 4883, -1398, 4894, -1400, 5329, -291, 5334, -247, 5346, -244, 5516, -904, 5516, -1138, 5519, -1139, 5545, -905, 5546, -901, 6191, -1330, 6191, -1328, 5564, -1283, 5562, -1280, 5519, -2827, 5514, -2824, 5338, -2783, 5329, -1670, 5334, -1667, 4885, -1733, 4886, -1728, 4940, -2768, 4934, -2850, 4870, -2850, 4603, -2762, 4546, -2341, 4552, -2316, 4537, -2323, 4182, -2361, 4152, -2775, 4157, -2904, 4228, -2901, 5306, -3706, 5366)
+
+[node name="Rooms" type="Node2D" parent="." unique_id=1182779514]
+metadata/_edit_lock_ = true
+
+[node name="Area2D" type="Area2D" parent="Rooms" unique_id=852131100]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Area2D" unique_id=1443617707]
+position = Vector2(-2549.125, 558)
+shape = SubResource("RectangleShape2D_ywdb4")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Rooms/Area2D" unique_id=919891051]
+position = Vector2(-1118, 5867.5)
+shape = SubResource("RectangleShape2D_f7x0w")
+
+[node name="ColorRect" type="CanvasModulate" parent="." unique_id=971754492]
+visible = false
+color = Color(0.3719951, 0.7356891, 0.4720794, 1)
+metadata/_edit_lock_ = true
+
+[node name="Elevator_ui" parent="." unique_id=1433977059 instance=ExtResource("15_cqbgt")]
+visible = false
+
+[node name="Workbench" parent="." unique_id=418933577 instance=ExtResource("16_vviw6")]
+visible = false
+
+[node name="Pause_ui" parent="." unique_id=1606086596 instance=ExtResource("17_6htyi")]
+visible = false
+
+[node name="Book_ui" parent="." unique_id=1141313864 instance=ExtResource("18_6ok8q")]
+visible = false
+
+[node name="Computer" parent="." unique_id=1334415562 instance=ExtResource("19_lhbik")]
+visible = false
+
+[node name="Blue" parent="." unique_id=1606365179 instance=ExtResource("19_3vgrc")]
+position = Vector2(-1215, 5949)
+
+[connection signal="body_entered" from="Outside/Area2D" to="Player" method="_on_area_2d_body_entered" binds= [true]]
+[connection signal="body_exited" from="Outside/Area2D" to="Player" method="_on_area_2d_body_exited" binds= [true]]
+[connection signal="body_entered" from="Rooms/Area2D" to="Player" method="_on_area_2d_body_entered" binds= [false]]
+[connection signal="body_exited" from="Rooms/Area2D" to="Player" method="_on_area_2d_body_exited" binds= [false]]

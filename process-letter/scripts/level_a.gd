@@ -11,6 +11,9 @@ func _process(delta):
 	if Globals.in_room:
 		outer.visible = false
 		inner.visible = true
+	elif Globals.outside:
+		outer.visible = false
+		inner.visible = false
 	else:
 		outer.visible = true
 		inner.visible = false

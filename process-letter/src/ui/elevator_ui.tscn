@@ -29,6 +29,7 @@ text = "Level 1"
 
 [node name="Level2" type="Button" parent="VBoxContainer" unique_id=1650062191]
 layout_mode = 2
+disabled = true
 text = "Level 2"
 
 [node name="Level3" type="Button" parent="VBoxContainer" unique_id=2050705395]

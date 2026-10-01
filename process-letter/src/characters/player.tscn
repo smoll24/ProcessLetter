@@ -91,7 +91,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"back_walk",
-"speed": 3.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -119,7 +119,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"front_walk",
-"speed": 3.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -147,7 +147,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"side_walk",
-"speed": 3.0
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ywdb4"]
@@ -158,7 +158,7 @@ script = ExtResource("1_3ikja")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1026202716]
 sprite_frames = SubResource("SpriteFrames_ywdb4")
-animation = &"back_walk"
+animation = &"side_walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1438348213]
 position = Vector2(1, 54.5)

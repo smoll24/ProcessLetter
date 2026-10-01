@@ -26,7 +26,7 @@ size = Vector2(345, 257)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f7x0w"]
 size = Vector2(560, 696)
 
-[node name="Level_A" type="Node2D" unique_id=1557939465]
+[node name="Level3" type="Node2D" unique_id=1557939465]
 script = ExtResource("1_w6u08")
 
 [node name="3levelRooms" type="Sprite2D" parent="." unique_id=854602812]
@@ -78,9 +78,6 @@ scale = Vector2(-1, 1)
 position = Vector2(-205, 4866.5)
 scale = Vector2(-1, 1)
 
-[node name="Elevator" parent="OuterLayer/Props" unique_id=902053519 instance=ExtResource("9_mn7hi")]
-position = Vector2(-2355, 514)
-
 [node name="Plants5" parent="OuterLayer/Props" unique_id=294577213 instance=ExtResource("8_53hdk")]
 position = Vector2(-515, 4775.5)
 scale = Vector2(-1, 1)
@@ -103,6 +100,9 @@ position = Vector2(-1921, 4821.5)
 position = Vector2(-722, 4964.5)
 
 [node name="InnerLayer" type="Node2D" parent="." unique_id=897240129]
+
+[node name="Elevator" parent="InnerLayer" unique_id=902053519 instance=ExtResource("9_mn7hi")]
+position = Vector2(-2461, 546)
 
 [node name="Book" parent="InnerLayer" unique_id=348016050 instance=ExtResource("17_8qwly")]
 position = Vector2(-2820, 5219.5)
@@ -174,5 +174,5 @@ visible = false
 [node name="Computer" parent="." unique_id=1334415562 instance=ExtResource("24_k6qb7")]
 visible = false
 
-[connection signal="body_entered" from="Rooms/Area2D" to="Player" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Rooms/Area2D" to="Player" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Rooms/Area2D" to="Player" method="_on_area_2d_body_entered" binds= [false]]
+[connection signal="body_exited" from="Rooms/Area2D" to="Player" method="_on_area_2d_body_exited" binds= [false]]

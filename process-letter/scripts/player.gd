@@ -88,9 +88,17 @@ func play_anim(movement):
 	#Globals.can_move = true
 
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	Globals.in_room = true
+func _on_area_2d_body_entered(body: Node2D, out: bool) -> void:
+	if body.is_in_group("player"): 
+		if out:
+			Globals.outside = true
+		else:
+			Globals.in_room = true
 
 
-func _on_area_2d_body_exited(body: Node2D) -> void:
-	Globals.in_room = false
+func _on_area_2d_body_exited(body: Node2D, out: bool) -> void:
+	if body.is_in_group("player"): 
+		if out:
+			Globals.outside = false
+		else:
+			Globals.in_room = false

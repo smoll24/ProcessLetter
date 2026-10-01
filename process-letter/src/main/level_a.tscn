@@ -154,9 +154,6 @@ position = Vector2(1123, 4509)
 [node name="Plants14" parent="OuterLayer/Props" unique_id=1556956451 instance=ExtResource("3_m4akb")]
 position = Vector2(1119, 4928)
 
-[node name="Elevator" parent="OuterLayer/Props" unique_id=902053519 instance=ExtResource("10_88hbs")]
-position = Vector2(-1278, 952)
-
 [node name="OutCharacters" type="Node2D" parent="OuterLayer" unique_id=790197414]
 
 [node name="Purple" parent="OuterLayer/OutCharacters" unique_id=626783985 instance=ExtResource("2_waa7u")]
@@ -186,6 +183,9 @@ position = Vector2(-715, 644)
 position = Vector2(-1073, 1418)
 
 [node name="InnerLayer" type="Node2D" parent="." unique_id=897240129]
+
+[node name="Elevator" parent="InnerLayer" unique_id=902053519 instance=ExtResource("10_88hbs")]
+position = Vector2(-1398, 1013)
 
 [node name="Computer" parent="InnerLayer" unique_id=1891796453 instance=ExtResource("9_bexj4")]
 position = Vector2(50, 324)
@@ -331,5 +331,5 @@ visible = false
 visible = false
 
 [connection signal="body_entered" from="Icon" to="Player" method="_on_icon_body_entered"]
-[connection signal="body_entered" from="Rooms/Area2D" to="Player" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Rooms/Area2D" to="Player" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Rooms/Area2D" to="Player" method="_on_area_2d_body_entered" binds= [false]]
+[connection signal="body_exited" from="Rooms/Area2D" to="Player" method="_on_area_2d_body_exited" binds= [false]]

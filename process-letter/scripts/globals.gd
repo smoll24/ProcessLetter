@@ -31,6 +31,7 @@ var elevator = false
 var in_elevator = false
 var bot = false
 var paused = false
+var outside = false
 
 var can_capture = true
 var captured = 0
