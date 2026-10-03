@@ -196,7 +196,7 @@ position = Vector2(242, 341)
 type = 1
 
 [node name="Book" parent="InnerLayer" unique_id=348016050 instance=ExtResource("17_rqb8u")]
-position = Vector2(-44, 567)
+position = Vector2(-35, 545)
 
 [node name="Player" parent="." unique_id=864046172 instance=ExtResource("1_dpurt")]
 position = Vector2(106, 483)

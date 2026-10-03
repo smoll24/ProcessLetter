@@ -1,15 +1,81 @@
 [gd_scene format=3 uid="uid://c0nax5i68tmxy"]
 
 [ext_resource type="Script" uid="uid://c4di53d53klm" path="res://scripts/book_ui.gd" id="1_1jgus"]
-[ext_resource type="Texture2D" uid="uid://sdlmwyfftmor" path="res://assets/ui/computer.png" id="2_g8rso"]
+[ext_resource type="Texture2D" uid="uid://bfu3n0jqtsamk" path="res://assets/ui/IMG_1754.PNG" id="2_bmblt"]
+[ext_resource type="FontFile" uid="uid://7n5uyv7q3hvv" path="res://assets/fonts/process_script4.ttf" id="3_7pb3i"]
 
 [node name="Book_ui" type="CanvasLayer" unique_id=1433977059]
 script = ExtResource("1_1jgus")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=894745684]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.11372549, 0.09803922, 0.12156863, 1)
+
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1609062932]
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("2_g8rso")
+texture = ExtResource("2_bmblt")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=944644028]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -222.0
+offset_top = -350.0
+offset_right = 200.0
+offset_bottom = -215.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.99607843, 0.8745098, 0.019607844, 1)
+theme_override_fonts/normal_font = ExtResource("3_7pb3i")
+theme_override_font_sizes/normal_font_size = 200
+text = "Technopoly"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=1745687646]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -246.0
+offset_top = -228.0
+offset_right = 235.0
+offset_bottom = -93.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.89411765, 0.63529414, 0.039215688, 1)
+theme_override_fonts/normal_font = ExtResource("3_7pb3i")
+theme_override_font_sizes/normal_font_size = 90
+text = "THE SURRENDER OF CULTURE TO TECHNOLOGY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="." unique_id=1897841290]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = 211.0
+offset_right = 241.0
+offset_bottom = 346.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.89411765, 0.63529414, 0.039215688, 1)
+theme_override_fonts/normal_font = ExtResource("3_7pb3i")
+theme_override_font_sizes/normal_font_size = 90
+text = "Neil Postman"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Button" type="Button" parent="." unique_id=1091397934]
 offset_left = 36.0

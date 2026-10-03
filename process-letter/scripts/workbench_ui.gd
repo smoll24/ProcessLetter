@@ -6,16 +6,16 @@ extends CanvasLayer
 @onready var slot3 = $Control/TextureButton3
 
 var solutions = {
-	"prog1":["res://assets/workshop/item3.png",
-			"res://assets/workshop/item4.png",
+	"prog1":["res://assets/workshop/item4.png",
+			"res://assets/workshop/item3.png",
 			"res://assets/workshop/item5.png"],
-	"prog2":["res://assets/workshop/item1.png",
-			"res://assets/workshop/irem6.png",
-			"res://assets/workshop/item8.png"],
+	"prog2":["res://assets/workshop/irem6.png",
+			"res://assets/workshop/item8.png",
+			"res://assets/workshop/item1.png"],
 	"prog3":["res://assets/workshop/item2.png",
 			"res://assets/workshop/item9.png",
 			"res://assets/workshop/item0.png"]
-}
+	}
 
 func _process(_delta):
 	if Globals.in_workbench:
