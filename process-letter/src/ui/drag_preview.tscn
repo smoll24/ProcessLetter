@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dux12jclsqcf5"]
+
+[ext_resource type="Script" uid="uid://yrh836pjtb8e" path="res://scripts/drag_preview.gd" id="1_2c8co"]
+
+[node name="drag_preview" type="TextureRect" unique_id=1695253032]
+modulate = Color(1, 1, 1, 0.5921569)
+rotation = 2.0943952
+script = ExtResource("1_2c8co")

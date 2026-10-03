@@ -2,11 +2,18 @@
 
 [ext_resource type="Script" uid="uid://g1yicx3lbqc7" path="res://scripts/workbench_ui.gd" id="1_cldsk"]
 [ext_resource type="Texture2D" uid="uid://sdlmwyfftmor" path="res://assets/ui/computer.png" id="1_dpo3r"]
+[ext_resource type="Texture2D" uid="uid://cdlhkhjrerxvn" path="res://assets/puzzles/sudoku/sud0.png" id="3_cldsk"]
+[ext_resource type="Texture2D" uid="uid://bmn3pxg3a7vpv" path="res://assets/puzzles/sudoku/sud0hover.png" id="4_suigc"]
+[ext_resource type="Script" uid="uid://bcxj5el16w0qs" path="res://scripts/texture_button.gd" id="5_suigc"]
+[ext_resource type="Texture2D" uid="uid://ca0ghuq2y1v23" path="res://assets/puzzles/sudoku/sud1.png" id="6_llh03"]
+[ext_resource type="Texture2D" uid="uid://bmxwyqs0ywg76" path="res://assets/puzzles/sudoku/sud1chosen.png" id="7_0lruc"]
+[ext_resource type="Texture2D" uid="uid://bmj8vbg1aweds" path="res://assets/puzzles/sudoku/sud7.png" id="8_0lruc"]
 
 [node name="Workbench" type="CanvasLayer" unique_id=1433977059]
 script = ExtResource("1_cldsk")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1609062932]
+visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_dpo3r")
@@ -17,5 +24,71 @@ offset_top = 22.0
 offset_right = 154.0
 offset_bottom = 106.0
 text = "[Exit]"
+
+[node name="Control" type="Control" parent="." unique_id=893886648]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=1313184270]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -158.0
+offset_top = -32.0
+offset_right = 158.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/HBoxContainer" unique_id=1140117113]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="Control/HBoxContainer/CenterContainer" unique_id=2131744965]
+layout_mode = 2
+texture_normal = ExtResource("3_cldsk")
+texture_pressed = ExtResource("4_suigc")
+script = ExtResource("5_suigc")
+
+[node name="CenterContainer2" type="CenterContainer" parent="Control/HBoxContainer" unique_id=774571518]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="Control/HBoxContainer/CenterContainer2" unique_id=1149992483]
+layout_mode = 2
+texture_normal = ExtResource("6_llh03")
+texture_pressed = ExtResource("7_0lruc")
+script = ExtResource("5_suigc")
+
+[node name="CenterContainer3" type="CenterContainer" parent="Control/HBoxContainer" unique_id=964914241]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="Control/HBoxContainer/CenterContainer3" unique_id=1482825615]
+layout_mode = 2
+texture_normal = ExtResource("3_cldsk")
+texture_pressed = ExtResource("4_suigc")
+script = ExtResource("5_suigc")
+
+[node name="CenterContainer4" type="CenterContainer" parent="Control/HBoxContainer" unique_id=1354138439]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="Control/HBoxContainer/CenterContainer4" unique_id=1745900603]
+layout_mode = 2
+texture_normal = ExtResource("3_cldsk")
+texture_pressed = ExtResource("4_suigc")
+script = ExtResource("5_suigc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=797921627]
+visible = false
+position = Vector2(644, 306.99997)
+rotation = -2.0786872
+texture = ExtResource("8_0lruc")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

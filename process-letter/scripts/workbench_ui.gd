@@ -7,8 +7,6 @@ func _process(_delta):
 	else:
 		self.visible = false
 		
-		
-
 func _on_button_pressed() -> void:
 	Globals.in_workbench = false
 	Globals.can_move = true
