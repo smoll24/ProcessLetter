@@ -35,6 +35,7 @@ texture = ExtResource("2_w6u08")
 metadata/_edit_lock_ = true
 
 [node name="OuterLayer" type="Node2D" parent="." unique_id=1467002887]
+visible = false
 
 [node name="3level" type="Sprite2D" parent="OuterLayer" unique_id=1989980623]
 position = Vector2(-1419.0001, 3008.0002)
@@ -106,6 +107,7 @@ position = Vector2(-2461, 546)
 
 [node name="Book" parent="InnerLayer" unique_id=348016050 instance=ExtResource("17_8qwly")]
 position = Vector2(-2820, 5219.5)
+type = 3
 
 [node name="Pink" parent="InnerLayer" unique_id=213673184 instance=ExtResource("12_6xdca")]
 position = Vector2(-2809, 5512.5)

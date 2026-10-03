@@ -195,8 +195,12 @@ position = Vector2(50, 324)
 position = Vector2(242, 341)
 type = 1
 
-[node name="Book" parent="InnerLayer" unique_id=348016050 instance=ExtResource("17_rqb8u")]
-position = Vector2(-35, 545)
+[node name="Book1" parent="InnerLayer" unique_id=348016050 instance=ExtResource("17_rqb8u")]
+position = Vector2(198, 593)
+
+[node name="Book2" parent="InnerLayer" unique_id=638705684 instance=ExtResource("17_rqb8u")]
+position = Vector2(-2190, 4035)
+type = 1
 
 [node name="Player" parent="." unique_id=864046172 instance=ExtResource("1_dpurt")]
 position = Vector2(106, 483)

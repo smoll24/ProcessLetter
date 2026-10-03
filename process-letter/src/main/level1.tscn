@@ -36,6 +36,7 @@ texture = ExtResource("2_dyd7v")
 metadata/_edit_lock_ = true
 
 [node name="OuterLayer" type="Node2D" parent="." unique_id=1467002887]
+visible = false
 
 [node name="1level" type="Sprite2D" parent="OuterLayer" unique_id=1989980623]
 position = Vector2(-1419.0001, 3008.0002)
@@ -132,7 +133,6 @@ position = Vector2(-2360, 4786)
 position = Vector2(-539, 4796)
 
 [node name="InnerLayer" type="Node2D" parent="." unique_id=897240129]
-visible = false
 
 [node name="1levelRooms" type="Sprite2D" parent="InnerLayer" unique_id=854602812]
 position = Vector2(-1419, 3008)
@@ -143,7 +143,8 @@ metadata/_edit_lock_ = true
 position = Vector2(-2461, 546)
 
 [node name="Book" parent="InnerLayer" unique_id=348016050 instance=ExtResource("11_3sgqi")]
-position = Vector2(-1009, 5646)
+position = Vector2(-994, 5661)
+type = 2
 
 [node name="Player" parent="." unique_id=864046172 instance=ExtResource("13_phllu")]
 position = Vector2(-2451, 511)
