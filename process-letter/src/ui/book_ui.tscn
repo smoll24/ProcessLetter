@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://c4di53d53klm" path="res://scripts/book_ui.gd" id="1_1jgus"]
 [ext_resource type="Texture2D" uid="uid://bfu3n0jqtsamk" path="res://assets/ui/IMG_1754.PNG" id="2_bmblt"]
 [ext_resource type="FontFile" uid="uid://7n5uyv7q3hvv" path="res://assets/fonts/process_script4.ttf" id="3_7pb3i"]
+[ext_resource type="Texture2D" uid="uid://cohoynw117kbg" path="res://assets/ui/IMG_1755.PNG" id="4_7pb3i"]
+[ext_resource type="Texture2D" uid="uid://bqdqcxn4gwyj3" path="res://assets/ui/IMG_1756.PNG" id="5_g8rso"]
+[ext_resource type="Texture2D" uid="uid://bfepf0521bisb" path="res://assets/ui/IMG_1758.PNG" id="6_bmnd7"]
 
 [node name="Book_ui" type="CanvasLayer" unique_id=1433977059]
 script = ExtResource("1_1jgus")
@@ -15,12 +18,23 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.11372549, 0.09803922, 0.12156863, 1)
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1609062932]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Technopoly" type="Control" parent="." unique_id=391233921]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Technopoly" unique_id=1609062932]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
 texture = ExtResource("2_bmblt")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=944644028]
+[node name="RichTextLabel" type="RichTextLabel" parent="Technopoly" unique_id=944644028]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -39,7 +53,8 @@ text = "Technopoly"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=1745687646]
+[node name="RichTextLabel2" type="RichTextLabel" parent="Technopoly" unique_id=1745687646]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -58,7 +73,8 @@ text = "THE SURRENDER OF CULTURE TO TECHNOLOGY"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RichTextLabel3" type="RichTextLabel" parent="." unique_id=1897841290]
+[node name="RichTextLabel3" type="RichTextLabel" parent="Technopoly" unique_id=1897841290]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -74,6 +90,210 @@ theme_override_colors/default_color = Color(0.89411765, 0.63529414, 0.039215688,
 theme_override_fonts/normal_font = ExtResource("3_7pb3i")
 theme_override_font_sizes/normal_font_size = 90
 text = "Neil Postman"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Foucault" type="Control" parent="." unique_id=303187351]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Foucault" unique_id=1689020272]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("4_7pb3i")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Foucault" unique_id=27772061]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -259.0
+offset_top = -346.0
+offset_right = 233.0
+offset_bottom = -157.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.9843137, 0.7647059, 0.12156863, 1)
+theme_override_fonts/normal_font = ExtResource("3_7pb3i")
+theme_override_font_sizes/normal_font_size = 180
+text = "DISCIPLINE A PUNISH"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Foucault" unique_id=1203302466]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -247.0
+offset_top = -211.0
+offset_right = 234.0
+offset_bottom = -76.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.85490197, 0.38039216, 0.22745098, 1)
+theme_override_fonts/normal_font = ExtResource("3_7pb3i")
+theme_override_font_sizes/normal_font_size = 80
+text = "The Birth of the Prison"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Foucault" unique_id=840455025]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -248.0
+offset_top = 203.0
+offset_right = 233.0
+offset_bottom = 338.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.78431374, 0.35686275, 0.21568628, 1)
+theme_override_fonts/normal_font = ExtResource("3_7pb3i")
+theme_override_font_sizes/normal_font_size = 90
+text = "Michel Foucault"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Gramsci" type="Control" parent="." unique_id=1117537069]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Gramsci" unique_id=381099745]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("5_g8rso")
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="Gramsci" unique_id=365139700]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -372.0
+offset_top = -385.0
+offset_right = 245.0
+offset_bottom = -250.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.9019608, 0.90588236, 0.8784314, 1)
+theme_override_fonts/normal_font = ExtResource("3_7pb3i")
+theme_override_font_sizes/normal_font_size = 80
+text = "Selections from the"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Gramsci" unique_id=1509771709]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -324.0
+offset_top = -337.0
+offset_right = 293.0
+offset_bottom = -202.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.9019608, 0.90588236, 0.8784314, 1)
+theme_override_fonts/normal_font = ExtResource("3_7pb3i")
+theme_override_font_sizes/normal_font_size = 100
+text = "PRISON NOTEBOOKS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Gramsci" unique_id=1206945474]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = 171.0
+offset_right = 241.0
+offset_bottom = 306.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.91764706, 0.24313726, 0.14901961, 1)
+theme_override_fonts/normal_font = ExtResource("3_7pb3i")
+theme_override_font_sizes/normal_font_size = 110
+text = "ANTONIO GRAMSCI"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Metropolis" type="Control" parent="." unique_id=1679948433]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Metropolis" unique_id=1681577526]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("6_bmnd7")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Metropolis" unique_id=884822354]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -307.0
+offset_top = -358.0
+offset_right = 310.0
+offset_bottom = -223.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.8627451, 0.7411765, 0.46666667, 1)
+theme_override_fonts/normal_font = ExtResource("3_7pb3i")
+theme_override_font_sizes/normal_font_size = 180
+text = "METROPOLIS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Metropolis" unique_id=2140693136]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -179.0
+offset_top = 230.0
+offset_right = 176.0
+offset_bottom = 365.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.0627451, 0.05882353, 0.050980393, 1)
+theme_override_fonts/normal_font = ExtResource("3_7pb3i")
+theme_override_font_sizes/normal_font_size = 70
+text = "EIN FILM VON FRTIZ LANG"
 horizontal_alignment = 1
 vertical_alignment = 1
 
