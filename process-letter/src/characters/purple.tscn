@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://drnv5c3qwtft" path="res://assets/ui/speech2.png" id="4_wfrv5"]
 [ext_resource type="Texture2D" uid="uid://cienvtrschr0s" path="res://assets/ui/speech3.png" id="5_78p0i"]
 [ext_resource type="Texture2D" uid="uid://dske6v8tow7vd" path="res://assets/ui/speech4.png" id="6_wfrv5"]
+[ext_resource type="FontFile" uid="uid://7n5uyv7q3hvv" path="res://assets/fonts/process_script4.ttf" id="7_78p0i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b3jmw"]
 atlas = ExtResource("1_1x5lt")
@@ -180,12 +181,21 @@ animations = [{
 "speed": 4.0
 }]
 
+[sub_resource type="Theme" id="Theme_ywdb4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ywdb4"]
+bg_color = Color(0.16078432, 0.14509805, 0.12156863, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
 [node name="Purple" type="CharacterBody2D" unique_id=864046172]
 script = ExtResource("1_b3jmw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1026202716]
 sprite_frames = SubResource("SpriteFrames_ywdb4")
-animation = &"front_walk"
+animation = &"side_idle"
 autoplay = "front_idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1438348213]
@@ -199,6 +209,7 @@ position = Vector2(-3, -0.5)
 shape = SubResource("RectangleShape2D_rj60s")
 
 [node name="Indicator2" type="AnimatedSprite2D" parent="." unique_id=823174083]
+visible = false
 position = Vector2(-3, -128)
 sprite_frames = SubResource("SpriteFrames_rj60s")
 autoplay = "default"
@@ -211,6 +222,44 @@ offset_right = 23.0
 offset_bottom = 49.0
 text = "[Talk]"
 horizontal_alignment = 1
+
+[node name="Speech" type="Node2D" parent="." unique_id=1493659085]
+modulate = Color(1, 1, 1, 0.5803922)
+z_index = 1
+position = Vector2(0, 5)
+
+[node name="ColorRect" type="Panel" parent="Speech" unique_id=571993934]
+offset_left = -175.0
+offset_top = -174.0
+offset_right = 175.0
+offset_bottom = -117.0
+theme = SubResource("Theme_ywdb4")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ywdb4")
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="Polygon2D" parent="Speech" unique_id=581121875]
+position = Vector2(0, -1)
+rotation = 0.7853982
+color = Color(0.16078432, 0.14509805, 0.12156863, 1)
+polygon = PackedVector2Array(-89.80257, -75.66043, -75.66043, -89.80257, -63.63961, -63.63961)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Speech" unique_id=1273749129]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -194.0
+offset_top = -186.0
+offset_right = 195.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("7_78p0i")
+theme_override_font_sizes/normal_font_size = 60
+text = "Worthless piece of junk."
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="body_entered" from="Interact_area" to="." method="_on_interact_area_body_entered"]
 [connection signal="body_exited" from="Interact_area" to="." method="_on_interact_area_body_exited"]

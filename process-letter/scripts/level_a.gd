@@ -6,6 +6,7 @@ extends Node2D
 
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+	Globals.in_elevator = false
 
 func _process(delta):
 	if Globals.in_room:

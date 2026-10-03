@@ -157,7 +157,7 @@ position = Vector2(1119, 4928)
 [node name="OutCharacters" type="Node2D" parent="OuterLayer" unique_id=790197414]
 
 [node name="Purple" parent="OuterLayer/OutCharacters" unique_id=626783985 instance=ExtResource("2_waa7u")]
-position = Vector2(53, 1268)
+position = Vector2(795, 1410)
 
 [node name="Blue" parent="OuterLayer/OutCharacters" unique_id=1379034531 instance=ExtResource("3_sg781")]
 position = Vector2(360, 1623)
@@ -213,10 +213,10 @@ position = Vector2(442, 354)
 position = Vector2(908, 353)
 
 [node name="Light4" parent="Lights" unique_id=327980320 instance=ExtResource("8_3dueu")]
-position = Vector2(193, 1070)
+position = Vector2(199, 1033)
 
 [node name="Light5" parent="Lights" unique_id=419073303 instance=ExtResource("8_3dueu")]
-position = Vector2(961, 1270)
+position = Vector2(953, 1199)
 
 [node name="Coliisions" type="Node2D" parent="." unique_id=1046833520]
 visible = false
@@ -309,6 +309,7 @@ metadata/_edit_lock_ = true
 
 [node name="Rooms" type="Node2D" parent="." unique_id=1182779514]
 visible = false
+metadata/_edit_lock_ = true
 
 [node name="Area2D" type="Area2D" parent="Rooms" unique_id=852131100]
 

@@ -13,6 +13,8 @@ func _ready():
 	Globals.can_talk = true
 	
 func _physics_process(delta):
+	z_index = int(global_position.y)
+	Globals.player_position = global_position
 	if Globals.can_move:
 		player_movement(delta)
 	else:
@@ -71,30 +73,13 @@ func play_anim(movement):
 				anim.play('back_walk')
 			elif movement == 0:
 				anim.play('back_idle')
-				
-
-#func _on_icon_body_entered(_body: Node2D) -> void:
-	#if can_talk:
-		#can_talk = false
-		#Globals.can_move = false
-		#play_anim(0)
-		#dialog = Dialogic.start("purple_idle")
-		#get_tree().root.add_child(dialog)
-		#Dialogic.timeline_ended.connect(dialog_end)
-		#
-#func dialog_end():
-	#await get_tree().create_timer(0.5).timeout
-	#can_talk = true
-	#Globals.can_move = true
-
-
+			
 func _on_area_2d_body_entered(body: Node2D, out: bool) -> void:
 	if body.is_in_group("player"): 
 		if out:
 			Globals.outside = true
 		else:
 			Globals.in_room = true
-
 
 func _on_area_2d_body_exited(body: Node2D, out: bool) -> void:
 	if body.is_in_group("player"): 
