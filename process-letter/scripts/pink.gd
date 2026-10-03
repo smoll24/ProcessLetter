@@ -45,8 +45,6 @@ func _process(_delta):
 	else:
 		velocity = Vector2.ZERO
 	
-	print(wander_timer.wait_time)
-	
 	if Globals.status in speech:
 		speech_bubble.visible = true
 		speech_text.text = speech[Globals.status]

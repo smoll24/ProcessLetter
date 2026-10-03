@@ -4,5 +4,5 @@
 
 [node name="drag_preview" type="TextureRect" unique_id=1695253032]
 modulate = Color(1, 1, 1, 0.5921569)
-rotation = 2.0943952
+z_index = 1
 script = ExtResource("1_2c8co")

@@ -54,6 +54,7 @@ position = Vector2(-1419, 3008)
 texture = ExtResource("2_bexj4")
 
 [node name="OuterLayer" type="Node2D" parent="." unique_id=1467002887]
+visible = false
 
 [node name="Alevel" type="Sprite2D" parent="OuterLayer" unique_id=1989980623]
 position = Vector2(-1419.0001, 3008.0002)
@@ -191,14 +192,14 @@ position = Vector2(-1398, 1013)
 position = Vector2(50, 324)
 
 [node name="Workbench" parent="InnerLayer" unique_id=629053132 instance=ExtResource("9_bexj4")]
-position = Vector2(298, 483)
+position = Vector2(242, 341)
 type = 1
 
 [node name="Book" parent="InnerLayer" unique_id=348016050 instance=ExtResource("17_rqb8u")]
 position = Vector2(-44, 567)
 
 [node name="Player" parent="." unique_id=864046172 instance=ExtResource("1_dpurt")]
-position = Vector2(226, 344)
+position = Vector2(106, 483)
 
 [node name="Lights" type="Node2D" parent="." unique_id=2116302559]
 visible = false

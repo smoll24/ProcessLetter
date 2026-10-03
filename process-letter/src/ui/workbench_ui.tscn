@@ -1,29 +1,29 @@
 [gd_scene format=3 uid="uid://c417vx6j6p730"]
 
 [ext_resource type="Script" uid="uid://g1yicx3lbqc7" path="res://scripts/workbench_ui.gd" id="1_cldsk"]
-[ext_resource type="Texture2D" uid="uid://sdlmwyfftmor" path="res://assets/ui/computer.png" id="1_dpo3r"]
-[ext_resource type="Texture2D" uid="uid://cdlhkhjrerxvn" path="res://assets/puzzles/sudoku/sud0.png" id="3_cldsk"]
-[ext_resource type="Texture2D" uid="uid://bmn3pxg3a7vpv" path="res://assets/puzzles/sudoku/sud0hover.png" id="4_suigc"]
+[ext_resource type="Texture2D" uid="uid://ba6lhgm677kod" path="res://assets/workshop/workshop_bg.PNG" id="2_20bex"]
+[ext_resource type="Texture2D" uid="uid://44dvqryxrq4l" path="res://assets/workshop/item3.png" id="3_gw2w1"]
 [ext_resource type="Script" uid="uid://bcxj5el16w0qs" path="res://scripts/texture_button.gd" id="5_suigc"]
-[ext_resource type="Texture2D" uid="uid://ca0ghuq2y1v23" path="res://assets/puzzles/sudoku/sud1.png" id="6_llh03"]
-[ext_resource type="Texture2D" uid="uid://bmxwyqs0ywg76" path="res://assets/puzzles/sudoku/sud1chosen.png" id="7_0lruc"]
-[ext_resource type="Texture2D" uid="uid://bmj8vbg1aweds" path="res://assets/puzzles/sudoku/sud7.png" id="8_0lruc"]
+[ext_resource type="Texture2D" uid="uid://bxw2kqmulvof2" path="res://assets/workshop/irem6.png" id="5_wf5lg"]
+[ext_resource type="Texture2D" uid="uid://ch6hye84oetor" path="res://assets/workshop/item8.png" id="6_0gesc"]
+[ext_resource type="Texture2D" uid="uid://cj2pxpoy48jws" path="res://assets/workshop/item1.png" id="7_4snul"]
+[ext_resource type="Texture2D" uid="uid://dw0x63wundl8s" path="res://assets/workshop/item5.png" id="8_uv0hw"]
+[ext_resource type="Texture2D" uid="uid://cqam42lo4pdk8" path="res://assets/workshop/item2.png" id="9_4juye"]
+[ext_resource type="Texture2D" uid="uid://dbye72oxney18" path="res://assets/workshop/item4.png" id="10_74yby"]
+[ext_resource type="Texture2D" uid="uid://bsmm3hbb6vw2d" path="res://assets/workshop/item9.png" id="11_o4i0i"]
+[ext_resource type="Texture2D" uid="uid://bpnjpg0rmd4r5" path="res://assets/workshop/item0.png" id="12_67r6b"]
+[ext_resource type="Texture2D" uid="uid://brr2kvn0ak8mj" path="res://assets/workshop/empty.PNG" id="13_0gesc"]
+[ext_resource type="Texture2D" uid="uid://chtj75wljim0k" path="res://assets/workshop/workshop_overlay.png" id="13_wf5lg"]
+[ext_resource type="Texture2D" uid="uid://c10w8ak2updpn" path="res://assets/workshop/empty2.png" id="14_0gesc"]
 
 [node name="Workbench" type="CanvasLayer" unique_id=1433977059]
 script = ExtResource("1_cldsk")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1609062932]
-visible = false
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("1_dpo3r")
-
-[node name="Button" type="Button" parent="." unique_id=1091397934]
-offset_left = 36.0
-offset_top = 22.0
-offset_right = 154.0
-offset_bottom = 106.0
-text = "[Exit]"
+mouse_filter = 2
+texture = ExtResource("2_20bex")
 
 [node name="Control" type="Control" parent="." unique_id=893886648]
 layout_mode = 3
@@ -41,54 +41,179 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -158.0
-offset_top = -32.0
-offset_right = 158.0
-offset_bottom = 32.0
+offset_left = -425.0
+offset_top = -348.5
+offset_right = 425.0
+offset_bottom = -19.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 30
 
 [node name="CenterContainer" type="CenterContainer" parent="Control/HBoxContainer" unique_id=1140117113]
 layout_mode = 2
 
 [node name="TextureButton" type="TextureButton" parent="Control/HBoxContainer/CenterContainer" unique_id=2131744965]
 layout_mode = 2
-texture_normal = ExtResource("3_cldsk")
-texture_pressed = ExtResource("4_suigc")
+texture_normal = ExtResource("3_gw2w1")
+texture_pressed = ExtResource("3_gw2w1")
 script = ExtResource("5_suigc")
 
-[node name="CenterContainer2" type="CenterContainer" parent="Control/HBoxContainer" unique_id=774571518]
+[node name="CenterContainer2" type="CenterContainer" parent="Control/HBoxContainer" unique_id=159779081]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="Control/HBoxContainer/CenterContainer2" unique_id=1149992483]
+[node name="TextureButton" type="TextureButton" parent="Control/HBoxContainer/CenterContainer2" unique_id=332622794]
 layout_mode = 2
-texture_normal = ExtResource("6_llh03")
-texture_pressed = ExtResource("7_0lruc")
+texture_normal = ExtResource("5_wf5lg")
 script = ExtResource("5_suigc")
 
-[node name="CenterContainer3" type="CenterContainer" parent="Control/HBoxContainer" unique_id=964914241]
+[node name="CenterContainer3" type="CenterContainer" parent="Control/HBoxContainer" unique_id=1156091837]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="Control/HBoxContainer/CenterContainer3" unique_id=1482825615]
+[node name="TextureButton" type="TextureButton" parent="Control/HBoxContainer/CenterContainer3" unique_id=1377854036]
 layout_mode = 2
-texture_normal = ExtResource("3_cldsk")
-texture_pressed = ExtResource("4_suigc")
+texture_normal = ExtResource("6_0gesc")
 script = ExtResource("5_suigc")
 
-[node name="CenterContainer4" type="CenterContainer" parent="Control/HBoxContainer" unique_id=1354138439]
+[node name="CenterContainer4" type="CenterContainer" parent="Control/HBoxContainer" unique_id=649643266]
 layout_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="Control/HBoxContainer/CenterContainer4" unique_id=1745900603]
+[node name="TextureButton" type="TextureButton" parent="Control/HBoxContainer/CenterContainer4" unique_id=1494083478]
 layout_mode = 2
-texture_normal = ExtResource("3_cldsk")
-texture_pressed = ExtResource("4_suigc")
+texture_normal = ExtResource("7_4snul")
 script = ExtResource("5_suigc")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=797921627]
-visible = false
-position = Vector2(644, 306.99997)
-rotation = -2.0786872
-texture = ExtResource("8_0lruc")
+[node name="CenterContainer5" type="CenterContainer" parent="Control/HBoxContainer" unique_id=338670134]
+layout_mode = 2
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="TextureButton" type="TextureButton" parent="Control/HBoxContainer/CenterContainer5" unique_id=716784043]
+layout_mode = 2
+texture_normal = ExtResource("8_uv0hw")
+script = ExtResource("5_suigc")
+
+[node name="CenterContainer6" type="CenterContainer" parent="Control/HBoxContainer" unique_id=1304743666]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="Control/HBoxContainer/CenterContainer6" unique_id=657735743]
+layout_mode = 2
+texture_normal = ExtResource("9_4juye")
+script = ExtResource("5_suigc")
+
+[node name="CenterContainer7" type="CenterContainer" parent="Control/HBoxContainer" unique_id=471673756]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="Control/HBoxContainer/CenterContainer7" unique_id=1811805489]
+layout_mode = 2
+texture_normal = ExtResource("10_74yby")
+script = ExtResource("5_suigc")
+
+[node name="CenterContainer8" type="CenterContainer" parent="Control/HBoxContainer" unique_id=640855498]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="Control/HBoxContainer/CenterContainer8" unique_id=269873533]
+layout_mode = 2
+texture_normal = ExtResource("11_o4i0i")
+script = ExtResource("5_suigc")
+
+[node name="CenterContainer9" type="CenterContainer" parent="Control/HBoxContainer" unique_id=1293337447]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="Control/HBoxContainer/CenterContainer9" unique_id=426235904]
+layout_mode = 2
+texture_normal = ExtResource("12_67r6b")
+script = ExtResource("5_suigc")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control" unique_id=319964428]
+modulate = Color(1, 1, 1, 0.7529412)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.5
+offset_top = -28.5
+offset_right = 184.5
+offset_bottom = 300.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 90
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/HBoxContainer2" unique_id=516147022]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Control/HBoxContainer2/CenterContainer" unique_id=563845674]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("13_0gesc")
+
+[node name="CenterContainer2" type="CenterContainer" parent="Control/HBoxContainer2" unique_id=1342551203]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Control/HBoxContainer2/CenterContainer2" unique_id=621760652]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("13_0gesc")
+
+[node name="CenterContainer3" type="CenterContainer" parent="Control/HBoxContainer2" unique_id=2140819991]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Control/HBoxContainer2/CenterContainer3" unique_id=942925422]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("13_0gesc")
+
+[node name="TextureButton" type="TextureButton" parent="Control" unique_id=1469301411]
+layout_mode = 0
+offset_left = 458.0
+offset_top = 364.5
+offset_right = 521.0
+offset_bottom = 626.5
+texture_normal = ExtResource("14_0gesc")
+script = ExtResource("5_suigc")
+
+[node name="TextureButton2" type="TextureButton" parent="Control" unique_id=1991173965]
+layout_mode = 0
+offset_left = 611.0
+offset_top = 364.5
+offset_right = 674.0
+offset_bottom = 626.5
+texture_normal = ExtResource("14_0gesc")
+script = ExtResource("5_suigc")
+
+[node name="TextureButton3" type="TextureButton" parent="Control" unique_id=1804507324]
+layout_mode = 0
+offset_left = 764.0
+offset_top = 364.5
+offset_right = 827.0
+offset_bottom = 626.5
+texture_normal = ExtResource("14_0gesc")
+script = ExtResource("5_suigc")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1005255994]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("13_wf5lg")
+
+[node name="Exit" type="Button" parent="." unique_id=1091397934]
+offset_left = 36.0
+offset_top = 22.0
+offset_right = 154.0
+offset_bottom = 106.0
+text = "[Exit]"
+
+[node name="Check" type="Button" parent="." unique_id=2010884229]
+offset_left = 887.0
+offset_top = 539.0
+offset_right = 1005.0
+offset_bottom = 623.0
+text = "[Check]"
+
+[node name="Label" type="Label" parent="." unique_id=143672600]
+offset_left = 888.0
+offset_top = 630.0
+offset_right = 997.0
+offset_bottom = 663.0
+
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Check" to="." method="_on_check_pressed"]
