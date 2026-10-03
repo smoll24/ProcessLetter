@@ -8,7 +8,7 @@ func _ready() -> void:
 	Globals.workbench = false
 
 func _process(_delta):
-	if type == 0:
+	if type == 0 and Globals.puzzle_step == 1:
 		if Globals.status in Globals.interactions["computer"] \
 		and Globals.can_talk and Globals.workbench and Globals.workbench_type == self.type:
 			interact_indicator.visible = true
@@ -21,7 +21,7 @@ func _process(_delta):
 		else:
 			indicator2.visible = false
 	
-	elif type == 1:
+	elif type == 1 and Globals.puzzle_step == 2:
 		if Globals.status in Globals.interactions["workbench"] \
 		and Globals.can_talk and Globals.workbench and Globals.workbench_type == self.type:
 			interact_indicator.visible = true
@@ -44,11 +44,6 @@ func _process(_delta):
 				Globals.in_computer = true
 			elif type == 1:
 				Globals.in_workbench = true
-		
-#func dialog_end():
-	#await get_tree().create_timer(0.5).timeout
-	#Globals.can_talk = true
-	#Globals.can_move = true
 
 func _on_interact_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):

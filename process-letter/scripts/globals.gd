@@ -44,6 +44,9 @@ var book = false
 var book_type = 0
 var in_book = false
 
+#Indicates whether you can enter 1. Computer 2. Workshop 3. Upgrades
+var puzzle_step = 0
+
 var player_position: Vector2
 
 var current_bot_instance: CharacterBody2D = null
