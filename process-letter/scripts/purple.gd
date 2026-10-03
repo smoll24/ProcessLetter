@@ -140,25 +140,6 @@ func start_wandering() -> void:
 	if is_wandering:
 		stop_wandering()
 	
-#func move_one_step() -> void:
-	#if wander_steps <= 0:
-		#stop_wandering()
-		#return
-	#velocity = wander_direction * wander_speed
-	#var start_position = global_position
-	#var distance_to_move = step_distance
-	#while global_position.distance_to(start_position) < distance_to_move:
-		#if not is_wandering:
-			#velocity = Vector2.ZERO
-			#return
-		#move_and_slide()
-		#await get_tree().process_frame
-	#velocity = Vector2.ZERO
-	#wander_steps -= 1
-	#await get_tree().create_timer(randf_range(0.05, 0.2)).timeout
-	#if is_wandering:
-		#move_one_step()
-	
 func stop_wandering() -> void:
 	is_wandering = false
 	velocity = Vector2.ZERO
@@ -167,7 +148,6 @@ func stop_wandering() -> void:
 	#Wait before wandering again
 	wander_timer.start(randf_range(3.0, 6.0))
 	
-
 func update_walk_animation() -> void:
 	if wander_direction == Vector2.UP:
 		animated_sprite.flip_h = false
