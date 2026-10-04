@@ -1,9 +1,113 @@
 [gd_scene format=3 uid="uid://dj3b8bc4ffmnv"]
 
 [ext_resource type="Script" uid="uid://bvo8eonyp7hha" path="res://scripts/elevator_ui.gd" id="1_oca8a"]
+[ext_resource type="Texture2D" uid="uid://cbx4hnmq5fx" path="res://assets/ui/elevator_box.PNG" id="2_p1tfx"]
+[ext_resource type="Texture2D" uid="uid://dbsxsp0044koq" path="res://assets/ui/elevator_label.PNG" id="3_31fn0"]
+[ext_resource type="Texture2D" uid="uid://2gqio1pvd5dy" path="res://assets/ui/elevator_light_on.PNG" id="4_5q50v"]
+[ext_resource type="Texture2D" uid="uid://beajjql1kdbs6" path="res://assets/ui/elevator_button.PNG" id="4_lafvn"]
+[ext_resource type="Texture2D" uid="uid://cq58rkmh8ny0d" path="res://assets/ui/elevator_button_pressed.PNG" id="5_5q50v"]
+[ext_resource type="Texture2D" uid="uid://ducul2tnsr4yw" path="res://assets/ui/elevator_light_off.PNG" id="5_b2s11"]
+[ext_resource type="Texture2D" uid="uid://b4mdoilj8m10u" path="res://assets/ui/elevator_button_hover.PNG" id="6_b2s11"]
+[ext_resource type="Texture2D" uid="uid://deaa7m7ds6hkr" path="res://assets/ui/exit_button.PNG" id="7_rtkfm"]
+[ext_resource type="Texture2D" uid="uid://dwoldl1k2emt5" path="res://assets/ui/exit_pressed.PNG" id="8_ids5r"]
+[ext_resource type="Texture2D" uid="uid://w86672hharqj" path="res://assets/ui/exit_hover.PNG" id="9_axt1d"]
 
 [node name="Elevator_ui" type="CanvasLayer" unique_id=1433977059]
 script = ExtResource("1_oca8a")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1496650582]
+custom_minimum_size = Vector2(1280, 720)
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 0.16862746)
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=986810845]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -186.0
+offset_top = -245.0
+offset_right = 186.0
+offset_bottom = 245.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_p1tfx")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=2061805488]
+offset_left = 570.5
+offset_top = 159.5
+offset_right = 767.5
+offset_bottom = 218.5
+texture = ExtResource("3_31fn0")
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=1326374103]
+offset_left = 570.5
+offset_top = 231.5
+offset_right = 767.5
+offset_bottom = 290.5
+texture = ExtResource("3_31fn0")
+
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=941526149]
+offset_left = 570.5
+offset_top = 305.5
+offset_right = 767.5
+offset_bottom = 364.5
+texture = ExtResource("3_31fn0")
+
+[node name="TextureRect5" type="TextureRect" parent="." unique_id=1185725797]
+offset_left = 570.5
+offset_top = 378.5
+offset_right = 767.5
+offset_bottom = 437.5
+texture = ExtResource("3_31fn0")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=2085842987]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.5
+offset_top = -194.5
+offset_right = -86.5
+offset_bottom = 154.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="LightA_on" type="TextureRect" parent="VBoxContainer2" unique_id=1137960163]
+visible = false
+layout_mode = 2
+texture = ExtResource("4_5q50v")
+
+[node name="LightA_off" type="TextureRect" parent="VBoxContainer2" unique_id=1648373642]
+layout_mode = 2
+texture = ExtResource("5_b2s11")
+
+[node name="Light1_on" type="TextureRect" parent="VBoxContainer2" unique_id=72207982]
+layout_mode = 2
+texture = ExtResource("4_5q50v")
+
+[node name="Light1_off" type="TextureRect" parent="VBoxContainer2" unique_id=1946702589]
+visible = false
+layout_mode = 2
+texture = ExtResource("5_b2s11")
+
+[node name="Light2_off" type="TextureRect" parent="VBoxContainer2" unique_id=919899247]
+layout_mode = 2
+texture = ExtResource("5_b2s11")
+
+[node name="Light3_on" type="TextureRect" parent="VBoxContainer2" unique_id=1231114027]
+visible = false
+layout_mode = 2
+texture = ExtResource("4_5q50v")
+
+[node name="Light3_off" type="TextureRect" parent="VBoxContainer2" unique_id=1377279173]
+layout_mode = 2
+texture = ExtResource("5_b2s11")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1158380198]
 anchors_preset = 8
@@ -11,37 +115,50 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -98.5
-offset_top = -174.5
-offset_right = 98.5
-offset_bottom = 174.5
+offset_left = 50.5
+offset_top = -192.5
+offset_right = 247.5
+offset_bottom = 156.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 10
+theme_override_constants/separation = 30
 
-[node name="LevelA" type="Button" parent="VBoxContainer" unique_id=446714016]
+[node name="LevelA" type="TextureButton" parent="VBoxContainer" unique_id=1038964947]
 layout_mode = 2
-text = "Level A"
+texture_normal = ExtResource("4_lafvn")
+texture_pressed = ExtResource("5_5q50v")
+texture_hover = ExtResource("6_b2s11")
 
-[node name="Level1" type="Button" parent="VBoxContainer" unique_id=1846862309]
+[node name="Level1" type="TextureButton" parent="VBoxContainer" unique_id=559477099]
 layout_mode = 2
-text = "Level 1"
+texture_normal = ExtResource("4_lafvn")
+texture_pressed = ExtResource("5_5q50v")
+texture_hover = ExtResource("6_b2s11")
 
-[node name="Level2" type="Button" parent="VBoxContainer" unique_id=1650062191]
+[node name="Level2" type="TextureButton" parent="VBoxContainer" unique_id=768559186]
 layout_mode = 2
 disabled = true
-text = "Level 2"
+texture_normal = ExtResource("4_lafvn")
+texture_pressed = ExtResource("5_5q50v")
+texture_hover = ExtResource("6_b2s11")
+texture_disabled = ExtResource("5_5q50v")
 
-[node name="Level3" type="Button" parent="VBoxContainer" unique_id=2050705395]
+[node name="Level3" type="TextureButton" parent="VBoxContainer" unique_id=756022302]
 layout_mode = 2
-text = "Level 3"
+texture_normal = ExtResource("4_lafvn")
+texture_pressed = ExtResource("5_5q50v")
+texture_hover = ExtResource("6_b2s11")
 
-[node name="Cancel" type="Button" parent="VBoxContainer" unique_id=1543620701]
-layout_mode = 2
-text = "Cancel"
+[node name="Cancel" type="TextureButton" parent="." unique_id=1864586537]
+offset_left = 584.0
+offset_top = 464.0
+offset_right = 693.0
+offset_bottom = 565.0
+texture_normal = ExtResource("7_rtkfm")
+texture_pressed = ExtResource("8_ids5r")
+texture_hover = ExtResource("9_axt1d")
 
 [connection signal="pressed" from="VBoxContainer/LevelA" to="." method="_on_level_a_pressed"]
 [connection signal="pressed" from="VBoxContainer/Level1" to="." method="_on_level_1_pressed"]
-[connection signal="pressed" from="VBoxContainer/Level2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Level3" to="." method="_on_level_3_pressed"]
-[connection signal="pressed" from="VBoxContainer/Cancel" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="Cancel" to="." method="_on_cancel_pressed"]

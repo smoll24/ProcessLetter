@@ -35,7 +35,8 @@ func _process(_delta):
 		metropolis.visible = true
 
 
-func _on_button_pressed() -> void:
+
+func _on_exit_pressed() -> void:
 	Globals.in_book = false
 	Globals.can_move = true
 	Globals.can_talk = true

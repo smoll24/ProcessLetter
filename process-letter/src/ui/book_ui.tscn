@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://cohoynw117kbg" path="res://assets/ui/IMG_1755.PNG" id="4_7pb3i"]
 [ext_resource type="Texture2D" uid="uid://bqdqcxn4gwyj3" path="res://assets/ui/IMG_1756.PNG" id="5_g8rso"]
 [ext_resource type="Texture2D" uid="uid://bfepf0521bisb" path="res://assets/ui/IMG_1758.PNG" id="6_bmnd7"]
+[ext_resource type="Texture2D" uid="uid://deaa7m7ds6hkr" path="res://assets/ui/exit_button.PNG" id="7_tr1og"]
+[ext_resource type="Texture2D" uid="uid://dwoldl1k2emt5" path="res://assets/ui/exit_pressed.PNG" id="8_1l2t0"]
+[ext_resource type="Texture2D" uid="uid://w86672hharqj" path="res://assets/ui/exit_hover.PNG" id="9_ehr54"]
 
 [node name="Book_ui" type="CanvasLayer" unique_id=1433977059]
 script = ExtResource("1_1jgus")
@@ -94,7 +97,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Foucault" type="Control" parent="." unique_id=303187351]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -116,15 +118,15 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -259.0
-offset_top = -346.0
-offset_right = 233.0
-offset_bottom = -157.0
+offset_top = -342.0
+offset_right = 234.0
+offset_bottom = -154.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/default_color = Color(0.9843137, 0.7647059, 0.12156863, 1)
 theme_override_fonts/normal_font = ExtResource("3_7pb3i")
 theme_override_font_sizes/normal_font_size = 180
-text = "DISCIPLINE A PUNISH"
+text = "DISCIPLINE & PUNISH"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -136,9 +138,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -247.0
-offset_top = -211.0
+offset_top = -220.0
 offset_right = 234.0
-offset_bottom = -76.0
+offset_bottom = -85.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/default_color = Color(0.85490197, 0.38039216, 0.22745098, 1)
@@ -169,6 +171,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Gramsci" type="Control" parent="." unique_id=1117537069]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -297,11 +300,13 @@ text = "EIN FILM VON FRTIZ LANG"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="." unique_id=1091397934]
-offset_left = 36.0
-offset_top = 22.0
-offset_right = 154.0
-offset_bottom = 106.0
-text = "[Exit]"
+[node name="Exit" type="TextureButton" parent="." unique_id=1074505417]
+offset_left = 905.0
+offset_top = 31.0
+offset_right = 1014.0
+offset_bottom = 132.0
+texture_normal = ExtResource("7_tr1og")
+texture_pressed = ExtResource("8_1l2t0")
+texture_hover = ExtResource("9_ehr54")
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

@@ -4,7 +4,7 @@ extends CanvasLayer
 
 func _ready():
 	start_button.grab_focus()
-	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 
 func _on_start_pressed() -> void:

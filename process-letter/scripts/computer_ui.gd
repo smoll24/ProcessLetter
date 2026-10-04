@@ -7,9 +7,9 @@ func _process(_delta):
 	else:
 		self.visible = false
 		
-		
 
-func _on_button_pressed() -> void:
+
+func _on_exit_pressed() -> void:
 	Globals.in_computer = false
 	Globals.can_move = true
 	Globals.can_talk = true

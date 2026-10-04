@@ -14,6 +14,12 @@
 [ext_resource type="Texture2D" uid="uid://bmj8vbg1aweds" path="res://assets/puzzles/sudoku/sud7.png" id="10_4fga5"]
 [ext_resource type="Texture2D" uid="uid://cekc2amfx0k78" path="res://assets/puzzles/sudoku/sud8.png" id="11_jtyee"]
 [ext_resource type="Texture2D" uid="uid://dpbn3b4jfr2g2" path="res://assets/puzzles/sudoku/sud9.png" id="12_12v7p"]
+[ext_resource type="Texture2D" uid="uid://dnbsasniy0d2n" path="res://assets/ui/reset_button.PNG" id="15_tkt40"]
+[ext_resource type="Texture2D" uid="uid://dudgobr1b6ulj" path="res://assets/ui/reset_pressed.PNG" id="16_quo7u"]
+[ext_resource type="Texture2D" uid="uid://bh14iwm28nxh3" path="res://assets/ui/reset_hover.PNG" id="17_oawjp"]
+[ext_resource type="Texture2D" uid="uid://bhcbmvg8w21iv" path="res://assets/ui/cont_button.PNG" id="18_bls3q"]
+[ext_resource type="Texture2D" uid="uid://dcj5hcvby03df" path="res://assets/ui/cont_pressed.PNG" id="19_nqbwe"]
+[ext_resource type="Texture2D" uid="uid://b4aln3aoovnem" path="res://assets/ui/cont_hover.PNG" id="20_lakng"]
 
 [node name="Sudoku" type="Node2D" unique_id=507427484]
 script = ExtResource("1_c1wfx")
@@ -150,13 +156,6 @@ texture_pressed = ExtResource("2_tf1j2")
 texture_hover = ExtResource("3_6bora")
 texture_disabled = ExtResource("5_0f0gr")
 
-[node name="Check" type="Button" parent="." unique_id=8488002]
-offset_left = 1007.0
-offset_top = 503.0
-offset_right = 1172.0
-offset_bottom = 569.0
-text = "Check Solution"
-
 [node name="Label" type="Label" parent="." unique_id=1794928723]
 offset_left = 1015.0
 offset_top = 585.0
@@ -164,12 +163,31 @@ offset_right = 1144.0
 offset_bottom = 656.0
 text = " "
 
-[node name="Reset" type="Button" parent="." unique_id=1539558068]
-offset_left = 1006.0
-offset_top = 100.0
-offset_right = 1166.0
-offset_bottom = 167.0
-text = "Reset Game"
+[node name="Reset" type="TextureButton" parent="." unique_id=120913489]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 883.0
+offset_top = 190.0
+offset_right = 992.0
+offset_bottom = 291.0
+grow_horizontal = 2
+texture_normal = ExtResource("15_tkt40")
+texture_pressed = ExtResource("16_quo7u")
+texture_hover = ExtResource("17_oawjp")
+
+[node name="Check" type="TextureButton" parent="." unique_id=1419533000]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 885.0
+offset_top = 378.0
+offset_right = 994.0
+offset_bottom = 479.0
+grow_horizontal = 2
+texture_normal = ExtResource("18_bls3q")
+texture_pressed = ExtResource("19_nqbwe")
+texture_hover = ExtResource("20_lakng")
 
 [connection signal="pressed" from="SelectGrid/Button0" to="." method="_on_button_0_pressed"]
 [connection signal="pressed" from="SelectGrid/Button1" to="." method="_on_button_1_pressed"]
@@ -181,5 +199,5 @@ text = "Reset Game"
 [connection signal="pressed" from="SelectGrid/Button7" to="." method="_on_button_7_pressed"]
 [connection signal="pressed" from="SelectGrid/Button8" to="." method="_on_button_8_pressed"]
 [connection signal="pressed" from="SelectGrid/Button9" to="." method="_on_button_9_pressed"]
-[connection signal="pressed" from="Check" to="." method="_on_check_pressed"]
 [connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="Check" to="." method="_on_check_pressed"]

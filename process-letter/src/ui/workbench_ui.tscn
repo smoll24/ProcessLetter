@@ -15,6 +15,15 @@
 [ext_resource type="Texture2D" uid="uid://brr2kvn0ak8mj" path="res://assets/workshop/empty.PNG" id="13_0gesc"]
 [ext_resource type="Texture2D" uid="uid://chtj75wljim0k" path="res://assets/workshop/workshop_overlay.png" id="13_wf5lg"]
 [ext_resource type="Texture2D" uid="uid://c10w8ak2updpn" path="res://assets/workshop/empty2.png" id="14_0gesc"]
+[ext_resource type="Texture2D" uid="uid://dnbsasniy0d2n" path="res://assets/ui/reset_button.PNG" id="16_1s5u3"]
+[ext_resource type="Texture2D" uid="uid://deaa7m7ds6hkr" path="res://assets/ui/exit_button.PNG" id="16_oahsv"]
+[ext_resource type="Texture2D" uid="uid://dwoldl1k2emt5" path="res://assets/ui/exit_pressed.PNG" id="17_56xps"]
+[ext_resource type="Texture2D" uid="uid://dudgobr1b6ulj" path="res://assets/ui/reset_pressed.PNG" id="17_mraqn"]
+[ext_resource type="Texture2D" uid="uid://bh14iwm28nxh3" path="res://assets/ui/reset_hover.PNG" id="18_ble8y"]
+[ext_resource type="Texture2D" uid="uid://w86672hharqj" path="res://assets/ui/exit_hover.PNG" id="18_vok16"]
+[ext_resource type="Texture2D" uid="uid://bhcbmvg8w21iv" path="res://assets/ui/cont_button.PNG" id="19_oahsv"]
+[ext_resource type="Texture2D" uid="uid://dcj5hcvby03df" path="res://assets/ui/cont_pressed.PNG" id="20_56xps"]
+[ext_resource type="Texture2D" uid="uid://b4aln3aoovnem" path="res://assets/ui/cont_hover.PNG" id="21_vok16"]
 
 [node name="Workbench" type="CanvasLayer" unique_id=1433977059]
 script = ExtResource("1_cldsk")
@@ -195,19 +204,40 @@ offset_bottom = 40.0
 mouse_filter = 2
 texture = ExtResource("13_wf5lg")
 
-[node name="Exit" type="Button" parent="." unique_id=1091397934]
-offset_left = 36.0
-offset_top = 22.0
-offset_right = 154.0
-offset_bottom = 106.0
-text = "[Exit]"
+[node name="Exit" type="TextureButton" parent="." unique_id=2089467431]
+offset_left = 1142.0
+offset_top = 24.0
+offset_right = 1251.0
+offset_bottom = 125.0
+texture_normal = ExtResource("16_oahsv")
+texture_pressed = ExtResource("17_56xps")
+texture_hover = ExtResource("18_vok16")
 
-[node name="Check" type="Button" parent="." unique_id=2010884229]
-offset_left = 887.0
-offset_top = 539.0
-offset_right = 1005.0
-offset_bottom = 623.0
-text = "[Check]"
+[node name="Reset" type="TextureButton" parent="." unique_id=518854113]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -353.0
+offset_top = 535.0
+offset_right = -244.0
+offset_bottom = 636.0
+grow_horizontal = 2
+texture_normal = ExtResource("16_1s5u3")
+texture_pressed = ExtResource("17_mraqn")
+texture_hover = ExtResource("18_ble8y")
+
+[node name="Check" type="TextureButton" parent="." unique_id=1916311197]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 243.0
+offset_top = 537.0
+offset_right = 352.0
+offset_bottom = 638.0
+grow_horizontal = 2
+texture_normal = ExtResource("19_oahsv")
+texture_pressed = ExtResource("20_56xps")
+texture_hover = ExtResource("21_vok16")
 
 [node name="Label" type="Label" parent="." unique_id=143672600]
 offset_left = 888.0
@@ -216,4 +246,6 @@ offset_right = 997.0
 offset_bottom = 663.0
 
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]
+[connection signal="ready" from="Reset" to="." method="_on_reset_ready"]
 [connection signal="pressed" from="Check" to="." method="_on_check_pressed"]

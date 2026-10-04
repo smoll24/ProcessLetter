@@ -1,6 +1,13 @@
 [gd_scene format=3 uid="uid://bw3ljitjewcl4"]
 
 [ext_resource type="Script" uid="uid://mgh1cuvax0mp" path="res://scripts/pause_ui.gd" id="1_ndwa6"]
+[ext_resource type="Texture2D" uid="uid://copuu5f4xagd2" path="res://assets/ui/pause_box.PNG" id="2_c0xon"]
+[ext_resource type="Texture2D" uid="uid://bhcbmvg8w21iv" path="res://assets/ui/cont_button.PNG" id="3_opghh"]
+[ext_resource type="Texture2D" uid="uid://dcj5hcvby03df" path="res://assets/ui/cont_pressed.PNG" id="4_2eaee"]
+[ext_resource type="Texture2D" uid="uid://b4aln3aoovnem" path="res://assets/ui/cont_hover.PNG" id="5_i404s"]
+[ext_resource type="Texture2D" uid="uid://bctq147cokp7a" path="res://assets/ui/options_button.PNG" id="6_su2o2"]
+[ext_resource type="Texture2D" uid="uid://dq7f3e4isdx8s" path="res://assets/ui/options_pressed.PNG" id="7_dgnf2"]
+[ext_resource type="Texture2D" uid="uid://j4wks7a53p26" path="res://assets/ui/options_hover.PNG" id="8_uuxfn"]
 
 [node name="Pause_ui" type="CanvasLayer" unique_id=1606086596]
 process_mode = 3
@@ -11,6 +18,21 @@ custom_minimum_size = Vector2(1280, 720)
 offset_right = 40.0
 offset_bottom = 40.0
 color = Color(0, 0, 0, 0.16862746)
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1347963280]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -229.0
+offset_top = -293.5
+offset_right = 229.0
+offset_bottom = 229.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_c0xon")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1928322205]
 anchors_preset = 8
@@ -18,21 +40,25 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -38.5
-offset_top = -33.0
-offset_right = 38.5
-offset_bottom = 33.0
+offset_left = -54.5
+offset_top = -58.0
+offset_right = 54.5
+offset_bottom = 174.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 10
+theme_override_constants/separation = 30
 
-[node name="Unpause" type="Button" parent="VBoxContainer" unique_id=892601059]
+[node name="Unpause" type="TextureButton" parent="VBoxContainer" unique_id=850575238]
 layout_mode = 2
-text = "Unpause"
+texture_normal = ExtResource("3_opghh")
+texture_pressed = ExtResource("4_2eaee")
+texture_hover = ExtResource("5_i404s")
 
-[node name="Options" type="Button" parent="VBoxContainer" unique_id=261357663]
+[node name="Options" type="TextureButton" parent="VBoxContainer" unique_id=1561807180]
 layout_mode = 2
-text = "Options"
+texture_normal = ExtResource("6_su2o2")
+texture_pressed = ExtResource("7_dgnf2")
+texture_hover = ExtResource("8_uuxfn")
 
 [connection signal="pressed" from="VBoxContainer/Unpause" to="." method="_on_unpause_pressed"]
 [connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]

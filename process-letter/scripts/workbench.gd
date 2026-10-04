@@ -8,33 +8,30 @@ func _ready() -> void:
 	Globals.workbench = false
 
 func _process(_delta):
+	var show_interact_indicator := false
+	var show_indicator2 := false
+
+	# Computer
 	if type == 0 and Globals.puzzle_step == 1:
 		if Globals.status in Globals.interactions["computer"] \
-		and Globals.can_talk and Globals.workbench and Globals.workbench_type == self.type:
-			interact_indicator.visible = true
-		else:
-			interact_indicator.visible = false
-		
-		if Globals.status in Globals.interactions["computer"] \
 		and Globals.can_talk:
-			indicator2.visible = true
-		else:
-			indicator2.visible = false
-	
+			show_indicator2 = true
+			if Globals.workbench \
+			and Globals.workbench_type == type:
+				show_interact_indicator = true
+
+	# Workbench
 	elif type == 1 and Globals.puzzle_step == 2:
 		if Globals.status in Globals.interactions["workbench"] \
-		and Globals.can_talk and Globals.workbench and Globals.workbench_type == self.type:
-			interact_indicator.visible = true
-		else:
-			interact_indicator.visible = false
-		
-		if Globals.status in Globals.interactions["workbench"] \
 		and Globals.can_talk:
-			indicator2.visible = true
-		else:
-			indicator2.visible = false
-	
-	
+			show_indicator2 = true
+			if Globals.workbench \
+			and Globals.workbench_type == type:
+				show_interact_indicator = true
+
+	interact_indicator.visible = show_interact_indicator
+	indicator2.visible = show_indicator2
+
 	if Globals.workbench:
 		if Input.is_action_just_pressed("ui_accept") \
 		and interact_indicator.visible:

@@ -239,7 +239,6 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_ll2x6")
 metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect2" type="Polygon2D" parent="Speech" unique_id=1230719179]
-position = Vector2(0, -1)
 rotation = 0.7853982
 color = Color(0.16078432, 0.14509805, 0.12156863, 1)
 polygon = PackedVector2Array(-89.80257, -75.66043, -75.66043, -89.80257, -63.63961, -63.63961)

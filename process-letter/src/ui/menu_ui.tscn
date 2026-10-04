@@ -1,9 +1,24 @@
 [gd_scene format=3 uid="uid://b46tuer2ide6a"]
 
 [ext_resource type="Script" uid="uid://227vr7jfqqx4" path="res://scripts/menu_ui.gd" id="1_62e2l"]
+[ext_resource type="Texture2D" uid="uid://7lwbeeufcw85" path="res://assets/ui/main_menu.PNG" id="2_x2bi8"]
+[ext_resource type="Texture2D" uid="uid://bhcbmvg8w21iv" path="res://assets/ui/cont_button.PNG" id="3_2ym8j"]
+[ext_resource type="Texture2D" uid="uid://dcj5hcvby03df" path="res://assets/ui/cont_pressed.PNG" id="4_6thtj"]
+[ext_resource type="Texture2D" uid="uid://b4aln3aoovnem" path="res://assets/ui/cont_hover.PNG" id="5_vc3gx"]
+[ext_resource type="Texture2D" uid="uid://bctq147cokp7a" path="res://assets/ui/options_button.PNG" id="6_p0yao"]
+[ext_resource type="Texture2D" uid="uid://dq7f3e4isdx8s" path="res://assets/ui/options_pressed.PNG" id="7_hyxes"]
+[ext_resource type="Texture2D" uid="uid://j4wks7a53p26" path="res://assets/ui/options_hover.PNG" id="8_tiwus"]
 
 [node name="Menu_ui" type="CanvasLayer" unique_id=946832688]
 script = ExtResource("1_62e2l")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=847339739]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_x2bi8")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=235345106]
 anchors_preset = 8
@@ -11,26 +26,31 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -38.5
-offset_top = -33.0
-offset_right = 38.5
-offset_bottom = 33.0
+offset_left = -54.5
+offset_top = -20.0
+offset_right = 54.5
+offset_bottom = 212.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 10
+theme_override_constants/separation = 30
 
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=1937648351]
+visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "INCREDIBLE GAME TITLE WOW"
 
-[node name="Start" type="Button" parent="VBoxContainer" unique_id=1925711759]
+[node name="Start" type="TextureButton" parent="VBoxContainer" unique_id=246869094]
 layout_mode = 2
-text = "Start"
+texture_normal = ExtResource("3_2ym8j")
+texture_pressed = ExtResource("4_6thtj")
+texture_hover = ExtResource("5_vc3gx")
 
-[node name="Options" type="Button" parent="VBoxContainer" unique_id=1148047222]
+[node name="Options" type="TextureButton" parent="VBoxContainer" unique_id=1691107332]
 layout_mode = 2
-text = "Options"
+texture_normal = ExtResource("6_p0yao")
+texture_pressed = ExtResource("7_hyxes")
+texture_hover = ExtResource("8_tiwus")
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]

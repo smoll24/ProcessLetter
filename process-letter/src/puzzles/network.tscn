@@ -5,6 +5,12 @@
 [ext_resource type="Texture2D" uid="uid://bmn3pxg3a7vpv" path="res://assets/puzzles/sudoku/sud0hover.png" id="2_4oum5"]
 [ext_resource type="Texture2D" uid="uid://sdlmwyfftmor" path="res://assets/ui/computer.png" id="2_mvcmu"]
 [ext_resource type="Texture2D" uid="uid://bniiyukx4ojmj" path="res://assets/puzzles/sudoku/sud0select.png" id="3_mvcmu"]
+[ext_resource type="Texture2D" uid="uid://dnbsasniy0d2n" path="res://assets/ui/reset_button.PNG" id="6_kyl6v"]
+[ext_resource type="Texture2D" uid="uid://dudgobr1b6ulj" path="res://assets/ui/reset_pressed.PNG" id="7_bx8dc"]
+[ext_resource type="Texture2D" uid="uid://bh14iwm28nxh3" path="res://assets/ui/reset_hover.PNG" id="8_r6myi"]
+[ext_resource type="Texture2D" uid="uid://bhcbmvg8w21iv" path="res://assets/ui/cont_button.PNG" id="9_xlgkx"]
+[ext_resource type="Texture2D" uid="uid://dcj5hcvby03df" path="res://assets/ui/cont_pressed.PNG" id="10_dy2v0"]
+[ext_resource type="Texture2D" uid="uid://b4aln3aoovnem" path="res://assets/ui/cont_hover.PNG" id="11_4ryf2"]
 
 [node name="Network" type="Node2D" unique_id=1872065222]
 z_index = 2
@@ -126,13 +132,6 @@ texture_normal = ExtResource("1_j7lo0")
 texture_hover = ExtResource("2_4oum5")
 texture_focused = ExtResource("3_mvcmu")
 
-[node name="Check" type="Button" parent="." unique_id=1483293952]
-offset_left = 846.0
-offset_top = 406.0
-offset_right = 1011.0
-offset_bottom = 472.0
-text = "Check Solution"
-
 [node name="Label" type="Label" parent="." unique_id=146377841]
 offset_left = 853.0
 offset_top = 485.0
@@ -140,12 +139,31 @@ offset_right = 982.0
 offset_bottom = 556.0
 text = " "
 
-[node name="Reset" type="Button" parent="." unique_id=1859364623]
-offset_left = 848.0
-offset_top = 89.0
-offset_right = 1008.0
-offset_bottom = 156.0
-text = "Reset Game"
+[node name="Reset" type="TextureButton" parent="." unique_id=1250591950]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 883.0
+offset_top = 190.0
+offset_right = 992.0
+offset_bottom = 291.0
+grow_horizontal = 2
+texture_normal = ExtResource("6_kyl6v")
+texture_pressed = ExtResource("7_bx8dc")
+texture_hover = ExtResource("8_r6myi")
+
+[node name="Check" type="TextureButton" parent="." unique_id=1866754367]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 885.0
+offset_top = 378.0
+offset_right = 994.0
+offset_bottom = 479.0
+grow_horizontal = 2
+texture_normal = ExtResource("9_xlgkx")
+texture_pressed = ExtResource("10_dy2v0")
+texture_hover = ExtResource("11_4ryf2")
 
 [connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
@@ -158,5 +176,5 @@ text = "Reset Game"
 [connection signal="pressed" from="Button9" to="." method="_on_button_9_pressed"]
 [connection signal="pressed" from="Button10" to="." method="_on_button_10_pressed"]
 [connection signal="pressed" from="Button11" to="." method="_on_button_11_pressed"]
-[connection signal="pressed" from="Check" to="." method="_on_check_pressed"]
 [connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="Check" to="." method="_on_check_pressed"]

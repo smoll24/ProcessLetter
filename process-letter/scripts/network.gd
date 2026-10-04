@@ -186,3 +186,5 @@ func _on_reset_pressed() -> void:
 func _on_check_pressed() -> void:
 	var solution = check_solution()
 	label.text = solution[1]
+	if solution[0] == true:
+		Globals.puzzle_step = 2

@@ -22,6 +22,8 @@ var interactions = {"purple":[], "pink":[],"blue":[],
 #"workbench":["prog1","prog2","prog3"],
 #"computer":["prog1","prog2","prog3"]}
 
+var current_level = 0
+
 var purple = false
 var pink = false
 var teal = false
@@ -41,11 +43,11 @@ var can_capture = true
 var captured = 0
 
 var book = false
-var book_type = 0
+var book_type = 1
 var in_book = false
 
-#Indicates whether you can enter 1. Computer 2. Workshop 3. Upgrades
-var puzzle_step = 0
+#Indicates whether you can enter 1. Computer 2. Workshop 
+var puzzle_step = 2
 
 var player_position: Vector2
 

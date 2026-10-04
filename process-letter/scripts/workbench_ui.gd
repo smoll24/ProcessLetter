@@ -39,3 +39,18 @@ func _on_check_pressed() -> void:
 		label.text = "Correct!"
 	else:
 		label.text = "Incorrect."
+
+
+func _on_reset_pressed() -> void:
+	$Control/HBoxContainer/CenterContainer/TextureButton.texture_normal = preload("res://assets/workshop/item3.png")
+	$Control/HBoxContainer/CenterContainer2/TextureButton.texture_normal = preload("res://assets/workshop/irem6.png")
+	$Control/HBoxContainer/CenterContainer3/TextureButton.texture_normal = preload("res://assets/workshop/item8.png")
+	$Control/HBoxContainer/CenterContainer4/TextureButton.texture_normal = preload("res://assets/workshop/item1.png")
+	$Control/HBoxContainer/CenterContainer5/TextureButton.texture_normal = preload("res://assets/workshop/item5.png")
+	$Control/HBoxContainer/CenterContainer6/TextureButton.texture_normal = preload("res://assets/workshop/item2.png")
+	$Control/HBoxContainer/CenterContainer7/TextureButton.texture_normal = preload("res://assets/workshop/item4.png")
+	$Control/HBoxContainer/CenterContainer8/TextureButton.texture_normal = preload("res://assets/workshop/item9.png")
+	$Control/HBoxContainer/CenterContainer9/TextureButton.texture_normal = preload("res://assets/workshop/item0.png")
+	$Control/TextureButton.texture_normal = preload("res://assets/workshop/empty2.png")
+	$Control/TextureButton2.texture_normal = preload("res://assets/workshop/empty2.png")
+	$Control/TextureButton3.texture_normal = preload("res://assets/workshop/empty2.png")

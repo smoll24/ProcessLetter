@@ -2,7 +2,6 @@ extends CanvasLayer
 
 @onready var level_a_button = $VBoxContainer/LevelA
 
-
 func _process(_delta):
 	if Globals.in_elevator:
 		self.visible = true
@@ -10,6 +9,27 @@ func _process(_delta):
 	else:
 		self.visible = false
 		
+	if Globals.current_level == 0:
+		$VBoxContainer2/LightA_on.visible = true
+		$VBoxContainer2/LightA_off.visible = false
+		$VBoxContainer2/Light1_on.visible = false
+		$VBoxContainer2/Light1_off.visible = true
+		$VBoxContainer2/Light3_on.visible = false
+		$VBoxContainer2/Light3_off.visible = true
+	elif Globals.current_level == 1:
+		$VBoxContainer2/LightA_on.visible = false
+		$VBoxContainer2/LightA_off.visible = true
+		$VBoxContainer2/Light1_on.visible = true
+		$VBoxContainer2/Light1_off.visible = false
+		$VBoxContainer2/Light3_on.visible = false
+		$VBoxContainer2/Light3_off.visible = true
+	elif Globals.current_level == 3:
+		$VBoxContainer2/LightA_on.visible = false
+		$VBoxContainer2/LightA_off.visible = true
+		$VBoxContainer2/Light1_on.visible = false
+		$VBoxContainer2/Light1_off.visible = true
+		$VBoxContainer2/Light3_on.visible = true
+		$VBoxContainer2/Light3_off.visible = false
 		
 
 func _on_cancel_pressed() -> void:

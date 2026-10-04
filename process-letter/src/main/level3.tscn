@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cfq3f7ksxijtw"]
 
-[ext_resource type="Script" uid="uid://cpsify10evtdv" path="res://scripts/level_a.gd" id="1_w6u08"]
+[ext_resource type="Script" uid="uid://drhokw35gut74" path="res://scripts/level_3.gd" id="1_kak86"]
 [ext_resource type="Texture2D" uid="uid://ouso6xkxmnqo" path="res://assets/bg/level3_rooms.png" id="2_w6u08"]
 [ext_resource type="Texture2D" uid="uid://d2oq47dmpiimj" path="res://assets/bg/level3.png" id="3_y7tho"]
 [ext_resource type="Texture2D" uid="uid://cq6v255cdh4bu" path="res://assets/bg/IMG_1734.PNG" id="4_l7ty0"]
@@ -27,7 +27,7 @@ size = Vector2(345, 257)
 size = Vector2(560, 696)
 
 [node name="Level3" type="Node2D" unique_id=1557939465]
-script = ExtResource("1_w6u08")
+script = ExtResource("1_kak86")
 
 [node name="3levelRooms" type="Sprite2D" parent="." unique_id=854602812]
 position = Vector2(-1419, 3008)

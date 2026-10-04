@@ -215,6 +215,7 @@ func _on_button_0_pressed() -> void:
 	change_button_number(0)
 
 
+
 func _on_check_pressed() -> void:
 	var solution = check_solution()
 	label.text = solution[1]

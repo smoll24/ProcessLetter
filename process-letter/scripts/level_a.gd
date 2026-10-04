@@ -5,6 +5,7 @@ extends Node2D
 
 
 func _ready():
+	Globals.current_level = 0
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	Globals.in_elevator = false
 
