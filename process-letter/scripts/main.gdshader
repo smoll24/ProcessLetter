@@ -1,36 +1,64 @@
 shader_type canvas_item;
 
-uniform sampler2D SCREEN_TEXTURE : hint_screen_texture;
-uniform vec2 resolution = vec2(320.0, 180.0);
+uniform bool crt_enabled = true;
 
-uniform float scan_line_amount : hint_range(0.0, 1.0) = 0.5;
-uniform float warp_amount : hint_range(0.0, 1.0) = 0.05;
-uniform float vignette_amount : hint_range(0.0, 1.0) = 0.5;
-uniform float vignette_intensity : hint_range(0.0, 1.0) = 0.3;
-uniform float grille_amount : hint_range(0.0, 1.0) = 0.05;
-uniform float brightness_boost : hint_range(1.0, 2.0) = 1.2;
+uniform float scanLineFac : hint_range(0.0, 1.0) = 0.1;
+uniform float scanLineWidth : hint_range(0.0, 0.5) = 0.25;
+uniform float nearestFac : hint_range(0.0, 2.0) = 0.0;
+uniform float linearFac : hint_range(0.0, 2.0) = 1.3;
+
+uniform bool aberration_enabled = true;
+uniform float aberrationFac : hint_range(0.0, 0.01) = 0.001;
+
+const vec2 RESOLUTION = vec2(320.0, 180.0);
+
+uniform sampler2D screen_texture : hint_screen_texture, repeat_disable, filter_linear;
 
 void fragment() {
     vec2 uv = SCREEN_UV;
-    
-    vec2 delta = uv - 0.5;
-    float warp_factor = dot(delta, delta) * warp_amount;
-    uv += delta * warp_factor;
-    
-    float scanline = sin(uv.y * resolution.y * PI) * 0.5 + 0.5;
-    scanline = mix(1.0, scanline, scan_line_amount * 0.5); // Réduit l'impact
-    
-    float grille = mod(uv.x * resolution.x, 3.0) < 1.5 ? 0.95 : 1.05;
-    grille = mix(1.0, grille, grille_amount * 0.5);
-    
-    vec3 color = texture(SCREEN_TEXTURE, uv).rgb * scanline * grille;
-    
-    vec2 v_uv = uv * (1.0 - uv.xy);
-    float vignette = v_uv.x * v_uv.y * 15.0;
-    vignette = mix(1.0, vignette, vignette_amount * 0.7);
 
-    color *= vignette * brightness_boost;
+    if (crt_enabled) {
+        // Scanline position
+        float fy = fract(uv.y * RESOLUTION.y);
 
-    COLOR.rgb = color;
-    COLOR.a = 1.0;
+        float scanLine = 0.0;
+
+        if (fy < scanLineWidth || fy > 1.0 - scanLineWidth) {
+            scanLine = scanLineFac;
+        }
+
+        // Chromatic aberration
+        float chromaticStrength = aberration_enabled ? 1.0 : 0.0;
+
+        vec4 color = vec4(0.0);
+
+        color.r = texture(
+            screen_texture,
+            uv - vec2(chromaticStrength * aberrationFac, 0.0)
+        ).r;
+
+        color.g = texture(
+            screen_texture,
+            uv
+        ).g;
+
+        color.b = texture(
+            screen_texture,
+            uv + vec2(chromaticStrength * aberrationFac, 0.0)
+        ).b;
+
+        color.a = 1.0;
+
+        // Apply brightness and scanlines
+        color = mix(
+            color * linearFac,
+            vec4(0.0, 0.0, 0.0, 1.0),
+            scanLine
+        );
+
+        COLOR = color;
+    }
+    else {
+        COLOR = texture(screen_texture, uv);
+    }
 }
