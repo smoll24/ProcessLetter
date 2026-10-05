@@ -4,7 +4,7 @@ enum Enter {START, STAIR_TOP, STAIR_BOTTOM, ELEVATOR}
 
 var can_move = true
 var can_talk = true
-var puzzle_phase = 2
+var puzzle_phase = 0
 var status = "prog3"
 var phase = 3
 var in_room = true
@@ -47,7 +47,7 @@ var book_type = 1
 var in_book = false
 
 #Indicates whether you can enter 1. Computer 2. Workshop 
-var puzzle_step = 1
+var puzzle_step = 0
 
 var player_position: Vector2
 

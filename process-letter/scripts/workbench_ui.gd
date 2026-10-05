@@ -5,6 +5,10 @@ extends CanvasLayer
 @onready var slot2 = $Control/TextureButton2
 @onready var slot3 = $Control/TextureButton3
 
+@onready var upgrade_message = $Upgrade
+@onready var upgrade_sparkle = $Upgrade/Sparkle
+@onready var upgrade_sprite = $Upgrade/Bots
+
 var solutions = {
 	"prog1":["res://assets/workshop/item4.png",
 			"res://assets/workshop/item3.png",
@@ -17,12 +21,16 @@ var solutions = {
 			"res://assets/workshop/item0.png"]
 	}
 
-func _process(_delta):
+func _process(delta):
 	if Globals.in_workbench:
 		self.visible = true
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	else:
 		self.visible = false
+		
+		
+	if upgrade_message.visible:
+		upgrade_sparkle.rotation += 1.0 * delta
 		
 
 func _on_exit_pressed() -> void:
@@ -37,6 +45,8 @@ func _on_check_pressed() -> void:
 	and solutions[Globals.status][1] == slot2.texture_normal.resource_path  \
 	and solutions[Globals.status][2] == slot3.texture_normal.resource_path :
 		label.text = "Correct!"
+		upgrade_message.visible = true
+		var puzzle_step = 0
 	else:
 		label.text = "Incorrect."
 
@@ -54,3 +64,11 @@ func _on_reset_pressed() -> void:
 	$Control/TextureButton.texture_normal = preload("res://assets/workshop/empty2.png")
 	$Control/TextureButton2.texture_normal = preload("res://assets/workshop/empty2.png")
 	$Control/TextureButton3.texture_normal = preload("res://assets/workshop/empty2.png")
+
+
+func _on_next_pressed() -> void:
+	upgrade_message.visible = false
+	Globals.in_workbench = false
+	Globals.can_move = true
+	Globals.can_talk = true
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN

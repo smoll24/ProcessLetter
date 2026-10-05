@@ -24,6 +24,40 @@
 [ext_resource type="Texture2D" uid="uid://bhcbmvg8w21iv" path="res://assets/ui/cont_button.PNG" id="19_oahsv"]
 [ext_resource type="Texture2D" uid="uid://dcj5hcvby03df" path="res://assets/ui/cont_pressed.PNG" id="20_56xps"]
 [ext_resource type="Texture2D" uid="uid://b4aln3aoovnem" path="res://assets/ui/cont_hover.PNG" id="21_vok16"]
+[ext_resource type="Texture2D" uid="uid://c27hovxkxfc7c" path="res://assets/ui/upgrade_sparkle.PNG" id="25_8uwd6"]
+[ext_resource type="Texture2D" uid="uid://cpx1rthy5tra" path="res://assets/ui/upgrade_bot1.PNG" id="26_8ybbt"]
+[ext_resource type="Texture2D" uid="uid://bc6ba5f28p1i3" path="res://assets/ui/upgrade_bot2.PNG" id="27_qmooc"]
+[ext_resource type="Texture2D" uid="uid://danadw22q4oc7" path="res://assets/ui/upgrade_bot3.PNG" id="28_t61u0"]
+[ext_resource type="Texture2D" uid="uid://c8ti45wpgxjju" path="res://assets/ui/next_button.PNG" id="29_t61u0"]
+[ext_resource type="Texture2D" uid="uid://d3ma23qi54oad" path="res://assets/ui/next_pressed.PNG" id="30_7egjw"]
+[ext_resource type="Texture2D" uid="uid://t765jbgj2gl0" path="res://assets/ui/next_hover.PNG" id="31_8w5c7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ywdb4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_8ybbt")
+}],
+"loop": 1,
+"name": &"bot1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_qmooc")
+}],
+"loop": 1,
+"name": &"bot2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_t61u0")
+}],
+"loop": 1,
+"name": &"bot3",
+"speed": 5.0
+}]
 
 [node name="Workbench" type="CanvasLayer" unique_id=1433977059]
 script = ExtResource("1_cldsk")
@@ -240,12 +274,58 @@ texture_pressed = ExtResource("20_56xps")
 texture_hover = ExtResource("21_vok16")
 
 [node name="Label" type="Label" parent="." unique_id=143672600]
+visible = false
 offset_left = 888.0
 offset_top = 630.0
 offset_right = 997.0
 offset_bottom = 663.0
 
+[node name="Upgrade" type="Control" parent="." unique_id=645167396]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Upgrade" unique_id=1637684341]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1764706, 0.06666667, 0.19607843, 0.7137255)
+
+[node name="Sparkle" type="Sprite2D" parent="Upgrade" unique_id=1444883649]
+position = Vector2(636, 315)
+texture = ExtResource("25_8uwd6")
+
+[node name="Bots" type="AnimatedSprite2D" parent="Upgrade" unique_id=1424353658]
+position = Vector2(640, 317)
+sprite_frames = SubResource("SpriteFrames_ywdb4")
+animation = &"bot1"
+
+[node name="Next" type="TextureButton" parent="Upgrade" unique_id=2110817446]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.5
+offset_top = 249.5
+offset_right = 120.5
+offset_bottom = 334.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("29_t61u0")
+texture_pressed = ExtResource("30_7egjw")
+texture_hover = ExtResource("31_8w5c7")
+
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]
 [connection signal="ready" from="Reset" to="." method="_on_reset_ready"]
 [connection signal="pressed" from="Check" to="." method="_on_check_pressed"]
+[connection signal="pressed" from="Upgrade/Next" to="." method="_on_next_pressed"]

@@ -29,5 +29,6 @@ func _on_unpause_pressed() -> void:
 	Input.parse_input_event(pause_event)
 
 func _on_options_pressed() -> void:
-	options_screen.open()
-	visible = false
+	pass
+	#options_screen.open()
+	#visible = false
