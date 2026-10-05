@@ -53,7 +53,7 @@ var player_position: Vector2
 
 var current_bot_instance: CharacterBody2D = null
 
-func _process(delta):
+func _process(_delta):
 	Dialogic.VAR.set_variable("State", status)
 	
 	if paused:

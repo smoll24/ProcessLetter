@@ -35,7 +35,7 @@ func _ready() -> void:
 	animated_sprite.play("front_idle")
 
 func _process(_delta):
-	z_index = int(global_position.y)
+	z_index = int(global_position.y)/100
 	speech_bubble.z_index = Globals.player_position.y + 1
 	if is_wandering:
 		velocity = wander_direction * wander_speed

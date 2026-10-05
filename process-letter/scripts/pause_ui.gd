@@ -7,7 +7,7 @@ extends CanvasLayer
 func _ready():
 	visible = false
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if self.visible:
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 

@@ -63,9 +63,6 @@ func _ready():
 	init_game()
 	
 	
-func _process(delta):
-	pass
-	
 func _setup_game(phase):
 	number_grid = []
 	if phase == 1:

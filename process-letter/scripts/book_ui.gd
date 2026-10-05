@@ -4,7 +4,6 @@ extends CanvasLayer
 @onready var foucault = $Foucault
 @onready var gramsci = $Gramsci
 @onready var metropolis = $Metropolis
-@onready var button = $Button
 
 func _process(_delta):
 	if Globals.in_book:

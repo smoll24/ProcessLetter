@@ -39,7 +39,7 @@ func _ready():
 	init_game()
 	
 	
-func _process(delta):
+func _process(_delta):
 	if Globals.puzzle_phase == 0:
 		$Puzzle1.visible = true
 		$Puzzle2.visible = false
@@ -201,7 +201,7 @@ func _setup_game(phase):
 				button23,
 				button24]
 
-func _create_connections(buttons: Array, connections: Array):
+func _create_connections(connections: Array):
 	for connection in connections:
 		var point_a = connection[0]
 		var point_b = connection[1]
@@ -228,7 +228,7 @@ func _create_connections(buttons: Array, connections: Array):
 
 func init_game():
 	_setup_game(Globals.puzzle_phase)
-	_create_connections(buttons, connections)
+	_create_connections(connections)
 	
 
 func fill_connection(point_a: int, point_b: int):

@@ -8,6 +8,7 @@ func _ready():
 	Globals.current_level = 1
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	Globals.in_elevator = false
+	$level1Outer.visible = true
 
 func _process(delta):
 	if Globals.in_room:

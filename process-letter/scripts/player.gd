@@ -13,7 +13,7 @@ func _ready():
 	Globals.can_talk = true
 	
 func _physics_process(delta):
-	z_index = int(global_position.y)
+	z_index = int(global_position.y)/100
 	Globals.player_position = global_position
 	if Globals.can_move:
 		player_movement(delta)
