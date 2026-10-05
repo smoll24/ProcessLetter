@@ -4,7 +4,7 @@ enum Enter {START, STAIR_TOP, STAIR_BOTTOM, ELEVATOR}
 
 var can_move = true
 var can_talk = true
-var puzzle_phase = 0
+var puzzle_phase = 2
 var status = "prog3"
 var phase = 3
 var in_room = true
