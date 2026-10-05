@@ -66,7 +66,6 @@ position = Vector2(-1419, 3008)
 texture = ExtResource("2_bexj4")
 
 [node name="OuterLayer" type="Node2D" parent="." unique_id=1467002887]
-visible = false
 
 [node name="Alevel" type="Sprite2D" parent="OuterLayer" unique_id=1989980623]
 position = Vector2(-1419.0001, 3008.0002)
@@ -190,10 +189,10 @@ position = Vector2(-1382, 637)
 position = Vector2(604, 646)
 
 [node name="Bots2" parent="OuterLayer/OutBots" unique_id=1817324579 instance=ExtResource("8_q05mi")]
-position = Vector2(-715, 644)
+position = Vector2(-704, 713)
 
 [node name="Bots3" parent="OuterLayer/OutBots" unique_id=872997564 instance=ExtResource("8_q05mi")]
-position = Vector2(-1073, 1418)
+position = Vector2(-1039, 1411)
 
 [node name="InnerLayer" type="Node2D" parent="." unique_id=897240129]
 
