@@ -66,7 +66,6 @@ position = Vector2(-1419, 3008)
 texture = ExtResource("2_bexj4")
 
 [node name="OuterLayer" type="Node2D" parent="." unique_id=1467002887]
-visible = false
 
 [node name="Alevel" type="Sprite2D" parent="OuterLayer" unique_id=1989980623]
 position = Vector2(-1419.0001, 3008.0002)
@@ -218,7 +217,6 @@ type = 1
 position = Vector2(106, 483)
 
 [node name="Lights" type="Node2D" parent="." unique_id=2116302559]
-visible = false
 
 [node name="Light" parent="Lights" unique_id=392051107 instance=ExtResource("8_3dueu")]
 position = Vector2(15, 355)
@@ -320,9 +318,8 @@ position = Vector2(-1990, -476)
 shape = SubResource("RectangleShape2D_rj60s")
 
 [node name="ColorRect" type="CanvasModulate" parent="." unique_id=971754492]
-visible = false
-color = Color(0.3719951, 0.7356891, 0.4720794, 1)
-metadata/_edit_lock_ = true
+modulate = Color(1, 1, 1, 0.34901962)
+color = Color(0.7065665, 0.6500496, 0.35690042, 1)
 
 [node name="Rooms" type="Node2D" parent="." unique_id=1182779514]
 visible = false

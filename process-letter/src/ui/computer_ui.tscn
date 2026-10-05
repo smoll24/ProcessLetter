@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://fc8spue341ep"]
 
-[ext_resource type="Texture2D" uid="uid://sdlmwyfftmor" path="res://assets/ui/computer.png" id="1_dpo3r"]
 [ext_resource type="Script" uid="uid://c3xbndewerqbf" path="res://scripts/computer_ui.gd" id="1_l6xp8"]
 [ext_resource type="PackedScene" uid="uid://i1hf4jklbl1g" path="res://src/puzzles/sudoku.tscn" id="2_cldsk"]
+[ext_resource type="Texture2D" uid="uid://cqgh4d6k8nw5k" path="res://assets/ui/IMG_1792.PNG" id="2_vgeta"]
 [ext_resource type="PackedScene" uid="uid://dh51ib38pbrq0" path="res://src/puzzles/network.tscn" id="3_suigc"]
 [ext_resource type="Texture2D" uid="uid://deaa7m7ds6hkr" path="res://assets/ui/exit_button.PNG" id="5_vgeta"]
 [ext_resource type="Texture2D" uid="uid://dwoldl1k2emt5" path="res://assets/ui/exit_pressed.PNG" id="6_jgvbh"]
@@ -14,12 +14,7 @@ script = ExtResource("1_l6xp8")
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1609062932]
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("1_dpo3r")
-
-[node name="Sudoku" parent="." unique_id=507427484 instance=ExtResource("2_cldsk")]
-visible = false
-
-[node name="Network" parent="." unique_id=1872065222 instance=ExtResource("3_suigc")]
+texture = ExtResource("2_vgeta")
 
 [node name="Exit" type="TextureButton" parent="." unique_id=1217196598]
 offset_left = 1142.0
@@ -29,5 +24,10 @@ offset_bottom = 125.0
 texture_normal = ExtResource("5_vgeta")
 texture_pressed = ExtResource("6_jgvbh")
 texture_hover = ExtResource("7_ik0pn")
+
+[node name="Network" parent="." unique_id=1872065222 instance=ExtResource("3_suigc")]
+
+[node name="Sudoku" parent="." unique_id=507427484 instance=ExtResource("2_cldsk")]
+visible = false
 
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

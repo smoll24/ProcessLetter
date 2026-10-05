@@ -47,7 +47,7 @@ var book_type = 1
 var in_book = false
 
 #Indicates whether you can enter 1. Computer 2. Workshop 
-var puzzle_step = 2
+var puzzle_step = 1
 
 var player_position: Vector2
 

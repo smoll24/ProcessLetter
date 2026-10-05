@@ -1,3 +1,5 @@
+//https://godotshaders.com/shader/animal-well-inspired-crt-effect/
+
 shader_type canvas_item;
 
 uniform bool crt_enabled = true;
