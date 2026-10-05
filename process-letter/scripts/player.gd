@@ -8,6 +8,8 @@ var dialog = null
 var can_talk = true
 
 func _ready():
+	if Globals.phase == 0:
+		self.global_position = Vector2(106.0, 483.0)
 	anim.play('front_idle')
 	Globals.can_move = true
 	Globals.can_talk = true

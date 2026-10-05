@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cienvtrschr0s" path="res://assets/ui/speech3.png" id="5_tdksk"]
 [ext_resource type="Texture2D" uid="uid://dske6v8tow7vd" path="res://assets/ui/speech4.png" id="6_8h5oj"]
 [ext_resource type="FontFile" uid="uid://7n5uyv7q3hvv" path="res://assets/fonts/process_script4.ttf" id="7_6hgni"]
+[ext_resource type="Texture2D" uid="uid://ekbl1yctr65b" path="res://assets/ui/excalamation.png" id="7_tdksk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i7g7q"]
 atlas = ExtResource("1_gwiru")
@@ -156,7 +157,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ywdb4"]
-size = Vector2(46.5, 51.5)
+size = Vector2(46.5, 67.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_35yet"]
 size = Vector2(164, 211)
@@ -199,7 +200,7 @@ animation = &"front_idle"
 autoplay = "front_idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1438348213]
-position = Vector2(1.75, 65.75)
+position = Vector2(-0.25, 53.75)
 shape = SubResource("RectangleShape2D_ywdb4")
 
 [node name="Interact_area" type="Area2D" parent="." unique_id=1066289758]
@@ -209,12 +210,16 @@ position = Vector2(-3, -0.5)
 shape = SubResource("RectangleShape2D_35yet")
 
 [node name="Indicator2" type="AnimatedSprite2D" parent="." unique_id=1448777660]
-visible = false
 position = Vector2(-3, -136)
 sprite_frames = SubResource("SpriteFrames_nfm80")
 autoplay = "default"
 
-[node name="Indicator" type="Label" parent="." unique_id=1690913703]
+[node name="Indicator" type="Sprite2D" parent="." unique_id=1758899760]
+visible = false
+position = Vector2(-1, -144)
+texture = ExtResource("7_tdksk")
+
+[node name="Indicator_old" type="Label" parent="." unique_id=1690913703]
 visible = false
 offset_left = -20.0
 offset_top = 26.0

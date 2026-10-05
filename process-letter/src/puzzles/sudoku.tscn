@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://i1hf4jklbl1g"]
 
 [ext_resource type="Script" uid="uid://emyc6sagjy6m" path="res://scripts/sudoku.gd" id="1_c1wfx"]
+[ext_resource type="Texture2D" uid="uid://cqgh4d6k8nw5k" path="res://assets/ui/IMG_1792.PNG" id="2_lakng"]
 [ext_resource type="Texture2D" uid="uid://ca0ghuq2y1v23" path="res://assets/puzzles/sudoku/sud1.png" id="2_tf1j2"]
 [ext_resource type="Texture2D" uid="uid://c0t83qurw78u1" path="res://assets/puzzles/sudoku/sud1hover.png" id="3_6bora"]
 [ext_resource type="Texture2D" uid="uid://cdlhkhjrerxvn" path="res://assets/puzzles/sudoku/sud0.png" id="3_12v7p"]
@@ -20,15 +21,33 @@
 [ext_resource type="Texture2D" uid="uid://bhcbmvg8w21iv" path="res://assets/ui/cont_button.PNG" id="18_bls3q"]
 [ext_resource type="Texture2D" uid="uid://dcj5hcvby03df" path="res://assets/ui/cont_pressed.PNG" id="19_nqbwe"]
 [ext_resource type="Texture2D" uid="uid://b4aln3aoovnem" path="res://assets/ui/cont_hover.PNG" id="20_lakng"]
+[ext_resource type="Texture2D" uid="uid://cxr5hoswns0hr" path="res://assets/ui/correct.PNG" id="22_ssu3p"]
+[ext_resource type="Texture2D" uid="uid://c8ti45wpgxjju" path="res://assets/ui/next_button.PNG" id="23_do6qn"]
+[ext_resource type="Texture2D" uid="uid://d3ma23qi54oad" path="res://assets/ui/next_pressed.PNG" id="24_t7ctd"]
+[ext_resource type="Texture2D" uid="uid://t765jbgj2gl0" path="res://assets/ui/next_hover.PNG" id="25_h8215"]
 
-[node name="Sudoku" type="Node2D" unique_id=507427484]
+[node name="Sudoku" type="Control" unique_id=393533036]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_c1wfx")
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=336282589]
+visible = false
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("2_lakng")
+
 [node name="GridContainer" type="GridContainer" parent="." unique_id=817522832]
-offset_left = 344.0
-offset_top = 24.0
-offset_right = 907.0
-offset_bottom = 587.0
+layout_mode = 0
+offset_left = 312.0
+offset_top = 112.0
+offset_right = 875.0
+offset_bottom = 675.0
 columns = 9
 
 [node name="Button1" type="TextureButton" parent="GridContainer" unique_id=95356826]
@@ -77,15 +96,17 @@ layout_mode = 2
 texture_normal = ExtResource("2_tf1j2")
 
 [node name="SelectGrid" type="GridContainer" parent="." unique_id=698591237]
+visible = false
+layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 342.0
-offset_top = 639.0
-offset_right = 945.0
-offset_bottom = 698.0
+offset_left = 276.0
+offset_top = 727.0
+offset_right = 947.0
+offset_bottom = 786.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/h_separation = 9
@@ -157,37 +178,84 @@ texture_hover = ExtResource("3_6bora")
 texture_disabled = ExtResource("5_0f0gr")
 
 [node name="Label" type="Label" parent="." unique_id=1794928723]
+layout_mode = 0
 offset_left = 1015.0
 offset_top = 585.0
 offset_right = 1144.0
 offset_bottom = 656.0
 text = " "
 
-[node name="Reset" type="TextureButton" parent="." unique_id=120913489]
+[node name="Reset" type="TextureButton" parent="." unique_id=1562952005]
+layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 883.0
-offset_top = 190.0
-offset_right = 992.0
-offset_bottom = 291.0
+offset_left = 172.0
+offset_top = 108.0
+offset_right = 281.0
+offset_bottom = 209.0
 grow_horizontal = 2
 texture_normal = ExtResource("15_tkt40")
 texture_pressed = ExtResource("16_quo7u")
 texture_hover = ExtResource("17_oawjp")
 
-[node name="Check" type="TextureButton" parent="." unique_id=1419533000]
+[node name="Check" type="TextureButton" parent="." unique_id=270752629]
+layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 885.0
-offset_top = 378.0
-offset_right = 994.0
-offset_bottom = 479.0
+offset_left = 171.0
+offset_top = 506.0
+offset_right = 280.0
+offset_bottom = 607.0
 grow_horizontal = 2
 texture_normal = ExtResource("18_bls3q")
 texture_pressed = ExtResource("19_nqbwe")
 texture_hover = ExtResource("20_lakng")
+
+[node name="Win" type="Control" parent="." unique_id=2091115860]
+visible = false
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Win" unique_id=1180492846]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 289.0
+offset_top = 96.0
+offset_right = -338.0
+offset_bottom = -95.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1764706, 0.06666667, 0.19607843, 0.7137255)
+
+[node name="check" type="Sprite2D" parent="Win" unique_id=975407636]
+position = Vector2(636, 287)
+texture = ExtResource("22_ssu3p")
+
+[node name="Next" type="TextureButton" parent="Win" unique_id=388253531]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.5
+offset_top = 137.5
+offset_right = 104.5
+offset_bottom = 222.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("23_do6qn")
+texture_pressed = ExtResource("24_t7ctd")
+texture_hover = ExtResource("25_h8215")
 
 [connection signal="pressed" from="SelectGrid/Button0" to="." method="_on_button_0_pressed"]
 [connection signal="pressed" from="SelectGrid/Button1" to="." method="_on_button_1_pressed"]
@@ -199,5 +267,4 @@ texture_hover = ExtResource("20_lakng")
 [connection signal="pressed" from="SelectGrid/Button7" to="." method="_on_button_7_pressed"]
 [connection signal="pressed" from="SelectGrid/Button8" to="." method="_on_button_8_pressed"]
 [connection signal="pressed" from="SelectGrid/Button9" to="." method="_on_button_9_pressed"]
-[connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]
-[connection signal="pressed" from="Check" to="." method="_on_check_pressed"]
+[connection signal="pressed" from="Win/Next" to="." method="_on_next_pressed"]

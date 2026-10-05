@@ -32,6 +32,13 @@ func _process(delta):
 	if upgrade_message.visible:
 		upgrade_sparkle.rotation += 1.0 * delta
 		
+	if Globals.status == "prog1":
+		upgrade_sprite.play("bot1")
+	elif Globals.status == "prog2":
+		upgrade_sprite.play("bot2")
+	elif Globals.status == "prog3":
+		upgrade_sprite.play("bot3")
+		
 
 func _on_exit_pressed() -> void:
 	Globals.in_workbench = false
@@ -46,7 +53,7 @@ func _on_check_pressed() -> void:
 	and solutions[Globals.status][2] == slot3.texture_normal.resource_path :
 		label.text = "Correct!"
 		upgrade_message.visible = true
-		var puzzle_step = 0
+		Globals.puzzle_step = 0
 	else:
 		label.text = "Incorrect."
 

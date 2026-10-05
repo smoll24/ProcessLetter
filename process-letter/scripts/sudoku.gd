@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 @onready var grid = $GridContainer
 
@@ -13,6 +13,7 @@ extends Node2D
 @onready var button9 = $SelectGrid/Button9
 
 @onready var label = $Label
+@onready var win_message = $Win
 
 var normal_textures = [
 	preload("res://assets/puzzles/sudoku/sud0.png"),
@@ -61,6 +62,7 @@ var selected_pos:Vector2
 
 func _ready():
 	init_game()
+	win_message.visible = false
 	
 	
 func _setup_game(phase):
@@ -216,6 +218,12 @@ func _on_button_0_pressed() -> void:
 func _on_check_pressed() -> void:
 	var solution = check_solution()
 	label.text = solution[1]
+	if solution[0] == true:
+		win_message.visible = true
 
 func _on_reset_pressed() -> void:
 	get_tree().reload_current_scene()
+
+
+func _on_next_pressed() -> void:
+	Globals.current_puzzle = "logic"

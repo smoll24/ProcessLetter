@@ -66,6 +66,7 @@ position = Vector2(-1419, 3008)
 texture = ExtResource("2_bexj4")
 
 [node name="OuterLayer" type="Node2D" parent="." unique_id=1467002887]
+visible = false
 
 [node name="Alevel" type="Sprite2D" parent="OuterLayer" unique_id=1989980623]
 position = Vector2(-1419.0001, 3008.0002)
@@ -207,16 +208,18 @@ position = Vector2(248, 326)
 type = 1
 
 [node name="Book1" parent="InnerLayer" unique_id=348016050 instance=ExtResource("17_rqb8u")]
-position = Vector2(198, 593)
+position = Vector2(-2735, 3953)
 
 [node name="Book2" parent="InnerLayer" unique_id=638705684 instance=ExtResource("17_rqb8u")]
-position = Vector2(-2190, 4035)
+position = Vector2(-2193, 4291)
 type = 1
 
 [node name="Player" parent="." unique_id=864046172 instance=ExtResource("1_dpurt")]
-position = Vector2(106, 483)
+position = Vector2(-1274, 922)
 
 [node name="Lights" type="Node2D" parent="." unique_id=2116302559]
+visible = false
+metadata/_edit_lock_ = true
 
 [node name="Light" parent="Lights" unique_id=392051107 instance=ExtResource("8_3dueu")]
 position = Vector2(15, 355)
@@ -344,6 +347,7 @@ visible = false
 [node name="ColorRect" type="CanvasModulate" parent="." unique_id=971754492]
 modulate = Color(1, 1, 1, 0.34901962)
 color = Color(0.6275533, 0.6723382, 0.47547442, 1)
+metadata/_edit_lock_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=463526421]
 
@@ -357,6 +361,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
 
 [connection signal="body_entered" from="Icon" to="Player" method="_on_icon_body_entered"]
 [connection signal="body_entered" from="Rooms/Area2D" to="Player" method="_on_area_2d_body_entered" binds= [false]]

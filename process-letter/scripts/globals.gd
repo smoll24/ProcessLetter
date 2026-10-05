@@ -1,18 +1,16 @@
 extends Node
 
-enum Enter {START, STAIR_TOP, STAIR_BOTTOM, ELEVATOR}
-
 var can_move = true
 var can_talk = true
+#0,1,2,3
 var puzzle_phase = 0
-var status = "prog3"
+var status = "post3"
+#1,2,3
 var phase = 3
 var in_room = true
 
-var entrance: Enter = Enter.START
-
-var interactions = {"purple":[], "pink":[],"blue":[],
-"teal":[],"violet":[], "workbench":["prog1","prog2","prog3"],
+var interactions = {"purple":["post3"], "pink":[],"blue":["post3"],
+"teal":[],"violet":["post3"], "workbench":["prog1","prog2","prog3"],
 "computer":["prog1","prog2","prog3"]}
 
 #var interactions = {"purple":["prog3","pre1","prog1","pre2","prog2","pre3"],
@@ -47,7 +45,9 @@ var book_type = 1
 var in_book = false
 
 #Indicates whether you can enter 1. Computer 2. Workshop 
-var puzzle_step = 0
+var puzzle_step = 1
+#Network, Sudoku, Logic
+var current_puzzle = "network"
 
 var player_position: Vector2
 

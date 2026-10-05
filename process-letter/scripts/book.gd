@@ -1,17 +1,19 @@
 extends Node2D
 
 @onready var interact_indicator = $Indicator
+@onready var indicator_bubble = $Indicator_bubble
 @export var type : int
 
 func _ready() -> void:
-	Globals.workbench = false
+	Globals.book = false
 
 func _process(_delta):
-	if type == 0:
-		if Globals.book and Globals.book_type == self.type:
-			interact_indicator.visible = true
-		else:
-			interact_indicator.visible = false
+	if Globals.book and Globals.book_type == self.type:
+		indicator_bubble.visible = false
+		interact_indicator.visible = true
+	else:
+		indicator_bubble.visible = true
+		interact_indicator.visible = false
 		
 	
 	if Globals.book:

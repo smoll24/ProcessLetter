@@ -16,6 +16,12 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_vgeta")
 
+[node name="Network" parent="." unique_id=1872065222 instance=ExtResource("3_suigc")]
+
+[node name="Sudoku" parent="." unique_id=507427484 instance=ExtResource("2_cldsk")]
+visible = false
+mouse_filter = 1
+
 [node name="Exit" type="TextureButton" parent="." unique_id=1217196598]
 offset_left = 1142.0
 offset_top = 24.0
@@ -24,10 +30,5 @@ offset_bottom = 125.0
 texture_normal = ExtResource("5_vgeta")
 texture_pressed = ExtResource("6_jgvbh")
 texture_hover = ExtResource("7_ik0pn")
-
-[node name="Network" parent="." unique_id=1872065222 instance=ExtResource("3_suigc")]
-
-[node name="Sudoku" parent="." unique_id=507427484 instance=ExtResource("2_cldsk")]
-visible = false
 
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

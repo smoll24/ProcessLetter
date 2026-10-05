@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bvw5y7tqx0204" path="res://assets/characters/bots/IMG_1731.PNG" id="5_uehc6"]
 [ext_resource type="Texture2D" uid="uid://y2xucwpyybe3" path="res://assets/characters/bots/IMG_1732.PNG" id="6_kmire"]
 [ext_resource type="Texture2D" uid="uid://cyp43rr1kwetc" path="res://assets/characters/bots/IMG_1733.PNG" id="7_7uerp"]
+[ext_resource type="Texture2D" uid="uid://ekbl1yctr65b" path="res://assets/ui/excalamation.png" id="8_xkvqc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rj60s"]
 animations = [{
@@ -55,7 +56,7 @@ script = ExtResource("1_b0rwi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=143158568]
 sprite_frames = SubResource("SpriteFrames_rj60s")
-animation = &"1_front_idle"
+animation = &"3_front_idle"
 autoplay = "1_front_idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=781260810]
@@ -68,13 +69,19 @@ shape = SubResource("RectangleShape2D_ywdb4")
 position = Vector2(-2, -7)
 shape = SubResource("RectangleShape2D_b0rwi")
 
-[node name="Indicator" type="Label" parent="." unique_id=1076289784]
+[node name="Indicator_old" type="Label" parent="." unique_id=1076289784]
+visible = false
 offset_left = -40.0
 offset_top = -41.0
 offset_right = 32.0
 offset_bottom = -18.0
 text = "[Interact]"
 horizontal_alignment = 1
+
+[node name="Indicator" type="Sprite2D" parent="." unique_id=64694445]
+visible = false
+position = Vector2(-1, -128)
+texture = ExtResource("8_xkvqc")
 
 [connection signal="body_entered" from="Interact_area" to="." method="_on_interact_area_body_entered"]
 [connection signal="body_exited" from="Interact_area" to="." method="_on_interact_area_body_exited"]

@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://deaa7m7ds6hkr" path="res://assets/ui/exit_button.PNG" id="7_rtkfm"]
 [ext_resource type="Texture2D" uid="uid://dwoldl1k2emt5" path="res://assets/ui/exit_pressed.PNG" id="8_ids5r"]
 [ext_resource type="Texture2D" uid="uid://w86672hharqj" path="res://assets/ui/exit_hover.PNG" id="9_axt1d"]
+[ext_resource type="FontFile" uid="uid://7n5uyv7q3hvv" path="res://assets/fonts/process_script4.ttf" id="12_5q50v"]
 
 [node name="Elevator_ui" type="CanvasLayer" unique_id=1433977059]
 script = ExtResource("1_oca8a")
@@ -78,12 +79,16 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
 
-[node name="LightA_on" type="TextureRect" parent="VBoxContainer2" unique_id=1137960163]
+[node name="Light3_on" type="TextureRect" parent="VBoxContainer2" unique_id=1231114027]
 visible = false
 layout_mode = 2
 texture = ExtResource("4_5q50v")
 
-[node name="LightA_off" type="TextureRect" parent="VBoxContainer2" unique_id=1648373642]
+[node name="Light3_off" type="TextureRect" parent="VBoxContainer2" unique_id=1377279173]
+layout_mode = 2
+texture = ExtResource("5_b2s11")
+
+[node name="Light2_off" type="TextureRect" parent="VBoxContainer2" unique_id=919899247]
 layout_mode = 2
 texture = ExtResource("5_b2s11")
 
@@ -96,16 +101,12 @@ visible = false
 layout_mode = 2
 texture = ExtResource("5_b2s11")
 
-[node name="Light2_off" type="TextureRect" parent="VBoxContainer2" unique_id=919899247]
-layout_mode = 2
-texture = ExtResource("5_b2s11")
-
-[node name="Light3_on" type="TextureRect" parent="VBoxContainer2" unique_id=1231114027]
+[node name="LightA_on" type="TextureRect" parent="VBoxContainer2" unique_id=1137960163]
 visible = false
 layout_mode = 2
 texture = ExtResource("4_5q50v")
 
-[node name="Light3_off" type="TextureRect" parent="VBoxContainer2" unique_id=1377279173]
+[node name="LightA_off" type="TextureRect" parent="VBoxContainer2" unique_id=1648373642]
 layout_mode = 2
 texture = ExtResource("5_b2s11")
 
@@ -123,19 +124,15 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 30
 
-[node name="LevelA" type="TextureButton" parent="VBoxContainer" unique_id=1038964947]
-layout_mode = 2
-texture_normal = ExtResource("4_lafvn")
-texture_pressed = ExtResource("5_5q50v")
-texture_hover = ExtResource("6_b2s11")
-
-[node name="Level1" type="TextureButton" parent="VBoxContainer" unique_id=559477099]
+[node name="Level3" type="TextureButton" parent="VBoxContainer" unique_id=756022302]
+modulate = Color(0.8990583, 0.60974854, 0.5856133, 1)
 layout_mode = 2
 texture_normal = ExtResource("4_lafvn")
 texture_pressed = ExtResource("5_5q50v")
 texture_hover = ExtResource("6_b2s11")
 
 [node name="Level2" type="TextureButton" parent="VBoxContainer" unique_id=768559186]
+modulate = Color(0.6371786, 0.64292955, 0.6478392, 1)
 layout_mode = 2
 disabled = true
 texture_normal = ExtResource("4_lafvn")
@@ -143,7 +140,15 @@ texture_pressed = ExtResource("5_5q50v")
 texture_hover = ExtResource("6_b2s11")
 texture_disabled = ExtResource("5_5q50v")
 
-[node name="Level3" type="TextureButton" parent="VBoxContainer" unique_id=756022302]
+[node name="Level1" type="TextureButton" parent="VBoxContainer" unique_id=559477099]
+modulate = Color(0.47220325, 0.99999994, 0.99737984, 1)
+layout_mode = 2
+texture_normal = ExtResource("4_lafvn")
+texture_pressed = ExtResource("5_5q50v")
+texture_hover = ExtResource("6_b2s11")
+
+[node name="LevelA" type="TextureButton" parent="VBoxContainer" unique_id=1038964947]
+modulate = Color(0.56393117, 0.88995224, 0.5556328, 1)
 layout_mode = 2
 texture_normal = ExtResource("4_lafvn")
 texture_pressed = ExtResource("5_5q50v")
@@ -158,7 +163,83 @@ texture_normal = ExtResource("7_rtkfm")
 texture_pressed = ExtResource("8_ids5r")
 texture_hover = ExtResource("9_axt1d")
 
-[connection signal="pressed" from="VBoxContainer/LevelA" to="." method="_on_level_a_pressed"]
-[connection signal="pressed" from="VBoxContainer/Level1" to="." method="_on_level_1_pressed"]
+[node name="LabelA" type="Label" parent="." unique_id=2143399935]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.0
+offset_top = 8.0
+offset_right = -5.0
+offset_bottom = 63.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.21176471, 0.25490198, 0.24313726, 1)
+theme_override_fonts/font = ExtResource("12_5q50v")
+theme_override_font_sizes/font_size = 120
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label1" type="Label" parent="." unique_id=1192599660]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -48.0
+offset_right = -7.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.1764706, 0.28627452, 0.4392157, 1)
+theme_override_fonts/font = ExtResource("12_5q50v")
+theme_override_font_sizes/font_size = 120
+text = "I"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1805234876]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.0
+offset_top = -122.0
+offset_right = 12.0
+offset_bottom = -67.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.3764706, 0.28627452, 0.4392157, 1)
+theme_override_fonts/font = ExtResource("12_5q50v")
+theme_override_font_sizes/font_size = 120
+text = "II"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="." unique_id=835989447]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.5
+offset_top = -195.0
+offset_right = 34.5
+offset_bottom = -140.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.3372549, 0.1764706, 0.25882354, 1)
+theme_override_fonts/font = ExtResource("12_5q50v")
+theme_override_font_sizes/font_size = 120
+text = "III"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="VBoxContainer/Level3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/Level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/LevelA" to="." method="_on_level_a_pressed"]
 [connection signal="pressed" from="Cancel" to="." method="_on_cancel_pressed"]

@@ -67,11 +67,12 @@ func _process(_delta):
 	if Globals.status in Globals.interactions["blue"] \
 	and Globals.can_talk and Globals.blue:
 		interact_indicator.visible = true
+		indicator2.visible = false
 	else:
 		interact_indicator.visible = false
 	
 	if Globals.status in Globals.interactions["blue"] \
-	and Globals.can_talk:
+	and Globals.can_talk and not Globals.blue:
 		indicator2.visible = true
 	else:
 		indicator2.visible = false
@@ -84,11 +85,13 @@ func _process(_delta):
 				wander_timer.stop()
 			Globals.can_move = false
 			Globals.can_talk = false
-			dialog = Dialogic.start("blue_idle")
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+			dialog = Dialogic.start("tree1_blue")
 			get_tree().root.add_child(dialog)
 			Dialogic.timeline_ended.connect(dialog_end)
 		
 func dialog_end():
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	Globals.can_move = true
 	await get_tree().create_timer(0.5).timeout
 	Globals.can_talk = true

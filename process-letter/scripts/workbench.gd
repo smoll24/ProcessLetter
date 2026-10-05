@@ -1,7 +1,7 @@
 extends Node2D
 
-@onready var interact_indicator = $Indicator
-@onready var indicator2 = $Indicator2
+@onready var interact_indicator = $Indicator2
+@onready var indicator2 = $Indicator_bubble
 @export var type : int
 
 func _ready() -> void:
@@ -31,7 +31,10 @@ func _process(_delta):
 
 	interact_indicator.visible = show_interact_indicator
 	indicator2.visible = show_indicator2
-
+	
+	if interact_indicator.visible:
+		indicator2.visible = false
+	
 	if Globals.workbench:
 		if Input.is_action_just_pressed("ui_accept") \
 		and interact_indicator.visible:

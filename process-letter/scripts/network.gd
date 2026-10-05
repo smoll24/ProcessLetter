@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 #Reset right now restarts the whole scene, but that makes
 #the game glitch so fix that later... same for the other games
@@ -29,6 +29,7 @@ var button23
 var button24
 
 @onready var label = $Label
+@onready var win_message = $Win
 
 var buttons = []
 var connections = []
@@ -37,6 +38,7 @@ var selected_point = -1
 
 func _ready():
 	init_game()
+	win_message.visible = false
 	
 	
 func _process(_delta):
@@ -212,7 +214,7 @@ func _create_connections(connections: Array):
 		var line = Line2D.new()
 		line.name = "Line_%d_%d" % [point_a, point_b]
 		line.width = 5.0
-		line.default_color = Color("#C7E3C2")
+		line.default_color = Color("#A29DB3")
 		line.z_index = 1
 		
 		line.add_point(button_a.position + button_a.size / 2)
@@ -242,7 +244,7 @@ func fill_connection(point_a: int, point_b: int):
 				return
 			
 			connection["filled"] = true
-			connection["line"].default_color = Color("#4A8540")
+			connection["line"].default_color = Color("#304E7E")
 			selected_point = point_b
 			buttons[selected_point-1].grab_focus()
 			return
@@ -325,7 +327,8 @@ func _on_check_pressed() -> void:
 	var solution = check_solution()
 	label.text = solution[1]
 	if solution[0] == true:
-		Globals.puzzle_step = 2
+		#Globals.puzzle_step = 2
+		win_message.visible = true
 
 
 func _on_button_12_pressed() -> void:
@@ -366,3 +369,7 @@ func _on_button_23_pressed() -> void:
 
 func _on_button_24_pressed() -> void:
 	_on_point_pressed(24)
+
+
+func _on_next_pressed() -> void:
+	Globals.current_puzzle = "sudoku"
