@@ -38,37 +38,46 @@ func _ready() -> void:
 	wander_timer.start(randf_range(2.0, 5.0))
 	
 	animated_sprite.play("front_idle")
+	
+	#Violet
+	if Globals.status == "pre1":
+		if level == 10:
+			#HCD Lab
+			self.global_position = Vector2(-2701.0, 4262.0)
+	elif Globals.status == "prog1":
+		if level == 10:
+			#HCD Lab
+			self.global_position = Vector2(-2701.0, 4262.0)
+	elif Globals.status == "pre2":
+		if level == 0:
+			#Outside green office
+			self.global_position = Vector2(-236.0, 443.0)
+	elif Globals.status == "prog2":
+		if level == 10:
+			#HCD Lab
+			self.global_position = Vector2(-2701.0, 4262.0)
+	elif Globals.status == "pre3":
+		if level == 10:
+			#HCD Lab
+			self.global_position = Vector2(-2701.0, 4262.0)
+	elif Globals.status == "prog3":
+		if level == 0:
+			#Conversation with purple and violet
+			self.global_position = Vector2(-1339.0, 1660.0)
+	elif Globals.status == "post3":
+		if level == 0:
+			#Bottom left map
+			self.global_position = Vector2(743.0, 4769.0)
+	elif Globals.status == "prog4":
+		if level == 0:
+			#Bottom left map
+			self.global_position = Vector2(743.0, 4769.0)
+	elif Globals.status == "post4":
+		if level == 0:
+			#Corridor right
+			self.global_position = Vector2(652.0, 2080.0)
 
 func _process(_delta):
-	#if Globals.status == "pre1":
-		#if level == 0:
-			#self.global_position = Vector2()
-	#elif Globals.status == "prog1":
-		#if level == 0:
-			#self.global_position = Vector2()
-	#elif Globals.status == "pre2":
-		#if level == 0:
-			#self.global_position = Vector2()
-	#elif Globals.status == "prog2":
-		#if level == 0:
-			#self.global_position = Vector2()
-	#elif Globals.status == "pre3":
-		#if level == 0:
-			#self.global_position = Vector2()
-	#elif Globals.status == "prog3":
-		#if level == 0:
-			##Conversation with purple and violet
-			#self.global_position = Vector2(-1339.0, 1660.0)
-	#elif Globals.status == "post3":
-		#if level == 0:
-			#self.global_position = Vector2()
-	#elif Globals.status == "prog4":
-		#if level == 0:
-			#self.global_position = Vector2()
-	#elif Globals.status == "post4":
-		#if level == 0:
-			#self.global_position = Vector2()
-	
 	z_index = int(round(global_position.y / 100.0))
 	speech_bubble.z_index = Globals.player_position.y + 1
 	if is_wandering:

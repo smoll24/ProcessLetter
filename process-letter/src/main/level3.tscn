@@ -168,6 +168,10 @@ scale = Vector2(-1, 1)
 
 [node name="OutCharacters" type="Node2D" parent="OuterLayer" unique_id=790197414]
 
+[node name="Pink" parent="OuterLayer/OutCharacters" unique_id=864046172 instance=ExtResource("12_6xdca")]
+position = Vector2(1310, 3315)
+level = 3
+
 [node name="OutBots" type="Node2D" parent="OuterLayer" unique_id=479377854]
 
 [node name="Bots1" parent="OuterLayer/OutBots" unique_id=47230853 instance=ExtResource("15_yktyn")]
@@ -189,10 +193,13 @@ position = Vector2(-2461, 546)
 position = Vector2(-2820, 5219.5)
 type = 3
 
-[node name="Pink" parent="InnerLayer" unique_id=213673184 instance=ExtResource("12_6xdca")]
-position = Vector2(-2809, 5512.5)
+[node name="InnerCharacters" type="Node2D" parent="InnerLayer" unique_id=1895807071]
 
-[node name="Player" parent="." unique_id=864046172 instance=ExtResource("18_hw075")]
+[node name="Pink" parent="InnerLayer/InnerCharacters" unique_id=213673184 instance=ExtResource("12_6xdca")]
+position = Vector2(1374, 3128)
+level = 32
+
+[node name="Player" parent="." unique_id=1905961577 instance=ExtResource("18_hw075")]
 position = Vector2(-2451, 511)
 
 [node name="Lights" type="Node2D" parent="." unique_id=2116302559]

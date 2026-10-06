@@ -34,21 +34,30 @@ func _ready() -> void:
 	wander_timer.start(randf_range(2.0, 5.0))
 	
 	animated_sprite.play("front_idle")
+	
+	#Pink
+	if Globals.status == "pre3":
+		if level == 32:
+			#Pink office
+			self.global_position = Vector2(-2815.0, 5480.0)
+	elif Globals.status == "prog3":
+		if level == 32:
+			#Pink office
+			self.global_position = Vector2(-2815.0, 5480.0)
+	elif Globals.status == "post3":
+		if level == 3:
+			#Outside office
+			self.global_position = Vector2(-1715.0, 4949.0)
+	elif Globals.status == "prog4":
+		if level == 3:
+			#Outside office
+			self.global_position = Vector2(-1715.0, 4949.0)
+	elif Globals.status == "post4":
+		if level == 0:
+			#Corridor center right
+			self.global_position = Vector2(304.0, 1349.0)
 
 func _process(_delta):
-	#if Globals.status == "pre3":
-		#if level == 0:
-			#self.global_position = Vector2()
-	#elif Globals.status == "post3":
-		#if level == 0:
-			#self.global_position = Vector2()
-	#elif Globals.status == "prog4":
-		#if level == 0:
-			#self.global_position = Vector2()
-	#elif Globals.status == "post4":
-		#if level == 0:
-			#self.global_position = Vector2()
-	
 	z_index = int(round(global_position.y / 100.0))
 	speech_bubble.z_index = Globals.player_position.y + 1
 	if is_wandering:

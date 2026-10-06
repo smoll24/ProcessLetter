@@ -63,7 +63,7 @@ func _ready() -> void:
 			self.global_position = Vector2(-1122.0, 5303.0)
 	elif Globals.status == "post4":
 		if level == 0:
-			#Corridor
+			#Corridor left
 			self.global_position = Vector2(-2026.0, 2199.0)
 
 func _process(_delta):

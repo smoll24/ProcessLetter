@@ -169,19 +169,19 @@ position = Vector2(1119, 4928)
 [node name="OutCharacters" type="Node2D" parent="OuterLayer" unique_id=790197414]
 
 [node name="Purple" parent="OuterLayer/OutCharacters" unique_id=626783985 instance=ExtResource("2_waa7u")]
-position = Vector2(-1029, 1398)
+position = Vector2(2939, 2152)
 
 [node name="Blue" parent="OuterLayer/OutCharacters" unique_id=1379034531 instance=ExtResource("3_sg781")]
 position = Vector2(2604, 2199)
 
 [node name="Pink" parent="OuterLayer/OutCharacters" unique_id=213673184 instance=ExtResource("4_oqaou")]
-position = Vector2(1648, 1335)
+position = Vector2(2761, 1891)
 
 [node name="Teal" parent="OuterLayer/OutCharacters" unique_id=855263268 instance=ExtResource("5_sr8mx")]
-position = Vector2(-2834, 3639)
+position = Vector2(3061, 2352)
 
 [node name="Violet" parent="OuterLayer/OutCharacters" unique_id=1078976922 instance=ExtResource("6_3dueu")]
-position = Vector2(-1339, 1660)
+position = Vector2(2736, 2503)
 
 [node name="OutBots" type="Node2D" parent="OuterLayer" unique_id=479377854]
 
@@ -189,12 +189,13 @@ position = Vector2(-1339, 1660)
 position = Vector2(604, 646)
 
 [node name="Bots2" parent="OuterLayer/OutBots" unique_id=1817324579 instance=ExtResource("8_q05mi")]
-position = Vector2(-704, 713)
+position = Vector2(-1502, 672)
 
 [node name="Bots3" parent="OuterLayer/OutBots" unique_id=872997564 instance=ExtResource("8_q05mi")]
-position = Vector2(666, 2157)
+position = Vector2(3042, 1855)
 
 [node name="InnerLayer" type="Node2D" parent="." unique_id=897240129]
+visible = false
 
 [node name="Elevator" parent="InnerLayer" unique_id=902053519 instance=ExtResource("10_88hbs")]
 position = Vector2(-1398, 1013)
@@ -210,10 +211,24 @@ type = 1
 position = Vector2(-2735, 3953)
 
 [node name="Book2" parent="InnerLayer" unique_id=638705684 instance=ExtResource("17_rqb8u")]
-position = Vector2(-2193, 4291)
+position = Vector2(-2167, 4091)
 type = 1
 
-[node name="Player" parent="." unique_id=864046172 instance=ExtResource("1_dpurt")]
+[node name="InnerCharacters" type="Node2D" parent="InnerLayer" unique_id=1482933499]
+
+[node name="Violet" parent="InnerLayer/InnerCharacters" unique_id=864046172 instance=ExtResource("6_3dueu")]
+position = Vector2(3634, 2804)
+level = 10
+
+[node name="Purple" parent="InnerLayer/InnerCharacters" unique_id=941100547 instance=ExtResource("2_waa7u")]
+position = Vector2(3877, 2558)
+level = 10
+
+[node name="Teal" parent="InnerLayer/InnerCharacters" unique_id=565516422 instance=ExtResource("5_sr8mx")]
+position = Vector2(3645, 2397)
+level = 10
+
+[node name="Player" parent="." unique_id=701298983 instance=ExtResource("1_dpurt")]
 position = Vector2(-1274, 922)
 
 [node name="Lights" type="Node2D" parent="." unique_id=2116302559]
