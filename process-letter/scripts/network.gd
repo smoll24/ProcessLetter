@@ -1,8 +1,5 @@
 extends Control
 
-#Reset right now restarts the whole scene, but that makes
-#the game glitch so fix that later... same for the other games
-
 var button1
 var button2
 var button3
@@ -54,7 +51,6 @@ func _process(_delta):
 		$Puzzle1.visible = false
 		$Puzzle2.visible = false
 		$Puzzle3.visible = true
-	pass
 	
 func _setup_game(phase):
 	if phase == 0:

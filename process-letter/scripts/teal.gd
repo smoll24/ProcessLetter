@@ -22,7 +22,7 @@ var wander_timer: Timer
 var speech = {
 	"pre1":"Oh no, no, no!",
 	"prog1":"It'll be fine...",
-	"pre2":"Thank God that’s over!",
+	"pre2":"Thank God that's over!",
 	"prog2":"Just a bit more...",
 	"pre3":"Not good at all.",
 	"prog3":"Don't you see this!?"

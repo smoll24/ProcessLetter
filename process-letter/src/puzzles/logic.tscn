@@ -1,6 +1,130 @@
 [gd_scene format=3 uid="uid://c4805r4kokdc8"]
 
 [ext_resource type="Script" uid="uid://cm24l10iproju" path="res://scripts/logic.gd" id="1_sggxs"]
+[ext_resource type="Texture2D" uid="uid://cqgh4d6k8nw5k" path="res://assets/ui/IMG_1792.PNG" id="2_ajm3p"]
+[ext_resource type="Script" uid="uid://bcxj5el16w0qs" path="res://scripts/texture_button.gd" id="3_5oa80"]
+[ext_resource type="Texture2D" uid="uid://dnbsasniy0d2n" path="res://assets/ui/reset_button.PNG" id="3_j81h0"]
+[ext_resource type="Texture2D" uid="uid://dudgobr1b6ulj" path="res://assets/ui/reset_pressed.PNG" id="4_5oa80"]
+[ext_resource type="Texture2D" uid="uid://bh14iwm28nxh3" path="res://assets/ui/reset_hover.PNG" id="5_vphw5"]
+[ext_resource type="Texture2D" uid="uid://bhcbmvg8w21iv" path="res://assets/ui/cont_button.PNG" id="6_b2828"]
+[ext_resource type="Texture2D" uid="uid://dcj5hcvby03df" path="res://assets/ui/cont_pressed.PNG" id="7_dqyc8"]
+[ext_resource type="Texture2D" uid="uid://b4aln3aoovnem" path="res://assets/ui/cont_hover.PNG" id="8_07gi4"]
+[ext_resource type="Texture2D" uid="uid://cxr5hoswns0hr" path="res://assets/ui/correct.PNG" id="9_ef4tm"]
+[ext_resource type="Texture2D" uid="uid://c8ti45wpgxjju" path="res://assets/ui/next_button.PNG" id="10_1kyl6"]
+[ext_resource type="Texture2D" uid="uid://d3ma23qi54oad" path="res://assets/ui/next_pressed.PNG" id="11_55chr"]
+[ext_resource type="Texture2D" uid="uid://t765jbgj2gl0" path="res://assets/ui/next_hover.PNG" id="12_kfp45"]
 
-[node name="Logic" type="Node2D" unique_id=1012643610]
+[node name="Logic" type="Control" unique_id=1895458848]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(-341, -46)
 script = ExtResource("1_sggxs")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1841234000]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_ajm3p")
+
+[node name="Puzzle1" type="Control" parent="." unique_id=1656545445]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureButton" type="TextureButton" parent="Puzzle1" unique_id=2098510271]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_5oa80")
+
+[node name="Puzzle2" type="Control" parent="." unique_id=440607636]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Puzzle3" type="Control" parent="." unique_id=2014569272]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Reset" type="TextureButton" parent="." unique_id=2064940379]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 172.0
+offset_top = 108.0
+offset_right = 281.0
+offset_bottom = 209.0
+grow_horizontal = 2
+texture_normal = ExtResource("3_j81h0")
+texture_pressed = ExtResource("4_5oa80")
+texture_hover = ExtResource("5_vphw5")
+
+[node name="Check" type="TextureButton" parent="." unique_id=405956681]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 171.0
+offset_top = 506.0
+offset_right = 280.0
+offset_bottom = 607.0
+grow_horizontal = 2
+texture_normal = ExtResource("6_b2828")
+texture_pressed = ExtResource("7_dqyc8")
+texture_hover = ExtResource("8_07gi4")
+
+[node name="Win" type="Control" parent="." unique_id=659368509]
+visible = false
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="ColorRect" type="ColorRect" parent="Win" unique_id=166636463]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 289.0
+offset_top = 96.0
+offset_right = -338.0
+offset_bottom = -95.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1764706, 0.06666667, 0.19607843, 0.7137255)
+
+[node name="check" type="Sprite2D" parent="Win" unique_id=694024528]
+position = Vector2(636, 287)
+texture = ExtResource("9_ef4tm")
+
+[node name="Next" type="TextureButton" parent="Win" unique_id=1789907987]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.5
+offset_top = 137.5
+offset_right = 104.5
+offset_bottom = 222.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("10_1kyl6")
+texture_pressed = ExtResource("11_55chr")
+texture_hover = ExtResource("12_kfp45")
+
+[connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="Check" to="." method="_on_check_pressed"]
+[connection signal="pressed" from="Win/Next" to="." method="_on_next_pressed"]

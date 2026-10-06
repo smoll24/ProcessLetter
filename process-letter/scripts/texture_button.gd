@@ -14,7 +14,6 @@ func _get_drag_data(_position: Vector2):
 		"origin_texture_normal": texture_normal
 	}
 	var drag_preview = DRAG_PREVIEW.instantiate()
-	print("dragging")
 	drag_preview.texture = texture_normal
 	set_drag_preview(drag_preview)
 	return data
