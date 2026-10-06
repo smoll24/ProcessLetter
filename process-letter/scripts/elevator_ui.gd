@@ -11,13 +11,13 @@ func _process(_delta):
 	else:
 		self.visible = false
 		
-	if Globals.phase == 0 or Globals.phase == 1:
+	if Globals.phase == 0:
 		level_1_button.disabled = true
 		level_3_button.disabled = true
-	elif Globals.phase == 2:
+	elif Globals.phase == 1:
 		level_1_button.disabled = false
 		level_3_button.disabled = true
-	elif Globals.phase == 3:
+	elif Globals.phase == 2 or Globals.phase == 3 or Globals.phase == 4:
 		level_1_button.disabled = false
 		level_3_button.disabled = false
 		

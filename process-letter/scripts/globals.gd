@@ -3,7 +3,7 @@ extends Node
 var can_move = true
 var can_talk = true
 #0,1,2,3
-var puzzle_phase = 0
+#var puzzle_phase = 0
 var status = "pre1"
 #1,2,3
 var phase:int
@@ -63,6 +63,7 @@ var conversations = 0
 var reloading = false
 
 func _process(_delta):
+	var puzzle_phase = phase
 	
 	Dialogic.VAR.set_variable("State", status)
 	
