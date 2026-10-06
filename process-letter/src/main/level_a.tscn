@@ -169,19 +169,19 @@ position = Vector2(1119, 4928)
 [node name="OutCharacters" type="Node2D" parent="OuterLayer" unique_id=790197414]
 
 [node name="Purple" parent="OuterLayer/OutCharacters" unique_id=626783985 instance=ExtResource("2_waa7u")]
-position = Vector2(795, 1410)
+position = Vector2(-1029, 1398)
 
 [node name="Blue" parent="OuterLayer/OutCharacters" unique_id=1379034531 instance=ExtResource("3_sg781")]
-position = Vector2(360, 1623)
+position = Vector2(2604, 2199)
 
 [node name="Pink" parent="OuterLayer/OutCharacters" unique_id=213673184 instance=ExtResource("4_oqaou")]
-position = Vector2(-609, 1265)
+position = Vector2(1648, 1335)
 
 [node name="Teal" parent="OuterLayer/OutCharacters" unique_id=855263268 instance=ExtResource("5_sr8mx")]
-position = Vector2(-170, 512)
+position = Vector2(-2834, 3639)
 
 [node name="Violet" parent="OuterLayer/OutCharacters" unique_id=1078976922 instance=ExtResource("6_3dueu")]
-position = Vector2(-1382, 637)
+position = Vector2(-1339, 1660)
 
 [node name="OutBots" type="Node2D" parent="OuterLayer" unique_id=479377854]
 
@@ -192,7 +192,7 @@ position = Vector2(604, 646)
 position = Vector2(-704, 713)
 
 [node name="Bots3" parent="OuterLayer/OutBots" unique_id=872997564 instance=ExtResource("8_q05mi")]
-position = Vector2(-1039, 1411)
+position = Vector2(666, 2157)
 
 [node name="InnerLayer" type="Node2D" parent="." unique_id=897240129]
 
@@ -344,11 +344,13 @@ visible = false
 visible = false
 
 [node name="ColorRect" type="CanvasModulate" parent="." unique_id=971754492]
+visible = false
 modulate = Color(1, 1, 1, 0.34901962)
 color = Color(0.6275533, 0.6723382, 0.47547442, 1)
 metadata/_edit_lock_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=463526421]
+visible = false
 
 [node name="ColorRect2" type="ColorRect" parent="CanvasLayer" unique_id=2071225237]
 modulate = Color(1, 1, 1, 0.3647059)

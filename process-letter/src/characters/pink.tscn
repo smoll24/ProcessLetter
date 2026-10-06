@@ -216,6 +216,7 @@ sprite_frames = SubResource("SpriteFrames_fjmkk")
 autoplay = "default"
 
 [node name="Indicator" type="Label" parent="." unique_id=2067371888]
+visible = false
 offset_left = -20.0
 offset_top = 26.0
 offset_right = 23.0

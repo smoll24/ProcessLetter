@@ -33,6 +33,7 @@ offset_bottom = 40.0
 texture = ExtResource("2_xlgkx")
 
 [node name="Puzzle1" type="Control" parent="." unique_id=491296672]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -159,7 +160,6 @@ texture_hover = ExtResource("2_4oum5")
 texture_focused = ExtResource("3_mvcmu")
 
 [node name="Puzzle2" type="Control" parent="." unique_id=1058052330]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -354,10 +354,10 @@ texture_focused = ExtResource("3_mvcmu")
 [node name="Button18" type="TextureButton" parent="Puzzle2" unique_id=1176848317]
 z_index = 2
 layout_mode = 0
-offset_left = 560.0
-offset_top = 508.0
-offset_right = 619.0
-offset_bottom = 567.0
+offset_left = 557.0
+offset_top = 513.0
+offset_right = 616.0
+offset_bottom = 572.0
 texture_normal = ExtResource("1_j7lo0")
 texture_hover = ExtResource("2_4oum5")
 texture_focused = ExtResource("3_mvcmu")
@@ -670,6 +670,7 @@ texture_pressed = ExtResource("10_dy2v0")
 texture_hover = ExtResource("11_4ryf2")
 
 [node name="Win" type="Control" parent="." unique_id=1033189742]
+visible = false
 z_index = 2
 layout_mode = 1
 anchors_preset = 15

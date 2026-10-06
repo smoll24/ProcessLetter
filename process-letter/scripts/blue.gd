@@ -17,6 +17,7 @@ var wander_speed = 40.0
 var step_distance = 30.0
 var wander_timer: Timer
 
+@export var level:int
 
 var speech = {
 	"prog2":"Need something?",
@@ -34,9 +35,39 @@ func _ready() -> void:
 	wander_timer.start(randf_range(2.0, 5.0))
 	
 	animated_sprite.play("front_idle")
+	
+	#Blue
+	if Globals.status == "pre2":
+		if level == 12:
+			#Blue office
+			self.global_position = Vector2(-1177.0, 5928.0)
+	elif Globals.status == "prog2":
+		if level == 12:
+			#Blue office
+			self.global_position = Vector2(-1177.0, 5928.0)
+	elif Globals.status == "pre3":
+		if level == 0:
+			#Observing plants in corridor
+			self.global_position = Vector2(607.0, 1404.0)
+	elif Globals.status == "prog3":
+		if level == 0:
+			#Corridor away from purple/violet
+			self.global_position = Vector2(-1029.0, 1713.0)
+	elif Globals.status == "post3":
+		if level == 1:
+			#Outside office
+			self.global_position = Vector2(-1122.0, 5303.0)
+	elif Globals.status == "prog4":
+		if level == 1:
+			#Outside office
+			self.global_position = Vector2(-1122.0, 5303.0)
+	elif Globals.status == "post4":
+		if level == 0:
+			#Corridor
+			self.global_position = Vector2(-2026.0, 2199.0)
 
 func _process(_delta):
-	z_index = int(global_position.y)/100
+	z_index = int(round(global_position.y / 100.0))
 	speech_bubble.z_index = Globals.player_position.y + 1
 	if is_wandering:
 		velocity = wander_direction * wander_speed

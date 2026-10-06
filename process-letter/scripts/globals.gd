@@ -3,10 +3,10 @@ extends Node
 var can_move = true
 var can_talk = true
 #0,1,2,3
-var puzzle_phase = 0
+var puzzle_phase = 1
 var status = "post3"
 #1,2,3
-var phase = 3
+var phase:int
 var in_room = true
 
 var interactions = {"purple":["post3"], "pink":[],"blue":["post3"],
@@ -59,3 +59,12 @@ func _process(_delta):
 	if paused:
 		can_move = false
 		can_talk = false
+		
+	if status == "pre1" or status == "prog1":
+		phase = 0
+	if status == "pre2" or status == "prog2":
+		phase = 1
+	if status == "pre3" or status == "prog3":
+		phase = 2
+	if status == "post3" or status == "prog4" or status == "post4":
+		phase = 3

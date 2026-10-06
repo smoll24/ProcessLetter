@@ -200,6 +200,10 @@ scale = Vector2(-1, 1)
 
 [node name="OutCharacters" type="Node2D" parent="OuterLayer" unique_id=790197414]
 
+[node name="Blue" parent="OuterLayer/OutCharacters" unique_id=864046172 instance=ExtResource("19_3vgrc")]
+position = Vector2(2187, 4064)
+level = 1
+
 [node name="OutBots" type="Node2D" parent="OuterLayer" unique_id=479377854]
 
 [node name="Bots1" parent="OuterLayer/OutBots" unique_id=47230853 instance=ExtResource("9_arvg8")]
@@ -212,7 +216,6 @@ position = Vector2(-2360, 4786)
 position = Vector2(-539, 4796)
 
 [node name="InnerLayer" type="Node2D" parent="." unique_id=897240129]
-visible = false
 
 [node name="1levelRooms" type="Sprite2D" parent="InnerLayer" unique_id=854602812]
 position = Vector2(-1419, 3008)
@@ -226,7 +229,11 @@ position = Vector2(-2461, 546)
 position = Vector2(-994, 5661)
 type = 2
 
-[node name="Player" parent="." unique_id=864046172 instance=ExtResource("13_phllu")]
+[node name="Blue" parent="InnerLayer" unique_id=1606365179 instance=ExtResource("19_3vgrc")]
+position = Vector2(2217, 4571)
+level = 12
+
+[node name="Player" parent="." unique_id=400026715 instance=ExtResource("13_phllu")]
 position = Vector2(-2451, 511)
 
 [node name="Lights" type="Node2D" parent="." unique_id=2116302559]
@@ -304,9 +311,6 @@ visible = false
 
 [node name="Computer" parent="." unique_id=1334415562 instance=ExtResource("19_lhbik")]
 visible = false
-
-[node name="Blue" parent="." unique_id=1606365179 instance=ExtResource("19_3vgrc")]
-position = Vector2(-1215, 5949)
 
 [node name="ColorRect2" type="CanvasModulate" parent="." unique_id=1780929460]
 modulate = Color(1, 1, 1, 0.34901962)

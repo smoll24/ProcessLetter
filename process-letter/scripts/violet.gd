@@ -17,6 +17,7 @@ var wander_speed = 40.0
 var step_distance = 30.0
 var wander_timer: Timer
 
+@export var level:int
 
 var speech = {
 	"pre1":"My baby...",
@@ -39,7 +40,36 @@ func _ready() -> void:
 	animated_sprite.play("front_idle")
 
 func _process(_delta):
-	z_index = int(global_position.y)/100
+	#if Globals.status == "pre1":
+		#if level == 0:
+			#self.global_position = Vector2()
+	#elif Globals.status == "prog1":
+		#if level == 0:
+			#self.global_position = Vector2()
+	#elif Globals.status == "pre2":
+		#if level == 0:
+			#self.global_position = Vector2()
+	#elif Globals.status == "prog2":
+		#if level == 0:
+			#self.global_position = Vector2()
+	#elif Globals.status == "pre3":
+		#if level == 0:
+			#self.global_position = Vector2()
+	#elif Globals.status == "prog3":
+		#if level == 0:
+			##Conversation with purple and violet
+			#self.global_position = Vector2(-1339.0, 1660.0)
+	#elif Globals.status == "post3":
+		#if level == 0:
+			#self.global_position = Vector2()
+	#elif Globals.status == "prog4":
+		#if level == 0:
+			#self.global_position = Vector2()
+	#elif Globals.status == "post4":
+		#if level == 0:
+			#self.global_position = Vector2()
+	
+	z_index = int(round(global_position.y / 100.0))
 	speech_bubble.z_index = Globals.player_position.y + 1
 	if is_wandering:
 		velocity = wander_direction * wander_speed
