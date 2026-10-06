@@ -2,11 +2,14 @@
 
 [ext_resource type="Script" uid="uid://cm24l10iproju" path="res://scripts/logic.gd" id="1_sggxs"]
 [ext_resource type="Texture2D" uid="uid://cqgh4d6k8nw5k" path="res://assets/ui/IMG_1792.PNG" id="2_ajm3p"]
-[ext_resource type="Script" uid="uid://bcxj5el16w0qs" path="res://scripts/texture_button.gd" id="3_5oa80"]
+[ext_resource type="Texture2D" uid="uid://c5w474lomldjs" path="res://assets/puzzles/logic/and_gate.png" id="3_b2828"]
 [ext_resource type="Texture2D" uid="uid://dnbsasniy0d2n" path="res://assets/ui/reset_button.PNG" id="3_j81h0"]
 [ext_resource type="Texture2D" uid="uid://dudgobr1b6ulj" path="res://assets/ui/reset_pressed.PNG" id="4_5oa80"]
+[ext_resource type="Texture2D" uid="uid://dlminv3wjodtn" path="res://assets/puzzles/logic/or_gate.png" id="4_dqyc8"]
+[ext_resource type="Texture2D" uid="uid://cm6g1ndq7uk10" path="res://assets/puzzles/logic/xor_gate.png" id="5_07gi4"]
 [ext_resource type="Texture2D" uid="uid://bh14iwm28nxh3" path="res://assets/ui/reset_hover.PNG" id="5_vphw5"]
 [ext_resource type="Texture2D" uid="uid://bhcbmvg8w21iv" path="res://assets/ui/cont_button.PNG" id="6_b2828"]
+[ext_resource type="Texture2D" uid="uid://cktxdhbmwqxkh" path="res://assets/puzzles/logic/not_gate.png" id="6_ef4tm"]
 [ext_resource type="Texture2D" uid="uid://dcj5hcvby03df" path="res://assets/ui/cont_pressed.PNG" id="7_dqyc8"]
 [ext_resource type="Texture2D" uid="uid://b4aln3aoovnem" path="res://assets/ui/cont_hover.PNG" id="8_07gi4"]
 [ext_resource type="Texture2D" uid="uid://cxr5hoswns0hr" path="res://assets/ui/correct.PNG" id="9_ef4tm"]
@@ -25,22 +28,47 @@ pivot_offset = Vector2(-341, -46)
 script = ExtResource("1_sggxs")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1841234000]
-visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_ajm3p")
 
+[node name="Buttons" type="Control" parent="." unique_id=2009723331]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Buttons" unique_id=1642266606]
+layout_mode = 0
+offset_left = 326.0
+offset_top = 541.0
+offset_right = 763.0
+offset_bottom = 587.0
+theme_override_constants/separation = 50
+
+[node name="and_button" type="TextureButton" parent="Buttons/HBoxContainer" unique_id=2098510271]
+layout_mode = 2
+texture_normal = ExtResource("3_b2828")
+
+[node name="or_button" type="TextureButton" parent="Buttons/HBoxContainer" unique_id=240548509]
+layout_mode = 2
+texture_normal = ExtResource("4_dqyc8")
+
+[node name="xor_button" type="TextureButton" parent="Buttons/HBoxContainer" unique_id=1256269118]
+layout_mode = 2
+texture_normal = ExtResource("5_07gi4")
+
+[node name="not_button" type="TextureButton" parent="Buttons/HBoxContainer" unique_id=196133272]
+layout_mode = 2
+texture_normal = ExtResource("6_ef4tm")
+
 [node name="Puzzle1" type="Control" parent="." unique_id=1656545445]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-
-[node name="TextureButton" type="TextureButton" parent="Puzzle1" unique_id=2098510271]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("3_5oa80")
 
 [node name="Puzzle2" type="Control" parent="." unique_id=440607636]
 anchors_preset = 0
@@ -125,6 +153,10 @@ texture_normal = ExtResource("10_1kyl6")
 texture_pressed = ExtResource("11_55chr")
 texture_hover = ExtResource("12_kfp45")
 
+[connection signal="pressed" from="Buttons/HBoxContainer/and_button" to="." method="_on_and_button_pressed"]
+[connection signal="pressed" from="Buttons/HBoxContainer/or_button" to="." method="_on_or_button_pressed"]
+[connection signal="pressed" from="Buttons/HBoxContainer/xor_button" to="." method="_on_xor_button_pressed"]
+[connection signal="pressed" from="Buttons/HBoxContainer/not_button" to="." method="_on_not_button_pressed"]
 [connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]
 [connection signal="pressed" from="Check" to="." method="_on_check_pressed"]
 [connection signal="pressed" from="Win/Next" to="." method="_on_next_pressed"]
