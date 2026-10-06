@@ -20,3 +20,11 @@ func _process(delta):
 		outer.visible = true
 		inner.visible = false
 		
+
+
+func _on_cutscene_7_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		if Globals.status == "pre3":
+			Globals.status = "prog3"
+			Globals.puzzle_step = 1
+			print("prog3")

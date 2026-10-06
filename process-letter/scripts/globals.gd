@@ -3,8 +3,8 @@ extends Node
 var can_move = true
 var can_talk = true
 #0,1,2,3
-var puzzle_phase = 1
-var status = "post3"
+var puzzle_phase = 0
+var status = "pre1"
 #1,2,3
 var phase:int
 var in_room = true
@@ -44,16 +44,26 @@ var book = false
 var book_type = 1
 var in_book = false
 
+var blue_convo = false
+var purple_convo = false
+var violet_convo = false
+
 #Indicates whether you can enter 1. Computer 2. Workshop 
 var puzzle_step = 1
 #Network, Sudoku, Logic
 var current_puzzle = "network"
 
 var player_position: Vector2
+var stored_player_position: Vector2
 
 var current_bot_instance: CharacterBody2D = null
 
+var conversations = 0
+
+var reloading = false
+
 func _process(_delta):
+	
 	Dialogic.VAR.set_variable("State", status)
 	
 	if paused:
@@ -68,3 +78,9 @@ func _process(_delta):
 		phase = 2
 	if status == "post3" or status == "prog4" or status == "post4":
 		phase = 3
+	if conversations == 3 and status == "post3":
+		status = "prog4"
+		print("prog4")
+	if captured == 4 and status == "prog4":
+		status = "post4"
+		print("post4")

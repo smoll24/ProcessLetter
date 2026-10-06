@@ -27,6 +27,9 @@ size = Vector2(370.25, 278.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f7x0w"]
 size = Vector2(509, 693)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dyd7v"]
+size = Vector2(331.5, 129)
+
 [sub_resource type="Shader" id="Shader_dyd7v"]
 resource_local_to_scene = true
 code = "//https://godotshaders.com/shader/animal-well-inspired-crt-effect/
@@ -116,6 +119,7 @@ texture = ExtResource("2_dyd7v")
 metadata/_edit_lock_ = true
 
 [node name="OuterLayer" type="Node2D" parent="." unique_id=1467002887]
+metadata/_edit_lock_ = true
 
 [node name="1level" type="Sprite2D" parent="OuterLayer" unique_id=1989980623]
 position = Vector2(-1419.0001, 3008.0002)
@@ -216,6 +220,8 @@ position = Vector2(-2360, 4786)
 position = Vector2(-539, 4796)
 
 [node name="InnerLayer" type="Node2D" parent="." unique_id=897240129]
+visible = false
+metadata/_edit_lock_ = true
 
 [node name="1levelRooms" type="Sprite2D" parent="InnerLayer" unique_id=854602812]
 position = Vector2(-1419, 3008)
@@ -297,6 +303,15 @@ shape = SubResource("RectangleShape2D_ywdb4")
 position = Vector2(-1118, 5867.5)
 shape = SubResource("RectangleShape2D_f7x0w")
 
+[node name="Cutscenes" type="Node2D" parent="." unique_id=1350420686]
+
+[node name="Cutscene4" type="Area2D" parent="Cutscenes" unique_id=723246583]
+position = Vector2(-300, 1413)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cutscenes/Cutscene4" unique_id=1625676824]
+position = Vector2(-867, 4213)
+shape = SubResource("RectangleShape2D_dyd7v")
+
 [node name="Elevator_ui" parent="." unique_id=1433977059 instance=ExtResource("15_cqbgt")]
 visible = false
 
@@ -333,3 +348,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="body_exited" from="Outside/Area2D" to="Player" method="_on_area_2d_body_exited" binds= [true]]
 [connection signal="body_entered" from="Rooms/Area2D" to="Player" method="_on_area_2d_body_entered" binds= [false]]
 [connection signal="body_exited" from="Rooms/Area2D" to="Player" method="_on_area_2d_body_exited" binds= [false]]
+[connection signal="body_entered" from="Cutscenes/Cutscene4" to="." method="_on_cutscene_4_body_entered"]

@@ -78,7 +78,7 @@ func _ready() -> void:
 			self.global_position = Vector2(-1199.0, 2091.0)
 
 func _process(_delta):
-	z_index = int(round(global_position.y / 100.0))
+	z_index = int(round(global_position.y / 500.0))
 	speech_bubble.z_index = Globals.player_position.y + 1
 	if is_wandering:
 		velocity = wander_direction * wander_speed

@@ -327,7 +327,6 @@ func _on_check_pressed() -> void:
 	var solution = check_solution()
 	label.text = solution[1]
 	if solution[0] == true:
-		#Globals.puzzle_step = 2
 		win_message.visible = true
 
 
@@ -372,4 +371,6 @@ func _on_button_24_pressed() -> void:
 
 
 func _on_next_pressed() -> void:
-	Globals.current_puzzle = "sudoku"
+	#Globals.current_puzzle = "sudoku"
+	#Temp to go straight to workshop
+	Globals.puzzle_step = 2

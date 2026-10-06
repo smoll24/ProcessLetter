@@ -10,12 +10,15 @@ var can_talk = true
 func _ready():
 	if Globals.phase == 0:
 		self.global_position = Vector2(106.0, 483.0)
+	if Globals.reloading:
+		self.global_position = Globals.stored_player_position
+		Globals.reloading = false
 	anim.play('front_idle')
 	Globals.can_move = true
 	Globals.can_talk = true
 	
 func _physics_process(delta):
-	z_index = int(global_position.y)/100
+	z_index = int(round(global_position.y / 500.0))
 	Globals.player_position = global_position
 	if Globals.can_move:
 		player_movement(delta)

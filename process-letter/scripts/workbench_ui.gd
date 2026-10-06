@@ -54,9 +54,18 @@ func _on_check_pressed() -> void:
 		label.text = "Correct!"
 		upgrade_message.visible = true
 		Globals.puzzle_step = 0
+		if Globals.status == "prog1":
+			Globals.status = "pre2"
+			print("pre2")
+		elif Globals.status == "prog2":
+			Globals.status = "pre3"
+			print("pre3")
+		elif Globals.status == "prog3":
+			Globals.status = "post3"
+			print("post3")
 	else:
 		label.text = "Incorrect."
-
+	
 
 func _on_reset_pressed() -> void:
 	$Control/HBoxContainer/CenterContainer/TextureButton.texture_normal = preload("res://assets/workshop/item3.png")
@@ -73,9 +82,15 @@ func _on_reset_pressed() -> void:
 	$Control/TextureButton3.texture_normal = preload("res://assets/workshop/empty2.png")
 
 
+func reload_scene():
+	Globals.reloading = true
+	Globals.stored_player_position = Globals.player_position
+	get_tree().change_scene_to_file("res://src/main/level_a.tscn")
+
 func _on_next_pressed() -> void:
 	upgrade_message.visible = false
 	Globals.in_workbench = false
 	Globals.can_move = true
 	Globals.can_talk = true
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+	reload_scene()

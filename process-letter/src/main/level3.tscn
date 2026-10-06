@@ -26,6 +26,9 @@ size = Vector2(345, 257)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f7x0w"]
 size = Vector2(560, 696)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kak86"]
+size = Vector2(331.5, 129)
+
 [sub_resource type="Shader" id="Shader_kak86"]
 resource_local_to_scene = true
 code = "//https://godotshaders.com/shader/animal-well-inspired-crt-effect/
@@ -243,6 +246,15 @@ shape = SubResource("RectangleShape2D_ywdb4")
 position = Vector2(-2713, 5441)
 shape = SubResource("RectangleShape2D_f7x0w")
 
+[node name="Cutscenes" type="Node2D" parent="." unique_id=1454201405]
+
+[node name="Cutscene7" type="Area2D" parent="Cutscenes" unique_id=5231316]
+position = Vector2(-300, 1413)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cutscenes/Cutscene7" unique_id=1371645922]
+position = Vector2(-2369, 3799)
+shape = SubResource("RectangleShape2D_kak86")
+
 [node name="Elevator_ui" parent="." unique_id=1433977059 instance=ExtResource("20_8bnxt")]
 visible = false
 
@@ -277,3 +289,4 @@ metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="Rooms/Area2D" to="Player" method="_on_area_2d_body_entered" binds= [false]]
 [connection signal="body_exited" from="Rooms/Area2D" to="Player" method="_on_area_2d_body_exited" binds= [false]]
+[connection signal="body_entered" from="Cutscenes/Cutscene7" to="." method="_on_cutscene_7_body_entered"]

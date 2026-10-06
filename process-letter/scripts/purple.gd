@@ -78,7 +78,7 @@ func _ready() -> void:
 			self.global_position = Vector2(823.0, 1533.0)
 
 func _process(_delta):
-	z_index = int(round(global_position.y / 100.0))
+	z_index = int(round(global_position.y / 500.0))
 	speech_bubble.z_index = Globals.player_position.y + 1
 	if is_wandering:
 		velocity = wander_direction * wander_speed
@@ -107,14 +107,14 @@ func _process(_delta):
 		speech_bubble.visible = false
 	
 	if Globals.status in Globals.interactions["purple"] \
-	and Globals.can_talk and Globals.purple:
+	and Globals.can_talk and Globals.purple and not Globals.purple_convo:
 		interact_indicator.visible = true
 		indicator2.visible = false
 	else:
 		interact_indicator.visible = false
 	
 	if Globals.status in Globals.interactions["purple"] \
-	and Globals.can_talk and not Globals.purple:
+	and Globals.can_talk and not Globals.purple and not Globals.purple_convo:
 		indicator2.visible = true
 	else:
 		indicator2.visible = false
@@ -137,6 +137,8 @@ func dialog_end():
 	Globals.can_move = true
 	await get_tree().create_timer(0.5).timeout
 	Globals.can_talk = true
+	Globals.conversations += 1
+	Globals.purple_convo = true
 	wander_timer.start(randf_range(2.0, 5.0))
 
 func start_floating_animation():

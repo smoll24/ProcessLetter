@@ -29,7 +29,14 @@ func _ready():
 	Globals.bot = false
 
 func _process(_delta):
-	if Globals.bot:
+	if Globals.phase == 0:
+		self.visible = false
+		$CollisionShape2D.disabled = true
+	else:
+		self.visible = true
+		$CollisionShape2D.disabled = false
+	
+	if Globals.bot and Globals.status == "prog4":
 		interact_indicator.visible = true
 	else:
 		interact_indicator.visible = false
@@ -43,7 +50,7 @@ func _process(_delta):
 	else:
 		velocity = Vector2.ZERO
 	
-	if Globals.bot and Globals.status == "post3":
+	if Globals.bot and Globals.status == "prog4":
 		if Input.is_action_just_pressed("ui_accept") \
 		and interact_indicator.visible:
 			if Globals.can_capture:
@@ -102,38 +109,40 @@ func stop_wandering() -> void:
 
 func update_walk_animation() -> void:
 	var phase = str(Globals.phase)
+	if phase != "0":
 	
-	if wander_direction == Vector2.UP:
-		sprite.flip_h = false
-		sprite.play(phase + "_back")
-		
-	elif wander_direction == Vector2.DOWN:
-		sprite.flip_h = false
-		sprite.play(phase + "_front_idle")
-		
-	elif wander_direction == Vector2.LEFT:
-		sprite.flip_h = true
-		sprite.play(phase + "_side")
-		
-	elif wander_direction == Vector2.RIGHT:
-		sprite.flip_h = false
-		sprite.play(phase + "_side")
+		if wander_direction == Vector2.UP:
+			sprite.flip_h = false
+			sprite.play(phase + "_back")
+			
+		elif wander_direction == Vector2.DOWN:
+			sprite.flip_h = false
+			sprite.play(phase + "_front_idle")
+			
+		elif wander_direction == Vector2.LEFT:
+			sprite.flip_h = true
+			sprite.play(phase + "_side")
+			
+		elif wander_direction == Vector2.RIGHT:
+			sprite.flip_h = false
+			sprite.play(phase + "_side")
 
 
 func update_idle_animation() -> void:
 	var phase = str(Globals.phase)
+	if phase != "0":
 	
-	if wander_direction == Vector2.UP:
-		sprite.flip_h = false
-		sprite.play(phase + "_back")
-		
-	elif wander_direction == Vector2.DOWN:
-		sprite.flip_h = false
-		sprite.play(phase + "_front_idle")
-		
-	elif wander_direction == Vector2.LEFT \
-	or wander_direction == Vector2.RIGHT:
-		sprite.play(phase + "_side")
+		if wander_direction == Vector2.UP:
+			sprite.flip_h = false
+			sprite.play(phase + "_back")
+			
+		elif wander_direction == Vector2.DOWN:
+			sprite.flip_h = false
+			sprite.play(phase + "_front_idle")
+			
+		elif wander_direction == Vector2.LEFT \
+		or wander_direction == Vector2.RIGHT:
+			sprite.play(phase + "_side")
 	
 
 func _on_interact_area_body_entered(body: Node2D) -> void:
