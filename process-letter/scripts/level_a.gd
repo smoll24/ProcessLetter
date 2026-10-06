@@ -3,6 +3,8 @@ extends Node2D
 @onready var outer = $OuterLayer
 @onready var inner = $InnerLayer
 
+@onready var elevator_block = $Collisions/Elevator_Block/CollisionShape2D
+
 
 func _ready():
 	Globals.current_level = 0
@@ -10,6 +12,11 @@ func _ready():
 	Globals.in_elevator = false
 
 func _process(_delta):
+	if Globals.phase == 0:
+		elevator_block.disabled = false
+	else:
+		elevator_block.disabled = true
+	
 	if Globals.in_room:
 		outer.visible = false
 		inner.visible = true

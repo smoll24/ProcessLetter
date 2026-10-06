@@ -130,6 +130,7 @@ layout_mode = 2
 texture_normal = ExtResource("4_lafvn")
 texture_pressed = ExtResource("5_5q50v")
 texture_hover = ExtResource("6_b2s11")
+texture_disabled = ExtResource("5_5q50v")
 
 [node name="Level2" type="TextureButton" parent="VBoxContainer" unique_id=768559186]
 modulate = Color(0.6371786, 0.64292955, 0.6478392, 1)
@@ -146,6 +147,7 @@ layout_mode = 2
 texture_normal = ExtResource("4_lafvn")
 texture_pressed = ExtResource("5_5q50v")
 texture_hover = ExtResource("6_b2s11")
+texture_disabled = ExtResource("5_5q50v")
 
 [node name="LevelA" type="TextureButton" parent="VBoxContainer" unique_id=1038964947]
 modulate = Color(0.56393117, 0.88995224, 0.5556328, 1)

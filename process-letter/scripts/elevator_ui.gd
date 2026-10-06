@@ -1,6 +1,8 @@
 extends CanvasLayer
 
 @onready var level_a_button = $VBoxContainer/LevelA
+@onready var level_1_button = $VBoxContainer/Level1
+@onready var level_3_button = $VBoxContainer/Level3
 
 func _process(_delta):
 	if Globals.in_elevator:
@@ -8,6 +10,17 @@ func _process(_delta):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	else:
 		self.visible = false
+		
+	if Globals.phase == 0 or Globals.phase == 1:
+		level_1_button.disabled = true
+		level_3_button.disabled = true
+	elif Globals.phase == 2:
+		level_1_button.disabled = false
+		level_3_button.disabled = true
+	elif Globals.phase == 3:
+		level_1_button.disabled = false
+		level_3_button.disabled = false
+		
 		
 	if Globals.current_level == 0:
 		$VBoxContainer2/LightA_on.visible = true
