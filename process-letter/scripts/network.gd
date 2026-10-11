@@ -265,6 +265,7 @@ func are_filled(point_a: int, point_b: int) -> bool:
 	return false
 	
 func _on_point_pressed(point: int):
+	Click.play()
 	if selected_point == -1:
 		selected_point = point
 		buttons[selected_point-1].grab_focus()
@@ -317,9 +318,11 @@ func _on_button_11_pressed() -> void:
 	_on_point_pressed(11)
 	
 func _on_reset_pressed() -> void:
+	Click.play()
 	get_tree().reload_current_scene()
 
 func _on_check_pressed() -> void:
+	Click.play()
 	var solution = check_solution()
 	label.text = solution[1]
 	if solution[0] == true:
@@ -367,6 +370,7 @@ func _on_button_24_pressed() -> void:
 
 
 func _on_next_pressed() -> void:
+	Click.play()
 	#Globals.current_puzzle = "sudoku"
 	#Temp to go straight to workshop
 	Globals.puzzle_step = 2

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dx1koj0fsp3pw"]
+
+[ext_resource type="AudioStream" uid="uid://bmdhvih6t432i" path="res://assets/sounds/office.mp3" id="1_vdv8q"]
+
+[node name="Office" type="AudioStreamPlayer" unique_id=189821190]
+stream = ExtResource("1_vdv8q")
+volume_db = -80.0
+bus = &"Sounds"

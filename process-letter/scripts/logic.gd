@@ -66,16 +66,19 @@ func check_solution() -> bool:
 
 
 func _on_reset_pressed() -> void:
+	Click.play()
 	get_tree().reload_current_scene()
 
 
 func _on_check_pressed() -> void:
+	Click.play()
 	var solution = check_solution()
 	if solution == true:
 		win_message.visible = true
 
 
 func _on_next_pressed() -> void:
+	Click.play()
 	#Go to workshop
 	#Reset puzzle to sudoku
 	Globals.puzzle_step = 2
@@ -83,13 +86,17 @@ func _on_next_pressed() -> void:
 
 
 func _on_and_button_pressed() -> void:
+	Click.play()
 	current_gate = "and"
 
 func _on_or_button_pressed() -> void:
+	Click.play()
 	current_gate = "or"
 
 func _on_xor_button_pressed() -> void:
+	Click.play()
 	current_gate = "xor"
 
 func _on_not_button_pressed() -> void:
+	Click.play()
 	current_gate = "not"

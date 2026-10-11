@@ -170,6 +170,7 @@ func check_solution() -> Array:
 	return [true, message]
 
 func change_button_number(number):
+	Click.play()
 	if selected_button != null:
 		number_grid[int(selected_pos[0])][int(selected_pos[1])] = number
 		selected_button.texture_normal = normal_textures[number]
@@ -178,6 +179,7 @@ func change_button_number(number):
 		
 
 func _on_grid_button_pressed(pos, button):
+	Click.play()
 	button.grab_focus()
 	selected_button = button
 	selected_pos = pos
@@ -216,14 +218,17 @@ func _on_button_0_pressed() -> void:
 
 
 func _on_check_pressed() -> void:
+	Click.play()
 	var solution = check_solution()
 	label.text = solution[1]
 	if solution[0] == true:
 		win_message.visible = true
 
 func _on_reset_pressed() -> void:
+	Click.play()
 	get_tree().reload_current_scene()
 
 
 func _on_next_pressed() -> void:
+	Click.play()
 	Globals.current_puzzle = "logic"

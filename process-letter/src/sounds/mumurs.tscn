@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://blrqfaknm516v"]
+
+[ext_resource type="AudioStream" uid="uid://ddmo74r5bbtit" path="res://assets/sounds/murmurs.mp3" id="1_6d5eg"]
+
+[node name="Mumurs" type="AudioStreamPlayer" unique_id=1930404090]
+stream = ExtResource("1_6d5eg")
+bus = &"Murmur"

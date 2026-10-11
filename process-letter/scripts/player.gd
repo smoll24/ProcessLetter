@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var anim = $AnimatedSprite2D
+@onready var footstep_audio = $Walking
 
 const speed = 500
 var current_dir = 'none'
@@ -53,6 +54,11 @@ func player_movement(_delta):
 	move_and_slide()
 	
 func play_anim(movement):
+	if movement == 1:
+		footstep_audio.start_walking()
+	else:
+		footstep_audio.stop_walking()
+		
 	var dir = current_dir
 	if dir == 'right':
 		anim.flip_h = false

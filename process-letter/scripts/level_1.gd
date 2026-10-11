@@ -5,6 +5,14 @@ extends Node2D
 
 
 func _ready():
+	LevelABg.stop()
+	Office.play()
+	Level1Bg.play()
+	Level3Bg.stop()
+	OutsideBg.play()
+	OutsideBg.stream_paused = true
+	MenuBg.stop()
+	
 	Globals.current_level = 1
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	Globals.in_elevator = false
@@ -14,12 +22,19 @@ func _process(delta):
 	if Globals.in_room:
 		outer.visible = false
 		inner.visible = true
+		Level1Bg.volume_db = -15
 	elif Globals.outside:
 		outer.visible = false
 		inner.visible = false
+		Level1Bg.stream_paused = true
+		OutsideBg.stream_paused = false
+		Level1Bg.volume_db = 0.0
 	else:
 		outer.visible = true
 		inner.visible = false
+		Level1Bg.stream_paused = false
+		OutsideBg.stream_paused = true
+		Level1Bg.volume_db = 0.0
 		
 
 

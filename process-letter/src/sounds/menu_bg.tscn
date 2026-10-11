@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cbnwopoulg3a2"]
+
+[ext_resource type="AudioStream" uid="uid://duykgq07x0ku5" path="res://assets/sounds/nojisuma-just_a_little-194876.mp3" id="1_yrnnd"]
+
+[node name="MenuBg" type="AudioStreamPlayer" unique_id=103129981]
+stream = ExtResource("1_yrnnd")
+bus = &"Music"

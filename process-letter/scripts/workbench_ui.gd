@@ -41,6 +41,7 @@ func _process(delta):
 		
 
 func _on_exit_pressed() -> void:
+	Click.play()
 	Globals.in_workbench = false
 	Globals.can_move = true
 	Globals.can_talk = true
@@ -48,6 +49,7 @@ func _on_exit_pressed() -> void:
 
 
 func _on_check_pressed() -> void:
+	Click.play()
 	if solutions[Globals.status][0] == slot1.texture_normal.resource_path  \
 	and solutions[Globals.status][1] == slot2.texture_normal.resource_path  \
 	and solutions[Globals.status][2] == slot3.texture_normal.resource_path :
@@ -68,6 +70,7 @@ func _on_check_pressed() -> void:
 	
 
 func _on_reset_pressed() -> void:
+	Click.play()
 	$Control/HBoxContainer/CenterContainer/TextureButton.texture_normal = preload("res://assets/workshop/item3.png")
 	$Control/HBoxContainer/CenterContainer2/TextureButton.texture_normal = preload("res://assets/workshop/irem6.png")
 	$Control/HBoxContainer/CenterContainer3/TextureButton.texture_normal = preload("res://assets/workshop/item8.png")
@@ -88,6 +91,7 @@ func reload_scene():
 	get_tree().change_scene_to_file("res://src/main/level_a.tscn")
 
 func _on_next_pressed() -> void:
+	Click.play()
 	upgrade_message.visible = false
 	Globals.in_workbench = false
 	Globals.can_move = true

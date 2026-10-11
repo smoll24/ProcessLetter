@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dw1bhlt0incon"]
+
+[ext_resource type="AudioStream" uid="uid://1elt57itwkr" path="res://assets/sounds/nojisuma-the_scent_of_flowers-528844.mp3" id="1_n7usl"]
+
+[node name="OutsideBg" type="AudioStreamPlayer" unique_id=1078829452]
+stream = ExtResource("1_n7usl")
+bus = &"Music"

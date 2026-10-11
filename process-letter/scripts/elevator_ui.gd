@@ -46,6 +46,7 @@ func _process(_delta):
 		
 
 func _on_cancel_pressed() -> void:
+	Click.play()
 	Globals.in_elevator = false
 	Globals.can_move = true
 	Globals.can_talk = true
@@ -55,6 +56,7 @@ func _on_cancel_pressed() -> void:
 #positon (also have option for stairs?)
 
 func _on_level_a_pressed() -> void:
+	Click.play()
 	get_tree().change_scene_to_file("res://src/main/level_a.tscn")
 	Globals.in_elevator = false
 	Globals.can_move = true
@@ -63,14 +65,16 @@ func _on_level_a_pressed() -> void:
 
 
 func _on_level_1_pressed() -> void:
+	Click.play()
 	get_tree().change_scene_to_file("res://src/main/level1.tscn")
 
 
 func _on_level_2_pressed() -> void:
-	pass # Replace with function body.
+	Click.play()
 
 
 func _on_level_3_pressed() -> void:
+	Click.play()
 	get_tree().change_scene_to_file("res://src/main/level3.tscn")
 	Globals.in_elevator = false
 	Globals.can_move = true

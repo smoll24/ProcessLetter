@@ -21,6 +21,7 @@ func _input(event):
 		resume_button.grab_focus()
 
 func _on_unpause_pressed() -> void:
+	Click.play()
 	var pause_event = InputEventAction.new()
 	pause_event.action = "pause"
 	pause_event.pressed = true
@@ -29,6 +30,6 @@ func _on_unpause_pressed() -> void:
 	Input.parse_input_event(pause_event)
 
 func _on_options_pressed() -> void:
-	pass
+	Click.play()
 	#options_screen.open()
 	#visible = false

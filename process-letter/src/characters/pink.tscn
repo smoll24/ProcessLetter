@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dqiqxcmja3uoy" path="res://scripts/pink.gd" id="1_0jq27"]
 [ext_resource type="Texture2D" uid="uid://cgasxnon3nc45" path="res://assets/characters/pink/pink.png" id="1_wh1jl"]
+[ext_resource type="PackedScene" uid="uid://bcya1cn3j0ny1" path="res://src/sounds/walking.tscn" id="2_g3vva"]
 [ext_resource type="Texture2D" uid="uid://ia5pvbbm51nv" path="res://assets/ui/speech1.png" id="3_e4abx"]
 [ext_resource type="Texture2D" uid="uid://drnv5c3qwtft" path="res://assets/ui/speech2.png" id="4_4ry5a"]
 [ext_resource type="Texture2D" uid="uid://cienvtrschr0s" path="res://assets/ui/speech3.png" id="5_g3vva"]
@@ -192,6 +193,8 @@ corner_radius_bottom_left = 20
 
 [node name="Pink" type="CharacterBody2D" unique_id=864046172]
 script = ExtResource("1_0jq27")
+
+[node name="Walking" parent="." unique_id=357510024 instance=ExtResource("2_g3vva")]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1026202716]
 sprite_frames = SubResource("SpriteFrames_ywdb4")

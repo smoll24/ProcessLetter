@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ddiryxw8d515r"]
+
+[ext_resource type="AudioStream" uid="uid://0uk0mhbi31sj" path="res://assets/sounds/click.mp3" id="1_eoqcm"]
+
+[node name="Click" type="AudioStreamPlayer" unique_id=1069155278]
+stream = ExtResource("1_eoqcm")

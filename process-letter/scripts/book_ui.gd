@@ -36,6 +36,7 @@ func _process(_delta):
 
 
 func _on_exit_pressed() -> void:
+	Click.play()
 	Globals.in_book = false
 	Globals.can_move = true
 	Globals.can_talk = true

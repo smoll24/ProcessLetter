@@ -26,14 +26,12 @@ grow_vertical = 2
 script = ExtResource("1_4oum5")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=56757061]
-visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_xlgkx")
 
 [node name="Puzzle1" type="Control" parent="." unique_id=491296672]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -160,6 +158,7 @@ texture_hover = ExtResource("2_4oum5")
 texture_focused = ExtResource("3_mvcmu")
 
 [node name="Puzzle2" type="Control" parent="." unique_id=1058052330]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0

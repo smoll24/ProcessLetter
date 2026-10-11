@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://diolx4pn4dnav" path="res://scripts/teal.gd" id="1_mw68n"]
 [ext_resource type="Texture2D" uid="uid://f1gm587m4tw4" path="res://assets/characters/teal/teal.png" id="1_ttf2c"]
+[ext_resource type="PackedScene" uid="uid://bcya1cn3j0ny1" path="res://src/sounds/walking.tscn" id="2_bi0wx"]
 [ext_resource type="Texture2D" uid="uid://ia5pvbbm51nv" path="res://assets/ui/speech1.png" id="3_7v7ee"]
 [ext_resource type="Texture2D" uid="uid://drnv5c3qwtft" path="res://assets/ui/speech2.png" id="4_uivgs"]
 [ext_resource type="Texture2D" uid="uid://cienvtrschr0s" path="res://assets/ui/speech3.png" id="5_bi0wx"]
@@ -192,6 +193,8 @@ corner_radius_bottom_left = 20
 
 [node name="Teal" type="CharacterBody2D" unique_id=864046172]
 script = ExtResource("1_mw68n")
+
+[node name="Walking" parent="." unique_id=357510024 instance=ExtResource("2_bi0wx")]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1026202716]
 sprite_frames = SubResource("SpriteFrames_ywdb4")

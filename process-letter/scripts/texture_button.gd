@@ -23,6 +23,7 @@ func _can_drop_data(_position: Vector2, data) -> bool:
 	return data.has("origin_node") and data["origin_node"] != self
 
 func _drop_data(_position: Vector2, data):
+	Click.play()
 	var origin_node = data["origin_node"]
 	var target_texture_normal = texture_normal
 	origin_node.texture_normal = target_texture_normal

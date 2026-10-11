@@ -3,7 +3,7 @@ extends Node
 var can_move = true
 var can_talk = true
 #0,1,2,3
-#var puzzle_phase = 0
+var puzzle_phase = 0
 var status = "pre1"
 #1,2,3
 var phase:int

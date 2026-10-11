@@ -184,6 +184,7 @@ position = Vector2(2604, 2199)
 
 [node name="Pink" parent="OuterLayer/OutCharacters" unique_id=213673184 instance=ExtResource("4_oqaou")]
 position = Vector2(2761, 1891)
+level = null
 
 [node name="Teal" parent="OuterLayer/OutCharacters" unique_id=855263268 instance=ExtResource("5_sr8mx")]
 position = Vector2(3061, 2352)
@@ -410,13 +411,11 @@ visible = false
 visible = false
 
 [node name="ColorRect" type="CanvasModulate" parent="." unique_id=971754492]
-visible = false
 modulate = Color(1, 1, 1, 0.34901962)
 color = Color(0.6275533, 0.6723382, 0.47547442, 1)
 metadata/_edit_lock_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=463526421]
-visible = false
 
 [node name="ColorRect2" type="ColorRect" parent="CanvasLayer" unique_id=2071225237]
 modulate = Color(1, 1, 1, 0.3647059)
