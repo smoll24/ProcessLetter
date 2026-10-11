@@ -4,12 +4,16 @@ extends CanvasLayer
 
 @onready var options_screen = $VBoxContainer/Options
 
+var music: int = AudioServer.get_bus_index("Music")
+
 func _ready():
 	visible = false
 	
 func _process(_delta: float) -> void:
 	if self.visible:
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		AudioServer.set_bus_volume_db(music, -15)
+		
 
 func _input(event):
 	if event.is_action_pressed("pause"):
@@ -21,6 +25,7 @@ func _input(event):
 		resume_button.grab_focus()
 
 func _on_unpause_pressed() -> void:
+	AudioServer.set_bus_volume_db(music, 0)
 	Click.play()
 	var pause_event = InputEventAction.new()
 	pause_event.action = "pause"
