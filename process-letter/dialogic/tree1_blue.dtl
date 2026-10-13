@@ -1,14 +1,14 @@
 join blue (Curious) left
 blue: Am I too late? Did you make one for him?
-- No. I made him several. They're my finest work yet!
+- I made him several, they're my finest work!
 	blue (Vexxed): Your work is putting us all at risk.
 	blue (Impressed): The rest of us are trying to do something about it.
 	blue (Curious): Will you help us?
-	- You want to destroy my work!? Absolutely not!
+	- You want to destroy my work!? No!
 		blue (Curious): I see. Leaving us with your mess.
 		blue (Vexxed): I thought you were better than that.
 		- I... ok.
-	- ...don't ask me to destroy my own work. Please.
+	- ...don't ask me to destroy my own work.
 		blue (Vexxed): Don't be so thoughtless and I won't have to.
 		blue (Curious): Will you help us?
 		- I... ok.

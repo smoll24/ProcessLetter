@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c86vik2jxrhci"]
+
+[ext_resource type="Script" uid="uid://d3wtqxthmkilt" path="res://scripts/bots_ui.gd" id="1_kmnrs"]
+[ext_resource type="PackedScene" uid="uid://d2sqm43l1myd2" path="res://src/ui/bot_icon.tscn" id="2_pv04k"]
+
+[node name="BotsUi" type="CanvasLayer" unique_id=1973747785]
+script = ExtResource("1_kmnrs")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1104510593]
+modulate = Color(1, 1, 1, 0.47058824)
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 1302.0
+offset_bottom = 102.0
+theme_override_constants/separation = 120
+
+[node name="BotIcon2" parent="HBoxContainer" unique_id=2087096911 instance=ExtResource("2_pv04k")]
+layout_mode = 2

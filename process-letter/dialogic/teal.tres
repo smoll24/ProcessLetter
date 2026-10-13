@@ -39,11 +39,12 @@ script = ExtResource("2_wxuvg")
 scene = ExtResource("6_gdhoy")
 overrides = {
 "box_margin_bottom": "30.0",
-"box_size": "Vector2(700, 130)",
+"box_size": "Vector2(700, 170)",
 "name_label_custom_color": "Color(1, 1, 1, 0)",
 "name_label_use_character_color": "false",
 "name_label_use_global_color": "false",
-"normal_font": "\"res://assets/fonts/process_script.ttf\""
+"normal_font": "\"res://assets/fonts/process_script.ttf\"",
+"typing_sounds_volume": "0.0"
 }
 
 [sub_resource type="Resource" id="Resource_ppqxq"]
@@ -53,6 +54,12 @@ scene = ExtResource("7_vgcao")
 [sub_resource type="Resource" id="Resource_2q2wn"]
 script = ExtResource("2_wxuvg")
 scene = ExtResource("8_nw7m6")
+overrides = {
+"boxes_fill_width": "false",
+"boxes_min_size": "Vector2(0, 80)",
+"boxes_v_separation": "15.0",
+"sounds_volume": "0.0"
+}
 
 [sub_resource type="Resource" id="Resource_65f8m"]
 script = ExtResource("2_wxuvg")
@@ -77,4 +84,4 @@ layer_info = {
 "16": SubResource("Resource_65f8m"),
 "17": SubResource("Resource_knem8")
 }
-metadata/_latest_layer = "13"
+metadata/_latest_layer = "15"

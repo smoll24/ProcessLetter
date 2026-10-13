@@ -14,6 +14,8 @@ var wander_timer: Timer
 @onready var footstep_audio = $Walking
 
 func _ready():
+	if self not in Globals.bots_list:
+		Globals.bots_list.append(self)
 	update_idle_animation()
 	wander_timer = Timer.new()
 	wander_timer.one_shot = true

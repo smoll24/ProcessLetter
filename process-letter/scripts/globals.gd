@@ -62,6 +62,7 @@ var player_position: Vector2
 var stored_player_position: Vector2
 
 var current_bot_instance: CharacterBody2D = null
+var bots_list = []
 
 var conversations = 0
 

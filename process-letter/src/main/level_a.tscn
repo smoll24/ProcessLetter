@@ -27,6 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://fc8spue341ep" path="res://src/ui/computer_ui.tscn" id="24_lw1of"]
 [ext_resource type="Shader" uid="uid://dqu8j2i4bu2bt" path="res://scripts/main.gdshader" id="25_05tb5"]
 [ext_resource type="PackedScene" uid="uid://c5a8r8w1y5k7c" path="res://src/ui/cutscene_ui.tscn" id="26_3cnvk"]
+[ext_resource type="PackedScene" uid="uid://c86vik2jxrhci" path="res://src/ui/bots_ui.tscn" id="26_rdf1g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7wt6k"]
 size = Vector2(1418, 1156.5)
@@ -441,6 +442,8 @@ visible = false
 
 [node name="Computer" parent="." unique_id=1334415562 instance=ExtResource("24_lw1of")]
 visible = false
+
+[node name="BotsUi" parent="." unique_id=1973747785 instance=ExtResource("26_rdf1g")]
 
 [node name="CutsceneUi" parent="." unique_id=2051133641 instance=ExtResource("26_3cnvk")]
 visible = false
