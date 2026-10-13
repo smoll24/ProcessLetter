@@ -13,7 +13,8 @@ var cutscenes = {
 	5: ["res://assets/temp/cutscene5.png"],
 	6: ["res://assets/temp/cutscene6.png"],
 	7: ["res://assets/temp/cutscene7.png"],
-	8: ["res://assets/temp/cutscene8.png"]
+	8: ["res://assets/temp/cutscene8.png"],
+	9: ["res://assets/temp/cutscene8.png"]
 }
 
 var cut_num: int = 0

@@ -67,6 +67,8 @@ var conversations = 0
 
 var reloading = false
 
+var cutscenes = []
+
 func _process(_delta):
 	var puzzle_phase = phase
 	

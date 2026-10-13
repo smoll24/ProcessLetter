@@ -47,8 +47,10 @@ func _process(_delta):
 
 func _on_cutscene_2_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and Globals.status == "pre1":
-		Globals.current_cutscene = 2
-		Globals.in_cutscene = true
+		if "2" not in Globals.cutscenes:
+			Globals.current_cutscene = 2
+			Globals.in_cutscene = true
+			Globals.cutscenes.append("2")
 		
 		if Globals.status == "pre1":
 			Globals.puzzle_step = 1
@@ -58,23 +60,36 @@ func _on_cutscene_2_body_entered(body: Node2D) -> void:
 
 func _on_cutscene_3_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and Globals.status == "pre2":
-		Globals.current_cutscene = 3
-		Globals.in_cutscene = true
+		if "3" not in Globals.cutscenes:
+			Globals.current_cutscene = 3
+			Globals.in_cutscene = true
+			Globals.cutscenes.append("3")
 
 
 func _on_cutscene_5_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and Globals.status == "pre3":
-		Globals.current_cutscene = 5
-		Globals.in_cutscene = true
+		if "5" not in Globals.cutscenes:
+			Globals.current_cutscene = 5
+			Globals.in_cutscene = true
+			Globals.cutscenes.append("5")
 
 
 func _on_cutscene_6_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and Globals.status == "pre3":
-		Globals.current_cutscene = 6
-		Globals.in_cutscene = true
+		if "6" not in Globals.cutscenes:
+			Globals.current_cutscene = 6
+			Globals.in_cutscene = true
+			Globals.cutscenes.append("6")
 
 
 func _on_cutscene_8_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and Globals.status == "prog3":
-		Globals.current_cutscene = 8
-		Globals.in_cutscene = true
+		if "8" not in Globals.cutscenes:
+			Globals.current_cutscene = 8
+			Globals.in_cutscene = true
+			Globals.cutscenes.append("8")
+	if body.is_in_group("player") and Globals.status == "post3":
+		if "9" not in Globals.cutscenes:
+			Globals.current_cutscene = 9
+			Globals.in_cutscene = true
+			Globals.cutscenes.append("9")

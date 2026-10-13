@@ -65,7 +65,7 @@ func _ready() -> void:
 	elif Globals.status == "prog3":
 		if level == 0:
 			#Conversation with purple and violet
-			self.global_position = Vector2(793.0, 1398.0)
+			self.global_position = Vector2(-1029.0, 1713.0)
 	elif Globals.status == "post3":
 		if level == 0:
 			#Outside HCD
