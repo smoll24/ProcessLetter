@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://g3j5ixhfkttk"]
 
 [ext_resource type="Script" uid="uid://brkw4aahc2l4p" path="res://scripts/bots.gd" id="1_b0rwi"]
+[ext_resource type="PackedScene" uid="uid://bcya1cn3j0ny1" path="res://src/sounds/walking.tscn" id="2_5uihm"]
 [ext_resource type="Texture2D" uid="uid://drleiafnadbm3" path="res://assets/characters/bots/IMG_1728.PNG" id="2_b0rwi"]
 [ext_resource type="Texture2D" uid="uid://dph5vxay08gko" path="res://assets/characters/bots/bot_back1.png" id="2_jyd2k"]
 [ext_resource type="Texture2D" uid="uid://blkdsjw3ntgi" path="res://assets/characters/bots/IMG_1729.PNG" id="3_xkvqc"]
@@ -107,6 +108,8 @@ size = Vector2(159, 207)
 
 [node name="Bots" type="CharacterBody2D" unique_id=47230853]
 script = ExtResource("1_b0rwi")
+
+[node name="Walking" parent="." unique_id=1349250710 instance=ExtResource("2_5uihm")]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=143158568]
 sprite_frames = SubResource("SpriteFrames_rj60s")

@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bq5oiqag1k1a6" path="res://assets/characters/violet/violet.png" id="1_brh3x"]
 [ext_resource type="Script" uid="uid://d2hmnytxs2tcv" path="res://scripts/violet.gd" id="1_ecic8"]
+[ext_resource type="PackedScene" uid="uid://bcya1cn3j0ny1" path="res://src/sounds/walking.tscn" id="2_78ehb"]
 [ext_resource type="Texture2D" uid="uid://ia5pvbbm51nv" path="res://assets/ui/speech1.png" id="3_0j4ms"]
 [ext_resource type="Texture2D" uid="uid://drnv5c3qwtft" path="res://assets/ui/speech2.png" id="4_woboc"]
 [ext_resource type="Texture2D" uid="uid://cienvtrschr0s" path="res://assets/ui/speech3.png" id="5_vss22"]
@@ -193,6 +194,9 @@ corner_radius_bottom_left = 20
 
 [node name="Violet" type="CharacterBody2D" unique_id=864046172]
 script = ExtResource("1_ecic8")
+
+[node name="Walking" parent="." unique_id=1349250710 instance=ExtResource("2_78ehb")]
+chara = "violet"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1026202716]
 sprite_frames = SubResource("SpriteFrames_ywdb4")

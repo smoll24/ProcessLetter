@@ -195,6 +195,7 @@ corner_radius_bottom_left = 20
 script = ExtResource("1_mw68n")
 
 [node name="Walking" parent="." unique_id=357510024 instance=ExtResource("2_bi0wx")]
+chara = "teal"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1026202716]
 sprite_frames = SubResource("SpriteFrames_ywdb4")

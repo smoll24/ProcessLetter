@@ -11,6 +11,7 @@ var wander_steps = 0
 var wander_speed = 100.0
 var step_distance = 40.0
 var wander_timer: Timer
+@onready var footstep_audio = $Walking
 
 func _ready():
 	update_idle_animation()

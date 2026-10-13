@@ -7,6 +7,7 @@ var dialog = null
 @onready var speech_text = $Speech/RichTextLabel
 var bubble_tween: Tween
 var bubble_max_distance = 50
+@onready var footstep_audio = $Walking
 
 @onready var animated_sprite = $AnimatedSprite2D
 
@@ -78,6 +79,7 @@ func _ready() -> void:
 			self.global_position = Vector2(652.0, 2080.0)
 
 func _process(_delta):
+	print("violet",z_index)
 	z_index = int(round(global_position.y / 500.0))
 	speech_bubble.z_index = Globals.player_position.y + 1
 	if is_wandering:
@@ -191,6 +193,8 @@ func stop_wandering() -> void:
 	wander_timer.start(randf_range(3.0, 6.0))
 	
 func update_walk_animation() -> void:
+	footstep_audio.start_walking()
+	
 	if wander_direction == Vector2.UP:
 		animated_sprite.flip_h = false
 		animated_sprite.play("back_walk")
@@ -208,6 +212,8 @@ func update_walk_animation() -> void:
 		animated_sprite.play("side_walk")
 		
 func update_idle_animation() -> void:
+	footstep_audio.stop_walking()
+	
 	if wander_direction == Vector2.UP:
 		animated_sprite.play("back_idle")
 		
