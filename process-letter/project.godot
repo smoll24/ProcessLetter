@@ -32,6 +32,9 @@ Office="*uid://dx1koj0fsp3pw"
 OutsideBg="*uid://dw1bhlt0incon"
 WorkshopBg="*uid://pkh87nsjoeyh"
 Click="*uid://ddiryxw8d515r"
+Hover="*uid://v7ppamnx55a7"
+Correct="*uid://bj8mypttg8nrr"
+Incorrect="*uid://by3qduvbo7hui"
 
 [dialogic]
 

@@ -3,5 +3,6 @@
 [ext_resource type="AudioStream" uid="uid://gev7bo2qke" path="res://assets/sounds/nojisuma-condemnation-579244.mp3" id="1_b4w0u"]
 
 [node name="WorkshopBg" type="AudioStreamPlayer" unique_id=1504805182]
+process_mode = 3
 stream = ExtResource("1_b4w0u")
 bus = &"Music"

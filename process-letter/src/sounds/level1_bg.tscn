@@ -3,5 +3,6 @@
 [ext_resource type="AudioStream" uid="uid://bdvs2hmq0vq0b" path="res://assets/sounds/nojisuma-alone_by_the_river-186436.mp3" id="1_7sw37"]
 
 [node name="Level1Bg" type="AudioStreamPlayer" unique_id=182398377]
+process_mode = 3
 stream = ExtResource("1_7sw37")
 bus = &"Music"

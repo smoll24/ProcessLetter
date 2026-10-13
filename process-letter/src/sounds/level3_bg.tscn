@@ -3,5 +3,6 @@
 [ext_resource type="AudioStream" uid="uid://c8p75j4xs5ik" path="res://assets/sounds/nojisuma-something_lost-185380.mp3" id="1_dpqgw"]
 
 [node name="Level3Bg" type="AudioStreamPlayer" unique_id=167326674]
+process_mode = 3
 stream = ExtResource("1_dpqgw")
 bus = &"Music"

@@ -29,7 +29,7 @@ func _process(_delta):
 	if Globals.in_room:
 		outer.visible = false
 		inner.visible = true
-		LevelABg.volume_db = -15
+		LevelABg.volume_db = -10
 	elif Globals.outside:
 		outer.visible = false
 		inner.visible = false

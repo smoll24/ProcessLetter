@@ -1,7 +1,7 @@
 extends AudioStreamPlayer2D
 
-@export var step_delay: float = 0.30
-@export var pitch_randomness: float = 0.5
+@export var step_delay: float = 0.40
+@export var pitch_randomness: float = 0.1
 
 var time_since_last_step: float = 0.0
 var is_walking: bool = false

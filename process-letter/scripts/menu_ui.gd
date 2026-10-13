@@ -17,3 +17,11 @@ func _on_start_pressed() -> void:
 func _on_options_pressed() -> void:
 	Click.play()
 	
+
+
+func _on_start_mouse_entered() -> void:
+	Hover.play()
+
+
+func _on_options_mouse_entered() -> void:
+	Hover.play()

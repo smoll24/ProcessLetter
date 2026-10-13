@@ -38,6 +38,7 @@ func _process(_delta):
 	if Globals.workbench:
 		if Input.is_action_just_pressed("ui_accept") \
 		and interact_indicator.visible:
+			Hover.play()
 			Globals.can_move = false
 			Globals.can_talk = false
 			if type == 0:

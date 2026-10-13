@@ -241,7 +241,11 @@ text = "III"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[connection signal="mouse_entered" from="VBoxContainer/Level3" to="." method="_on_level_3_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/Level3" to="." method="_on_level_3_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/Level1" to="." method="_on_level_1_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/Level1" to="." method="_on_level_1_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/LevelA" to="." method="_on_level_a_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/LevelA" to="." method="_on_level_a_pressed"]
+[connection signal="mouse_entered" from="Cancel" to="." method="_on_cancel_mouse_entered"]
 [connection signal="pressed" from="Cancel" to="." method="_on_cancel_pressed"]

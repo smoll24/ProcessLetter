@@ -7,6 +7,8 @@ colors = PackedColorArray(0.84630436, 0.86025786, 0.8317263, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_ywdb4"]
 gradient = SubResource("Gradient_agk7f")
+width = 128
+height = 128
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.5, 1)
@@ -27,7 +29,8 @@ texture = SubResource("GradientTexture2D_ywdb4")
 
 [node name="PointLight2D3" type="PointLight2D" parent="." unique_id=993472149]
 position = Vector2(-1.0000014, 7.000002)
-scale = Vector2(10.187501, 8.197754)
+scale = Vector2(10, 8.047)
+energy = 0.5
 texture = SubResource("GradientTexture2D_ywdb4")
 
 [node name="Alevel" type="Sprite2D" parent="." unique_id=577795536]

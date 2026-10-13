@@ -60,5 +60,7 @@ texture_normal = ExtResource("6_su2o2")
 texture_pressed = ExtResource("7_dgnf2")
 texture_hover = ExtResource("8_uuxfn")
 
+[connection signal="mouse_entered" from="VBoxContainer/Unpause" to="." method="_on_unpause_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/Unpause" to="." method="_on_unpause_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/Options" to="." method="_on_options_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]

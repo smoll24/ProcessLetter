@@ -80,3 +80,22 @@ func _on_level_3_pressed() -> void:
 	Globals.can_move = true
 	Globals.can_talk = true
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+
+
+func _on_level_3_mouse_entered() -> void:
+	if not $VBoxContainer/Level3.disabled:
+		Hover.play()
+
+
+func _on_level_1_mouse_entered() -> void:
+	if not $VBoxContainer/Level1.disabled:
+		Hover.play()
+
+
+func _on_level_a_mouse_entered() -> void:
+	if not $VBoxContainer/LevelA.disabled:
+		Hover.play()
+
+
+func _on_cancel_mouse_entered() -> void:
+	Hover.play()

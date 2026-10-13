@@ -4,4 +4,4 @@
 
 [node name="Mumurs" type="AudioStreamPlayer" unique_id=1930404090]
 stream = ExtResource("1_6d5eg")
-bus = &"Murmur"
+bus = &"Sounds"

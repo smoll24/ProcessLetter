@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bj8mypttg8nrr"]
+
+[ext_resource type="AudioStream" uid="uid://c3td2kp1o8vd4" path="res://assets/sounds/dragon-studio-correct-472358.mp3" id="1_rhmxb"]
+
+[node name="Correct" type="AudioStreamPlayer" unique_id=1358927775]
+process_mode = 3
+stream = ExtResource("1_rhmxb")
+bus = &"UI"

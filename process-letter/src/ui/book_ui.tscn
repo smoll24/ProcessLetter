@@ -309,4 +309,5 @@ texture_normal = ExtResource("7_tr1og")
 texture_pressed = ExtResource("8_1l2t0")
 texture_hover = ExtResource("9_ehr54")
 
+[connection signal="mouse_entered" from="Exit" to="." method="_on_exit_mouse_entered"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

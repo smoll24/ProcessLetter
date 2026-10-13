@@ -327,6 +327,9 @@ func _on_check_pressed() -> void:
 	label.text = solution[1]
 	if solution[0] == true:
 		win_message.visible = true
+		Correct.play()
+	else:
+		Incorrect.play()
 
 
 func _on_button_12_pressed() -> void:

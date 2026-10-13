@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://by3qduvbo7hui"]
+
+[ext_resource type="AudioStream" uid="uid://2yablsfixruw" path="res://assets/sounds/lesiakower-error-mistake-sound-effect-incorrect-answer-437420.mp3" id="1_bx45c"]
+
+[node name="Incorrect" type="AudioStreamPlayer" unique_id=1673406219]
+process_mode = 3
+stream = ExtResource("1_bx45c")
+bus = &"UI"

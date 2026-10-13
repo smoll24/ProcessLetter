@@ -324,8 +324,12 @@ texture_normal = ExtResource("29_t61u0")
 texture_pressed = ExtResource("30_7egjw")
 texture_hover = ExtResource("31_8w5c7")
 
+[connection signal="mouse_entered" from="Exit" to="." method="_on_exit_mouse_entered"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="mouse_entered" from="Reset" to="." method="_on_reset_mouse_entered"]
 [connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]
 [connection signal="ready" from="Reset" to="." method="_on_reset_ready"]
+[connection signal="mouse_entered" from="Check" to="." method="_on_check_mouse_entered"]
 [connection signal="pressed" from="Check" to="." method="_on_check_pressed"]
+[connection signal="mouse_entered" from="Upgrade/Next" to="." method="_on_next_mouse_entered"]
 [connection signal="pressed" from="Upgrade/Next" to="." method="_on_next_pressed"]

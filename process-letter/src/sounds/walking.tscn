@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://bcya1cn3j0ny1"]
 
-[ext_resource type="AudioStream" uid="uid://syti4o0187ss" path="res://assets/sounds/Steps_floor-004.ogg" id="1_as1av"]
+[ext_resource type="AudioStream" uid="uid://433a7h6am1qg" path="res://assets/sounds/Steps_floor-010.ogg" id="1_6jcbr"]
 [ext_resource type="Script" uid="uid://ds1yhnt554qql" path="res://scripts/walking.gd" id="2_6jcbr"]
 
 [node name="Walking" type="AudioStreamPlayer2D" unique_id=1349250710]
-stream = ExtResource("1_as1av")
+stream = ExtResource("1_6jcbr")
+volume_db = -5.0
 max_distance = 1000.0
 bus = &"Sounds"
 script = ExtResource("2_6jcbr")

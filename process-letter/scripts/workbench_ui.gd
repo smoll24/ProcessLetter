@@ -55,6 +55,7 @@ func _on_check_pressed() -> void:
 	and solutions[Globals.status][2] == slot3.texture_normal.resource_path :
 		label.text = "Correct!"
 		upgrade_message.visible = true
+		Correct.play()
 		Globals.puzzle_step = 0
 		if Globals.status == "prog1":
 			Globals.status = "pre2"
@@ -67,6 +68,7 @@ func _on_check_pressed() -> void:
 			print("post3")
 	else:
 		label.text = "Incorrect."
+		Incorrect.play()
 	
 
 func _on_reset_pressed() -> void:
@@ -98,3 +100,16 @@ func _on_next_pressed() -> void:
 	Globals.can_talk = true
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	reload_scene()
+
+
+func _on_exit_mouse_entered() -> void:
+	Hover.play()
+
+func _on_reset_mouse_entered() -> void:
+	Hover.play()
+
+func _on_check_mouse_entered() -> void:
+	Hover.play()
+
+func _on_next_mouse_entered() -> void:
+	Hover.play()

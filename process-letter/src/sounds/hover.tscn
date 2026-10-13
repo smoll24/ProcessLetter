@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://v7ppamnx55a7"]
+
+[ext_resource type="AudioStream" uid="uid://dikicjpt3sgcx" path="res://assets/sounds/tunetank.com_select-click.wav" id="1_4vf3r"]
+
+[node name="hover" type="AudioStreamPlayer" unique_id=543418739]
+process_mode = 3
+stream = ExtResource("1_4vf3r")
+bus = &"UI"
