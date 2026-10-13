@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://xg000u67pfwa"]
 
 [ext_resource type="AudioStream" uid="uid://cxvaom25tgh3d" path="res://assets/sounds/nojisuma-walking_while_looking_at_the_moon-187621.mp3" id="1_yp5cg"]
+[ext_resource type="Script" uid="uid://bt6cpbm4nungv" path="res://scripts/level_a_bg.gd" id="2_ofwvn"]
 
 [node name="LevelABg" type="AudioStreamPlayer" unique_id=212282763]
 process_mode = 3
 stream = ExtResource("1_yp5cg")
 volume_db = -15.0
 bus = &"Music"
+script = ExtResource("2_ofwvn")

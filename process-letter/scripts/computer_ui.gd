@@ -4,14 +4,14 @@ extends CanvasLayer
 @onready var sudoku = $Sudoku
 
 func _process(_delta):
-	if Globals.in_computer or Globals.in_workbench:
-		LevelABg.stream_paused = true
-		WorkshopBg.stream_paused = false
-		Office.stream_paused = true
-	else:
-		LevelABg.stream_paused = false
-		WorkshopBg.stream_paused = true
-		Office.stream_paused = false
+	#if Globals.in_computer or Globals.in_workbench:
+		#LevelABg.stream_paused = true
+		#WorkshopBg.stream_paused = false
+		#Office.stream_paused = true
+	#else:
+		#LevelABg.stream_paused = false
+		#WorkshopBg.stream_paused = true
+		#Office.stream_paused = false
 	
 	if Globals.in_computer:
 		self.visible = true

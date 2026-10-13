@@ -26,10 +26,8 @@ func _ready():
 
 func _process(delta: float) -> void:
 	if is_walking:
-		print("walking")
 		time_since_last_step += delta
 		if time_since_last_step >= step_delay and not self.playing:
-			print("play")
 			play_footstep()
 			#self.play()
 			time_since_last_step = 0.0 

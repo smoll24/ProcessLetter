@@ -9,7 +9,7 @@ var status = "pre1"
 var phase:int
 var in_room = true
 
-var interactions = {"purple":["post3"], "pink":[],"blue":["post3"],
+var interactions = {"purple":["post3"], "pink":["post3"],"blue":["post3"],
 "teal":[],"violet":["post3"], "workbench":["prog1","prog2","prog3"],
 "computer":["prog1","prog2","prog3"]}
 
@@ -37,7 +37,7 @@ var bot = false
 var paused = false
 var outside = false
 
-var can_capture = true
+var can_capture = false
 var captured = 0
 
 var book = false
@@ -47,6 +47,7 @@ var in_book = false
 var blue_convo = false
 var purple_convo = false
 var violet_convo = false
+var pink_convo = false
 
 #Indicates whether you can enter 1. Computer 2. Workshop 
 var puzzle_step = 1
@@ -67,6 +68,9 @@ func _process(_delta):
 	
 	Dialogic.VAR.set_variable("State", status)
 	
+	if status == "prog4":
+		can_capture = true
+	
 	if paused:
 		can_move = false
 		can_talk = false
@@ -79,7 +83,8 @@ func _process(_delta):
 		phase = 2
 	if status == "post3" or status == "prog4" or status == "post4":
 		phase = 3
-	if conversations == 3 and status == "post3":
+	if pink_convo and blue_convo and purple_convo \
+	and violet_convo and status == "post3":
 		status = "prog4"
 		print("prog4")
 	if captured == 4 and status == "prog4":

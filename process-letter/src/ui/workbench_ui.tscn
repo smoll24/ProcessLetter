@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://c8ti45wpgxjju" path="res://assets/ui/next_button.PNG" id="29_t61u0"]
 [ext_resource type="Texture2D" uid="uid://d3ma23qi54oad" path="res://assets/ui/next_pressed.PNG" id="30_7egjw"]
 [ext_resource type="Texture2D" uid="uid://t765jbgj2gl0" path="res://assets/ui/next_hover.PNG" id="31_8w5c7"]
+[ext_resource type="AudioStream" uid="uid://du0nu1ypkxadf" path="res://assets/sounds/freesound_community-success-fanfare-trumpets-6185.mp3" id="32_7egjw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ywdb4"]
 animations = [{
@@ -323,6 +324,9 @@ grow_vertical = 2
 texture_normal = ExtResource("29_t61u0")
 texture_pressed = ExtResource("30_7egjw")
 texture_hover = ExtResource("31_8w5c7")
+
+[node name="Success" type="AudioStreamPlayer" parent="." unique_id=483911916]
+stream = ExtResource("32_7egjw")
 
 [connection signal="mouse_entered" from="Exit" to="." method="_on_exit_mouse_entered"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

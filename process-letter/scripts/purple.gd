@@ -8,6 +8,7 @@ var dialog = null
 var bubble_tween: Tween
 var bubble_max_distance = 50
 @onready var footstep_audio = $Walking
+var music: int = AudioServer.get_bus_index("Music")
 
 @onready var animated_sprite = $AnimatedSprite2D
 
@@ -79,7 +80,6 @@ func _ready() -> void:
 			self.global_position = Vector2(823.0, 1533.0)
 
 func _process(_delta):
-	print("purple",z_index)
 	z_index = int(round(global_position.y / 500.0))
 	speech_bubble.z_index = Globals.player_position.y + 1
 	if is_wandering:
@@ -130,11 +130,13 @@ func _process(_delta):
 			Globals.can_move = false
 			Globals.can_talk = false
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+			AudioServer.set_bus_mute(music, true)
 			dialog = Dialogic.start("tree2_purple")
 			get_tree().root.add_child(dialog)
 			Dialogic.timeline_ended.connect(dialog_end)
 		
 func dialog_end():
+	AudioServer.set_bus_mute(music, false)
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	Globals.can_move = true
 	await get_tree().create_timer(0.5).timeout

@@ -30,6 +30,10 @@ func _ready():
 	Globals.bot = false
 
 func _process(_delta):
+	if Globals.status == "post4":
+		self.queue_free()
+	
+	z_index = int(round(global_position.y / 500.0))
 	if Globals.phase == 0:
 		self.visible = false
 		$CollisionShape2D.disabled = true
@@ -37,7 +41,7 @@ func _process(_delta):
 		self.visible = true
 		$CollisionShape2D.disabled = false
 	
-	if Globals.bot and Globals.status == "prog4":
+	if Globals.bot and Globals.status == "prog4" and Globals.can_capture:
 		interact_indicator.visible = true
 	else:
 		interact_indicator.visible = false
@@ -55,6 +59,7 @@ func _process(_delta):
 		if Input.is_action_just_pressed("ui_accept") \
 		and interact_indicator.visible:
 			if Globals.can_capture:
+				Incorrect.play()
 				Globals.captured += 1
 				if Globals.current_bot_instance == self:
 					Globals.current_bot_instance.queue_free()

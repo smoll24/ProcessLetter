@@ -55,7 +55,8 @@ func _on_check_pressed() -> void:
 	and solutions[Globals.status][2] == slot3.texture_normal.resource_path :
 		label.text = "Correct!"
 		upgrade_message.visible = true
-		Correct.play()
+		#Correct.play()
+		$Success.play()
 		Globals.puzzle_step = 0
 		if Globals.status == "prog1":
 			Globals.status = "pre2"
