@@ -4,6 +4,7 @@ extends CharacterBody2D
 
 @onready var interact_indicator = $Indicator
 
+@export var bot_id = 0
 
 var is_wandering = false
 var wander_direction = Vector2.ZERO
@@ -14,8 +15,9 @@ var wander_timer: Timer
 @onready var footstep_audio = $Walking
 
 func _ready():
-	if self not in Globals.bots_list:
-		Globals.bots_list.append(self)
+	if self.bot_id not in Globals.bots_list:
+		Globals.bots_list.append(self.bot_id)
+
 	update_idle_animation()
 	wander_timer = Timer.new()
 	wander_timer.one_shot = true

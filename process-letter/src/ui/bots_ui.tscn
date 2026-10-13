@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://d2sqm43l1myd2" path="res://src/ui/bot_icon.tscn" id="2_pv04k"]
 
 [node name="BotsUi" type="CanvasLayer" unique_id=1973747785]
+visible = false
 script = ExtResource("1_kmnrs")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1104510593]
