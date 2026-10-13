@@ -61,6 +61,7 @@ func _process(_delta):
 			if Globals.can_capture:
 				Incorrect.play()
 				Globals.captured += 1
+				print("captured: ",Globals.capured)
 				if Globals.current_bot_instance == self:
 					Globals.current_bot_instance.queue_free()
 					Globals.current_bot_instance = null

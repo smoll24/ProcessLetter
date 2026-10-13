@@ -7,6 +7,10 @@ extends Node2D
 
 
 func _ready():
+	if Globals.status == "pre1":
+		Globals.current_cutscene = 1
+		Globals.in_cutscene = true
+	
 	LevelABg.play()
 	Office.play()
 	Level1Bg.stop()
@@ -42,28 +46,35 @@ func _process(_delta):
 
 
 func _on_cutscene_2_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"):
+	if body.is_in_group("player") and Globals.status == "pre1":
+		Globals.current_cutscene = 2
+		Globals.in_cutscene = true
+		
 		if Globals.status == "pre1":
-			Globals.status = "prog1"
 			Globals.puzzle_step = 1
 			print("prog1")
+			Globals.status = "prog1"
 
 
 func _on_cutscene_3_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"):
-		pass
+	if body.is_in_group("player") and Globals.status == "pre2":
+		Globals.current_cutscene = 3
+		Globals.in_cutscene = true
 
 
 func _on_cutscene_5_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"):
-		pass
+	if body.is_in_group("player") and Globals.status == "pre3":
+		Globals.current_cutscene = 5
+		Globals.in_cutscene = true
 
 
 func _on_cutscene_6_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"):
-		pass
+	if body.is_in_group("player") and Globals.status == "pre3":
+		Globals.current_cutscene = 6
+		Globals.in_cutscene = true
 
 
 func _on_cutscene_8_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"):
-		pass
+	if body.is_in_group("player") and Globals.status == "prog3":
+		Globals.current_cutscene = 8
+		Globals.in_cutscene = true

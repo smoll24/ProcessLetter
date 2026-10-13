@@ -44,10 +44,14 @@ var book = false
 var book_type = 1
 var in_book = false
 
+var in_cutscene = false
+
 var blue_convo = false
 var purple_convo = false
 var violet_convo = false
 var pink_convo = false
+
+var current_cutscene = 0
 
 #Indicates whether you can enter 1. Computer 2. Workshop 
 var puzzle_step = 1

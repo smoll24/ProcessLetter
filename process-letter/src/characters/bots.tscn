@@ -104,7 +104,7 @@ animations = [{
 size = Vector2(120, 67)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b0rwi"]
-size = Vector2(159, 207)
+size = Vector2(247.5, 240.5)
 
 [node name="Bots" type="CharacterBody2D" unique_id=47230853]
 script = ExtResource("1_b0rwi")
@@ -123,7 +123,7 @@ shape = SubResource("RectangleShape2D_ywdb4")
 [node name="Interact_area" type="Area2D" parent="." unique_id=1329553667]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interact_area" unique_id=1289686543]
-position = Vector2(-2, -7)
+position = Vector2(2, -1)
 shape = SubResource("RectangleShape2D_b0rwi")
 
 [node name="Indicator_old" type="Label" parent="." unique_id=1076289784]

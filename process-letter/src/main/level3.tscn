@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://r5j5r2hfjn43" path="res://src/characters/player.tscn" id="18_hw075"]
 [ext_resource type="PackedScene" uid="uid://dyue8j0eesvj3" path="res://src/background/Light.tscn" id="19_8pc5x"]
 [ext_resource type="PackedScene" uid="uid://dj3b8bc4ffmnv" path="res://src/ui/elevator_ui.tscn" id="20_8bnxt"]
+[ext_resource type="PackedScene" uid="uid://c5a8r8w1y5k7c" path="res://src/ui/cutscene_ui.tscn" id="20_d2okl"]
 [ext_resource type="PackedScene" uid="uid://c417vx6j6p730" path="res://src/ui/workbench_ui.tscn" id="21_xtvrr"]
 [ext_resource type="PackedScene" uid="uid://bw3ljitjewcl4" path="res://src/ui/pause_ui.tscn" id="22_lo4kh"]
 [ext_resource type="PackedScene" uid="uid://c0nax5i68tmxy" path="res://src/ui/book_ui.tscn" id="23_qmes4"]
@@ -269,6 +270,8 @@ visible = false
 
 [node name="Computer" parent="." unique_id=1334415562 instance=ExtResource("24_k6qb7")]
 visible = false
+
+[node name="CutsceneUi" parent="." unique_id=2051133641 instance=ExtResource("20_d2okl")]
 
 [node name="ColorRect2" type="CanvasModulate" parent="." unique_id=1708779507]
 modulate = Color(1, 1, 1, 0.34901962)

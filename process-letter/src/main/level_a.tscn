@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://c0nax5i68tmxy" path="res://src/ui/book_ui.tscn" id="22_bi4mk"]
 [ext_resource type="PackedScene" uid="uid://fc8spue341ep" path="res://src/ui/computer_ui.tscn" id="24_lw1of"]
 [ext_resource type="Shader" uid="uid://dqu8j2i4bu2bt" path="res://scripts/main.gdshader" id="25_05tb5"]
+[ext_resource type="PackedScene" uid="uid://c5a8r8w1y5k7c" path="res://src/ui/cutscene_ui.tscn" id="26_3cnvk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7wt6k"]
 size = Vector2(1418, 1156.5)
@@ -52,7 +53,7 @@ size = Vector2(226, 122)
 size = Vector2(283, 9)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ywdb4"]
-size = Vector2(331.5, 129)
+size = Vector2(331.5, 219.5)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_05tb5"]
 resource_local_to_scene = true
@@ -416,14 +417,14 @@ shape = SubResource("RectangleShape2D_ywdb4")
 position = Vector2(-300, 1413)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cutscenes/Cutscene6" unique_id=1849993310]
-position = Vector2(32, -101)
+position = Vector2(41, -663)
 shape = SubResource("RectangleShape2D_ywdb4")
 
 [node name="Cutscene8" type="Area2D" parent="Cutscenes" unique_id=431879402]
 position = Vector2(-300, 1413)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cutscenes/Cutscene8" unique_id=1239930047]
-position = Vector2(32, -101)
+position = Vector2(36, -666)
 shape = SubResource("RectangleShape2D_ywdb4")
 
 [node name="Elevator_ui" parent="." unique_id=1433977059 instance=ExtResource("18_q3b3h")]
@@ -439,6 +440,9 @@ visible = false
 visible = false
 
 [node name="Computer" parent="." unique_id=1334415562 instance=ExtResource("24_lw1of")]
+visible = false
+
+[node name="CutsceneUi" parent="." unique_id=2051133641 instance=ExtResource("26_3cnvk")]
 visible = false
 
 [node name="ColorRect" type="CanvasModulate" parent="." unique_id=971754492]

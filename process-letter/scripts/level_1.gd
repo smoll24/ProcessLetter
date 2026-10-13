@@ -39,8 +39,11 @@ func _process(delta):
 
 
 func _on_cutscene_4_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"):
+	if body.is_in_group("player") and Globals.status == "pre2":
+		Globals.current_cutscene = 4
+		Globals.in_cutscene = true
+		
 		if Globals.status == "pre2":
-			Globals.status = "prog2"
 			Globals.puzzle_step = 1
 			print("prog2")
+			Globals.status = "prog2"

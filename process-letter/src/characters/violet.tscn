@@ -161,7 +161,7 @@ animations = [{
 size = Vector2(73.5, 76.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hptjb"]
-size = Vector2(164, 211)
+size = Vector2(245, 284)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_svy08"]
 animations = [{
@@ -210,7 +210,7 @@ shape = SubResource("RectangleShape2D_ywdb4")
 [node name="Interact_area" type="Area2D" parent="." unique_id=1807325238]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interact_area" unique_id=1221529453]
-position = Vector2(-3, -0.5)
+position = Vector2(-1, -2)
 shape = SubResource("RectangleShape2D_hptjb")
 
 [node name="Indicator2" type="AnimatedSprite2D" parent="." unique_id=1185435531]

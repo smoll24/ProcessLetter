@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://c0nax5i68tmxy" path="res://src/ui/book_ui.tscn" id="18_6ok8q"]
 [ext_resource type="PackedScene" uid="uid://bjuqqpsi7fd6y" path="res://src/characters/blue.tscn" id="19_3vgrc"]
 [ext_resource type="PackedScene" uid="uid://fc8spue341ep" path="res://src/ui/computer_ui.tscn" id="19_lhbik"]
+[ext_resource type="PackedScene" uid="uid://c5a8r8w1y5k7c" path="res://src/ui/cutscene_ui.tscn" id="21_s5fll"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ywdb4"]
 size = Vector2(370.25, 278.5)
@@ -326,6 +327,8 @@ visible = false
 
 [node name="Computer" parent="." unique_id=1334415562 instance=ExtResource("19_lhbik")]
 visible = false
+
+[node name="CutsceneUi" parent="." unique_id=2051133641 instance=ExtResource("21_s5fll")]
 
 [node name="ColorRect2" type="CanvasModulate" parent="." unique_id=1780929460]
 modulate = Color(1, 1, 1, 0.34901962)

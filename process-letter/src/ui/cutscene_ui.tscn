@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://c5a8r8w1y5k7c"]
+
+[ext_resource type="Script" uid="uid://cr0jgwpctsv7y" path="res://scripts/cutscene_ui.gd" id="1_3y1y2"]
+[ext_resource type="Texture2D" uid="uid://c8ti45wpgxjju" path="res://assets/ui/next_button.PNG" id="1_54anw"]
+[ext_resource type="Texture2D" uid="uid://d3ma23qi54oad" path="res://assets/ui/next_pressed.PNG" id="2_3y1y2"]
+[ext_resource type="Texture2D" uid="uid://t765jbgj2gl0" path="res://assets/ui/next_hover.PNG" id="3_io5ew"]
+[ext_resource type="Texture2D" uid="uid://deaa7m7ds6hkr" path="res://assets/ui/exit_button.PNG" id="5_nbreo"]
+[ext_resource type="Texture2D" uid="uid://dwoldl1k2emt5" path="res://assets/ui/exit_pressed.PNG" id="6_ell0p"]
+[ext_resource type="Texture2D" uid="uid://w86672hharqj" path="res://assets/ui/exit_hover.PNG" id="7_m58jq"]
+
+[node name="CutsceneUi" type="CanvasLayer" unique_id=2051133641]
+script = ExtResource("1_3y1y2")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1797491029]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Next" type="TextureButton" parent="." unique_id=78115833]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.5
+offset_top = 249.5
+offset_right = 120.5
+offset_bottom = 334.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("1_54anw")
+texture_pressed = ExtResource("2_3y1y2")
+texture_hover = ExtResource("3_io5ew")
+
+[node name="Exit" type="TextureButton" parent="." unique_id=372801362]
+offset_left = 589.0
+offset_top = 591.0
+offset_right = 698.0
+offset_bottom = 692.0
+texture_normal = ExtResource("5_nbreo")
+texture_pressed = ExtResource("6_ell0p")
+texture_hover = ExtResource("7_m58jq")
+
+[connection signal="mouse_entered" from="Next" to="." method="_on_next_mouse_entered"]
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
+[connection signal="mouse_entered" from="Exit" to="." method="_on_exit_mouse_entered"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
