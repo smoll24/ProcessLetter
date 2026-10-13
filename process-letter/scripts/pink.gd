@@ -89,13 +89,13 @@ func _process(_delta):
 		speech_bubble.visible = false
 	
 	if Globals.status in Globals.interactions["pink"] \
-	and Globals.can_talk and Globals.pink:
+	and Globals.can_talk and Globals.pink and not Globals.pink_convo:
 		interact_indicator.visible = true
 	else:
 		interact_indicator.visible = false
 	
 	if Globals.status in Globals.interactions["pink"] \
-	and Globals.can_talk:
+	and Globals.can_talk and not Globals.pink and not Globals.pink_convo:
 		indicator2.visible = true
 	else:
 		indicator2.visible = false

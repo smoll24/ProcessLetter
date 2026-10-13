@@ -214,13 +214,13 @@ position = Vector2(-3, -0.5)
 shape = SubResource("RectangleShape2D_rj60s")
 
 [node name="Indicator2" type="AnimatedSprite2D" parent="." unique_id=823174083]
-visible = false
 position = Vector2(-3, -128)
 sprite_frames = SubResource("SpriteFrames_rj60s")
 autoplay = "default"
 frame_progress = 0.86240745
 
 [node name="Indicator" type="Sprite2D" parent="." unique_id=1814160177]
+visible = false
 position = Vector2(-1, -137)
 texture = ExtResource("7_v2pe6")
 

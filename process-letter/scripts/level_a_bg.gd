@@ -1,7 +1,7 @@
 extends AudioStreamPlayer
 
 func _process(delta: float) -> void:
-	if Globals.phase == 3:
+	if Globals.phase == 3 and Globals.status != "post4":
 		if stream != preload("res://assets/sounds/nojisuma-something_lost-185380.mp3"):
 			stream = preload("res://assets/sounds/nojisuma-something_lost-185380.mp3")
 	else:

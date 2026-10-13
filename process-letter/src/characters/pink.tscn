@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cienvtrschr0s" path="res://assets/ui/speech3.png" id="5_g3vva"]
 [ext_resource type="Texture2D" uid="uid://dske6v8tow7vd" path="res://assets/ui/speech4.png" id="6_3qrpf"]
 [ext_resource type="FontFile" uid="uid://7n5uyv7q3hvv" path="res://assets/fonts/process_script4.ttf" id="7_4ry5a"]
+[ext_resource type="Texture2D" uid="uid://ekbl1yctr65b" path="res://assets/ui/excalamation.png" id="8_3qrpf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0jq27"]
 atlas = ExtResource("1_wh1jl")
@@ -214,12 +215,16 @@ position = Vector2(-3, -0.5)
 shape = SubResource("RectangleShape2D_hip6v")
 
 [node name="Indicator2" type="AnimatedSprite2D" parent="." unique_id=1059083350]
-visible = false
 position = Vector2(-3, -128)
 sprite_frames = SubResource("SpriteFrames_fjmkk")
 autoplay = "default"
 
-[node name="Indicator" type="Label" parent="." unique_id=2067371888]
+[node name="Indicator" type="Sprite2D" parent="." unique_id=153497928]
+visible = false
+position = Vector2(-2, -145)
+texture = ExtResource("8_3qrpf")
+
+[node name="Indicator_old" type="Label" parent="." unique_id=2067371888]
 visible = false
 offset_left = -20.0
 offset_top = 26.0
