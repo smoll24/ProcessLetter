@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://i1hf4jklbl1g" path="res://src/puzzles/sudoku.tscn" id="2_cldsk"]
 [ext_resource type="Texture2D" uid="uid://cqgh4d6k8nw5k" path="res://assets/ui/IMG_1792.PNG" id="2_vgeta"]
 [ext_resource type="PackedScene" uid="uid://dh51ib38pbrq0" path="res://src/puzzles/network.tscn" id="3_suigc"]
+[ext_resource type="PackedScene" uid="uid://c4805r4kokdc8" path="res://src/puzzles/logic.tscn" id="5_jgvbh"]
 [ext_resource type="Texture2D" uid="uid://deaa7m7ds6hkr" path="res://assets/ui/exit_button.PNG" id="5_vgeta"]
 [ext_resource type="Texture2D" uid="uid://dwoldl1k2emt5" path="res://assets/ui/exit_pressed.PNG" id="6_jgvbh"]
 [ext_resource type="Texture2D" uid="uid://w86672hharqj" path="res://assets/ui/exit_hover.PNG" id="7_ik0pn"]
@@ -17,10 +18,15 @@ offset_bottom = 40.0
 texture = ExtResource("2_vgeta")
 
 [node name="Network" parent="." unique_id=1872065222 instance=ExtResource("3_suigc")]
+visible = false
 
 [node name="Sudoku" parent="." unique_id=507427484 instance=ExtResource("2_cldsk")]
 visible = false
 mouse_filter = 1
+
+[node name="Logic" parent="." unique_id=1895458848 instance=ExtResource("5_jgvbh")]
+offset_left = -1.0
+offset_right = -1.0
 
 [node name="Exit" type="TextureButton" parent="." unique_id=1217196598]
 offset_left = 1142.0

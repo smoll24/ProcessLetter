@@ -66,6 +66,7 @@ grow_vertical = 2
 script = ExtResource("1_c1wfx")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=336282589]
+visible = false
 layout_mode = 0
 offset_right = 1280.0
 offset_bottom = 720.0

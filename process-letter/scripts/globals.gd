@@ -56,7 +56,7 @@ var current_cutscene = 0
 #Indicates whether you can enter 1. Computer 2. Workshop 
 var puzzle_step = 1
 #Network, Sudoku, Logic
-var current_puzzle = "network"
+var current_puzzle = "logic"
 
 var player_position: Vector2
 var stored_player_position: Vector2
