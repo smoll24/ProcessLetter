@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var outer = $OuterLayer
 @onready var inner = $InnerLayer
+@onready var color = $ColorRect2
 
 
 func _ready():
@@ -22,15 +23,18 @@ func _process(delta):
 	if Globals.in_room:
 		outer.visible = false
 		inner.visible = true
+		color.visible = false
 		Level1Bg.volume_db = -10
 	elif Globals.outside:
 		outer.visible = false
 		inner.visible = false
+		color.visible = false
 		Level1Bg.stream_paused = true
 		OutsideBg.stream_paused = false
 		Level1Bg.volume_db = 0.0
 	else:
 		outer.visible = true
+		#color.visible = true
 		inner.visible = false
 		Level1Bg.stream_paused = false
 		OutsideBg.stream_paused = true

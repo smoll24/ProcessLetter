@@ -139,11 +139,11 @@ position = Vector2(-472, 5072)
 texture = ExtResource("5_jpkov")
 
 [node name="Img1743" type="Sprite2D" parent="OuterLayer/Wall" unique_id=1105621814]
-position = Vector2(-2215, 5099)
+position = Vector2(-2216, 5094)
 texture = ExtResource("6_lrpvm")
 
 [node name="Img1744" type="Sprite2D" parent="OuterLayer/Wall" unique_id=458823375]
-position = Vector2(-1875, 5091)
+position = Vector2(-1875, 5168)
 texture = ExtResource("4_paf3d")
 
 [node name="Img1745" type="Sprite2D" parent="OuterLayer/Wall" unique_id=823216833]
@@ -163,22 +163,26 @@ position = Vector2(-883, 577)
 texture = ExtResource("6_lrpvm")
 
 [node name="Img1737" type="Sprite2D" parent="OuterLayer/Wall" unique_id=1625311647]
-position = Vector2(-2134, 580)
+position = Vector2(-1921, 573)
 texture = ExtResource("4_paf3d")
 
 [node name="Img1741" type="Sprite2D" parent="OuterLayer/Wall" unique_id=1030855354]
 position = Vector2(-1157, 708)
 texture = ExtResource("5_jpkov")
 
+[node name="Img1747" type="Sprite2D" parent="OuterLayer/Wall" unique_id=899880869]
+position = Vector2(-2168, 691)
+texture = ExtResource("6_lrpvm")
+
 [node name="Props" type="Node2D" parent="OuterLayer" unique_id=1379142347]
 
 [node name="Plants4" parent="OuterLayer/Props" unique_id=100185598 instance=ExtResource("7_efemj")]
-position = Vector2(-560, 174)
+position = Vector2(-584, 174)
 rotation = 3.1415927
 scale = Vector2(1, -1)
 
 [node name="Plants3" parent="OuterLayer/Props" unique_id=568945762 instance=ExtResource("7_efemj")]
-position = Vector2(-1003, 184)
+position = Vector2(-1011, 176)
 scale = Vector2(-1, 1)
 
 [node name="Plants12" parent="OuterLayer/Props" unique_id=1703785443 instance=ExtResource("8_4g1g5")]
@@ -202,6 +206,15 @@ scale = Vector2(-1, 1)
 
 [node name="Plants8" parent="OuterLayer/Props" unique_id=1552174335 instance=ExtResource("7_efemj")]
 position = Vector2(-2121, 868)
+scale = Vector2(-1, 1)
+
+[node name="Plants9" parent="OuterLayer/Props" unique_id=2000273989 instance=ExtResource("7_efemj")]
+position = Vector2(-2045, 179)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="Plants10" parent="OuterLayer/Props" unique_id=2053283752 instance=ExtResource("7_efemj")]
+position = Vector2(-2479, 180)
 scale = Vector2(-1, 1)
 
 [node name="OutCharacters" type="Node2D" parent="OuterLayer" unique_id=790197414]
@@ -244,24 +257,6 @@ level = 12
 [node name="Player" parent="." unique_id=400026715 instance=ExtResource("13_phllu")]
 position = Vector2(-2451, 511)
 
-[node name="Lights" type="Node2D" parent="." unique_id=2116302559]
-visible = false
-
-[node name="Light" parent="Lights" unique_id=392051107 instance=ExtResource("14_cc3hh")]
-position = Vector2(15, 355)
-
-[node name="Light2" parent="Lights" unique_id=288759062 instance=ExtResource("14_cc3hh")]
-position = Vector2(442, 354)
-
-[node name="Light3" parent="Lights" unique_id=1208578315 instance=ExtResource("14_cc3hh")]
-position = Vector2(908, 353)
-
-[node name="Light4" parent="Lights" unique_id=327980320 instance=ExtResource("14_cc3hh")]
-position = Vector2(193, 1070)
-
-[node name="Light5" parent="Lights" unique_id=419073303 instance=ExtResource("14_cc3hh")]
-position = Vector2(961, 1270)
-
 [node name="Outside" type="Node2D" parent="." unique_id=29916399]
 visible = false
 metadata/_edit_lock_ = true
@@ -271,6 +266,69 @@ metadata/_edit_lock_ = true
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Outside/Area2D" unique_id=1311554806]
 position = Vector2(-13, 35)
 polygon = PackedVector2Array(-3496, 722, -2763, 739, -2729, 1198, -2340, 1199, -2061, 1359, -1006, 1357, -706, 1207, -372, 1067, -325, 867, -320, 722, 490, 725, 521, 4840, -230, 4823, -275, 4238, -900, 4213, -1033, 4027, -2128, 4182, -2327, 4278, -2771, 4538, -2855, 4574, -2885, 4782, -3098, 4871, -3580, 4802)
+
+[node name="Lights" type="Node2D" parent="." unique_id=48487518]
+visible = false
+metadata/_edit_lock_ = true
+
+[node name="Light" parent="Lights" unique_id=392051107 instance=ExtResource("14_cc3hh")]
+position = Vector2(-1316, -64)
+
+[node name="Light2" parent="Lights" unique_id=510425725 instance=ExtResource("14_cc3hh")]
+position = Vector2(-798, -65)
+
+[node name="Light3" parent="Lights" unique_id=403695823 instance=ExtResource("14_cc3hh")]
+position = Vector2(-374, -59)
+
+[node name="Light4" parent="Lights" unique_id=701522926 instance=ExtResource("14_cc3hh")]
+position = Vector2(-761, 848)
+
+[node name="Light6" parent="Lights" unique_id=1805482571 instance=ExtResource("14_cc3hh")]
+position = Vector2(-1855, 5205)
+
+[node name="Light7" parent="Lights" unique_id=133312339 instance=ExtResource("14_cc3hh")]
+position = Vector2(-2692, 4567)
+
+[node name="Light8" parent="Lights" unique_id=484403347 instance=ExtResource("14_cc3hh")]
+visible = false
+position = Vector2(-369, 4589)
+
+[node name="Light9" parent="Lights" unique_id=1979734591 instance=ExtResource("14_cc3hh")]
+visible = false
+position = Vector2(-1134, 4346)
+
+[node name="Light10" parent="Lights" unique_id=1087987239 instance=ExtResource("14_cc3hh")]
+position = Vector2(-1883, 4398)
+
+[node name="Light11" parent="Lights" unique_id=1811268661 instance=ExtResource("14_cc3hh")]
+position = Vector2(-1103, 6111)
+
+[node name="Light12" parent="Lights" unique_id=1477447090 instance=ExtResource("14_cc3hh")]
+position = Vector2(-2697, -60)
+
+[node name="Light13" parent="Lights" unique_id=667121572 instance=ExtResource("14_cc3hh")]
+position = Vector2(-2270, -61)
+
+[node name="Light14" parent="Lights" unique_id=1700862933 instance=ExtResource("14_cc3hh")]
+position = Vector2(-1852, -64)
+
+[node name="Light16" parent="Lights" unique_id=1803831232 instance=ExtResource("14_cc3hh")]
+position = Vector2(-2341, 866)
+
+[node name="Light18" parent="Lights" unique_id=882643508 instance=ExtResource("14_cc3hh")]
+position = Vector2(-569, 5172)
+
+[node name="Light19" parent="Lights" unique_id=123795662 instance=ExtResource("14_cc3hh")]
+position = Vector2(-2686, 5161)
+
+[node name="Light20" parent="Lights" unique_id=1496740624 instance=ExtResource("14_cc3hh")]
+position = Vector2(-1106, 5181)
+
+[node name="Light21" parent="Lights" unique_id=731854536 instance=ExtResource("14_cc3hh")]
+position = Vector2(-1988, 650)
+
+[node name="Light22" parent="Lights" unique_id=604720568 instance=ExtResource("14_cc3hh")]
+position = Vector2(-1058, 652)
 
 [node name="Coliisions" type="Node2D" parent="." unique_id=1046833520]
 visible = false
@@ -334,8 +392,9 @@ visible = false
 [node name="CutsceneUi" parent="." unique_id=2051133641 instance=ExtResource("21_s5fll")]
 
 [node name="ColorRect2" type="CanvasModulate" parent="." unique_id=1780929460]
+visible = false
 modulate = Color(1, 1, 1, 0.34901962)
-color = Color(0.4688303, 0.67267376, 0.8132988, 1)
+color = Color(0.3708097, 0.6992783, 0.79242176, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=78096064]
 

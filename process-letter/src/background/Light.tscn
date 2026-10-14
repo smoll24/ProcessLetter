@@ -1,40 +1,64 @@
 [gd_scene format=3 uid="uid://dyue8j0eesvj3"]
 
 [ext_resource type="Texture2D" uid="uid://cyostt8afrjb1" path="res://assets/bg/alevel.png" id="1_k5soo"]
+[ext_resource type="Texture2D" uid="uid://88fw70lyio3l" path="res://light2.tres" id="1_xqk8m"]
 
-[sub_resource type="Gradient" id="Gradient_agk7f"]
-colors = PackedColorArray(0.84630436, 0.86025786, 0.8317263, 1, 0, 0, 0, 1)
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_xqk8m"]
+blend_mode = 1
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_ywdb4"]
-gradient = SubResource("Gradient_agk7f")
-width = 128
-height = 128
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(0.5, 1)
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hx0xr"]
+blend_mode = 1
 
 [node name="Light" type="Node2D" unique_id=392051107]
-
-[node name="PointLight2D2" type="PointLight2D" parent="." unique_id=1441279017]
-visible = false
-position = Vector2(1.4531155, 1.8437403)
-scale = Vector2(7.51416, 5.661133)
-texture = SubResource("GradientTexture2D_ywdb4")
-
-[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1284547096]
-visible = false
-position = Vector2(17, 3.000002)
-scale = Vector2(2.7890625, 1.8945313)
-texture = SubResource("GradientTexture2D_ywdb4")
-
-[node name="PointLight2D3" type="PointLight2D" parent="." unique_id=993472149]
-position = Vector2(-1.0000014, 7.000002)
-scale = Vector2(10, 8.047)
-energy = 0.5
-texture = SubResource("GradientTexture2D_ywdb4")
+material = SubResource("CanvasItemMaterial_xqk8m")
 
 [node name="Alevel" type="Sprite2D" parent="." unique_id=577795536]
 visible = false
 position = Vector2(-1432, 2661)
 texture = ExtResource("1_k5soo")
 metadata/_edit_lock_ = true
+
+[node name="PointLight2D2" type="PointLight2D" parent="." unique_id=1441279017]
+visible = false
+position = Vector2(1.4531155, 1.8437403)
+scale = Vector2(7.51416, 5.661133)
+texture = ExtResource("1_xqk8m")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1284547096]
+visible = false
+position = Vector2(17, 3.000002)
+scale = Vector2(2.7890625, 1.8945313)
+texture = ExtResource("1_xqk8m")
+
+[node name="PointLight2D3" type="PointLight2D" parent="." unique_id=993472149]
+position = Vector2(-1.0000014, 7.000002)
+scale = Vector2(10, 8.047)
+energy = 0.5
+texture = ExtResource("1_xqk8m")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1657096890]
+visible = false
+modulate = Color(1, 1, 1, 0.17254902)
+material = SubResource("CanvasItemMaterial_hx0xr")
+texture = ExtResource("1_xqk8m")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=302932920]
+visible = false
+modulate = Color(1, 1, 1, 0.1254902)
+material = SubResource("CanvasItemMaterial_hx0xr")
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_xqk8m")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1367776551]
+visible = false
+modulate = Color(1, 1, 1, 0.26666668)
+material = SubResource("CanvasItemMaterial_hx0xr")
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_xqk8m")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1896107125]
+visible = false
+modulate = Color(1, 1, 1, 0.26666668)
+material = SubResource("CanvasItemMaterial_hx0xr")
+scale = Vector2(2, 2)
+texture = ExtResource("1_xqk8m")
