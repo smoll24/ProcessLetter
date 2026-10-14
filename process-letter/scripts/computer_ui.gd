@@ -42,6 +42,10 @@ func _process(_delta):
 		logic.visible = false
 		password.visible = true
 
+func reload_scene():
+	Globals.reloading = true
+	Globals.stored_player_position = Globals.player_position
+	get_tree().change_scene_to_file("res://src/main/level_a.tscn")
 
 func _on_exit_pressed() -> void:
 	Click.play()
@@ -54,6 +58,8 @@ func _on_exit_pressed() -> void:
 			Globals.current_puzzle = "network"
 		else:
 			Globals.current_puzzle = "password"
+	if Globals.ending:
+		reload_scene()
 
 
 func _on_exit_mouse_entered() -> void:

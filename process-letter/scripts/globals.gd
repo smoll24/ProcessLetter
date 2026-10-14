@@ -104,3 +104,5 @@ func _process(_delta):
 	if captured > 4 and status == "prog4":
 		status = "post4"
 		print("post4")
+		puzzle_step == 1
+		current_puzzle = "password"
