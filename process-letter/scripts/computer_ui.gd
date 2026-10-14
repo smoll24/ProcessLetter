@@ -3,6 +3,7 @@ extends CanvasLayer
 @onready var network = $Network
 @onready var sudoku = $Sudoku
 @onready var logic = $Logic
+@onready var password = $Password
 
 func _process(_delta):
 	if Globals.in_computer or Globals.in_workbench:
@@ -24,14 +25,22 @@ func _process(_delta):
 		network.visible = true
 		sudoku.visible = false
 		logic.visible = false
+		password.visible = false
 	elif Globals.current_puzzle == "sudoku":
 		network.visible = false
 		sudoku.visible = true
 		logic.visible = false
+		password.visible = false
 	elif Globals.current_puzzle == "logic":
 		network.visible = false
 		sudoku.visible = false
 		logic.visible = true
+		password.visible = false
+	elif Globals.current_puzzle == "password":
+		network.visible = false
+		sudoku.visible = false
+		logic.visible = false
+		password.visible = true
 
 
 func _on_exit_pressed() -> void:
@@ -41,7 +50,10 @@ func _on_exit_pressed() -> void:
 	Globals.can_talk = true
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	if Globals.puzzle_step == 2:
-		Globals.current_puzzle = "network"
+		if Globals.phase < 3:
+			Globals.current_puzzle = "network"
+		else:
+			Globals.current_puzzle = "password"
 
 
 func _on_exit_mouse_entered() -> void:

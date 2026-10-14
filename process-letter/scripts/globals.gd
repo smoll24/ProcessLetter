@@ -9,9 +9,13 @@ var status = "pre1"
 var phase:int
 var in_room = true
 
+var ending = false
+
 var interactions = {"purple":["post3"], "pink":["post3"],"blue":["post3"],
 "teal":[],"violet":["post3"], "workbench":["prog1","prog2","prog3"],
-"computer":["prog1","prog2","prog3"]}
+"computer":["prog1","prog2","prog3","post4"]}
+
+#post post 4 is when real ending is
 
 #var interactions = {"purple":["prog3","pre1","prog1","pre2","prog2","pre3"],
 #"pink":["prog3","pre3"], "blue":["prog3","prog2","pre3"],
@@ -55,7 +59,7 @@ var current_cutscene = 0
 
 #Indicates whether you can enter 1. Computer 2. Workshop 
 var puzzle_step = 1
-#Network, Sudoku, Logic
+#Network, Sudoku, Logic, Password
 var current_puzzle = "network"
 
 var player_position: Vector2
@@ -97,6 +101,6 @@ func _process(_delta):
 	and violet_convo and status == "post3":
 		status = "prog4"
 		print("prog4")
-	if captured == 4 and status == "prog4":
+	if captured > 4 and status == "prog4":
 		status = "post4"
 		print("post4")

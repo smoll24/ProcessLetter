@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dh51ib38pbrq0" path="res://src/puzzles/network.tscn" id="3_suigc"]
 [ext_resource type="PackedScene" uid="uid://c4805r4kokdc8" path="res://src/puzzles/logic.tscn" id="5_jgvbh"]
 [ext_resource type="Texture2D" uid="uid://deaa7m7ds6hkr" path="res://assets/ui/exit_button.PNG" id="5_vgeta"]
+[ext_resource type="PackedScene" uid="uid://7tut0ko3r4qo" path="res://src/puzzles/password.tscn" id="6_ik0pn"]
 [ext_resource type="Texture2D" uid="uid://dwoldl1k2emt5" path="res://assets/ui/exit_pressed.PNG" id="6_jgvbh"]
 [ext_resource type="Texture2D" uid="uid://w86672hharqj" path="res://assets/ui/exit_hover.PNG" id="7_ik0pn"]
 
@@ -27,6 +28,9 @@ mouse_filter = 1
 [node name="Logic" parent="." unique_id=1895458848 instance=ExtResource("5_jgvbh")]
 offset_left = -1.0
 offset_right = -1.0
+
+[node name="Password" parent="." unique_id=1145545776 instance=ExtResource("6_ik0pn")]
+visible = false
 
 [node name="Exit" type="TextureButton" parent="." unique_id=1217196598]
 offset_left = 1142.0

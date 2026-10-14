@@ -350,9 +350,11 @@ func _on_next_pressed() -> void:
 	Globals.can_move = true
 	Globals.can_talk = true
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
-	Globals.current_puzzle = "network"
-
-
+	if Globals.phase < 3:
+		Globals.current_puzzle = "network"
+	else:
+		Globals.current_puzzle = "password"
+		
 func _on_and_button_pressed() -> void:
 	Click.play()
 	current_gate = "and"
