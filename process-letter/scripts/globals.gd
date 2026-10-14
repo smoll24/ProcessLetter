@@ -4,7 +4,7 @@ var can_move = true
 var can_talk = true
 #0,1,2,3
 var puzzle_phase = 0
-var status = "pre1"
+var status = "prog1"
 #1,2,3
 var phase:int
 var in_room = true
@@ -71,7 +71,7 @@ var reloading = false
 var cutscenes = []
 
 func _process(_delta):
-	var puzzle_phase = phase
+	puzzle_phase = phase
 	
 	Dialogic.VAR.set_variable("State", status)
 	

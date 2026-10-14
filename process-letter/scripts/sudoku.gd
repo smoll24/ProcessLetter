@@ -16,42 +16,55 @@ extends Control
 @onready var win_message = $Win
 
 var normal_textures = [
-	preload("res://assets/puzzles/sudoku/sud0.png"),
-	preload("res://assets/puzzles/sudoku/sud1.png"),
-	preload("res://assets/puzzles/sudoku/sud2.png"),
-	preload("res://assets/puzzles/sudoku/sud3.png"),
-	preload("res://assets/puzzles/sudoku/sud4.png"),
-	preload("res://assets/puzzles/sudoku/sud5.png"),
-	preload("res://assets/puzzles/sudoku/sud6.png"),
-	preload("res://assets/puzzles/sudoku/sud7.png"),
-	preload("res://assets/puzzles/sudoku/sud8.png"),
-	preload("res://assets/puzzles/sudoku/sud9.png")
+	preload("res://assets/puzzles/sudoku/sud02.png"),
+	preload("res://assets/puzzles/sudoku/sud12.png"),
+	preload("res://assets/puzzles/sudoku/sud22.png"),
+	preload("res://assets/puzzles/sudoku/sud32.png"),
+	preload("res://assets/puzzles/sudoku/sud42.png"),
+	preload("res://assets/puzzles/sudoku/sud52.png"),
+	preload("res://assets/puzzles/sudoku/sud62.png"),
+	preload("res://assets/puzzles/sudoku/sud72.png"),
+	preload("res://assets/puzzles/sudoku/sud82.png"),
+	preload("res://assets/puzzles/sudoku/sud92.png")
 ]
 
 var hover_textures = [
-	preload("res://assets/puzzles/sudoku/sud0hover.png"),
-	preload("res://assets/puzzles/sudoku/sud1hover.png"),
-	preload("res://assets/puzzles/sudoku/sud2.png"),
-	preload("res://assets/puzzles/sudoku/sud3.png"),
-	preload("res://assets/puzzles/sudoku/sud4.png"),
-	preload("res://assets/puzzles/sudoku/sud5.png"),
-	preload("res://assets/puzzles/sudoku/sud6.png"),
-	preload("res://assets/puzzles/sudoku/sud7.png"),
-	preload("res://assets/puzzles/sudoku/sud8.png"),
-	preload("res://assets/puzzles/sudoku/sud9.png")
+	preload("res://assets/puzzles/sudoku/sud0hover2.png"),
+	preload("res://assets/puzzles/sudoku/sud1hover2.png"),
+	preload("res://assets/puzzles/sudoku/sud2hover2.png"),
+	preload("res://assets/puzzles/sudoku/sud3hover2.png"),
+	preload("res://assets/puzzles/sudoku/sud4hover2.png"),
+	preload("res://assets/puzzles/sudoku/sud5hover2.png"),
+	preload("res://assets/puzzles/sudoku/sud6hover2.png"),
+	preload("res://assets/puzzles/sudoku/sud7hover2.png"),
+	preload("res://assets/puzzles/sudoku/sud8hover2.png"),
+	preload("res://assets/puzzles/sudoku/sud9hover2.png")
 ]
 
 var focus_textures = [
-	preload("res://assets/puzzles/sudoku/sud0select.png"),
-	preload("res://assets/puzzles/sudoku/sud1.png"),
-	preload("res://assets/puzzles/sudoku/sud2.png"),
-	preload("res://assets/puzzles/sudoku/sud3.png"),
-	preload("res://assets/puzzles/sudoku/sud4.png"),
-	preload("res://assets/puzzles/sudoku/sud5.png"),
-	preload("res://assets/puzzles/sudoku/sud6.png"),
-	preload("res://assets/puzzles/sudoku/sud7.png"),
-	preload("res://assets/puzzles/sudoku/sud8.png"),
-	preload("res://assets/puzzles/sudoku/sud9.png")
+	preload("res://assets/puzzles/sudoku/sud0select2.png"),
+	preload("res://assets/puzzles/sudoku/sud1select2.png"),
+	preload("res://assets/puzzles/sudoku/sud2select2.png"),
+	preload("res://assets/puzzles/sudoku/sud3select2.png"),
+	preload("res://assets/puzzles/sudoku/sud4select2.png"),
+	preload("res://assets/puzzles/sudoku/sud5select2.png"),
+	preload("res://assets/puzzles/sudoku/sud6select2.png"),
+	preload("res://assets/puzzles/sudoku/sud7select2.png"),
+	preload("res://assets/puzzles/sudoku/sud8select2.png"),
+	preload("res://assets/puzzles/sudoku/sud9select2.png")
+]
+
+var disabled_textures = [
+	preload("res://assets/puzzles/sudoku/sud02.png"),
+	preload("res://assets/puzzles/sudoku/sud1disabled.png"),
+	preload("res://assets/puzzles/sudoku/sud2disabled.png"),
+	preload("res://assets/puzzles/sudoku/sud3disabled.png"),
+	preload("res://assets/puzzles/sudoku/sud4disabled.png"),
+	preload("res://assets/puzzles/sudoku/sud5disabled.png"),
+	preload("res://assets/puzzles/sudoku/sud6disabled.png"),
+	preload("res://assets/puzzles/sudoku/sud7disabled.png"),
+	preload("res://assets/puzzles/sudoku/sud8disabled.png"),
+	preload("res://assets/puzzles/sudoku/sud9disabled.png")
 ]
 
 var game_grid = []
@@ -67,33 +80,45 @@ func _ready():
 	
 func _setup_game(phase):
 	number_grid = []
-	if phase == 1:
-		for x in GRID_SIZE:
-			var column: Array = []
-			column.resize(GRID_SIZE)
-			column.fill(0)
-			number_grid.append(column)
-	elif phase == 0:
+	#if Globals.phase == 1:
+		#for x in GRID_SIZE:
+			#var column: Array = []
+			#column.resize(GRID_SIZE)
+			#column.fill(0)
+			#number_grid.append(column)
+	if phase == 0:
+		#Puzzle 1
 		number_grid = [[9,0,3,2,0,0,0,0,4],
 					  [2,1,0,4,3,8,0,6,0],
 					  [8,4,0,0,5,0,2,1,0],
 					  [0,8,2,5,0,4,1,9,6],
 					  [6,0,0,0,0,0,0,0,7],
-					  [7,9,4,3,1,0,8,2,0],
+					  [7,9,4,3,6,0,8,2,0],
 					  [0,7,8,0,9,0,0,3,2],
-					  [0,7,8,0,9,0,0,3,2],
+					  [0,3,0,8,2,6,0,7,1],
 					  [1,0,0,0,0,3,9,0,8]]
+	elif phase == 1:
+		#Puzzle 31
+		number_grid = [[0,2,0,5,0,8,0,0,0],
+					 [4,1,0,7,0,3,8,0,0],
+					 [0,8,0,0,0,0,4,3,0],
+					 [0,0,8,0,0,0,7,0,3],
+					 [0,0,0,9,0,4,0,0,0],
+					 [3,0,4,0,0,0,6,0,0],
+					 [0,7,6,0,0,0,0,2,0],
+					 [0,0,2,3,0,7,0,6,1],
+					 [0,0,0,6,0,1,0,7,0]]
 	elif phase == 2:
-		number_grid = [[9,6,3,2,1,7,5,8,4],
-					  [2,1,5,4,3,8,7,6,9],
-					  [8,4,7,6,5,9,2,1,3],
-					  [3,8,2,5,7,4,1,9,6],
-					  [6,5,1,9,8,2,3,4,7],
-					  [7,9,4,3,6,1,8,2,5],
-					  [4,7,8,1,9,5,6,3,2],
-					  [5,3,9,8,2,6,4,7,1],
-					  [1,2,6,7,4,3,9,5,8]]
-	
+		#Puzzle 61
+		number_grid = [[0,0,0,0,0,0,0,5,1],
+					 [0,4,5,2,1,0,0,0,0],
+					 [1,0,0,3,0,0,9,0,0],
+					 [9,2,0,0,0,0,3,0,0],
+					 [0,5,0,6,0,8,0,9,0],
+					 [0,0,4,0,0,0,0,1,8],
+					 [0,0,3,0,0,4,0,0,9],
+					 [0,0,0,0,8,3,6,2,0],
+					 [8,1,0,0,0,0,0,0,0]]
 	
 func init_game():
 	_setup_game(Globals.puzzle_phase)
@@ -113,6 +138,7 @@ func create_button(pos:Vector2):
 	button.texture_normal = normal_textures[number]
 	button.texture_hover = hover_textures[number]
 	button.texture_focused = focus_textures[number]
+	button.texture_disabled = disabled_textures[number]
 	
 	if number != 0:
 		button.disabled = true
@@ -217,6 +243,18 @@ func _on_button_0_pressed() -> void:
 
 
 
+func _on_next_pressed() -> void:
+	Click.play()
+	#Globals.current_puzzle = "logic"
+	#Temp to go straight to workshop
+	Globals.puzzle_step = 2
+
+
+func _on_reset_pressed() -> void:
+	Click.play()
+	get_tree().reload_current_scene()
+
+
 func _on_check_pressed() -> void:
 	Click.play()
 	var solution = check_solution()
@@ -227,11 +265,12 @@ func _on_check_pressed() -> void:
 	else:
 		Incorrect.play()
 
-func _on_reset_pressed() -> void:
-	Click.play()
-	get_tree().reload_current_scene()
 
+func _on_reset_mouse_entered() -> void:
+	Hover.play()
 
-func _on_next_pressed() -> void:
-	Click.play()
-	Globals.current_puzzle = "logic"
+func _on_check_mouse_entered() -> void:
+	Hover.play()
+
+func _on_next_mouse_entered() -> void:
+	Hover.play()

@@ -374,6 +374,6 @@ func _on_button_24_pressed() -> void:
 
 func _on_next_pressed() -> void:
 	Click.play()
-	#Globals.current_puzzle = "sudoku"
+	Globals.current_puzzle = "sudoku"
 	#Temp to go straight to workshop
-	Globals.puzzle_step = 2
+	#Globals.puzzle_step = 2

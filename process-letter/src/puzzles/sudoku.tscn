@@ -3,51 +3,136 @@
 [ext_resource type="Script" uid="uid://emyc6sagjy6m" path="res://scripts/sudoku.gd" id="1_c1wfx"]
 [ext_resource type="Texture2D" uid="uid://cqgh4d6k8nw5k" path="res://assets/ui/IMG_1792.PNG" id="2_lakng"]
 [ext_resource type="Texture2D" uid="uid://ca0ghuq2y1v23" path="res://assets/puzzles/sudoku/sud1.png" id="2_tf1j2"]
-[ext_resource type="Texture2D" uid="uid://c0t83qurw78u1" path="res://assets/puzzles/sudoku/sud1hover.png" id="3_6bora"]
-[ext_resource type="Texture2D" uid="uid://cdlhkhjrerxvn" path="res://assets/puzzles/sudoku/sud0.png" id="3_12v7p"]
-[ext_resource type="Texture2D" uid="uid://bmn3pxg3a7vpv" path="res://assets/puzzles/sudoku/sud0hover.png" id="4_2vqja"]
-[ext_resource type="Texture2D" uid="uid://bmxwyqs0ywg76" path="res://assets/puzzles/sudoku/sud1chosen.png" id="5_0f0gr"]
-[ext_resource type="Texture2D" uid="uid://caped36bmvlvx" path="res://assets/puzzles/sudoku/sud2.png" id="5_siw3q"]
-[ext_resource type="Texture2D" uid="uid://bxwk8aqncx8c5" path="res://assets/puzzles/sudoku/sud3.png" id="6_nj7ic"]
-[ext_resource type="Texture2D" uid="uid://dicsqaplrgpyf" path="res://assets/puzzles/sudoku/sud4.png" id="7_nj7ic"]
-[ext_resource type="Texture2D" uid="uid://oxjjg5b3grim" path="res://assets/puzzles/sudoku/sud5.png" id="8_g4g0s"]
-[ext_resource type="Texture2D" uid="uid://dh6v18ohksghl" path="res://assets/puzzles/sudoku/sud6.png" id="9_lhewo"]
-[ext_resource type="Texture2D" uid="uid://bmj8vbg1aweds" path="res://assets/puzzles/sudoku/sud7.png" id="10_4fga5"]
-[ext_resource type="Texture2D" uid="uid://cekc2amfx0k78" path="res://assets/puzzles/sudoku/sud8.png" id="11_jtyee"]
-[ext_resource type="Texture2D" uid="uid://dpbn3b4jfr2g2" path="res://assets/puzzles/sudoku/sud9.png" id="12_12v7p"]
+[ext_resource type="Texture2D" uid="uid://tacihg10iujw" path="res://assets/puzzles/sudoku/box3.png" id="3_7fau1"]
+[ext_resource type="Texture2D" uid="uid://cfc10kpbkqieg" path="res://assets/puzzles/sudoku/box1.png" id="3_c2q16"]
+[ext_resource type="Texture2D" uid="uid://c8i61y42rhga4" path="res://assets/puzzles/sudoku/box2.png" id="4_7fau1"]
+[ext_resource type="Texture2D" uid="uid://cndblq64macg8" path="res://assets/puzzles/sudoku/sud02.png" id="4_t7ctd"]
+[ext_resource type="Texture2D" uid="uid://52migum74h7j" path="res://assets/puzzles/sudoku/sud0hover2.png" id="5_h8215"]
+[ext_resource type="Texture2D" uid="uid://llc3ifmtackf" path="res://assets/puzzles/sudoku/sud12.png" id="6_dte52"]
+[ext_resource type="Texture2D" uid="uid://dk6lw7gi8725r" path="res://assets/puzzles/sudoku/sud1hover2.png" id="7_qrewy"]
+[ext_resource type="Texture2D" uid="uid://bsslyuwquvr2o" path="res://assets/puzzles/sudoku/sud1disabled.png" id="8_rjqv0"]
+[ext_resource type="Texture2D" uid="uid://ces25aiq7tiik" path="res://assets/puzzles/sudoku/sud1select2.png" id="9_h8215"]
+[ext_resource type="Texture2D" uid="uid://b3pvqeiw5q1aa" path="res://assets/puzzles/sudoku/sud22.png" id="10_qrewy"]
+[ext_resource type="Texture2D" uid="uid://cot0gssm3uo1q" path="res://assets/puzzles/sudoku/sud2hover2.png" id="11_rjqv0"]
+[ext_resource type="Texture2D" uid="uid://bafvfq2rr73bk" path="res://assets/puzzles/sudoku/sud2select2.png" id="12_bx1ox"]
+[ext_resource type="Texture2D" uid="uid://b2xvyy80nw6dg" path="res://assets/puzzles/sudoku/sud32.png" id="13_t4sis"]
+[ext_resource type="Texture2D" uid="uid://c6hdgrn15xsaa" path="res://assets/puzzles/sudoku/sud3hover2.png" id="14_j3x27"]
 [ext_resource type="Texture2D" uid="uid://dnbsasniy0d2n" path="res://assets/ui/reset_button.PNG" id="15_tkt40"]
+[ext_resource type="Texture2D" uid="uid://2xwcvolbmcb" path="res://assets/puzzles/sudoku/sud3disabled.png" id="15_toerd"]
 [ext_resource type="Texture2D" uid="uid://dudgobr1b6ulj" path="res://assets/ui/reset_pressed.PNG" id="16_quo7u"]
+[ext_resource type="Texture2D" uid="uid://cfh0fqgnx3386" path="res://assets/puzzles/sudoku/sud3select2.png" id="16_r1r2m"]
 [ext_resource type="Texture2D" uid="uid://bh14iwm28nxh3" path="res://assets/ui/reset_hover.PNG" id="17_oawjp"]
+[ext_resource type="Texture2D" uid="uid://da3ba6w6tycto" path="res://assets/puzzles/sudoku/sud42.png" id="17_r1r2m"]
+[ext_resource type="Texture2D" uid="uid://d0btyokja01hr" path="res://assets/puzzles/sudoku/sud4hover2.png" id="18_6b0mh"]
 [ext_resource type="Texture2D" uid="uid://bhcbmvg8w21iv" path="res://assets/ui/cont_button.PNG" id="18_bls3q"]
+[ext_resource type="Texture2D" uid="uid://bvgl08mo7wm33" path="res://assets/puzzles/sudoku/sud4disabled.png" id="19_0787g"]
 [ext_resource type="Texture2D" uid="uid://dcj5hcvby03df" path="res://assets/ui/cont_pressed.PNG" id="19_nqbwe"]
 [ext_resource type="Texture2D" uid="uid://b4aln3aoovnem" path="res://assets/ui/cont_hover.PNG" id="20_lakng"]
+[ext_resource type="Texture2D" uid="uid://clmdstlttm48b" path="res://assets/puzzles/sudoku/sud4select2.png" id="20_yg4ir"]
+[ext_resource type="Texture2D" uid="uid://dt6vh0a6wifpx" path="res://assets/puzzles/sudoku/sud52.png" id="21_yg4ir"]
+[ext_resource type="Texture2D" uid="uid://3arni16y07vd" path="res://assets/puzzles/sudoku/sud5hover2.png" id="22_hlpxh"]
 [ext_resource type="Texture2D" uid="uid://cxr5hoswns0hr" path="res://assets/ui/correct.PNG" id="22_ssu3p"]
 [ext_resource type="Texture2D" uid="uid://c8ti45wpgxjju" path="res://assets/ui/next_button.PNG" id="23_do6qn"]
+[ext_resource type="Texture2D" uid="uid://bbph3gye4iumw" path="res://assets/puzzles/sudoku/sud5disabled.png" id="23_v2y43"]
+[ext_resource type="Texture2D" uid="uid://d1ssxgn5hx8nf" path="res://assets/puzzles/sudoku/sud5select2.png" id="24_r54xi"]
 [ext_resource type="Texture2D" uid="uid://d3ma23qi54oad" path="res://assets/ui/next_pressed.PNG" id="24_t7ctd"]
 [ext_resource type="Texture2D" uid="uid://t765jbgj2gl0" path="res://assets/ui/next_hover.PNG" id="25_h8215"]
+[ext_resource type="Texture2D" uid="uid://c2cpiohcxl5mk" path="res://assets/puzzles/sudoku/sud62.png" id="25_r54xi"]
+[ext_resource type="Texture2D" uid="uid://bavgnl3ahnd05" path="res://assets/puzzles/sudoku/sud6hover2.png" id="26_nh4re"]
+[ext_resource type="Texture2D" uid="uid://3v4hxqtu6bem" path="res://assets/puzzles/sudoku/sud6disabled.png" id="27_pnkng"]
+[ext_resource type="Texture2D" uid="uid://dinth1hclu4fb" path="res://assets/puzzles/sudoku/sud6select2.png" id="28_lb5ln"]
+[ext_resource type="Texture2D" uid="uid://dfkbra6f5b6tu" path="res://assets/puzzles/sudoku/sud72.png" id="29_lb5ln"]
+[ext_resource type="Texture2D" uid="uid://i4v7gn2t57jr" path="res://assets/puzzles/sudoku/sud7hover2.png" id="30_v0u7c"]
+[ext_resource type="Texture2D" uid="uid://dilo3igsh5lxf" path="res://assets/puzzles/sudoku/sud7disabled.png" id="31_cmj34"]
+[ext_resource type="Texture2D" uid="uid://dvn2ry2b23cka" path="res://assets/puzzles/sudoku/sud7select2.png" id="32_7wtc2"]
+[ext_resource type="Texture2D" uid="uid://3kqlgm80u1gg" path="res://assets/puzzles/sudoku/sud82.png" id="33_7wtc2"]
+[ext_resource type="Texture2D" uid="uid://b7nage8mgo4hl" path="res://assets/puzzles/sudoku/sud8hover2.png" id="34_cehj0"]
+[ext_resource type="Texture2D" uid="uid://cm45e73afifta" path="res://assets/puzzles/sudoku/sud8disabled.png" id="35_e5h6d"]
+[ext_resource type="Texture2D" uid="uid://b15f52od2x3n2" path="res://assets/puzzles/sudoku/sud8select2.png" id="36_c2q16"]
+[ext_resource type="Texture2D" uid="uid://cultjlxki7tl0" path="res://assets/puzzles/sudoku/sud92.png" id="37_cehj0"]
+[ext_resource type="Texture2D" uid="uid://d3irwmd7bry60" path="res://assets/puzzles/sudoku/sud9hover2.png" id="38_e5h6d"]
+[ext_resource type="Texture2D" uid="uid://b14o3wmbkmats" path="res://assets/puzzles/sudoku/sud9disabled.png" id="39_c2q16"]
+[ext_resource type="Texture2D" uid="uid://d4hqyvr80nci8" path="res://assets/puzzles/sudoku/sud9select2.png" id="40_7fau1"]
 
 [node name="Sudoku" type="Control" unique_id=393533036]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_c1wfx")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=336282589]
-visible = false
 layout_mode = 0
 offset_right = 1280.0
 offset_bottom = 720.0
 texture = ExtResource("2_lakng")
 
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1623676056]
+layout_mode = 0
+offset_left = 295.0
+offset_top = 105.0
+offset_right = 796.0
+offset_bottom = 604.0
+texture = ExtResource("3_7fau1")
+
+[node name="GridContainer2" type="GridContainer" parent="." unique_id=572933596]
+visible = false
+layout_mode = 0
+offset_left = 296.00003
+offset_top = 107.00001
+offset_right = 859.0
+offset_bottom = 670.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 3
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer2" unique_id=752923179]
+layout_mode = 2
+texture = ExtResource("3_c2q16")
+
+[node name="TextureRect2" type="TextureRect" parent="GridContainer2" unique_id=809887735]
+layout_mode = 2
+texture = ExtResource("4_7fau1")
+
+[node name="TextureRect3" type="TextureRect" parent="GridContainer2" unique_id=694405978]
+layout_mode = 2
+texture = ExtResource("3_c2q16")
+
+[node name="TextureRect4" type="TextureRect" parent="GridContainer2" unique_id=183033366]
+layout_mode = 2
+texture = ExtResource("4_7fau1")
+
+[node name="TextureRect5" type="TextureRect" parent="GridContainer2" unique_id=406646946]
+layout_mode = 2
+texture = ExtResource("3_c2q16")
+
+[node name="TextureRect6" type="TextureRect" parent="GridContainer2" unique_id=1132700634]
+layout_mode = 2
+texture = ExtResource("4_7fau1")
+
+[node name="TextureRect7" type="TextureRect" parent="GridContainer2" unique_id=1133446059]
+layout_mode = 2
+texture = ExtResource("3_c2q16")
+
+[node name="TextureRect8" type="TextureRect" parent="GridContainer2" unique_id=1669709737]
+layout_mode = 2
+texture = ExtResource("4_7fau1")
+
+[node name="TextureRect9" type="TextureRect" parent="GridContainer2" unique_id=1394372854]
+layout_mode = 2
+texture = ExtResource("3_c2q16")
+
 [node name="GridContainer" type="GridContainer" parent="." unique_id=817522832]
 layout_mode = 0
-offset_left = 312.0
-offset_top = 112.0
-offset_right = 875.0
-offset_bottom = 675.0
+offset_left = 305.00003
+offset_top = 113.00001
+offset_right = 914.9999
+offset_bottom = 727.99994
+scale = Vector2(0.8, 0.8)
 columns = 9
 
 [node name="Button1" type="TextureButton" parent="GridContainer" unique_id=95356826]
@@ -96,88 +181,92 @@ layout_mode = 2
 texture_normal = ExtResource("2_tf1j2")
 
 [node name="SelectGrid" type="GridContainer" parent="." unique_id=698591237]
-visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 276.0
-offset_top = 727.0
-offset_right = 947.0
-offset_bottom = 786.0
+offset_left = 174.00006
+offset_top = -488.0
+offset_right = 301.00006
+offset_bottom = -177.0
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(0.8, 0.8)
 theme_override_constants/h_separation = 9
-columns = 10
+columns = 2
 
 [node name="Button0" type="TextureButton" parent="SelectGrid" unique_id=2041001120]
 layout_mode = 2
-texture_normal = ExtResource("3_12v7p")
-texture_hover = ExtResource("4_2vqja")
+texture_normal = ExtResource("4_t7ctd")
+texture_hover = ExtResource("5_h8215")
 
 [node name="Button1" type="TextureButton" parent="SelectGrid" unique_id=143198966]
 layout_mode = 2
-texture_normal = ExtResource("2_tf1j2")
-texture_hover = ExtResource("3_6bora")
-texture_disabled = ExtResource("5_0f0gr")
+texture_normal = ExtResource("6_dte52")
+texture_hover = ExtResource("7_qrewy")
+texture_disabled = ExtResource("8_rjqv0")
+texture_focused = ExtResource("9_h8215")
 
 [node name="Button2" type="TextureButton" parent="SelectGrid" unique_id=656547880]
 layout_mode = 2
-texture_normal = ExtResource("5_siw3q")
-texture_hover = ExtResource("3_6bora")
-texture_disabled = ExtResource("5_0f0gr")
+texture_normal = ExtResource("10_qrewy")
+texture_hover = ExtResource("11_rjqv0")
+texture_disabled = ExtResource("11_rjqv0")
+texture_focused = ExtResource("12_bx1ox")
 
 [node name="Button3" type="TextureButton" parent="SelectGrid" unique_id=946447546]
 layout_mode = 2
-texture_normal = ExtResource("6_nj7ic")
-texture_hover = ExtResource("3_6bora")
-texture_disabled = ExtResource("5_0f0gr")
+texture_normal = ExtResource("13_t4sis")
+texture_hover = ExtResource("14_j3x27")
+texture_disabled = ExtResource("15_toerd")
+texture_focused = ExtResource("16_r1r2m")
 
 [node name="Button4" type="TextureButton" parent="SelectGrid" unique_id=1265473786]
 layout_mode = 2
-texture_normal = ExtResource("7_nj7ic")
-texture_pressed = ExtResource("2_tf1j2")
-texture_hover = ExtResource("3_6bora")
-texture_disabled = ExtResource("5_0f0gr")
+texture_normal = ExtResource("17_r1r2m")
+texture_hover = ExtResource("18_6b0mh")
+texture_disabled = ExtResource("19_0787g")
+texture_focused = ExtResource("20_yg4ir")
 
 [node name="Button5" type="TextureButton" parent="SelectGrid" unique_id=1112853777]
 layout_mode = 2
-texture_normal = ExtResource("8_g4g0s")
-texture_pressed = ExtResource("2_tf1j2")
-texture_hover = ExtResource("3_6bora")
-texture_disabled = ExtResource("5_0f0gr")
+texture_normal = ExtResource("21_yg4ir")
+texture_hover = ExtResource("22_hlpxh")
+texture_disabled = ExtResource("23_v2y43")
+texture_focused = ExtResource("24_r54xi")
 
 [node name="Button6" type="TextureButton" parent="SelectGrid" unique_id=2051950509]
 layout_mode = 2
-texture_normal = ExtResource("9_lhewo")
-texture_pressed = ExtResource("2_tf1j2")
-texture_hover = ExtResource("3_6bora")
-texture_disabled = ExtResource("5_0f0gr")
+texture_normal = ExtResource("25_r54xi")
+texture_hover = ExtResource("26_nh4re")
+texture_disabled = ExtResource("27_pnkng")
+texture_focused = ExtResource("28_lb5ln")
 
 [node name="Button7" type="TextureButton" parent="SelectGrid" unique_id=1590312981]
 layout_mode = 2
-texture_normal = ExtResource("10_4fga5")
-texture_pressed = ExtResource("2_tf1j2")
-texture_hover = ExtResource("3_6bora")
-texture_disabled = ExtResource("5_0f0gr")
+texture_normal = ExtResource("29_lb5ln")
+texture_hover = ExtResource("30_v0u7c")
+texture_disabled = ExtResource("31_cmj34")
+texture_focused = ExtResource("32_7wtc2")
 
 [node name="Button8" type="TextureButton" parent="SelectGrid" unique_id=338970600]
 layout_mode = 2
-texture_normal = ExtResource("11_jtyee")
-texture_pressed = ExtResource("2_tf1j2")
-texture_hover = ExtResource("3_6bora")
-texture_disabled = ExtResource("5_0f0gr")
+texture_normal = ExtResource("33_7wtc2")
+texture_hover = ExtResource("34_cehj0")
+texture_disabled = ExtResource("35_e5h6d")
+texture_focused = ExtResource("36_c2q16")
 
 [node name="Button9" type="TextureButton" parent="SelectGrid" unique_id=540320129]
 layout_mode = 2
-texture_normal = ExtResource("12_12v7p")
-texture_pressed = ExtResource("2_tf1j2")
-texture_hover = ExtResource("3_6bora")
-texture_disabled = ExtResource("5_0f0gr")
+texture_normal = ExtResource("37_cehj0")
+texture_hover = ExtResource("38_e5h6d")
+texture_disabled = ExtResource("39_c2q16")
+texture_focused = ExtResource("40_7fau1")
 
 [node name="Label" type="Label" parent="." unique_id=1794928723]
+visible = false
 layout_mode = 0
 offset_left = 1015.0
 offset_top = 585.0
@@ -267,4 +356,9 @@ texture_hover = ExtResource("25_h8215")
 [connection signal="pressed" from="SelectGrid/Button7" to="." method="_on_button_7_pressed"]
 [connection signal="pressed" from="SelectGrid/Button8" to="." method="_on_button_8_pressed"]
 [connection signal="pressed" from="SelectGrid/Button9" to="." method="_on_button_9_pressed"]
+[connection signal="mouse_entered" from="Reset" to="." method="_on_reset_mouse_entered"]
+[connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]
+[connection signal="mouse_entered" from="Check" to="." method="_on_check_mouse_entered"]
+[connection signal="pressed" from="Check" to="." method="_on_check_pressed"]
+[connection signal="mouse_entered" from="Win/Next" to="." method="_on_next_mouse_entered"]
 [connection signal="pressed" from="Win/Next" to="." method="_on_next_pressed"]
