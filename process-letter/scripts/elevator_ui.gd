@@ -14,12 +14,15 @@ func _process(_delta):
 	if Globals.phase == 0:
 		level_1_button.disabled = true
 		level_3_button.disabled = true
+		level_a_button.disabled = true
 	elif Globals.phase == 1:
 		level_1_button.disabled = false
 		level_3_button.disabled = true
+		level_a_button.disabled = false
 	elif Globals.phase == 2 or Globals.phase == 3 or Globals.phase == 4:
 		level_1_button.disabled = false
 		level_3_button.disabled = false
+		level_a_button.disabled = false
 		
 		
 	if Globals.current_level == 0:

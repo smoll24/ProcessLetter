@@ -155,6 +155,7 @@ layout_mode = 2
 texture_normal = ExtResource("4_lafvn")
 texture_pressed = ExtResource("5_5q50v")
 texture_hover = ExtResource("6_b2s11")
+texture_disabled = ExtResource("5_5q50v")
 
 [node name="Cancel" type="TextureButton" parent="." unique_id=1864586537]
 offset_left = 584.0

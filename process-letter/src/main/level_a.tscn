@@ -19,7 +19,6 @@
 [ext_resource type="Texture2D" uid="uid://c46k4hlesdsh8" path="res://assets/bg/IMG_1735.PNG" id="15_bexj4"]
 [ext_resource type="Texture2D" uid="uid://pon5jb21air1" path="res://assets/bg/IMG_1736.PNG" id="16_yvsej"]
 [ext_resource type="PackedScene" uid="uid://dil5ewllsotai" path="res://src/background/Book.tscn" id="17_rqb8u"]
-[ext_resource type="Texture2D" uid="uid://cyod7ds5nj6vp" path="res://assets/temp/Image_20261011_210602_252.png" id="18_q2o23"]
 [ext_resource type="PackedScene" uid="uid://dj3b8bc4ffmnv" path="res://src/ui/elevator_ui.tscn" id="18_q3b3h"]
 [ext_resource type="PackedScene" uid="uid://c417vx6j6p730" path="res://src/ui/workbench_ui.tscn" id="18_yvsej"]
 [ext_resource type="PackedScene" uid="uid://bw3ljitjewcl4" path="res://src/ui/pause_ui.tscn" id="21_dvcwm"]
@@ -86,51 +85,43 @@ metadata/_edit_lock_ = true
 [node name="Wall" type="Node2D" parent="OuterLayer" unique_id=1333465863]
 
 [node name="Img1734" type="Sprite2D" parent="OuterLayer/Wall" unique_id=1743994147]
-position = Vector2(-891, 1058)
+position = Vector2(-1331, 1347)
 texture = ExtResource("14_4w7p0")
 
 [node name="Img1735" type="Sprite2D" parent="OuterLayer/Wall" unique_id=1880429891]
-position = Vector2(287, 1045)
+position = Vector2(321, 1031)
 texture = ExtResource("15_bexj4")
 
 [node name="Img1736" type="Sprite2D" parent="OuterLayer/Wall" unique_id=1240565447]
-position = Vector2(822, 1163)
+position = Vector2(797, 1353)
 texture = ExtResource("16_yvsej")
 
 [node name="Img1737" type="Sprite2D" parent="OuterLayer/Wall" unique_id=1822299127]
-position = Vector2(1062, 1241)
+position = Vector2(66, 1139)
 texture = ExtResource("14_4w7p0")
 
 [node name="Img1738" type="Sprite2D" parent="OuterLayer/Wall" unique_id=827911438]
-position = Vector2(-1571, 1175)
+position = Vector2(-874, 1008)
 texture = ExtResource("15_bexj4")
 
 [node name="Img1739" type="Sprite2D" parent="OuterLayer/Wall" unique_id=2135090568]
-position = Vector2(-1374, 1320)
+position = Vector2(-627, 1147)
 texture = ExtResource("16_yvsej")
 
 [node name="Img1740" type="Sprite2D" parent="OuterLayer/Wall" unique_id=534981440]
-position = Vector2(-1911, 1915)
+position = Vector2(-1948, 2065)
 texture = ExtResource("14_4w7p0")
 
 [node name="Img1741" type="Sprite2D" parent="OuterLayer/Wall" unique_id=37342258]
-position = Vector2(-2379, 2030)
+position = Vector2(-1886, 1908)
 texture = ExtResource("15_bexj4")
 
-[node name="Img1742" type="Sprite2D" parent="OuterLayer/Wall" unique_id=1249392288]
-position = Vector2(-3261, 1919)
-texture = ExtResource("16_yvsej")
-
-[node name="Img1743" type="Sprite2D" parent="OuterLayer/Wall" unique_id=1105621814]
-position = Vector2(-3239, 3373)
-texture = ExtResource("14_4w7p0")
-
 [node name="Img1744" type="Sprite2D" parent="OuterLayer/Wall" unique_id=458823375]
-position = Vector2(-2016, 3351)
+position = Vector2(-1907, 3493)
 texture = ExtResource("15_bexj4")
 
 [node name="Img1745" type="Sprite2D" parent="OuterLayer/Wall" unique_id=823216833]
-position = Vector2(-2349, 3455)
+position = Vector2(-1886, 3338)
 texture = ExtResource("16_yvsej")
 
 [node name="Props" type="Node2D" parent="OuterLayer" unique_id=1379142347]
@@ -176,6 +167,10 @@ position = Vector2(1123, 4509)
 
 [node name="Plants14" parent="OuterLayer/Props" unique_id=1556956451 instance=ExtResource("3_m4akb")]
 position = Vector2(1119, 4928)
+
+[node name="Plants7" parent="OuterLayer/Props" unique_id=110217364 instance=ExtResource("4_yema0")]
+position = Vector2(835, 780)
+scale = Vector2(-1, 1)
 
 [node name="OutCharacters" type="Node2D" parent="OuterLayer" unique_id=790197414]
 
@@ -240,11 +235,6 @@ level = 10
 position = Vector2(3645, 2397)
 level = 10
 
-[node name="Image20261011210602252" type="Sprite2D" parent="." unique_id=2014431917]
-position = Vector2(-2293, 4109)
-scale = Vector2(0.453125, 0.39166668)
-texture = ExtResource("18_q2o23")
-
 [node name="Player" parent="." unique_id=701298983 instance=ExtResource("1_dpurt")]
 position = Vector2(-1274, 922)
 
@@ -261,28 +251,28 @@ position = Vector2(442, 354)
 position = Vector2(908, 353)
 
 [node name="Light4" parent="Lights" unique_id=327980320 instance=ExtResource("8_3dueu")]
-position = Vector2(199, 1033)
+position = Vector2(194, 1063)
 
 [node name="Light5" parent="Lights" unique_id=419073303 instance=ExtResource("8_3dueu")]
-position = Vector2(953, 1199)
+position = Vector2(942, 1207)
 
 [node name="Light6" parent="Lights" unique_id=1867534275 instance=ExtResource("8_3dueu")]
-position = Vector2(-2745, 3263)
+position = Vector2(-2444, 1920)
 
 [node name="Light7" parent="Lights" unique_id=1321660459 instance=ExtResource("8_3dueu")]
-position = Vector2(-2318, 3262)
+position = Vector2(-2456, 3345)
 
 [node name="Light8" parent="Lights" unique_id=519758501 instance=ExtResource("8_3dueu")]
-position = Vector2(-1852, 3261)
+position = Vector2(-3206, 3350)
 
 [node name="Light9" parent="Lights" unique_id=1047183751 instance=ExtResource("8_3dueu")]
-position = Vector2(-2706, 3887)
+position = Vector2(-2696, 4004)
 
 [node name="Light10" parent="Lights" unique_id=677662361 instance=ExtResource("8_3dueu")]
-position = Vector2(-2279, 3886)
+position = Vector2(-1912, 4013)
 
 [node name="Light11" parent="Lights" unique_id=1224665537 instance=ExtResource("8_3dueu")]
-position = Vector2(-1813, 3885)
+position = Vector2(-1005, 4122)
 
 [node name="Light12" parent="Lights" unique_id=1551616990 instance=ExtResource("8_3dueu")]
 position = Vector2(-1430, 359)
@@ -293,6 +283,30 @@ position = Vector2(-1003, 358)
 [node name="Light14" parent="Lights" unique_id=124916299 instance=ExtResource("8_3dueu")]
 position = Vector2(-537, 357)
 
+[node name="Light15" parent="Lights" unique_id=1188610848 instance=ExtResource("8_3dueu")]
+position = Vector2(-736, 1061)
+
+[node name="Light16" parent="Lights" unique_id=1280513927 instance=ExtResource("8_3dueu")]
+position = Vector2(-1342, 1259)
+
+[node name="Light17" parent="Lights" unique_id=1433030814 instance=ExtResource("8_3dueu")]
+position = Vector2(-3210, 1899)
+
+[node name="Light18" parent="Lights" unique_id=49427488 instance=ExtResource("8_3dueu")]
+position = Vector2(723, 4092)
+
+[node name="Light19" parent="Lights" unique_id=435453740 instance=ExtResource("8_3dueu")]
+position = Vector2(-704, 4674)
+
+[node name="Light20" parent="Lights" unique_id=744397501 instance=ExtResource("8_3dueu")]
+position = Vector2(205, 4629)
+
+[node name="Light21" parent="Lights" unique_id=1690554929 instance=ExtResource("8_3dueu")]
+position = Vector2(-1055, 2248)
+
+[node name="Light22" parent="Lights" unique_id=436807675 instance=ExtResource("8_3dueu")]
+position = Vector2(496, 2248)
+
 [node name="Collisions" type="Node2D" parent="." unique_id=1046833520]
 visible = false
 metadata/_edit_lock_ = true
@@ -300,7 +314,7 @@ metadata/_edit_lock_ = true
 [node name="StaticBody2D" type="StaticBody2D" parent="Collisions" unique_id=455011079]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions/StaticBody2D" unique_id=1732225373]
-polygon = PackedVector2Array(1622, 634, 76, 639, 75, 602, 253, 602, 256, 413, -72, 411, -71, 601, -54, 600, -56, 640, -76, 642, -90, 635, -91, 400, -120, 383, -118, 206, -406, 208, -406, 382, -435, 401, -440, 640, -1885, 640, -1882, -634, 1610, -639)
+polygon = PackedVector2Array(1622, 634, 76, 639, 75, 602, 253, 602, 256, 413, -72, 411, -71, 601, -54, 600, -56, 640, -76, 642, -90, 635, -91, 400, -122, 416, -183, 365, -341, 364, -404, 413, -435, 401, -440, 640, -1885, 640, -1882, -634, 1610, -639)
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Collisions" unique_id=1040210687]
 
@@ -374,6 +388,7 @@ polygon = PackedVector2Array(-3602, 3805, -2338, 3801, -2336, 3846, -2741, 3851,
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions/Elevator_Block" unique_id=1333589911]
 position = Vector2(-1280, 882)
 shape = SubResource("RectangleShape2D_f7x0w")
+disabled = true
 
 [node name="Icon" type="Area2D" parent="." unique_id=1028668035]
 position = Vector2(-264, 904)

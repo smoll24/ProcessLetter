@@ -26,7 +26,7 @@ func _ready():
 
 func _process(_delta):
 	if Globals.phase == 0:
-		elevator_block.disabled = false
+		elevator_block.disabled = true
 	else:
 		elevator_block.disabled = true
 	

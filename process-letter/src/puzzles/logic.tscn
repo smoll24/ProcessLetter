@@ -51,6 +51,7 @@ pivot_offset = Vector2(-341, -46)
 script = ExtResource("1_sggxs")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1841234000]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
