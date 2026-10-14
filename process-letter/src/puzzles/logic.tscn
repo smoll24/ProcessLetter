@@ -266,6 +266,7 @@ texture_disabled = ExtResource("15_7gm8i")
 texture_focused = ExtResource("5_avobu")
 
 [node name="Puzzle2" type="Control" parent="." unique_id=15981725]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -429,91 +430,111 @@ texture_disabled = ExtResource("15_7gm8i")
 texture_focused = ExtResource("5_avobu")
 
 [node name="Puzzle3" type="Control" parent="." unique_id=20791501]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.8, 0.8)
 
 [node name="input1" type="Line2D" parent="Puzzle3" unique_id=1195477813]
-position = Vector2(-4.999996, -14.999992)
+position = Vector2(-5, -55)
 scale = Vector2(0.99999976, 0.99999976)
-points = PackedVector2Array(401.24997, 236.24998, 482.49994, 236.24998)
+points = PackedVector2Array(401.24997, 236.24998, 466.11597, 236.24997, 482.49994, 236.24998)
 width = 5.0
 default_color = Color(0.76862746, 0.85490197, 1, 1)
 
 [node name="input2" type="Line2D" parent="Puzzle3" unique_id=1055825747]
-position = Vector2(-4.999996, 11.250003)
+position = Vector2(-5, -28.75)
 scale = Vector2(0.99999976, 0.99999976)
 points = PackedVector2Array(401.24997, 236.24998, 482.49994, 236.24998)
 width = 5.0
 default_color = Color(0.50293607, 0.49347472, 0.54150504, 1)
 
 [node name="input3" type="Line2D" parent="Puzzle3" unique_id=562893797]
-position = Vector2(-4.999999, 112.49998)
+position = Vector2(-5, 49.99997)
 scale = Vector2(0.9999997, 0.9999997)
 points = PackedVector2Array(401.24997, 236.24998, 482.49994, 236.24998)
 width = 5.0
 default_color = Color(0.76862746, 0.85490197, 1, 1)
 
 [node name="input4" type="Line2D" parent="Puzzle3" unique_id=256866379]
-position = Vector2(-4.999999, 138.74998)
+position = Vector2(-5, 76.25)
 scale = Vector2(0.9999997, 0.9999997)
 points = PackedVector2Array(401.24997, 236.24998, 482.49994, 236.24998)
 width = 5.0
 default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
 
-[node name="input5" type="Line2D" parent="Puzzle3" unique_id=40106452]
-position = Vector2(155.00002, 256.24997)
+[node name="input5" type="Line2D" parent="Puzzle3" unique_id=1812202457]
+position = Vector2(-5, 175.00006)
+scale = Vector2(0.9999997, 0.9999997)
+points = PackedVector2Array(401.24997, 236.24998, 466.11597, 236.24997, 482.49994, 236.24998)
+width = 5.0
+default_color = Color(0.76862746, 0.85490197, 1, 1)
+
+[node name="input6" type="Line2D" parent="Puzzle3" unique_id=1977588325]
+position = Vector2(-5, 201.25006)
+scale = Vector2(0.9999997, 0.9999997)
+points = PackedVector2Array(401.24997, 236.24998, 482.49994, 236.24998)
+width = 5.0
+default_color = Color(0.50293607, 0.49347472, 0.54150504, 1)
+
+[node name="input7" type="Line2D" parent="Puzzle3" unique_id=765122952]
+position = Vector2(-5.0000305, 279.99997)
 scale = Vector2(0.99999964, 0.99999964)
 points = PackedVector2Array(401.24997, 236.24998, 482.49994, 236.24998)
 width = 5.0
 default_color = Color(0.76862746, 0.85490197, 1, 1)
 
-[node name="input6" type="Line2D" parent="Puzzle3" unique_id=1794005744]
-position = Vector2(155.00002, 282.4999)
+[node name="input8" type="Line2D" parent="Puzzle3" unique_id=2031507909]
+position = Vector2(-5.0000305, 306.24997)
 scale = Vector2(0.99999964, 0.99999964)
 points = PackedVector2Array(401.24997, 236.24998, 482.49994, 236.24998)
 width = 5.0
 default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
 
 [node name="gate1_xor1" type="Line2D" parent="Puzzle3" unique_id=1375935523]
-position = Vector2(-4.9999986, 112.49997)
+position = Vector2(-44.99999, 72.49997)
 scale = Vector2(0.99999964, 0.99999964)
-points = PackedVector2Array(567.5001, 122.50002, 717.5001, 122.50003, 717.5001, 166.25005, 801.2501, 166.25003)
+points = PackedVector2Array(601.2502, 121.25007, 676.2502, 121.25007, 676.2502, 167.50006, 715.0002, 167.50006)
 width = 5.0
 default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
 
-[node name="not_xor1" type="Line2D" parent="Puzzle3" unique_id=1778131920]
-position = Vector2(-4.999998, 112.49996)
+[node name="gate2_xor1" type="Line2D" parent="Puzzle3" unique_id=555361569]
+position = Vector2(-46.250004, 93.75)
 scale = Vector2(0.9999995, 0.9999995)
-points = PackedVector2Array(725.0002, 251.25008, 758.75024, 251.25008, 758.75024, 191.25008, 802.50024, 191.25008)
+points = PackedVector2Array(606.25024, 208.75009, 676.25024, 208.75009, 676.2502, 167.50006, 715.0002, 167.50006)
 width = 5.0
 default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
 
-[node name="gate3_and1" type="Line2D" parent="Puzzle3" unique_id=1827444614]
-position = Vector2(155, 256.24997)
+[node name="gate4_and1" type="Line2D" parent="Puzzle3" unique_id=1778131920]
+position = Vector2(-141.24998, 298.74997)
 scale = Vector2(0.9999995, 0.9999995)
-points = PackedVector2Array(785.0001, 171.25006, 701.2501, 171.25006, 701.2501, 248.75006, 565.00006, 248.75006)
+points = PackedVector2Array(700.00024, 233.75009, 757.5003, 233.75009, 757.5003, 191.25009, 802.50024, 191.25008)
 width = 5.0
 default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
 
-[node name="gate2_not" type="Line2D" parent="Puzzle3" unique_id=2099529435]
-position = Vector2(-4.9999976, 112.499954)
-scale = Vector2(0.99999946, 0.99999946)
-points = PackedVector2Array(566.2502, 248.75008, 640.0002, 248.75008)
+[node name="and1_and2" type="Line2D" parent="Puzzle3" unique_id=1827444614]
+position = Vector2(151.25002, 216.24988)
+scale = Vector2(0.9999995, 0.9999995)
+points = PackedVector2Array(785.0001, 171.25006, 701.2501, 171.25006, 701.25024, 263.7502, 590.00024, 263.7502)
 width = 5.0
 default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
 
-[node name="xor1_and1" type="Line2D" parent="Puzzle3" unique_id=2012863588]
-position = Vector2(154.99998, 256.24997)
+[node name="gate3_and1" type="Line2D" parent="Puzzle3" unique_id=2099529435]
+position = Vector2(-4.999997, 176.24994)
 scale = Vector2(0.99999946, 0.99999946)
-points = PackedVector2Array(788.7502, 143.75006, 753.7502, 143.75006, 753.7503, 35.00003, 720.00024, 35.00003)
+points = PackedVector2Array(566.2502, 248.75008, 621.25037, 248.7502, 621.25037, 290.00024, 667.50037, 290.00024)
+width = 5.0
+default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
+
+[node name="xor1_and2" type="Line2D" parent="Puzzle3" unique_id=2012863588]
+position = Vector2(98.74999, 218.75)
+scale = Vector2(0.99999946, 0.99999946)
+points = PackedVector2Array(788.7502, 143.75006, 753.7502, 143.75006, 753.7504, 31.250015, 645.00037, 31.250015)
 width = 5.0
 default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
 
 [node name="output" type="Line2D" parent="Puzzle3" unique_id=1812716152]
-position = Vector2(154.99997, 257.49997)
+position = Vector2(104.999954, 217.5)
 scale = Vector2(0.9999994, 0.9999994)
 points = PackedVector2Array(870.0002, 157.50006, 951.2503, 157.50006)
 width = 5.0

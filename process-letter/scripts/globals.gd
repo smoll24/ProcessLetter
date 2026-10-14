@@ -3,8 +3,8 @@ extends Node
 var can_move = true
 var can_talk = true
 #0,1,2,3
-var puzzle_phase = 1
-var status = "prog1"
+var puzzle_phase = 0
+var status = "pre1"
 #1,2,3
 var phase:int
 var in_room = true
@@ -56,7 +56,7 @@ var current_cutscene = 0
 #Indicates whether you can enter 1. Computer 2. Workshop 
 var puzzle_step = 1
 #Network, Sudoku, Logic
-var current_puzzle = "logic"
+var current_puzzle = "network"
 
 var player_position: Vector2
 var stored_player_position: Vector2
@@ -71,7 +71,10 @@ var reloading = false
 var cutscenes = []
 
 func _process(_delta):
-	#puzzle_phase = phase
+	if phase < 3:
+		puzzle_phase = phase
+	else:
+		puzzle_phase = 2
 	
 	Dialogic.VAR.set_variable("State", status)
 	

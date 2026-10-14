@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var anim = $AnimatedSprite2D
 @onready var footstep_audio = $Walking
 
-const speed = 500
+const speed = 1000
 var current_dir = 'none'
 var dialog = null
 var can_talk = true

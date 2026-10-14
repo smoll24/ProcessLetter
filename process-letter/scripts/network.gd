@@ -133,7 +133,7 @@ func _setup_game(phase):
 				button16,
 				button17,
 				button18]
-	elif phase == 2:
+	else:
 		connections = [[1,2],[1,6],[2,3],
 					[2,7],[2,8],[3,4],
 					[3,8],[4,5],[4,9],
@@ -278,11 +278,15 @@ func _on_point_pressed(point: int):
 	
 	buttons[selected_point-1].grab_focus()
 	
+	
 func check_solution() -> Array:
-	for connection in filled_connections:
-		if connection["filled"] == false:
-			return [false, "Not all connections filled"]
-	return [true, "Correct!"]
+	return [true, "test"]
+	
+#func check_solution() -> Array:
+	#for connection in filled_connections:
+		#if connection["filled"] == false:
+			#return [false, "Not all connections filled"]
+	#return [true, "Correct!"]
 
 func _on_button_1_pressed() -> void:
 	_on_point_pressed(1)
