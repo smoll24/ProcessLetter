@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://dq7f3e4isdx8s" path="res://assets/ui/options_pressed.PNG" id="7_hyxes"]
 [ext_resource type="Texture2D" uid="uid://j4wks7a53p26" path="res://assets/ui/options_hover.PNG" id="8_tiwus"]
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_rj60s"]
+
 [node name="Menu_ui" type="CanvasLayer" unique_id=946832688]
 script = ExtResource("1_62e2l")
 
@@ -51,6 +53,16 @@ layout_mode = 2
 texture_normal = ExtResource("6_p0yao")
 texture_pressed = ExtResource("7_hyxes")
 texture_hover = ExtResource("8_tiwus")
+
+[node name="Loading" type="TextureRect" parent="." unique_id=1921870350]
+visible = false
+modulate = Color(0, 0, 0, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_rj60s")
 
 [connection signal="mouse_entered" from="VBoxContainer/Start" to="." method="_on_start_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]

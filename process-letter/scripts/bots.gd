@@ -13,6 +13,7 @@ var wander_speed = 100.0
 var step_distance = 40.0
 var wander_timer: Timer
 @onready var footstep_audio = $Walking
+var indexing = false
 
 func _ready():
 	if self.bot_id not in Globals.bots_list:
@@ -34,10 +35,14 @@ func _ready():
 	Globals.bot = false
 
 func _process(_delta):
+	if indexing and self.global_position.y < Globals.player_position.y:
+		z_index = 1
+	else:
+		z_index = 3
+		
 	if Globals.status == "post4":
 		self.queue_free()
 	
-	z_index = int(round(global_position.y / 500.0))
 	if Globals.phase == 0:
 		self.visible = false
 		$CollisionShape2D.disabled = true
@@ -160,8 +165,10 @@ func _on_interact_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		Globals.current_bot_instance = self
 		Globals.bot = true
+		indexing = true
 		
 
 func _on_interact_area_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		Globals.bot = false
+		indexing = false

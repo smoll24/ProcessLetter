@@ -18,6 +18,7 @@ var wander_steps = 0
 var wander_speed = 40.0
 var step_distance = 30.0
 var wander_timer: Timer
+var indexing = false
 
 @export var level:int
 
@@ -80,7 +81,11 @@ func _ready() -> void:
 			self.global_position = Vector2(652.0, 2080.0)
 
 func _process(_delta):
-	z_index = int(round(global_position.y / 500.0))
+	if indexing and self.global_position.y < Globals.player_position.y:
+		z_index = 1
+	else:
+		z_index = 3
+		
 	speech_bubble.z_index = Globals.player_position.y + 1
 	if is_wandering:
 		velocity = wander_direction * wander_speed
@@ -233,7 +238,9 @@ func update_idle_animation() -> void:
 func _on_interact_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		Globals.violet = true
+		indexing = true
 	
 func _on_interact_area_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		Globals.violet = false
+		indexing = false

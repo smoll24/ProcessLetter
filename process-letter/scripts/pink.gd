@@ -9,6 +9,7 @@ var bubble_tween: Tween
 var bubble_max_distance = 50
 @onready var footstep_audio = $Walking
 var music: int = AudioServer.get_bus_index("Music")
+var indexing = false
 
 @onready var animated_sprite = $AnimatedSprite2D
 
@@ -60,7 +61,11 @@ func _ready() -> void:
 			self.global_position = Vector2(304.0, 1349.0)
 
 func _process(_delta):
-	z_index = int(round(global_position.y / 500.0))
+	if indexing and self.global_position.y < Globals.player_position.y:
+		z_index = 1
+	else:
+		z_index = 3
+		
 	speech_bubble.z_index = Globals.player_position.y + 1
 	if is_wandering:
 		velocity = wander_direction * wander_speed
@@ -209,7 +214,9 @@ func update_idle_animation() -> void:
 func _on_interact_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		Globals.pink = true
+		indexing = true
 	
 func _on_interact_area_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		Globals.pink = false
+		indexing = false

@@ -4,7 +4,7 @@ var can_move = true
 var can_talk = true
 #0,1,2,3
 var puzzle_phase = 0
-var status = "prog3"
+var status = "prog4"
 #1,2,3
 var phase:int
 var in_room = true
@@ -103,6 +103,6 @@ func _process(_delta):
 		print("prog4")
 	if captured > 4 and status == "prog4":
 		status = "post4"
-		print("post4")
-		puzzle_step == 1
+		puzzle_step = 1
 		current_puzzle = "password"
+		print("post4")
