@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://ifwjjjlkkg2j" path="res://assets/puzzles/logic/not_disabled.png" id="13_avobu"]
 [ext_resource type="Texture2D" uid="uid://egwctwt08em4" path="res://assets/puzzles/logic/xor_disabled.png" id="14_u8ng4"]
 [ext_resource type="Texture2D" uid="uid://bv02h5afs2fl3" path="res://assets/puzzles/logic/and_disabled.png" id="15_7gm8i"]
+[ext_resource type="AudioStream" uid="uid://du0nu1ypkxadf" path="res://assets/sounds/freesound_community-success-fanfare-trumpets-6185.mp3" id="30_a3tri"]
 
 [sub_resource type="Theme" id="Theme_ywdb4"]
 
@@ -108,6 +109,7 @@ layout_mode = 2
 texture_normal = ExtResource("6_ef4tm")
 
 [node name="Puzzle1" type="Control" parent="." unique_id=1656545445]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -117,12 +119,14 @@ scale = Vector2(0.8, 0.8)
 position = Vector2(-4.999997, -14.999995)
 scale = Vector2(0.99999994, 0.99999994)
 points = PackedVector2Array(401.24997, 236.24998, 482.49994, 236.24998)
+width = 5.0
 default_color = Color(0.76862746, 0.85490197, 1, 1)
 
 [node name="input2" type="Line2D" parent="Puzzle1" unique_id=914186494]
 position = Vector2(-4.999997, 11.250003)
 scale = Vector2(0.99999994, 0.99999994)
 points = PackedVector2Array(401.24997, 236.24998, 482.49994, 236.24998)
+width = 5.0
 default_color = Color(0.50293607, 0.49347472, 0.54150504, 1)
 
 [node name="input3" type="Line2D" parent="Puzzle1" unique_id=1236621085]
@@ -262,28 +266,111 @@ texture_disabled = ExtResource("15_7gm8i")
 texture_focused = ExtResource("5_avobu")
 
 [node name="Puzzle2" type="Control" parent="." unique_id=15981725]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.8, 0.8)
 
+[node name="input1" type="Line2D" parent="Puzzle2" unique_id=1525643825]
+position = Vector2(-4.9999967, -14.999994)
+scale = Vector2(0.9999998, 0.9999998)
+points = PackedVector2Array(401.24997, 236.24998, 482.49994, 236.24998)
+width = 5.0
+default_color = Color(0.76862746, 0.85490197, 1, 1)
+
+[node name="input2" type="Line2D" parent="Puzzle2" unique_id=1707870991]
+position = Vector2(-4.9999967, 11.250003)
+scale = Vector2(0.9999998, 0.9999998)
+points = PackedVector2Array(401.24997, 236.24998, 482.49994, 236.24998)
+width = 5.0
+default_color = Color(0.50293607, 0.49347472, 0.54150504, 1)
+
+[node name="input3" type="Line2D" parent="Puzzle2" unique_id=1392426448]
+position = Vector2(-4.9999995, 112.49999)
+scale = Vector2(0.99999976, 0.99999976)
+points = PackedVector2Array(401.24997, 236.24998, 482.49994, 236.24998)
+width = 5.0
+default_color = Color(0.76862746, 0.85490197, 1, 1)
+
+[node name="input4" type="Line2D" parent="Puzzle2" unique_id=278377127]
+position = Vector2(-4.9999995, 138.74998)
+scale = Vector2(0.99999976, 0.99999976)
+points = PackedVector2Array(401.24997, 236.24998, 482.49994, 236.24998)
+width = 5.0
+default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
+
+[node name="input5" type="Line2D" parent="Puzzle2" unique_id=1292311969]
+position = Vector2(155.00003, 256.24997)
+scale = Vector2(0.9999997, 0.9999997)
+points = PackedVector2Array(401.24997, 236.24998, 482.49994, 236.24998)
+width = 5.0
+default_color = Color(0.76862746, 0.85490197, 1, 1)
+
+[node name="input6" type="Line2D" parent="Puzzle2" unique_id=1837480322]
+position = Vector2(155.00003, 282.49994)
+scale = Vector2(0.9999997, 0.9999997)
+points = PackedVector2Array(401.24997, 236.24998, 482.49994, 236.24998)
+width = 5.0
+default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
+
+[node name="gate1_xor1" type="Line2D" parent="Puzzle2" unique_id=1612146155]
+position = Vector2(-4.999999, 112.49998)
+scale = Vector2(0.9999997, 0.9999997)
+points = PackedVector2Array(567.5001, 122.50002, 717.5001, 122.50003, 717.5001, 166.25005, 801.2501, 166.25003)
+width = 5.0
+default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
+
+[node name="not_xor1" type="Line2D" parent="Puzzle2" unique_id=290599805]
+position = Vector2(-4.9999986, 112.49997)
+scale = Vector2(0.99999964, 0.99999964)
+points = PackedVector2Array(725.0002, 251.25008, 758.75024, 251.25008, 758.75024, 191.25008, 802.50024, 191.25008)
+width = 5.0
+default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
+
+[node name="gate3_and1" type="Line2D" parent="Puzzle2" unique_id=854258106]
+position = Vector2(155.00002, 256.24997)
+scale = Vector2(0.99999964, 0.99999964)
+points = PackedVector2Array(785.0001, 171.25006, 701.2501, 171.25006, 701.2501, 248.75006, 565.00006, 248.75006)
+width = 5.0
+default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
+
+[node name="gate2_not" type="Line2D" parent="Puzzle2" unique_id=679720527]
+position = Vector2(-4.999998, 112.49996)
+scale = Vector2(0.9999995, 0.9999995)
+points = PackedVector2Array(566.2502, 248.75008, 640.0002, 248.75008)
+width = 5.0
+default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
+
+[node name="xor1_and1" type="Line2D" parent="Puzzle2" unique_id=748775698]
+position = Vector2(155, 256.24997)
+scale = Vector2(0.9999995, 0.9999995)
+points = PackedVector2Array(788.7502, 143.75006, 753.7502, 143.75006, 753.7503, 35.00003, 720.00024, 35.00003)
+width = 5.0
+default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
+
+[node name="output" type="Line2D" parent="Puzzle2" unique_id=1558682916]
+position = Vector2(154.99998, 257.49997)
+scale = Vector2(0.99999946, 0.99999946)
+points = PackedVector2Array(870.0002, 157.50006, 951.2503, 157.50006)
+width = 5.0
+default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
+
 [node name="gate1_button" type="TextureButton" parent="Puzzle2" unique_id=450184834]
 layout_mode = 0
 offset_left = 472.50006
-offset_top = 178.5
+offset_top = 189.75002
 offset_right = 561.50006
-offset_bottom = 267.5
+offset_bottom = 278.75
 texture_normal = ExtResource("12_avobu")
 texture_hover = ExtResource("4_kfp45")
 texture_focused = ExtResource("5_avobu")
 
 [node name="gate2_button" type="TextureButton" parent="Puzzle2" unique_id=69019916]
 layout_mode = 0
-offset_left = 473.75003
-offset_top = 315.00006
-offset_right = 562.75
-offset_bottom = 404.00006
+offset_left = 473.75006
+offset_top = 317.50003
+offset_right = 562.75006
+offset_bottom = 406.50003
 texture_normal = ExtResource("12_avobu")
 texture_hover = ExtResource("4_kfp45")
 texture_focused = ExtResource("5_avobu")
@@ -319,10 +406,10 @@ texture_focused = ExtResource("5_avobu")
 
 [node name="not_gate1" type="TextureButton" parent="Puzzle2" unique_id=703374586]
 layout_mode = 0
-offset_left = 632.5
-offset_top = 317.50006
-offset_right = 721.5
-offset_bottom = 406.5001
+offset_left = 632.50006
+offset_top = 316.2501
+offset_right = 721.50006
+offset_bottom = 405.25012
 disabled = true
 texture_normal = ExtResource("12_avobu")
 texture_hover = ExtResource("4_kfp45")
@@ -347,6 +434,90 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.8, 0.8)
+
+[node name="input1" type="Line2D" parent="Puzzle3" unique_id=1195477813]
+position = Vector2(-4.999996, -14.999992)
+scale = Vector2(0.99999976, 0.99999976)
+points = PackedVector2Array(401.24997, 236.24998, 482.49994, 236.24998)
+width = 5.0
+default_color = Color(0.76862746, 0.85490197, 1, 1)
+
+[node name="input2" type="Line2D" parent="Puzzle3" unique_id=1055825747]
+position = Vector2(-4.999996, 11.250003)
+scale = Vector2(0.99999976, 0.99999976)
+points = PackedVector2Array(401.24997, 236.24998, 482.49994, 236.24998)
+width = 5.0
+default_color = Color(0.50293607, 0.49347472, 0.54150504, 1)
+
+[node name="input3" type="Line2D" parent="Puzzle3" unique_id=562893797]
+position = Vector2(-4.999999, 112.49998)
+scale = Vector2(0.9999997, 0.9999997)
+points = PackedVector2Array(401.24997, 236.24998, 482.49994, 236.24998)
+width = 5.0
+default_color = Color(0.76862746, 0.85490197, 1, 1)
+
+[node name="input4" type="Line2D" parent="Puzzle3" unique_id=256866379]
+position = Vector2(-4.999999, 138.74998)
+scale = Vector2(0.9999997, 0.9999997)
+points = PackedVector2Array(401.24997, 236.24998, 482.49994, 236.24998)
+width = 5.0
+default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
+
+[node name="input5" type="Line2D" parent="Puzzle3" unique_id=40106452]
+position = Vector2(155.00002, 256.24997)
+scale = Vector2(0.99999964, 0.99999964)
+points = PackedVector2Array(401.24997, 236.24998, 482.49994, 236.24998)
+width = 5.0
+default_color = Color(0.76862746, 0.85490197, 1, 1)
+
+[node name="input6" type="Line2D" parent="Puzzle3" unique_id=1794005744]
+position = Vector2(155.00002, 282.4999)
+scale = Vector2(0.99999964, 0.99999964)
+points = PackedVector2Array(401.24997, 236.24998, 482.49994, 236.24998)
+width = 5.0
+default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
+
+[node name="gate1_xor1" type="Line2D" parent="Puzzle3" unique_id=1375935523]
+position = Vector2(-4.9999986, 112.49997)
+scale = Vector2(0.99999964, 0.99999964)
+points = PackedVector2Array(567.5001, 122.50002, 717.5001, 122.50003, 717.5001, 166.25005, 801.2501, 166.25003)
+width = 5.0
+default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
+
+[node name="not_xor1" type="Line2D" parent="Puzzle3" unique_id=1778131920]
+position = Vector2(-4.999998, 112.49996)
+scale = Vector2(0.9999995, 0.9999995)
+points = PackedVector2Array(725.0002, 251.25008, 758.75024, 251.25008, 758.75024, 191.25008, 802.50024, 191.25008)
+width = 5.0
+default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
+
+[node name="gate3_and1" type="Line2D" parent="Puzzle3" unique_id=1827444614]
+position = Vector2(155, 256.24997)
+scale = Vector2(0.9999995, 0.9999995)
+points = PackedVector2Array(785.0001, 171.25006, 701.2501, 171.25006, 701.2501, 248.75006, 565.00006, 248.75006)
+width = 5.0
+default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
+
+[node name="gate2_not" type="Line2D" parent="Puzzle3" unique_id=2099529435]
+position = Vector2(-4.9999976, 112.499954)
+scale = Vector2(0.99999946, 0.99999946)
+points = PackedVector2Array(566.2502, 248.75008, 640.0002, 248.75008)
+width = 5.0
+default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
+
+[node name="xor1_and1" type="Line2D" parent="Puzzle3" unique_id=2012863588]
+position = Vector2(154.99998, 256.24997)
+scale = Vector2(0.99999946, 0.99999946)
+points = PackedVector2Array(788.7502, 143.75006, 753.7502, 143.75006, 753.7503, 35.00003, 720.00024, 35.00003)
+width = 5.0
+default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
+
+[node name="output" type="Line2D" parent="Puzzle3" unique_id=1812716152]
+position = Vector2(154.99997, 257.49997)
+scale = Vector2(0.9999994, 0.9999994)
+points = PackedVector2Array(870.0002, 157.50006, 951.2503, 157.50006)
+width = 5.0
+default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
 
 [node name="gate1_button" type="TextureButton" parent="Puzzle3" unique_id=556974637]
 layout_mode = 0
@@ -484,10 +655,11 @@ grow_vertical = 2
 color = Color(0.1764706, 0.06666667, 0.19607843, 0.7137255)
 
 [node name="check" type="Sprite2D" parent="Win" unique_id=694024528]
-position = Vector2(636, 287)
+position = Vector2(628, 337)
 texture = ExtResource("9_ef4tm")
 
 [node name="Next" type="TextureButton" parent="Win" unique_id=1789907987]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -503,6 +675,9 @@ grow_vertical = 2
 texture_normal = ExtResource("10_1kyl6")
 texture_pressed = ExtResource("11_55chr")
 texture_hover = ExtResource("12_kfp45")
+
+[node name="Success" type="AudioStreamPlayer" parent="." unique_id=1627362650]
+stream = ExtResource("30_a3tri")
 
 [connection signal="mouse_entered" from="Buttons/HBoxContainer/and_button" to="." method="_on_and_button_mouse_entered"]
 [connection signal="pressed" from="Buttons/HBoxContainer/and_button" to="." method="_on_and_button_pressed"]

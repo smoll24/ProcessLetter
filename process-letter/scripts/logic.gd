@@ -53,8 +53,14 @@ const OFF_COLOR = Color("#A29DB3")
 
 func _ready():
 	_setup_slot_buttons()
-	update_puzzle1_lines()
 	win_message.visible = false
+
+	if Globals.puzzle_phase == 0:
+		update_puzzle1_lines()
+	elif Globals.puzzle_phase == 1:
+		update_puzzle2_lines()
+	elif Globals.puzzle_phase == 2:
+		update_puzzle3_lines()
 	
 func _process(_delta):
 	if Globals.puzzle_phase == 0:
@@ -108,7 +114,13 @@ func _setup_slot_buttons() -> void:
 			slot_buttons[phase][slot] = button
 	
 func set_line_state(line_name: String, value: int) -> void:
-	var line = $Puzzle1.get_node_or_null(line_name)
+	var line
+	if Globals.puzzle_phase == 0:
+		line = $Puzzle1.get_node_or_null(line_name)
+	elif Globals.puzzle_phase == 1:
+		line = $Puzzle2.get_node_or_null(line_name)
+	elif Globals.puzzle_phase == 2:
+		line = $Puzzle3.get_node_or_null(line_name)
 	line.default_color = ON_COLOR if value == 1 else OFF_COLOR
 	
 func update_puzzle1_lines() -> void:
@@ -144,13 +156,54 @@ func update_puzzle1_lines() -> void:
 	var final_output = int(and1 == 1 and g3 == 1)
 	set_line_state("output", final_output)
 	
+func update_puzzle2_lines() -> void:
+	var selected: Dictionary = gate_selections[1]
+	var input1 = 1
+	var input2 = 1
+	var input3 = 1
+	var input4 = 1
+	var input5 = 1
+	var input6 = 0
+	set_line_state("input1", input1)
+	set_line_state("input2", input2)
+	set_line_state("input3", input3)
+	set_line_state("input4", input4)
+	set_line_state("input5", input5)
+	set_line_state("input6", input6)
+	var g1 = 0
+	if selected[1] != "":
+		g1 = evaluate_gate(selected[1], input1, input2)
+	set_line_state("gate1_xor1", g1)
+	var g2 = 0
+	if selected[2] != "":
+		g2 = evaluate_gate(selected[2], input3, input4)
+	set_line_state("gate2_not", g2)
+	var not_g2 = 1 - g2
+	set_line_state("not_xor1", not_g2)
+	var xor1 = int(g1 != not_g2)
+	set_line_state("xor1_and1", xor1)
+	var g3 = 0
+	if selected[3] != "":
+		g3 = evaluate_gate(selected[3], input5, input6)
+	set_line_state("gate3_and1", g3)
+	var final_output = int(xor1 == 1 and g3 == 1)
+	set_line_state("output", final_output)
+
+
+func update_puzzle3_lines() -> void:
+	pass
 
 func update_gate_texture(button: TextureButton, gate: String) -> void:
 	var gate_index = GATE_NAMES.find(gate)
 	button.texture_normal = normal_textures[gate_index]
 	button.texture_hover = hover_textures[gate_index]
 	button.texture_focused = focus_textures[gate_index]
-	update_puzzle1_lines()
+	if Globals.puzzle_phase == 0:
+		update_puzzle1_lines()
+	elif Globals.puzzle_phase == 1:
+		update_puzzle2_lines()
+	elif Globals.puzzle_phase == 2:
+		update_puzzle3_lines()
 
 
 func _on_gate_slot_pressed(slot: int) -> void:
@@ -241,7 +294,8 @@ func _on_check_pressed() -> void:
 	var solution = check_solution()
 	if solution == true:
 		win_message.visible = true
-		Correct.play()
+		$Success.play()
+		Globals.puzzle_step = 2
 	else:
 		win_message.visible = false
 		Incorrect.play()
@@ -253,6 +307,10 @@ func _on_next_pressed() -> void:
 	#Go to workshop
 	#Reset puzzle to network
 	Globals.puzzle_step = 2
+	Globals.in_computer = false
+	Globals.can_move = true
+	Globals.can_talk = true
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	Globals.current_puzzle = "network"
 
 

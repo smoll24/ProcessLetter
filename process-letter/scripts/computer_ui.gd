@@ -40,6 +40,8 @@ func _on_exit_pressed() -> void:
 	Globals.can_move = true
 	Globals.can_talk = true
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+	if Globals.puzzle_step == 2:
+		Globals.current_puzzle = "network"
 
 
 func _on_exit_mouse_entered() -> void:
