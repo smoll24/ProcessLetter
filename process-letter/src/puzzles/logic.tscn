@@ -2,23 +2,42 @@
 
 [ext_resource type="Script" uid="uid://cm24l10iproju" path="res://scripts/logic.gd" id="1_sggxs"]
 [ext_resource type="Texture2D" uid="uid://cqgh4d6k8nw5k" path="res://assets/ui/IMG_1792.PNG" id="2_ajm3p"]
-[ext_resource type="Texture2D" uid="uid://c5w474lomldjs" path="res://assets/puzzles/logic/and_gate.png" id="3_b2828"]
+[ext_resource type="Texture2D" uid="uid://cfhwjgtt286r0" path="res://assets/puzzles/logic/and_normal.png" id="3_55chr"]
 [ext_resource type="Texture2D" uid="uid://dnbsasniy0d2n" path="res://assets/ui/reset_button.PNG" id="3_j81h0"]
 [ext_resource type="Texture2D" uid="uid://dudgobr1b6ulj" path="res://assets/ui/reset_pressed.PNG" id="4_5oa80"]
-[ext_resource type="Texture2D" uid="uid://dlminv3wjodtn" path="res://assets/puzzles/logic/or_gate.png" id="4_dqyc8"]
-[ext_resource type="Texture2D" uid="uid://cm6g1ndq7uk10" path="res://assets/puzzles/logic/xor_gate.png" id="5_07gi4"]
+[ext_resource type="Texture2D" uid="uid://bsjiyyqdegjn0" path="res://assets/puzzles/logic/and_hover.png" id="4_er5ix"]
+[ext_resource type="Texture2D" uid="uid://ds4e17dfhu1dm" path="res://assets/puzzles/logic/emp_hover.png" id="4_kfp45"]
+[ext_resource type="Texture2D" uid="uid://dlspv6pel1ylm" path="res://assets/puzzles/logic/and_selected.png" id="5_a7e6x"]
+[ext_resource type="Texture2D" uid="uid://bfcvibyatqeqj" path="res://assets/puzzles/logic/emp_selected.png" id="5_avobu"]
 [ext_resource type="Texture2D" uid="uid://bh14iwm28nxh3" path="res://assets/ui/reset_hover.PNG" id="5_vphw5"]
+[ext_resource type="Texture2D" uid="uid://cy74x2jak7itp" path="res://assets/puzzles/logic/or_normal.png" id="6_avobu"]
 [ext_resource type="Texture2D" uid="uid://bhcbmvg8w21iv" path="res://assets/ui/cont_button.PNG" id="6_b2828"]
 [ext_resource type="Texture2D" uid="uid://cktxdhbmwqxkh" path="res://assets/puzzles/logic/not_gate.png" id="6_ef4tm"]
+[ext_resource type="Texture2D" uid="uid://cf8pk1jjqfg8d" path="res://assets/puzzles/logic/or_hover.png" id="7_a7e6x"]
 [ext_resource type="Texture2D" uid="uid://dcj5hcvby03df" path="res://assets/ui/cont_pressed.PNG" id="7_dqyc8"]
-[ext_resource type="Texture2D" uid="uid://cndblq64macg8" path="res://assets/puzzles/sudoku/sud02.png" id="7_ef4tm"]
-[ext_resource type="Texture2D" uid="uid://52migum74h7j" path="res://assets/puzzles/sudoku/sud0hover2.png" id="8_1kyl6"]
+[ext_resource type="Texture2D" uid="uid://dvb7gahivhqkl" path="res://assets/puzzles/logic/xor_hover.png" id="7_u8ng4"]
 [ext_resource type="Texture2D" uid="uid://b4aln3aoovnem" path="res://assets/ui/cont_hover.PNG" id="8_07gi4"]
-[ext_resource type="Texture2D" uid="uid://dat0th3s8asia" path="res://assets/puzzles/sudoku/sud0select2.png" id="9_55chr"]
+[ext_resource type="Texture2D" uid="uid://dof5e1gdt4ovn" path="res://assets/puzzles/logic/or_selected.png" id="8_7gm8i"]
 [ext_resource type="Texture2D" uid="uid://cxr5hoswns0hr" path="res://assets/ui/correct.PNG" id="9_ef4tm"]
+[ext_resource type="Texture2D" uid="uid://bhmx5to25jqlt" path="res://assets/puzzles/logic/or_disabled.png" id="9_pde0f"]
+[ext_resource type="Texture2D" uid="uid://cruiy16y2vhg" path="res://assets/puzzles/logic/xor_normal.png" id="9_u8ng4"]
 [ext_resource type="Texture2D" uid="uid://c8ti45wpgxjju" path="res://assets/ui/next_button.PNG" id="10_1kyl6"]
+[ext_resource type="Texture2D" uid="uid://bv2lmkkggqi26" path="res://assets/puzzles/logic/xor_selected.png" id="10_7gm8i"]
 [ext_resource type="Texture2D" uid="uid://d3ma23qi54oad" path="res://assets/ui/next_pressed.PNG" id="11_55chr"]
+[ext_resource type="Texture2D" uid="uid://cx5kinkenlufg" path="res://assets/puzzles/logic/emp_normal.png" id="12_avobu"]
 [ext_resource type="Texture2D" uid="uid://t765jbgj2gl0" path="res://assets/ui/next_hover.PNG" id="12_kfp45"]
+[ext_resource type="Texture2D" uid="uid://ifwjjjlkkg2j" path="res://assets/puzzles/logic/not_disabled.png" id="13_avobu"]
+[ext_resource type="Texture2D" uid="uid://egwctwt08em4" path="res://assets/puzzles/logic/xor_disabled.png" id="14_u8ng4"]
+[ext_resource type="Texture2D" uid="uid://bv02h5afs2fl3" path="res://assets/puzzles/logic/and_disabled.png" id="15_7gm8i"]
+
+[sub_resource type="Theme" id="Theme_ywdb4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ywdb4"]
+bg_color = Color(0, 0, 0, 0.19607843)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="Logic" type="Control" unique_id=1895458848]
 layout_mode = 3
@@ -31,11 +50,19 @@ pivot_offset = Vector2(-341, -46)
 script = ExtResource("1_sggxs")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1841234000]
-visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_ajm3p")
+
+[node name="ColorRect" type="PanelContainer" parent="." unique_id=1937799971]
+layout_mode = 0
+offset_left = 322.0
+offset_top = 481.0
+offset_right = 735.0
+offset_bottom = 608.0
+theme = SubResource("Theme_ywdb4")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ywdb4")
 
 [node name="Buttons" type="Control" parent="." unique_id=2009723331]
 layout_mode = 1
@@ -44,28 +71,39 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_lock_ = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Buttons" unique_id=1642266606]
 layout_mode = 0
-offset_left = 326.0
-offset_top = 541.0
-offset_right = 763.0
-offset_bottom = 587.0
+offset_left = 342.0
+offset_top = 501.0
+offset_right = 713.0
+offset_bottom = 590.0
 theme_override_constants/separation = 50
 
 [node name="and_button" type="TextureButton" parent="Buttons/HBoxContainer" unique_id=2098510271]
 layout_mode = 2
-texture_normal = ExtResource("3_b2828")
+texture_normal = ExtResource("3_55chr")
+texture_hover = ExtResource("4_er5ix")
+texture_disabled = ExtResource("15_7gm8i")
+texture_focused = ExtResource("5_a7e6x")
 
 [node name="or_button" type="TextureButton" parent="Buttons/HBoxContainer" unique_id=240548509]
 layout_mode = 2
-texture_normal = ExtResource("4_dqyc8")
+texture_normal = ExtResource("6_avobu")
+texture_hover = ExtResource("7_a7e6x")
+texture_disabled = ExtResource("9_pde0f")
+texture_focused = ExtResource("8_7gm8i")
 
 [node name="xor_button" type="TextureButton" parent="Buttons/HBoxContainer" unique_id=1256269118]
 layout_mode = 2
-texture_normal = ExtResource("5_07gi4")
+texture_normal = ExtResource("9_u8ng4")
+texture_hover = ExtResource("7_u8ng4")
+texture_disabled = ExtResource("14_u8ng4")
+texture_focused = ExtResource("10_7gm8i")
 
 [node name="not_button" type="TextureButton" parent="Buttons/HBoxContainer" unique_id=196133272]
+visible = false
 layout_mode = 2
 texture_normal = ExtResource("6_ef4tm")
 
@@ -73,61 +111,325 @@ texture_normal = ExtResource("6_ef4tm")
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+scale = Vector2(0.8, 0.8)
+
+[node name="input1" type="Line2D" parent="Puzzle1" unique_id=1221027046]
+position = Vector2(-4.999997, -14.999995)
+scale = Vector2(0.99999994, 0.99999994)
+points = PackedVector2Array(401.24997, 236.24998, 482.49994, 236.24998)
+default_color = Color(0.76862746, 0.85490197, 1, 1)
+
+[node name="input2" type="Line2D" parent="Puzzle1" unique_id=914186494]
+position = Vector2(-4.999997, 11.250003)
+scale = Vector2(0.99999994, 0.99999994)
+points = PackedVector2Array(401.24997, 236.24998, 482.49994, 236.24998)
+default_color = Color(0.50293607, 0.49347472, 0.54150504, 1)
+
+[node name="input3" type="Line2D" parent="Puzzle1" unique_id=1236621085]
+position = Vector2(-5, 112.5)
+scale = Vector2(0.9999998, 0.9999998)
+points = PackedVector2Array(401.24997, 236.24998, 482.49994, 236.24998)
+width = 5.0
+default_color = Color(0.76862746, 0.85490197, 1, 1)
+
+[node name="input4" type="Line2D" parent="Puzzle1" unique_id=1887439374]
+position = Vector2(-5, 138.75)
+scale = Vector2(0.9999998, 0.9999998)
+points = PackedVector2Array(401.24997, 236.24998, 482.49994, 236.24998)
+width = 5.0
+default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
+
+[node name="input5" type="Line2D" parent="Puzzle1" unique_id=1310810827]
+position = Vector2(155.00005, 256.24997)
+scale = Vector2(0.99999976, 0.99999976)
+points = PackedVector2Array(401.24997, 236.24998, 482.49994, 236.24998)
+width = 5.0
+default_color = Color(0.76862746, 0.85490197, 1, 1)
+
+[node name="input6" type="Line2D" parent="Puzzle1" unique_id=516281755]
+position = Vector2(155.00005, 282.49997)
+scale = Vector2(0.99999976, 0.99999976)
+points = PackedVector2Array(401.24997, 236.24998, 482.49994, 236.24998)
+width = 5.0
+default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
+
+[node name="gate1_and1" type="Line2D" parent="Puzzle1" unique_id=1500785414]
+position = Vector2(-4.9999995, 112.49999)
+scale = Vector2(0.99999976, 0.99999976)
+points = PackedVector2Array(567.5001, 122.50002, 717.5001, 122.50003, 717.5001, 166.25005, 801.2501, 166.25003)
+width = 5.0
+default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
+
+[node name="not_and1" type="Line2D" parent="Puzzle1" unique_id=640668370]
+position = Vector2(-4.999999, 112.49998)
+scale = Vector2(0.9999997, 0.9999997)
+points = PackedVector2Array(725.0002, 251.25008, 758.75024, 251.25008, 758.75024, 191.25008, 802.50024, 191.25008)
+width = 5.0
+default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
+
+[node name="gate3_and2" type="Line2D" parent="Puzzle1" unique_id=1119952223]
+position = Vector2(155.00003, 256.24997)
+scale = Vector2(0.9999997, 0.9999997)
+points = PackedVector2Array(785.0001, 171.25006, 701.2501, 171.25006, 701.2501, 248.75006, 565.00006, 248.75006)
+width = 5.0
+default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
+
+[node name="gate2_not" type="Line2D" parent="Puzzle1" unique_id=912597789]
+position = Vector2(-4.9999986, 112.49997)
+scale = Vector2(0.99999964, 0.99999964)
+points = PackedVector2Array(566.2502, 248.75008, 640.0002, 248.75008)
+width = 5.0
+default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
+
+[node name="and1_and2" type="Line2D" parent="Puzzle1" unique_id=1061696210]
+position = Vector2(155.00002, 256.24997)
+scale = Vector2(0.99999964, 0.99999964)
+points = PackedVector2Array(788.7502, 143.75006, 753.7502, 143.75006, 753.7502, 38.75003, 720.0002, 38.75003)
+width = 5.0
+default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
+
+[node name="output" type="Line2D" parent="Puzzle1" unique_id=239170374]
+position = Vector2(155, 257.49997)
+scale = Vector2(0.9999995, 0.9999995)
+points = PackedVector2Array(870.0002, 157.50006, 951.2503, 157.50006)
+width = 5.0
+default_color = Color(0.52156866, 0.50980395, 0.5568628, 1)
 
 [node name="gate1_button" type="TextureButton" parent="Puzzle1" unique_id=568385219]
 layout_mode = 0
-offset_left = 383.0
-offset_top = 196.0
-offset_right = 442.0
-offset_bottom = 255.0
-texture_normal = ExtResource("7_ef4tm")
-texture_hover = ExtResource("8_1kyl6")
-texture_focused = ExtResource("9_55chr")
+offset_left = 472.5
+offset_top = 188.50002
+offset_right = 561.5
+offset_bottom = 277.5
+texture_normal = ExtResource("12_avobu")
+texture_hover = ExtResource("4_kfp45")
+texture_focused = ExtResource("5_avobu")
 
-[node name="gate2_button" type="TextureButton" parent="Puzzle1" unique_id=1858157872]
+[node name="gate2_button" type="TextureButton" parent="Puzzle1" unique_id=1900094640]
 layout_mode = 0
-offset_left = 384.0
-offset_top = 274.0
-offset_right = 443.0
-offset_bottom = 333.0
-texture_normal = ExtResource("7_ef4tm")
-texture_hover = ExtResource("8_1kyl6")
-texture_focused = ExtResource("9_55chr")
+offset_left = 473.75003
+offset_top = 315.00006
+offset_right = 562.75
+offset_bottom = 404.00006
+texture_normal = ExtResource("12_avobu")
+texture_hover = ExtResource("4_kfp45")
+texture_focused = ExtResource("5_avobu")
 
-[node name="gate3_button" type="TextureButton" parent="Puzzle1" unique_id=1236190448]
+[node name="gate3_button" type="TextureButton" parent="Puzzle1" unique_id=168776406]
 layout_mode = 0
-offset_left = 476.0
-offset_top = 381.0
-offset_right = 535.0
-offset_bottom = 440.0
-texture_normal = ExtResource("7_ef4tm")
-texture_hover = ExtResource("8_1kyl6")
-texture_focused = ExtResource("9_55chr")
+offset_left = 635.00006
+offset_top = 460.0
+offset_right = 724.00006
+offset_bottom = 549.0
+texture_normal = ExtResource("12_avobu")
+texture_hover = ExtResource("4_kfp45")
+texture_focused = ExtResource("5_avobu")
 
-[node name="TextureRect" type="TextureRect" parent="Puzzle1" unique_id=518920788]
+[node name="and_gate1" type="TextureButton" parent="Puzzle1" unique_id=67500752]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 792.5
+offset_top = 246.25002
+offset_right = 881.5
+offset_bottom = 335.25
+disabled = true
+texture_normal = ExtResource("12_avobu")
+texture_hover = ExtResource("4_kfp45")
+texture_disabled = ExtResource("15_7gm8i")
+texture_focused = ExtResource("5_avobu")
 
-[node name="Puzzle2" type="Control" parent="." unique_id=440607636]
+[node name="not_gate1" type="TextureButton" parent="Puzzle1" unique_id=293357052]
+layout_mode = 0
+offset_left = 632.5
+offset_top = 317.50006
+offset_right = 721.5
+offset_bottom = 406.5001
+disabled = true
+texture_normal = ExtResource("12_avobu")
+texture_hover = ExtResource("4_kfp45")
+texture_disabled = ExtResource("13_avobu")
+texture_focused = ExtResource("5_avobu")
+
+[node name="and_gate2" type="TextureButton" parent="Puzzle1" unique_id=476937047]
+layout_mode = 0
+offset_left = 938.75006
+offset_top = 367.5
+offset_right = 1027.75
+offset_bottom = 456.5
+disabled = true
+texture_normal = ExtResource("12_avobu")
+texture_hover = ExtResource("4_kfp45")
+texture_disabled = ExtResource("15_7gm8i")
+texture_focused = ExtResource("5_avobu")
+
+[node name="Puzzle2" type="Control" parent="." unique_id=15981725]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+scale = Vector2(0.8, 0.8)
 
-[node name="Puzzle3" type="Control" parent="." unique_id=2014569272]
+[node name="gate1_button" type="TextureButton" parent="Puzzle2" unique_id=450184834]
+layout_mode = 0
+offset_left = 472.50006
+offset_top = 178.5
+offset_right = 561.50006
+offset_bottom = 267.5
+texture_normal = ExtResource("12_avobu")
+texture_hover = ExtResource("4_kfp45")
+texture_focused = ExtResource("5_avobu")
+
+[node name="gate2_button" type="TextureButton" parent="Puzzle2" unique_id=69019916]
+layout_mode = 0
+offset_left = 473.75003
+offset_top = 315.00006
+offset_right = 562.75
+offset_bottom = 404.00006
+texture_normal = ExtResource("12_avobu")
+texture_hover = ExtResource("4_kfp45")
+texture_focused = ExtResource("5_avobu")
+
+[node name="gate3_button" type="TextureButton" parent="Puzzle2" unique_id=998062421]
+layout_mode = 0
+offset_left = 635.00006
+offset_top = 460.0
+offset_right = 724.00006
+offset_bottom = 549.0
+texture_normal = ExtResource("12_avobu")
+texture_hover = ExtResource("4_kfp45")
+texture_focused = ExtResource("5_avobu")
+
+[node name="TextureRect" type="TextureRect" parent="Puzzle2" unique_id=1686185251]
+layout_mode = 0
+offset_left = 17.5
+offset_top = -69.99998
+offset_right = 57.5
+offset_bottom = -29.999977
+
+[node name="xor_gate1" type="TextureButton" parent="Puzzle2" unique_id=1392317339]
+layout_mode = 0
+offset_left = 792.5
+offset_top = 246.25002
+offset_right = 881.5
+offset_bottom = 335.25
+disabled = true
+texture_normal = ExtResource("12_avobu")
+texture_hover = ExtResource("4_kfp45")
+texture_disabled = ExtResource("14_u8ng4")
+texture_focused = ExtResource("5_avobu")
+
+[node name="not_gate1" type="TextureButton" parent="Puzzle2" unique_id=703374586]
+layout_mode = 0
+offset_left = 632.5
+offset_top = 317.50006
+offset_right = 721.5
+offset_bottom = 406.5001
+disabled = true
+texture_normal = ExtResource("12_avobu")
+texture_hover = ExtResource("4_kfp45")
+texture_disabled = ExtResource("13_avobu")
+texture_focused = ExtResource("5_avobu")
+
+[node name="and_gate2" type="TextureButton" parent="Puzzle2" unique_id=1884706349]
+layout_mode = 0
+offset_left = 938.75006
+offset_top = 367.5
+offset_right = 1027.75
+offset_bottom = 456.5
+disabled = true
+texture_normal = ExtResource("12_avobu")
+texture_hover = ExtResource("4_kfp45")
+texture_disabled = ExtResource("15_7gm8i")
+texture_focused = ExtResource("5_avobu")
+
+[node name="Puzzle3" type="Control" parent="." unique_id=20791501]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+scale = Vector2(0.8, 0.8)
 
-[node name="gate4_button" type="TextureButton" parent="Puzzle3" unique_id=150639533]
+[node name="gate1_button" type="TextureButton" parent="Puzzle3" unique_id=556974637]
 layout_mode = 0
-offset_left = 567.0
-offset_top = 414.0
-offset_right = 626.0
-offset_bottom = 473.0
-texture_normal = ExtResource("7_ef4tm")
-texture_hover = ExtResource("8_1kyl6")
-texture_focused = ExtResource("9_55chr")
+offset_left = 472.50006
+offset_top = 148.50005
+offset_right = 561.50006
+offset_bottom = 237.50005
+texture_normal = ExtResource("12_avobu")
+texture_hover = ExtResource("4_kfp45")
+texture_focused = ExtResource("5_avobu")
+
+[node name="gate2_button" type="TextureButton" parent="Puzzle3" unique_id=906185137]
+layout_mode = 0
+offset_left = 473.75006
+offset_top = 255.00008
+offset_right = 562.75006
+offset_bottom = 344.00006
+texture_normal = ExtResource("12_avobu")
+texture_hover = ExtResource("4_kfp45")
+texture_focused = ExtResource("5_avobu")
+
+[node name="TextureRect" type="TextureRect" parent="Puzzle3" unique_id=935220576]
+layout_mode = 0
+offset_left = 17.5
+offset_top = -69.99998
+offset_right = 57.5
+offset_bottom = -29.999977
+
+[node name="xor_gate1" type="TextureButton" parent="Puzzle3" unique_id=1181009589]
+layout_mode = 0
+offset_left = 661.25
+offset_top = 205.0
+offset_right = 750.25
+offset_bottom = 294.0
+disabled = true
+texture_normal = ExtResource("12_avobu")
+texture_hover = ExtResource("4_kfp45")
+texture_disabled = ExtResource("14_u8ng4")
+texture_focused = ExtResource("5_avobu")
+
+[node name="and_gate2" type="TextureButton" parent="Puzzle3" unique_id=1102485314]
+layout_mode = 0
+offset_left = 886.25
+offset_top = 330.0
+offset_right = 975.25
+offset_bottom = 419.0
+disabled = true
+texture_normal = ExtResource("12_avobu")
+texture_hover = ExtResource("4_kfp45")
+texture_disabled = ExtResource("15_7gm8i")
+texture_focused = ExtResource("5_avobu")
+
+[node name="gate3_button" type="TextureButton" parent="Puzzle3" unique_id=708179412]
+layout_mode = 0
+offset_left = 472.50006
+offset_top = 378.5
+offset_right = 561.50006
+offset_bottom = 467.5
+texture_normal = ExtResource("12_avobu")
+texture_hover = ExtResource("4_kfp45")
+texture_focused = ExtResource("5_avobu")
+
+[node name="gate4_button" type="TextureButton" parent="Puzzle3" unique_id=1566671149]
+layout_mode = 0
+offset_left = 473.75006
+offset_top = 485.00006
+offset_right = 562.75006
+offset_bottom = 574.00006
+texture_normal = ExtResource("12_avobu")
+texture_hover = ExtResource("4_kfp45")
+texture_focused = ExtResource("5_avobu")
+
+[node name="and_gate3" type="TextureButton" parent="Puzzle3" unique_id=124596329]
+layout_mode = 0
+offset_left = 658.75006
+offset_top = 433.74994
+offset_right = 747.75006
+offset_bottom = 522.74994
+disabled = true
+texture_normal = ExtResource("12_avobu")
+texture_hover = ExtResource("4_kfp45")
+texture_disabled = ExtResource("15_7gm8i")
+texture_focused = ExtResource("5_avobu")
 
 [node name="Reset" type="TextureButton" parent="." unique_id=2064940379]
 layout_mode = 1
@@ -210,12 +512,18 @@ texture_hover = ExtResource("12_kfp45")
 [connection signal="pressed" from="Buttons/HBoxContainer/not_button" to="." method="_on_not_button_pressed"]
 [connection signal="mouse_entered" from="Puzzle1/gate1_button" to="." method="_on_gate_1_button_mouse_entered"]
 [connection signal="pressed" from="Puzzle1/gate1_button" to="." method="_on_gate_1_button_pressed"]
-[connection signal="mouse_entered" from="Puzzle1/gate2_button" to="." method="_on_gate_2_button_mouse_entered"]
 [connection signal="pressed" from="Puzzle1/gate2_button" to="." method="_on_gate_2_button_pressed"]
-[connection signal="mouse_entered" from="Puzzle1/gate3_button" to="." method="_on_gate_3_button_mouse_entered"]
 [connection signal="pressed" from="Puzzle1/gate3_button" to="." method="_on_gate_3_button_pressed"]
+[connection signal="pressed" from="Puzzle2/gate1_button" to="." method="_on_gate_1_button_pressed"]
+[connection signal="pressed" from="Puzzle2/gate2_button" to="." method="_on_gate_2_button_pressed"]
+[connection signal="pressed" from="Puzzle2/gate3_button" to="." method="_on_gate_3_button_pressed"]
+[connection signal="pressed" from="Puzzle3/gate1_button" to="." method="_on_gate_1_button_pressed"]
+[connection signal="pressed" from="Puzzle3/gate2_button" to="." method="_on_gate_2_button_pressed"]
+[connection signal="pressed" from="Puzzle3/gate3_button" to="." method="_on_gate_3_button_pressed"]
 [connection signal="pressed" from="Puzzle3/gate4_button" to="." method="_on_gate_4_button_pressed"]
+[connection signal="mouse_entered" from="Reset" to="." method="_on_reset_mouse_entered"]
 [connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]
+[connection signal="mouse_entered" from="Check" to="." method="_on_check_mouse_entered"]
 [connection signal="pressed" from="Check" to="." method="_on_check_pressed"]
 [connection signal="mouse_entered" from="Win/Next" to="." method="_on_next_mouse_entered"]
 [connection signal="pressed" from="Win/Next" to="." method="_on_next_pressed"]

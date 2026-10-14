@@ -5,10 +5,9 @@ extends Control
 @onready var and_button = $Buttons/HBoxContainer/and_button
 @onready var or_button = $Buttons/HBoxContainer/or_button
 @onready var xor_button = $Buttons/HBoxContainer/xor_button
-@onready var not_button = $Buttons/HBoxContainer/not_button
 
 const TARGET_OUTPUT = 1
-const GATE_NAMES = ["and", "or", "xor", "not"]
+const GATE_NAMES = ["and", "or", "xor"]
 
 #Instead of drag and drop, do more like Sudoku
 #Click the bottom button of one sets variable to "current" gate
@@ -26,13 +25,35 @@ var gate_selections = {
 	2: {1: "", 2: "", 3: "", 4: ""}
 }
 
+var normal_textures = [
+	preload("res://assets/puzzles/logic/and_normal.png"),
+	preload("res://assets/puzzles/logic/or_normal.png"),
+	preload("res://assets/puzzles/logic/xor_normal.png"),
+]
+
+var hover_textures = [
+	preload("res://assets/puzzles/logic/and_hover.png"),
+	preload("res://assets/puzzles/logic/or_hover.png"),
+	preload("res://assets/puzzles/logic/xor_hover.png"),
+]
+
+var focus_textures = [
+	preload("res://assets/puzzles/logic/and_selected.png"),
+	preload("res://assets/puzzles/logic/or_selected.png"),
+	preload("res://assets/puzzles/logic/xor_selected.png"),
+]
+
 var current_gate: String = ""
 var slot_buttons: Dictionary = {}
 var slot_labels: Dictionary = {}
 
+const ON_COLOR = Color("#304E7E")
+const OFF_COLOR = Color("#A29DB3")
+
 
 func _ready():
 	_setup_slot_buttons()
+	update_puzzle1_lines()
 	win_message.visible = false
 	
 func _process(_delta):
@@ -53,22 +74,18 @@ func _process(_delta):
 		and_button.disabled = true
 		or_button.disabled = false
 		xor_button.disabled = false
-		not_button.disabled = false
 	elif current_gate == "or":
 		and_button.disabled = false
 		or_button.disabled = true
 		xor_button.disabled = false
-		not_button.disabled = false
 	elif current_gate == "xor":
 		and_button.disabled = false
 		or_button.disabled = false
 		xor_button.disabled = true
-		not_button.disabled = false
 	elif current_gate == "not":
 		and_button.disabled = false
 		or_button.disabled = false
 		xor_button.disabled = false
-		not_button.disabled = true
 		
 
 func _setup_slot_buttons() -> void:
@@ -78,8 +95,8 @@ func _setup_slot_buttons() -> void:
 		slot_labels[phase] = {}
 		
 		var slot_count = 3
-		if phase == 4:
-			slot_count = 3
+		if phase == 2:
+			slot_count = 4
 		for slot in range(1, slot_count + 1):
 			var candidates = [
 				"gate%d_button" % slot
@@ -90,6 +107,51 @@ func _setup_slot_buttons() -> void:
 				button = puzzle_node.find_child(candidate, true, false)
 			slot_buttons[phase][slot] = button
 	
+func set_line_state(line_name: String, value: int) -> void:
+	var line = $Puzzle1.get_node_or_null(line_name)
+	line.default_color = ON_COLOR if value == 1 else OFF_COLOR
+	
+func update_puzzle1_lines() -> void:
+	var selected: Dictionary = gate_selections[0]
+	var input1 = 1
+	var input2 = 0
+	var input3 = 1
+	var input4 = 0
+	var input5 = 1
+	var input6 = 0
+	set_line_state("input1", input1)
+	set_line_state("input2", input2)
+	set_line_state("input3", input3)
+	set_line_state("input4", input4)
+	set_line_state("input5", input5)
+	set_line_state("input6", input6)
+	var g1 = 0
+	if selected[1] != "":
+		g1 = evaluate_gate(selected[1], input1, input2)
+	set_line_state("gate1_and1", g1)
+	var g2 = 0
+	if selected[2] != "":
+		g2 = evaluate_gate(selected[2], input3, input4)
+	set_line_state("gate2_not", g2)
+	var not_g2 = 1 - g2
+	set_line_state("not_and1", not_g2)
+	var and1 = int(g1 == 1 and not_g2 == 1)
+	set_line_state("and1_and2", and1)
+	var g3 = 0
+	if selected[3] != "":
+		g3 = evaluate_gate(selected[3], input5, input6)
+	set_line_state("gate3_and2", g3)
+	var final_output = int(and1 == 1 and g3 == 1)
+	set_line_state("output", final_output)
+	
+
+func update_gate_texture(button: TextureButton, gate: String) -> void:
+	var gate_index = GATE_NAMES.find(gate)
+	button.texture_normal = normal_textures[gate_index]
+	button.texture_hover = hover_textures[gate_index]
+	button.texture_focused = focus_textures[gate_index]
+	update_puzzle1_lines()
+
 
 func _on_gate_slot_pressed(slot: int) -> void:
 	Click.play()
@@ -98,8 +160,13 @@ func _on_gate_slot_pressed(slot: int) -> void:
 	
 	var phase = Globals.puzzle_phase
 	gate_selections[phase][slot] = current_gate
+	var button: TextureButton = slot_buttons[phase][slot]
+	update_gate_texture(button, current_gate)
 	
 	current_gate = ""
+	and_button.disabled = false
+	or_button.disabled = false
+	xor_button.disabled = false
 	
 	
 func evaluate_gate(gate: String, a: int, b: int) -> int:
@@ -110,8 +177,6 @@ func evaluate_gate(gate: String, a: int, b: int) -> int:
 			return int(a == 1 or b == 1)
 		"xor":
 			return int(a != b)
-		"not":
-			return int(a == 0)
 		_:
 			return -1
 
@@ -203,11 +268,6 @@ func _on_xor_button_pressed() -> void:
 	Click.play()
 	current_gate = "xor"
 
-func _on_not_button_pressed() -> void:
-	Click.play()
-	current_gate = "not"
-
-
 func _on_gate_1_button_pressed() -> void:
 	_on_gate_slot_pressed(1)
 
@@ -221,4 +281,10 @@ func _on_gate_4_button_pressed() -> void:
 	_on_gate_slot_pressed(4)
 
 func _on_next_mouse_entered() -> void:
+	Hover.play()
+
+func _on_reset_mouse_entered() -> void:
+	Hover.play()
+
+func _on_check_mouse_entered() -> void:
 	Hover.play()
