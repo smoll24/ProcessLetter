@@ -86,7 +86,7 @@ func _process(_delta):
 	else:
 		z_index = 3
 		
-	speech_bubble.z_index = Globals.player_position.y + 1
+	speech_bubble.z_index = 3
 	if is_wandering:
 		velocity = wander_direction * wander_speed
 		move_and_slide()

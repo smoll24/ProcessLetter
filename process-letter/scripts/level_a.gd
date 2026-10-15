@@ -82,6 +82,11 @@ func _on_cutscene_5_body_entered(body: Node2D) -> void:
 			Globals.current_cutscene = 13
 			Globals.in_cutscene = true
 			Globals.cutscenes.append("13")
+	elif body.is_in_group("player") and Globals.status == "post3":
+		if "9" not in Globals.cutscenes:
+			Globals.current_cutscene = 9
+			Globals.in_cutscene = true
+			Globals.cutscenes.append("9")
 
 
 func _on_cutscene_6_body_entered(body: Node2D) -> void:
@@ -103,8 +108,3 @@ func _on_cutscene_8_body_entered(body: Node2D) -> void:
 			Globals.current_cutscene = 8
 			Globals.in_cutscene = true
 			Globals.cutscenes.append("8")
-	elif body.is_in_group("player") and Globals.status == "post3":
-		if "9" not in Globals.cutscenes:
-			Globals.current_cutscene = 9
-			Globals.in_cutscene = true
-			Globals.cutscenes.append("9")
