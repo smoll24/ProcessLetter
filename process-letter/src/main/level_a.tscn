@@ -20,7 +20,9 @@
 [ext_resource type="Texture2D" uid="uid://pon5jb21air1" path="res://assets/bg/IMG_1736.PNG" id="16_yvsej"]
 [ext_resource type="PackedScene" uid="uid://dil5ewllsotai" path="res://src/background/Book.tscn" id="17_rqb8u"]
 [ext_resource type="PackedScene" uid="uid://dj3b8bc4ffmnv" path="res://src/ui/elevator_ui.tscn" id="18_q3b3h"]
+[ext_resource type="Texture2D" uid="uid://c27hovxkxfc7c" path="res://assets/ui/upgrade_sparkle.PNG" id="18_rdf1g"]
 [ext_resource type="PackedScene" uid="uid://c417vx6j6p730" path="res://src/ui/workbench_ui.tscn" id="18_yvsej"]
+[ext_resource type="Script" uid="uid://pylj7ynyvb8u" path="res://scripts/sparkle.gd" id="19_m7qr4"]
 [ext_resource type="PackedScene" uid="uid://bw3ljitjewcl4" path="res://src/ui/pause_ui.tscn" id="21_dvcwm"]
 [ext_resource type="PackedScene" uid="uid://c0nax5i68tmxy" path="res://src/ui/book_ui.tscn" id="22_bi4mk"]
 [ext_resource type="PackedScene" uid="uid://fc8spue341ep" path="res://src/ui/computer_ui.tscn" id="24_lw1of"]
@@ -75,6 +77,7 @@ texture = ExtResource("2_bexj4")
 metadata/_edit_lock_ = true
 
 [node name="OuterLayer" type="Node2D" parent="." unique_id=1467002887]
+visible = false
 metadata/_edit_lock_ = true
 
 [node name="Alevel" type="Sprite2D" parent="OuterLayer" unique_id=1989980623]
@@ -201,7 +204,6 @@ position = Vector2(-1502, 672)
 position = Vector2(3042, 1855)
 
 [node name="InnerLayer" type="Node2D" parent="." unique_id=897240129]
-visible = false
 metadata/_edit_lock_ = true
 
 [node name="Elevator" parent="InnerLayer" unique_id=902053519 instance=ExtResource("10_88hbs")]
@@ -234,6 +236,12 @@ level = 10
 [node name="Teal" parent="InnerLayer/InnerCharacters" unique_id=565516422 instance=ExtResource("5_sr8mx")]
 position = Vector2(3645, 2397)
 level = 10
+
+[node name="Sparkle" type="Sprite2D" parent="InnerLayer" unique_id=715774971]
+position = Vector2(-2865, 4165)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("18_rdf1g")
+script = ExtResource("19_m7qr4")
 
 [node name="Player" parent="." unique_id=701298983 instance=ExtResource("1_dpurt")]
 position = Vector2(-1274, 922)

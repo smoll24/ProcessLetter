@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://bc3xmnxig1sdp" path="res://src/background/plants1.tscn" id="8_53hdk"]
 [ext_resource type="PackedScene" uid="uid://bdincn4gbbh7k" path="res://src/background/Elevator.tscn" id="9_mn7hi"]
 [ext_resource type="PackedScene" uid="uid://cyajikvj7mg2n" path="res://src/characters/pink.tscn" id="12_6xdca"]
+[ext_resource type="Texture2D" uid="uid://c27hovxkxfc7c" path="res://assets/ui/upgrade_sparkle.PNG" id="13_iikl2"]
+[ext_resource type="Script" uid="uid://pylj7ynyvb8u" path="res://scripts/sparkle.gd" id="14_pwtw1"]
 [ext_resource type="PackedScene" uid="uid://g3j5ixhfkttk" path="res://src/characters/bots.tscn" id="15_yktyn"]
 [ext_resource type="PackedScene" uid="uid://dil5ewllsotai" path="res://src/background/Book.tscn" id="17_8qwly"]
 [ext_resource type="PackedScene" uid="uid://r5j5r2hfjn43" path="res://src/characters/player.tscn" id="18_hw075"]
@@ -202,6 +204,12 @@ type = 3
 [node name="Pink" parent="InnerLayer/InnerCharacters" unique_id=213673184 instance=ExtResource("12_6xdca")]
 position = Vector2(1374, 3128)
 level = 32
+
+[node name="Sparkle" type="Sprite2D" parent="InnerLayer" unique_id=1665183058]
+position = Vector2(-2442, 5424)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("13_iikl2")
+script = ExtResource("14_pwtw1")
 
 [node name="Player" parent="." unique_id=1905961577 instance=ExtResource("18_hw075")]
 position = Vector2(-2451, 511)
