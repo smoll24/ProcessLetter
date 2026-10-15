@@ -245,12 +245,6 @@ func _on_button_0_pressed() -> void:
 	change_button_number(0)
 
 
-
-func _on_next_pressed() -> void:
-	Click.play()
-	Globals.current_puzzle = "logic"
-
-
 func _on_reset_pressed() -> void:
 	Click.play()
 	get_tree().reload_current_scene()
@@ -272,6 +266,10 @@ func _on_reset_mouse_entered() -> void:
 
 func _on_check_mouse_entered() -> void:
 	Hover.play()
+
+func _on_next_pressed() -> void:
+	Click.play()
+	Globals.current_puzzle = "logic"
 
 func _on_next_mouse_entered() -> void:
 	Hover.play()

@@ -652,7 +652,10 @@ texture_normal = ExtResource("6_b2828")
 texture_pressed = ExtResource("7_dqyc8")
 texture_hover = ExtResource("8_07gi4")
 
-[node name="Win" type="Control" parent="." unique_id=659368509]
+[node name="Success" type="AudioStreamPlayer" parent="." unique_id=1627362650]
+stream = ExtResource("30_a3tri")
+
+[node name="Win" type="Control" parent="." unique_id=1033158380]
 visible = false
 z_index = 2
 layout_mode = 1
@@ -663,7 +666,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 
-[node name="ColorRect" type="ColorRect" parent="Win" unique_id=166636463]
+[node name="ColorRect" type="ColorRect" parent="Win" unique_id=161311211]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -676,12 +679,11 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.1764706, 0.06666667, 0.19607843, 0.7137255)
 
-[node name="check" type="Sprite2D" parent="Win" unique_id=694024528]
-position = Vector2(628, 337)
+[node name="check" type="Sprite2D" parent="Win" unique_id=1813364472]
+position = Vector2(636, 287)
 texture = ExtResource("9_ef4tm")
 
-[node name="Next" type="TextureButton" parent="Win" unique_id=1789907987]
-visible = false
+[node name="Next" type="TextureButton" parent="Win" unique_id=1643047896]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -697,9 +699,6 @@ grow_vertical = 2
 texture_normal = ExtResource("10_1kyl6")
 texture_pressed = ExtResource("11_55chr")
 texture_hover = ExtResource("12_kfp45")
-
-[node name="Success" type="AudioStreamPlayer" parent="." unique_id=1627362650]
-stream = ExtResource("30_a3tri")
 
 [connection signal="mouse_entered" from="Buttons/HBoxContainer/and_button" to="." method="_on_and_button_mouse_entered"]
 [connection signal="pressed" from="Buttons/HBoxContainer/and_button" to="." method="_on_and_button_pressed"]
