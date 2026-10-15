@@ -11,6 +11,14 @@
 [node name="CutsceneUi" type="CanvasLayer" unique_id=2051133641]
 script = ExtResource("1_3y1y2")
 
+[node name="TextureRect2" type="ColorRect" parent="." unique_id=1564936854]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.11372549, 0.09803922, 0.12156863, 1)
+
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1797491029]
 anchors_preset = 15
 anchor_right = 1.0

@@ -80,6 +80,11 @@ func _on_cutscene_6_body_entered(body: Node2D) -> void:
 			Globals.current_cutscene = 6
 			Globals.in_cutscene = true
 			Globals.cutscenes.append("6")
+	if body.is_in_group("player") and Globals.status == "prog2":
+		if "10" not in Globals.cutscenes:
+			Globals.current_cutscene = 10
+			Globals.in_cutscene = true
+			Globals.cutscenes.append("10")
 
 
 func _on_cutscene_8_body_entered(body: Node2D) -> void:
