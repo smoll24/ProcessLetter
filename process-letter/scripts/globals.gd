@@ -103,6 +103,10 @@ func _process(_delta):
 		phase = 3
 	if pink_convo and blue_convo and purple_convo \
 	and violet_convo and status == "post3":
+		if "11" not in Globals.cutscenes:
+			Globals.current_cutscene = 11
+			Globals.in_cutscene = true
+			Globals.cutscenes.append("11")
 		status = "prog4"
 		print("prog4")
 	if captured > 4 and status == "prog4":

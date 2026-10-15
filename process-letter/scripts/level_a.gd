@@ -72,6 +72,16 @@ func _on_cutscene_5_body_entered(body: Node2D) -> void:
 			Globals.current_cutscene = 5
 			Globals.in_cutscene = true
 			Globals.cutscenes.append("5")
+	elif body.is_in_group("player") and Globals.ending:
+		if "12" not in Globals.cutscenes:
+			Globals.current_cutscene = 12
+			Globals.in_cutscene = true
+			Globals.cutscenes.append("12")
+	elif body.is_in_group("player") and Globals.status == "prog3":
+		if "13" not in Globals.cutscenes:
+			Globals.current_cutscene = 13
+			Globals.in_cutscene = true
+			Globals.cutscenes.append("13")
 
 
 func _on_cutscene_6_body_entered(body: Node2D) -> void:
@@ -80,7 +90,7 @@ func _on_cutscene_6_body_entered(body: Node2D) -> void:
 			Globals.current_cutscene = 6
 			Globals.in_cutscene = true
 			Globals.cutscenes.append("6")
-	if body.is_in_group("player") and Globals.status == "prog2":
+	elif body.is_in_group("player") and Globals.status == "prog2":
 		if "10" not in Globals.cutscenes:
 			Globals.current_cutscene = 10
 			Globals.in_cutscene = true
@@ -93,7 +103,7 @@ func _on_cutscene_8_body_entered(body: Node2D) -> void:
 			Globals.current_cutscene = 8
 			Globals.in_cutscene = true
 			Globals.cutscenes.append("8")
-	if body.is_in_group("player") and Globals.status == "post3":
+	elif body.is_in_group("player") and Globals.status == "post3":
 		if "9" not in Globals.cutscenes:
 			Globals.current_cutscene = 9
 			Globals.in_cutscene = true
