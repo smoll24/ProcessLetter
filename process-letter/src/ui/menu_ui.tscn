@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b46tuer2ide6a"]
 
 [ext_resource type="Script" uid="uid://227vr7jfqqx4" path="res://scripts/menu_ui.gd" id="1_62e2l"]
-[ext_resource type="Texture2D" uid="uid://bccw4idnhsm8d" path="res://assets/ui/IMG_1807.PNG" id="2_6thtj"]
+[ext_resource type="Texture2D" uid="uid://clda6pncktq3q" path="res://assets/ui/IMG_1808.PNG" id="2_6thtj"]
 [ext_resource type="Texture2D" uid="uid://bhcbmvg8w21iv" path="res://assets/ui/cont_button.PNG" id="3_2ym8j"]
 [ext_resource type="Texture2D" uid="uid://dcj5hcvby03df" path="res://assets/ui/cont_pressed.PNG" id="4_6thtj"]
 [ext_resource type="Texture2D" uid="uid://b4aln3aoovnem" path="res://assets/ui/cont_hover.PNG" id="5_vc3gx"]
@@ -12,7 +12,7 @@
 [ext_resource type="Shader" uid="uid://dqu8j2i4bu2bt" path="res://scripts/main.gdshader" id="10_6thtj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rj60s"]
-bg_color = Color(0.3764706, 0.28627452, 0.4392157, 1)
+bg_color = Color(0.21568628, 0.1254902, 0.2784314, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -43,10 +43,10 @@ grow_vertical = 2
 texture = ExtResource("2_6thtj")
 
 [node name="Panel" type="Panel" parent="." unique_id=902881767]
-offset_left = 555.0
-offset_top = 369.0
-offset_right = 726.0
-offset_bottom = 648.0
+offset_left = 582.0
+offset_top = 299.0
+offset_right = 753.0
+offset_bottom = 578.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_rj60s")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=235345106]
@@ -55,10 +55,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -54.0
-offset_top = 29.0
-offset_right = 55.0
-offset_bottom = 261.0
+offset_left = -25.0
+offset_top = -41.0
+offset_right = 84.0
+offset_bottom = 191.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 30
@@ -98,6 +98,7 @@ visible = false
 layer = 3
 
 [node name="ColorRect2" type="ColorRect" parent="CanvasLayer" unique_id=1337958959]
+visible = false
 modulate = Color(1, 1, 1, 0.3647059)
 material = SubResource("ShaderMaterial_vc3gx")
 anchors_preset = 15
