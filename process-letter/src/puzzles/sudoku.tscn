@@ -72,11 +72,10 @@ offset_bottom = 720.0
 texture = ExtResource("2_lakng")
 
 [node name="GridContainer2" type="GridContainer" parent="." unique_id=572933596]
-visible = false
 layout_mode = 0
-offset_left = 296.00003
+offset_left = 299.00003
 offset_top = 107.00001
-offset_right = 859.0
+offset_right = 862.0
 offset_bottom = 670.0
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
@@ -173,6 +172,7 @@ layout_mode = 2
 texture_normal = ExtResource("2_tf1j2")
 
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=1623676056]
+visible = false
 modulate = Color(0.8776157, 0.8776158, 0.8776157, 1)
 layout_mode = 0
 offset_left = 295.0

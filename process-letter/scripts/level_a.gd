@@ -5,7 +5,6 @@ extends Node2D
 
 @onready var elevator_block = $Collisions/Elevator_Block/CollisionShape2D
 
-
 func _ready():
 	if Globals.status == "pre1":
 		Globals.current_cutscene = 1
