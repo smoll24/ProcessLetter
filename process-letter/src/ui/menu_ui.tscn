@@ -9,8 +9,20 @@
 [ext_resource type="Texture2D" uid="uid://dq7f3e4isdx8s" path="res://assets/ui/options_pressed.PNG" id="7_hyxes"]
 [ext_resource type="Texture2D" uid="uid://j4wks7a53p26" path="res://assets/ui/options_hover.PNG" id="8_tiwus"]
 [ext_resource type="PackedScene" uid="uid://850fwgvr48e0" path="res://src/ui/options_ui.tscn" id="9_2ym8j"]
+[ext_resource type="Shader" uid="uid://dqu8j2i4bu2bt" path="res://scripts/main.gdshader" id="10_6thtj"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_rj60s"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vc3gx"]
+resource_local_to_scene = true
+shader = ExtResource("10_6thtj")
+shader_parameter/crt_enabled = true
+shader_parameter/scanLineFac = 0.1
+shader_parameter/scanLineWidth = 0.25
+shader_parameter/nearestFac = 0.0
+shader_parameter/linearFac = 1.3
+shader_parameter/aberration_enabled = true
+shader_parameter/aberrationFac = 0.001
 
 [node name="Menu_ui" type="CanvasLayer" unique_id=946832688]
 script = ExtResource("1_62e2l")
@@ -66,6 +78,22 @@ grow_vertical = 2
 texture = SubResource("CanvasTexture_rj60s")
 
 [node name="OptionsUi" parent="." unique_id=4295411 instance=ExtResource("9_2ym8j")]
+visible = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=171553824]
+layer = 3
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer" unique_id=1337958959]
+modulate = Color(1, 1, 1, 0.3647059)
+material = SubResource("ShaderMaterial_vc3gx")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
 
 [connection signal="mouse_entered" from="VBoxContainer/Start" to="." method="_on_start_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]

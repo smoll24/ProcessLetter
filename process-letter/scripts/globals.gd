@@ -12,6 +12,9 @@ var options = false
 
 var ending = false
 
+var music_volume: float = 0.0
+var sounds_volume: float = 0.0
+
 var interactions = {"purple":["post3"], "pink":["post3"],"blue":["post3"],
 "teal":[],"violet":["post3"], "workbench":["prog1","prog2","prog3"],
 "computer":["prog1","prog2","prog3","post4"]}

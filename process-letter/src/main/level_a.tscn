@@ -470,7 +470,7 @@ color = Color(0.62194973, 0.6769522, 0.43161327, 1)
 metadata/_edit_lock_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=463526421]
-layer = 2
+layer = 3
 
 [node name="ColorRect2" type="ColorRect" parent="CanvasLayer" unique_id=2071225237]
 modulate = Color(1, 1, 1, 0.3647059)

@@ -334,7 +334,7 @@ modulate = Color(1, 1, 1, 0.34901962)
 color = Color(0.776341, 0.56361747, 0.7588149, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=133757095]
-layer = 2
+layer = 3
 
 [node name="ColorRect2" type="ColorRect" parent="CanvasLayer" unique_id=606373516]
 modulate = Color(1, 1, 1, 0.3647059)

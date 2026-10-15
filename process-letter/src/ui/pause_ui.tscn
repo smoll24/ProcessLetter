@@ -12,6 +12,7 @@
 
 [node name="Pause_ui" type="CanvasLayer" unique_id=1606086596]
 process_mode = 3
+layer = 2
 script = ExtResource("1_ndwa6")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=855303453]
@@ -62,6 +63,7 @@ texture_pressed = ExtResource("7_dgnf2")
 texture_hover = ExtResource("8_uuxfn")
 
 [node name="OptionsUi" parent="." unique_id=4295411 instance=ExtResource("9_opghh")]
+layer = 3
 visible = false
 
 [connection signal="mouse_entered" from="VBoxContainer/Unpause" to="." method="_on_unpause_mouse_entered"]

@@ -14,11 +14,11 @@ func _ready():
 func _process(_delta: float) -> void:
 	if self.visible:
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-		AudioServer.set_bus_volume_db(music, -15)
-		AudioServer.set_bus_volume_db(sounds, -15)
+		AudioServer.set_bus_volume_db(music, Globals.music_volume - 15)
+		AudioServer.set_bus_volume_db(sounds, Globals.sounds_volume - 15)
 	else: 
-		AudioServer.set_bus_volume_db(music, 0.0)
-		AudioServer.set_bus_volume_db(sounds, 0.0)
+		AudioServer.set_bus_volume_db(music, Globals.music_volume)
+		AudioServer.set_bus_volume_db(sounds, Globals.sounds_volume)
 	
 	if Globals.options and options_screen != null:
 		options_screen.visible = true

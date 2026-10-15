@@ -16,20 +16,30 @@ func _input(event):
 			if Globals.options:
 				Globals.options = false
 
+
 func init_slider(bus_name: String, slider_name: String) -> void:
 	var bus_index: int = AudioServer.get_bus_index(bus_name)
 	var slider: HSlider = get_node(slider_name)
-	
+
+	slider.min_value = -50.0
+	slider.max_value = 0.0
+	slider.step = 1.0
+
 	var db_val: float = AudioServer.get_bus_volume_db(bus_index)
-	slider.value = db_to_linear(db_val)
-	
+	slider.value = clampf(db_val, -50.0, 0.0)
+
 	slider.value_changed.connect(func(val: float) -> void:
 		_on_volume_changed(val, bus_index)
 	)
 
-func _on_volume_changed(linear_value: float, bus_index: int) -> void:
-	var db_value: float = linear_to_db(linear_value)
+func _on_volume_changed(db_value: float, bus_index: int) -> void:
 	AudioServer.set_bus_volume_db(bus_index, db_value)
+	var bus_name = AudioServer.get_bus_name(bus_index)
+
+	if bus_name == "Music":
+		Globals.music_volume = db_value
+	elif bus_name == "Sound":
+		Globals.sounds_volume = db_value
 
 
 func _on_exit_pressed() -> void:
