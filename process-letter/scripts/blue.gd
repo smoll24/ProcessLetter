@@ -56,13 +56,13 @@ func _ready() -> void:
 			#Corridor away from purple/violet
 			self.global_position = Vector2(793.0, 1398.0)
 	elif Globals.status == "post3":
-		if level == 1:
-			#Outside office
-			self.global_position = Vector2(-1122.0, 5303.0)
+		if level == 0:
+			#Outside Green's office
+			self.global_position = Vector2(-284.0, 727.0)
 	elif Globals.status == "prog4":
-		if level == 1:
-			#Outside office
-			self.global_position = Vector2(-1122.0, 5303.0)
+		if level == 0:
+			#Outside Green's office
+			self.global_position = Vector2(-284.0, 727.0)
 	elif Globals.status == "post4":
 		if level == 0:
 			#Corridor left
