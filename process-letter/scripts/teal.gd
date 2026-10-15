@@ -45,11 +45,11 @@ func _ready() -> void:
 	if Globals.status == "pre1":
 		if level == 10:
 			#HCD Lab
-			self.global_position = Vector2(-2574.0, 3914.0)
+			self.global_position = Vector2(-2433.0, 4167.0)
 	elif Globals.status == "prog1":
 		if level == 10:
 			#HCD Lab
-			self.global_position = Vector2(-2574.0, 3914.0)
+			self.global_position = Vector2(-2433.0, 4167.0)
 	elif Globals.status == "pre2":
 		if level == 0:
 			#Outside green office
@@ -65,7 +65,7 @@ func _ready() -> void:
 	elif Globals.status == "prog3":
 		if level == 10:
 			#HCD Lab
-			self.global_position = Vector2(-2574.0, 3914.0)
+			self.global_position = Vector2(-2433.0, 4167.0)
 	elif Globals.status == "post3":
 		if level == 0:
 			#Outside HCD

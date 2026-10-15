@@ -160,7 +160,7 @@ animations = [{
 size = Vector2(44.5, 66.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_obkwi"]
-size = Vector2(164, 211)
+size = Vector2(178, 228)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ycunb"]
 animations = [{
@@ -207,10 +207,9 @@ position = Vector2(0.75, 65.25)
 shape = SubResource("RectangleShape2D_ywdb4")
 
 [node name="Interact_area" type="Area2D" parent="." unique_id=1817894822]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interact_area" unique_id=1196227904]
-position = Vector2(-3, -0.5)
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_obkwi")
 
 [node name="Indicator2" type="AnimatedSprite2D" parent="." unique_id=506771925]

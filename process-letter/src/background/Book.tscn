@@ -36,7 +36,7 @@ script = ExtResource("1_5eaaj")
 [node name="Interact_area" type="Area2D" parent="." unique_id=1474680225]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interact_area" unique_id=1020525234]
-position = Vector2(-3.5, 21.5)
+position = Vector2(16, 20)
 shape = SubResource("RectangleShape2D_jgoxw")
 
 [node name="Indicator_old" type="Label" parent="." unique_id=939208964]

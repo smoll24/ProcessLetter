@@ -77,7 +77,6 @@ texture = ExtResource("2_bexj4")
 metadata/_edit_lock_ = true
 
 [node name="OuterLayer" type="Node2D" parent="." unique_id=1467002887]
-visible = false
 metadata/_edit_lock_ = true
 
 [node name="Alevel" type="Sprite2D" parent="OuterLayer" unique_id=1989980623]
@@ -204,6 +203,7 @@ position = Vector2(-1502, 672)
 position = Vector2(3042, 1855)
 
 [node name="InnerLayer" type="Node2D" parent="." unique_id=897240129]
+visible = false
 metadata/_edit_lock_ = true
 
 [node name="Elevator" parent="InnerLayer" unique_id=902053519 instance=ExtResource("10_88hbs")]
@@ -217,28 +217,28 @@ position = Vector2(248, 326)
 type = 1
 
 [node name="Book1" parent="InnerLayer" unique_id=348016050 instance=ExtResource("17_rqb8u")]
-position = Vector2(-2735, 3953)
+position = Vector2(-2566, 3845)
 
 [node name="Book2" parent="InnerLayer" unique_id=638705684 instance=ExtResource("17_rqb8u")]
-position = Vector2(-2167, 4091)
+position = Vector2(-2723, 4372)
 type = 1
 
 [node name="InnerCharacters" type="Node2D" parent="InnerLayer" unique_id=1482933499]
 
 [node name="Violet" parent="InnerLayer/InnerCharacters" unique_id=864046172 instance=ExtResource("6_3dueu")]
-position = Vector2(3634, 2804)
+position = Vector2(3096, 3329)
 level = 10
 
 [node name="Purple" parent="InnerLayer/InnerCharacters" unique_id=941100547 instance=ExtResource("2_waa7u")]
-position = Vector2(3877, 2558)
+position = Vector2(3089, 2794)
 level = 10
 
 [node name="Teal" parent="InnerLayer/InnerCharacters" unique_id=565516422 instance=ExtResource("5_sr8mx")]
-position = Vector2(3645, 2397)
+position = Vector2(3239, 3106)
 level = 10
 
 [node name="Sparkle" type="Sprite2D" parent="InnerLayer" unique_id=715774971]
-position = Vector2(-2865, 4165)
+position = Vector2(-2625, 4614)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("18_rdf1g")
 script = ExtResource("19_m7qr4")
@@ -317,7 +317,6 @@ position = Vector2(-1055, 2248)
 position = Vector2(496, 2248)
 
 [node name="Collisions" type="Node2D" parent="." unique_id=1046833520]
-visible = false
 metadata/_edit_lock_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Collisions" unique_id=455011079]
@@ -390,7 +389,7 @@ polygon = PackedVector2Array(-776, 1735, -618, 1639, -436, 1562, -249, 1543, -93
 [node name="StaticBody2D2" type="StaticBody2D" parent="Collisions" unique_id=1397742214]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions/StaticBody2D2" unique_id=838231144]
-polygon = PackedVector2Array(-3602, 3805, -2338, 3801, -2336, 3846, -2741, 3851, -2759, 4474, -1771, 4465, -1775, 3853, -2185, 3845, -2185, 3791, -1739, 3799, -1744, 4772, -3590, 4758)
+polygon = PackedVector2Array(-3602, 3805, -2326, 3795, -2326, 3832, -2523, 3839, -2522, 3942, -2543, 4016, -2611, 4021, -2613, 4073, -2656, 4081, -2660, 4304, -2667, 4328, -2667, 4568, -2362, 4571, -2372, 3959, -2115, 3961, -2114, 3833, -2192, 3832, -2192, 3796, -1739, 3799, -1744, 4772, -3590, 4758)
 
 [node name="Elevator_Block" type="StaticBody2D" parent="Collisions" unique_id=342137819]
 
@@ -421,7 +420,7 @@ polygon = PackedVector2Array(-251, 164, -76, 160, -72, 623, 1420, 609, 1346, 576
 position = Vector2(-300, 1413)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cutscenes/Cutscene2" unique_id=1839221217]
-position = Vector2(-1957, 2561)
+position = Vector2(-1976, 2589)
 shape = SubResource("RectangleShape2D_ywdb4")
 
 [node name="Cutscene3" type="Area2D" parent="Cutscenes" unique_id=811034]
