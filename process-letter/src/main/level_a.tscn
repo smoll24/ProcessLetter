@@ -451,7 +451,6 @@ visible = false
 visible = false
 
 [node name="Pause_ui" parent="." unique_id=1606086596 instance=ExtResource("21_dvcwm")]
-visible = false
 
 [node name="Book_ui" parent="." unique_id=1141313864 instance=ExtResource("22_bi4mk")]
 visible = false
@@ -471,6 +470,7 @@ color = Color(0.62194973, 0.6769522, 0.43161327, 1)
 metadata/_edit_lock_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=463526421]
+layer = 2
 
 [node name="ColorRect2" type="ColorRect" parent="CanvasLayer" unique_id=2071225237]
 modulate = Color(1, 1, 1, 0.3647059)

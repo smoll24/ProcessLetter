@@ -2,7 +2,8 @@ extends CanvasLayer
 
 @onready var resume_button = $VBoxContainer/Unpause
 
-@onready var options_screen = $VBoxContainer/Options
+@onready var options_screen = $OptionsUi
+
 
 var music: int = AudioServer.get_bus_index("Music")
 var sounds: int = AudioServer.get_bus_index("Sounds")
@@ -18,6 +19,11 @@ func _process(_delta: float) -> void:
 	else: 
 		AudioServer.set_bus_volume_db(music, 0.0)
 		AudioServer.set_bus_volume_db(sounds, 0.0)
+	
+	if Globals.options and options_screen != null:
+		options_screen.visible = true
+	else:
+		options_screen.visible = false
 		
 
 func _input(event):
@@ -41,8 +47,7 @@ func _on_unpause_pressed() -> void:
 
 func _on_options_pressed() -> void:
 	Click.play()
-	#options_screen.open()
-	#visible = false
+	Globals.options = true
 
 
 func _on_unpause_mouse_entered() -> void:

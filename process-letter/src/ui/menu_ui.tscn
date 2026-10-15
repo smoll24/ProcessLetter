@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bctq147cokp7a" path="res://assets/ui/options_button.PNG" id="6_p0yao"]
 [ext_resource type="Texture2D" uid="uid://dq7f3e4isdx8s" path="res://assets/ui/options_pressed.PNG" id="7_hyxes"]
 [ext_resource type="Texture2D" uid="uid://j4wks7a53p26" path="res://assets/ui/options_hover.PNG" id="8_tiwus"]
+[ext_resource type="PackedScene" uid="uid://850fwgvr48e0" path="res://src/ui/options_ui.tscn" id="9_2ym8j"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_rj60s"]
 
@@ -63,6 +64,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("CanvasTexture_rj60s")
+
+[node name="OptionsUi" parent="." unique_id=4295411 instance=ExtResource("9_2ym8j")]
 
 [connection signal="mouse_entered" from="VBoxContainer/Start" to="." method="_on_start_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]

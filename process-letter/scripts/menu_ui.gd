@@ -2,6 +2,7 @@ extends CanvasLayer
 
 @onready var start_button = $VBoxContainer/Start
 @onready var loading_screen = $Loading
+@onready var options_screen = $OptionsUi
 
 func _ready():
 	MenuBg.play()
@@ -10,6 +11,12 @@ func _ready():
 	
 	loading_screen.modulate.a = 0.0
 	loading_screen.visible = false
+	
+func _process(delta: float) -> void:
+	if Globals.options:
+		options_screen.visible = true
+	else:
+		options_screen.visible = false
 
 
 func _on_start_pressed() -> void:
@@ -25,6 +32,7 @@ func _on_start_pressed() -> void:
 
 func _on_options_pressed() -> void:
 	Click.play()
+	Globals.options = true
 
 func _on_start_mouse_entered() -> void:
 	Hover.play()

@@ -4,10 +4,11 @@ var can_move = true
 var can_talk = true
 #0,1,2,3
 var puzzle_phase = 0
-var status = "prog4"
+var status = "pre1"
 #1,2,3
 var phase:int
 var in_room = true
+var options = false
 
 var ending = false
 

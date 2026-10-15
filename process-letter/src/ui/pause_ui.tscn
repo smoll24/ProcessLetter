@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bctq147cokp7a" path="res://assets/ui/options_button.PNG" id="6_su2o2"]
 [ext_resource type="Texture2D" uid="uid://dq7f3e4isdx8s" path="res://assets/ui/options_pressed.PNG" id="7_dgnf2"]
 [ext_resource type="Texture2D" uid="uid://j4wks7a53p26" path="res://assets/ui/options_hover.PNG" id="8_uuxfn"]
+[ext_resource type="PackedScene" uid="uid://850fwgvr48e0" path="res://src/ui/options_ui.tscn" id="9_opghh"]
 
 [node name="Pause_ui" type="CanvasLayer" unique_id=1606086596]
 process_mode = 3
@@ -59,6 +60,9 @@ layout_mode = 2
 texture_normal = ExtResource("6_su2o2")
 texture_pressed = ExtResource("7_dgnf2")
 texture_hover = ExtResource("8_uuxfn")
+
+[node name="OptionsUi" parent="." unique_id=4295411 instance=ExtResource("9_opghh")]
+visible = false
 
 [connection signal="mouse_entered" from="VBoxContainer/Unpause" to="." method="_on_unpause_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/Unpause" to="." method="_on_unpause_pressed"]
