@@ -122,7 +122,6 @@ texture = ExtResource("2_w6u08")
 metadata/_edit_lock_ = true
 
 [node name="OuterLayer" type="Node2D" parent="." unique_id=1467002887]
-visible = false
 
 [node name="3level" type="Sprite2D" parent="OuterLayer" unique_id=1989980623]
 position = Vector2(-1419.0001, 3008.0002)
@@ -185,7 +184,7 @@ level = 3
 position = Vector2(-1141, 277)
 
 [node name="Bots2" parent="OuterLayer/OutBots" unique_id=1817324579 instance=ExtResource("15_yktyn")]
-position = Vector2(-1921, 4821.5)
+position = Vector2(-1436, 2909)
 
 [node name="Bots3" parent="OuterLayer/OutBots" unique_id=872997564 instance=ExtResource("15_yktyn")]
 position = Vector2(-722, 4964.5)
@@ -193,7 +192,7 @@ position = Vector2(-722, 4964.5)
 [node name="InnerLayer" type="Node2D" parent="." unique_id=897240129]
 
 [node name="Elevator" parent="InnerLayer" unique_id=902053519 instance=ExtResource("9_mn7hi")]
-position = Vector2(-2461, 546)
+position = Vector2(-2515, 468)
 
 [node name="Book" parent="InnerLayer" unique_id=348016050 instance=ExtResource("17_8qwly")]
 position = Vector2(-2848, 5098)
@@ -212,7 +211,7 @@ texture = ExtResource("13_iikl2")
 script = ExtResource("14_pwtw1")
 
 [node name="Player" parent="." unique_id=1905961577 instance=ExtResource("18_hw075")]
-position = Vector2(-2451, 511)
+position = Vector2(-2359, 452)
 
 [node name="Lights" type="Node2D" parent="." unique_id=105868944]
 visible = false
