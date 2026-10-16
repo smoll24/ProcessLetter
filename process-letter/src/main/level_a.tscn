@@ -217,7 +217,6 @@ bot_id = 3
 metadata/_edit_lock_ = true
 
 [node name="Book" parent="InnerLayer" unique_id=1891796453 instance=ExtResource("17_rqb8u")]
-z_index = 3
 position = Vector2(-2607, 4564)
 type = 4
 
@@ -232,11 +231,9 @@ position = Vector2(248, 326)
 type = 1
 
 [node name="Book1" parent="InnerLayer" unique_id=348016050 instance=ExtResource("17_rqb8u")]
-z_index = 3
 position = Vector2(-2562, 3830)
 
 [node name="Book2" parent="InnerLayer" unique_id=638705684 instance=ExtResource("17_rqb8u")]
-z_index = 3
 position = Vector2(-2717, 4316)
 type = 1
 
@@ -247,7 +244,7 @@ position = Vector2(3096, 3329)
 level = 10
 
 [node name="Purple" parent="InnerLayer/InnerCharacters" unique_id=941100547 instance=ExtResource("2_waa7u")]
-position = Vector2(2906, 2786)
+position = Vector2(3123, 3806)
 level = 10
 
 [node name="Teal" parent="InnerLayer/InnerCharacters" unique_id=565516422 instance=ExtResource("5_sr8mx")]
@@ -407,7 +404,7 @@ polygon = PackedVector2Array(-776, 1735, -618, 1639, -436, 1562, -249, 1543, -93
 [node name="StaticBody2D2" type="StaticBody2D" parent="Collisions" unique_id=1397742214]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions/StaticBody2D2" unique_id=838231144]
-polygon = PackedVector2Array(-3602, 3805, -2326, 3795, -2326, 3832, -2523, 3839, -2522, 3942, -2543, 4016, -2611, 4021, -2613, 4073, -2656, 4081, -2660, 4304, -2667, 4328, -2669, 4522, -2414, 4521, -2412, 4570, -2291, 4569, -2295, 4455, -2366, 4456, -2365, 4184, -2369, 4140, -2372, 3959, -2115, 3961, -2114, 3833, -2192, 3832, -2192, 3796, -1739, 3799, -1744, 4772, -3590, 4758)
+polygon = PackedVector2Array(-3602, 3805, -2326, 3795, -2326, 3832, -2523, 3839, -2522, 3942, -2543, 4016, -2611, 4021, -2613, 4073, -2656, 4081, -2660, 4304, -2667, 4328, -2669, 4522, -2414, 4521, -2412, 4570, -2291, 4569, -2295, 4455, -2366, 4456, -2365, 4184, -2369, 4140, -2372, 3959, -2101, 3961, -2104, 4030, -2176, 4034, -2180, 4574, -2111, 4570, -2110, 4073, -2114, 3833, -2192, 3832, -2192, 3796, -1739, 3799, -1744, 4772, -3590, 4758)
 
 [node name="Elevator_Block" type="StaticBody2D" parent="Collisions" unique_id=342137819]
 

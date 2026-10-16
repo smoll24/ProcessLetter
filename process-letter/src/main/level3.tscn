@@ -201,7 +201,6 @@ position = Vector2(-667, 4950)
 bot_id = 9
 
 [node name="InnerLayer" type="Node2D" parent="." unique_id=897240129]
-visible = false
 
 [node name="Elevator" parent="InnerLayer" unique_id=902053519 instance=ExtResource("9_mn7hi")]
 position = Vector2(-2515, 468)
@@ -213,7 +212,7 @@ type = 3
 [node name="InnerCharacters" type="Node2D" parent="InnerLayer" unique_id=1895807071]
 
 [node name="Pink" parent="InnerLayer/InnerCharacters" unique_id=213673184 instance=ExtResource("12_6xdca")]
-position = Vector2(-2726, 5246)
+position = Vector2(1418, 3674)
 level = 32
 
 [node name="Sparkle" type="Sprite2D" parent="InnerLayer" unique_id=1665183058]
