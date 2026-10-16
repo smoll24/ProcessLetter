@@ -3,7 +3,10 @@
 [ext_resource type="Script" uid="uid://227vr7jfqqx4" path="res://scripts/menu_ui.gd" id="1_62e2l"]
 [ext_resource type="Texture2D" uid="uid://clda6pncktq3q" path="res://assets/ui/IMG_1808.PNG" id="2_6thtj"]
 [ext_resource type="Texture2D" uid="uid://bhcbmvg8w21iv" path="res://assets/ui/cont_button.PNG" id="3_2ym8j"]
+[ext_resource type="Texture2D" uid="uid://di2j0jjlrfljd" path="res://assets/ui/contcont_normal.png" id="3_hyxes"]
 [ext_resource type="Texture2D" uid="uid://dcj5hcvby03df" path="res://assets/ui/cont_pressed.PNG" id="4_6thtj"]
+[ext_resource type="Texture2D" uid="uid://c7y2wbqdxkreu" path="res://assets/ui/contcont_pressed.png" id="4_tiwus"]
+[ext_resource type="Texture2D" uid="uid://dn4yo0s4ddcq0" path="res://assets/ui/contcont_hover.png" id="5_qxc6j"]
 [ext_resource type="Texture2D" uid="uid://b4aln3aoovnem" path="res://assets/ui/cont_hover.PNG" id="5_vc3gx"]
 [ext_resource type="Texture2D" uid="uid://bctq147cokp7a" path="res://assets/ui/options_button.PNG" id="6_p0yao"]
 [ext_resource type="Texture2D" uid="uid://dq7f3e4isdx8s" path="res://assets/ui/options_pressed.PNG" id="7_hyxes"]
@@ -44,9 +47,9 @@ texture = ExtResource("2_6thtj")
 
 [node name="Panel" type="Panel" parent="." unique_id=902881767]
 offset_left = 582.0
-offset_top = 299.0
+offset_top = 268.0
 offset_right = 753.0
-offset_bottom = 578.0
+offset_bottom = 692.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_rj60s")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=235345106]
@@ -56,9 +59,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -25.0
-offset_top = -41.0
+offset_top = -66.5
 offset_right = 84.0
-offset_bottom = 191.0
+offset_bottom = 296.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 30
@@ -68,6 +71,14 @@ visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "INCREDIBLE GAME TITLE WOW"
+
+[node name="Cont" type="TextureButton" parent="VBoxContainer" unique_id=788444224]
+layout_mode = 2
+disabled = true
+texture_normal = ExtResource("3_hyxes")
+texture_pressed = ExtResource("4_tiwus")
+texture_hover = ExtResource("5_qxc6j")
+texture_disabled = ExtResource("4_tiwus")
 
 [node name="Start" type="TextureButton" parent="VBoxContainer" unique_id=246869094]
 layout_mode = 2
@@ -110,6 +121,8 @@ mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 metadata/_edit_lock_ = true
 
+[connection signal="focus_entered" from="VBoxContainer/Cont" to="." method="_on_cont_focus_entered"]
+[connection signal="pressed" from="VBoxContainer/Cont" to="." method="_on_cont_pressed"]
 [connection signal="mouse_entered" from="VBoxContainer/Start" to="." method="_on_start_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="mouse_entered" from="VBoxContainer/Options" to="." method="_on_options_mouse_entered"]

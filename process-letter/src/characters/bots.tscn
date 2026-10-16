@@ -113,7 +113,7 @@ script = ExtResource("1_b0rwi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=143158568]
 sprite_frames = SubResource("SpriteFrames_rj60s")
-animation = &"3_front_idle"
+animation = &"2_front_idle"
 autoplay = "1_front_idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=781260810]

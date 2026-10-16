@@ -31,7 +31,6 @@ var cutscenes = {1: ["res://assets/cutscenes/1/1a.png",
 	"res://assets/cutscenes/7/7d.png"],
 	7: ["res://assets/cutscenes/8/8a.png",
 	"res://assets/cutscenes/8/8b.png",
-	"res://assets/cutscenes/8/8c.png",
 	"res://assets/cutscenes/8/8d.png"],
 	9: ["res://assets/cutscenes/9/9a.png",
 	"res://assets/cutscenes/9/9b.png",
@@ -42,8 +41,7 @@ var cutscenes = {1: ["res://assets/cutscenes/1/1a.png",
 	"res://assets/cutscenes/9/9g.png",
 	"res://assets/cutscenes/9/9h.png",
 	"res://assets/cutscenes/9/9j.png",
-	"res://assets/cutscenes/9/9k.png",
-	#"res://assets/cutscenes/9/9l.png",
+	"res://assets/cutscenes/9/9k.png"
 	],
 	11: ["res://assets/cutscenes/11/11a.png",
 	"res://assets/cutscenes/11/11b.png",
@@ -66,8 +64,7 @@ var cutscenes = {1: ["res://assets/cutscenes/1/1a.png",
 	"res://assets/cutscenes/12/12o.png",
 	"res://assets/cutscenes/12/12p.png",],
 	13: ["res://assets/cutscenes/13/13a.png",
-	"res://assets/cutscenes/13/13b.png",
-	"res://assets/cutscenes/13/13c.png",]
+	"res://assets/cutscenes/13/13b.png",]
 }
 
 var cut_num: int = 0
