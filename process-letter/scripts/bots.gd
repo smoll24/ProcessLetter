@@ -16,7 +16,7 @@ var wander_timer: Timer
 var indexing = false
 
 func _ready():
-	if self.bot_id not in Globals.bots_list:
+	if Globals.status != "prog4" and self.bot_id not in Globals.bots_list:
 		Globals.bots_list.append(self.bot_id)
 
 	update_idle_animation()
@@ -41,6 +41,9 @@ func _process(_delta):
 		z_index = 3
 		
 	if Globals.status == "post4":
+		self.queue_free()
+		
+	if Globals.captured > 1 and self.bot_id not in Globals.bots_list:
 		self.queue_free()
 	
 	if Globals.phase == 0:
@@ -71,6 +74,8 @@ func _process(_delta):
 				Incorrect.play()
 				Globals.captured += 1
 				print("captured: ",Globals.captured)
+				if self.bot_id in Globals.bots_list:
+					Globals.bots_list.erase(self.bot_id)
 				if Globals.current_bot_instance == self:
 					Globals.current_bot_instance.queue_free()
 					Globals.current_bot_instance = null

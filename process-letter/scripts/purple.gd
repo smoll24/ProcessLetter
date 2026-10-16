@@ -70,11 +70,11 @@ func _ready() -> void:
 	elif Globals.status == "post3":
 		if level == 0:
 			#Outside HCD
-			self.global_position = Vector2(-2625.0, 3573.0)
+			self.global_position = Vector2(-1786.0, 3689.0)
 	elif Globals.status == "prog4":
 		if level == 0:
 			#Outside HCD
-			self.global_position = Vector2(-2625.0, 3573.0)
+			self.global_position = Vector2(-1786.0, 3689.0)
 	elif Globals.status == "post4":
 		if level == 0:
 			#Corridor right

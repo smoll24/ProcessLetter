@@ -4,7 +4,7 @@ var can_move = true
 var can_talk = true
 #0,1,2,3
 var puzzle_phase = 0
-var status = "pre3"
+var status = "pre1"
 #1,2,3
 var phase:int
 var in_room = true
@@ -109,7 +109,7 @@ func _process(_delta):
 			Globals.cutscenes.append("11")
 		status = "prog4"
 		print("prog4")
-	if captured > 4 and status == "prog4":
+	if bots_list == [] and captured > 2 and status == "prog4":
 		status = "post4"
 		puzzle_step = 1
 		current_puzzle = "password"

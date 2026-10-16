@@ -37,7 +37,7 @@ func _process(_delta):
 		gramsci.visible = false
 		metropolis.visible = true
 		key.visible = false
-	elif Globals.book_type == 3:
+	elif Globals.book_type == 4:
 		technopoly.visible = false
 		foucault.visible = false
 		gramsci.visible = false
