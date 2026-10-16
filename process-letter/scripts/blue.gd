@@ -42,11 +42,11 @@ func _ready() -> void:
 	if Globals.status == "pre2":
 		if level == 12:
 			#Blue office
-			self.global_position = Vector2(-1177.0, 5928.0)
+			self.global_position = Vector2(-1264.0, 5671.0)
 	elif Globals.status == "prog2":
 		if level == 12:
 			#Blue office
-			self.global_position = Vector2(-1177.0, 5928.0)
+			self.global_position = Vector2(-1264.0, 5671.0)
 	elif Globals.status == "pre3":
 		if level == 0:
 			#Observing plants in corridor

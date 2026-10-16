@@ -77,7 +77,6 @@ texture = ExtResource("2_bexj4")
 metadata/_edit_lock_ = true
 
 [node name="OuterLayer" type="Node2D" parent="." unique_id=1467002887]
-visible = false
 metadata/_edit_lock_ = true
 
 [node name="Alevel" type="Sprite2D" parent="OuterLayer" unique_id=1989980623]
@@ -195,19 +194,30 @@ position = Vector2(2736, 2503)
 [node name="OutBots" type="Node2D" parent="OuterLayer" unique_id=479377854]
 
 [node name="Bots1" parent="OuterLayer/OutBots" unique_id=47230853 instance=ExtResource("8_q05mi")]
-position = Vector2(604, 646)
+position = Vector2(585, 697)
+bot_id = 1
 
 [node name="Bots2" parent="OuterLayer/OutBots" unique_id=1817324579 instance=ExtResource("8_q05mi")]
-position = Vector2(-1502, 672)
+position = Vector2(-1428, 686)
+bot_id = 2
 
 [node name="Bots3" parent="OuterLayer/OutBots" unique_id=872997564 instance=ExtResource("8_q05mi")]
 position = Vector2(3042, 1855)
 
+[node name="Bots" parent="OuterLayer/OutBots" unique_id=935213037 instance=ExtResource("8_q05mi")]
+position = Vector2(-1211, 4655)
+bot_id = 4
+
+[node name="Bots4" parent="OuterLayer/OutBots" unique_id=894573691 instance=ExtResource("8_q05mi")]
+position = Vector2(-2961, 2238)
+bot_id = 3
+
 [node name="InnerLayer" type="Node2D" parent="." unique_id=897240129]
+visible = false
 metadata/_edit_lock_ = true
 
 [node name="Book" parent="InnerLayer" unique_id=1891796453 instance=ExtResource("17_rqb8u")]
-position = Vector2(-2605, 4571)
+position = Vector2(-2606, 4590)
 type = 4
 
 [node name="Elevator" parent="InnerLayer" unique_id=902053519 instance=ExtResource("10_88hbs")]
@@ -224,7 +234,7 @@ type = 1
 position = Vector2(-2566, 3845)
 
 [node name="Book2" parent="InnerLayer" unique_id=638705684 instance=ExtResource("17_rqb8u")]
-position = Vector2(-2715, 4326)
+position = Vector2(-2717, 4316)
 type = 1
 
 [node name="InnerCharacters" type="Node2D" parent="InnerLayer" unique_id=1482933499]
@@ -420,12 +430,13 @@ metadata/_edit_lock_ = true
 polygon = PackedVector2Array(-251, 164, -76, 160, -72, 623, 1420, 609, 1346, 5765, -1821, 5713, -1769, 3817, -3996, 3823, -3589, 1409, -1976, 1388, -598, 1169, -688, 878, -1590, 874, -1597, 618, -447, 626, -437, 164, -277, 166, -268, -530, -4739, -283, -4634, 6199, 2781, 6241, 1994, -608, -235, -532)
 
 [node name="Cutscenes" type="Node2D" parent="." unique_id=189645102]
+visible = false
 
 [node name="Cutscene2" type="Area2D" parent="Cutscenes" unique_id=1290095768]
 position = Vector2(-300, 1413)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cutscenes/Cutscene2" unique_id=1839221217]
-position = Vector2(-1969, 2593)
+position = Vector2(-1966, 2496)
 shape = SubResource("RectangleShape2D_ywdb4")
 
 [node name="Cutscene3" type="Area2D" parent="Cutscenes" unique_id=811034]

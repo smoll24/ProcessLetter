@@ -42,11 +42,11 @@ func _ready() -> void:
 	if Globals.status == "pre3":
 		if level == 32:
 			#Pink office
-			self.global_position = Vector2(-2815.0, 5480.0)
+			self.global_position = Vector2(-2726.0, 5246.0)
 	elif Globals.status == "prog3":
 		if level == 32:
 			#Pink office
-			self.global_position = Vector2(-2815.0, 5480.0)
+			self.global_position = Vector2(-2726.0, 5246.0)
 	elif Globals.status == "post3":
 		if level == 3:
 			#Outside office

@@ -1,6 +1,6 @@
 if {State} == "prog3":
-	join pink center
+	join pink left
 	pink: Are you done yet?
 elif {} == "pre3":
-	join pink center
+	join pink left
 	pink: Not nearly enough.

@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ekbl1yctr65b" path="res://assets/ui/excalamation.png" id="6_6udn0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jgoxw"]
-size = Vector2(224, 209)
+size = Vector2(224, 240)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qq0wn"]
 animations = [{
@@ -36,7 +36,7 @@ script = ExtResource("1_5eaaj")
 [node name="Interact_area" type="Area2D" parent="." unique_id=1474680225]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interact_area" unique_id=1020525234]
-position = Vector2(5, -23.5)
+position = Vector2(5, -8)
 shape = SubResource("RectangleShape2D_jgoxw")
 
 [node name="Indicator_old" type="Label" parent="." unique_id=939208964]

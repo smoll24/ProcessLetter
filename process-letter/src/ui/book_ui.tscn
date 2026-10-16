@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cohoynw117kbg" path="res://assets/ui/IMG_1755.PNG" id="4_7pb3i"]
 [ext_resource type="Texture2D" uid="uid://bqdqcxn4gwyj3" path="res://assets/ui/IMG_1756.PNG" id="5_g8rso"]
 [ext_resource type="Texture2D" uid="uid://bfepf0521bisb" path="res://assets/ui/IMG_1758.PNG" id="6_bmnd7"]
+[ext_resource type="Texture2D" uid="uid://cmvy8i65d7olb" path="res://assets/ui/key.png" id="7_1l2t0"]
 [ext_resource type="Texture2D" uid="uid://deaa7m7ds6hkr" path="res://assets/ui/exit_button.PNG" id="7_tr1og"]
 [ext_resource type="Texture2D" uid="uid://dwoldl1k2emt5" path="res://assets/ui/exit_pressed.PNG" id="8_1l2t0"]
 [ext_resource type="Texture2D" uid="uid://w86672hharqj" path="res://assets/ui/exit_hover.PNG" id="9_ehr54"]
@@ -97,6 +98,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Foucault" type="Control" parent="." unique_id=303187351]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -301,13 +303,26 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Key" type="Control" parent="." unique_id=1887748889]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Key" unique_id=1789572310]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 106.0
+offset_top = 86.0
+offset_right = 106.0
+offset_bottom = 86.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("7_1l2t0")
 
 [node name="Exit" type="TextureButton" parent="." unique_id=1074505417]
 offset_left = 905.0

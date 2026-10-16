@@ -10,12 +10,22 @@
 "style": "pink",
 "suffix": ""
 },
-&"default_portrait": "",
+&"default_portrait": "New portrait",
 &"description": "",
 &"display_name": "Pink",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
-&"portraits": {},
+&"portraits": {
+"New portrait": {
+"export_overrides": {
+"image": "\"res://assets/characters/pink/emotes/pink_curious.png\""
+},
+"mirror": false,
+"offset": Vector2(70, 0),
+"scale": 1,
+"scene": ""
+}
+},
 &"scale": 1.0
 }
