@@ -4,6 +4,7 @@ extends CanvasLayer
 @onready var foucault = $Foucault
 @onready var gramsci = $Gramsci
 @onready var metropolis = $Metropolis
+@onready var key = $Key
 
 func _process(_delta):
 	if Globals.in_book:
@@ -17,21 +18,31 @@ func _process(_delta):
 		foucault.visible = false
 		gramsci.visible = false
 		metropolis.visible = false
+		key.visible = false
 	elif Globals.book_type == 1:
 		technopoly.visible = false
 		foucault.visible = true
 		gramsci.visible = false
 		metropolis.visible = false
+		key.visible = false
 	elif Globals.book_type == 2:
 		technopoly.visible = false
 		foucault.visible = false
 		gramsci.visible = true
 		metropolis.visible = false
+		key.visible = false
 	elif Globals.book_type == 3:
 		technopoly.visible = false
 		foucault.visible = false
 		gramsci.visible = false
 		metropolis.visible = true
+		key.visible = false
+	elif Globals.book_type == 3:
+		technopoly.visible = false
+		foucault.visible = false
+		gramsci.visible = false
+		metropolis.visible = false
+		key.visible = true
 
 
 

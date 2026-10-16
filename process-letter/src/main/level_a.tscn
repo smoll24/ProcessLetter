@@ -206,10 +206,14 @@ position = Vector2(3042, 1855)
 [node name="InnerLayer" type="Node2D" parent="." unique_id=897240129]
 metadata/_edit_lock_ = true
 
+[node name="Book" parent="InnerLayer" unique_id=1891796453 instance=ExtResource("17_rqb8u")]
+position = Vector2(-2605, 4571)
+type = 4
+
 [node name="Elevator" parent="InnerLayer" unique_id=902053519 instance=ExtResource("10_88hbs")]
 position = Vector2(-1430, 930)
 
-[node name="Computer" parent="InnerLayer" unique_id=1891796453 instance=ExtResource("9_bexj4")]
+[node name="Computer" parent="InnerLayer" unique_id=1339511426 instance=ExtResource("9_bexj4")]
 position = Vector2(41, 335)
 
 [node name="Workbench" parent="InnerLayer" unique_id=629053132 instance=ExtResource("9_bexj4")]
@@ -220,7 +224,7 @@ type = 1
 position = Vector2(-2566, 3845)
 
 [node name="Book2" parent="InnerLayer" unique_id=638705684 instance=ExtResource("17_rqb8u")]
-position = Vector2(-2723, 4372)
+position = Vector2(-2715, 4326)
 type = 1
 
 [node name="InnerCharacters" type="Node2D" parent="InnerLayer" unique_id=1482933499]
