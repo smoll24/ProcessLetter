@@ -274,6 +274,34 @@ position = Vector2(-13, 3075)
 [node name="Plants44" parent="OuterPlants" unique_id=755246246 instance=ExtResource("8_4g1g5")]
 position = Vector2(-15, 3482)
 
+[node name="Plants45" parent="OuterPlants" unique_id=450567500 instance=ExtResource("8_4g1g5")]
+position = Vector2(-703, 1870)
+scale = Vector2(-1, 1)
+
+[node name="Plants46" parent="OuterPlants" unique_id=489150494 instance=ExtResource("8_4g1g5")]
+position = Vector2(-707, 2269)
+scale = Vector2(-1, 1)
+
+[node name="Plants48" parent="OuterPlants" unique_id=209147708 instance=ExtResource("8_4g1g5")]
+position = Vector2(-708, 3097)
+scale = Vector2(-1, 1)
+
+[node name="Plants49" parent="OuterPlants" unique_id=1718165149 instance=ExtResource("8_4g1g5")]
+position = Vector2(-710, 3504)
+scale = Vector2(-1, 1)
+
+[node name="Plants47" parent="OuterPlants" unique_id=1437097224 instance=ExtResource("8_4g1g5")]
+position = Vector2(-2355, 1848)
+
+[node name="Plants50" parent="OuterPlants" unique_id=2107764445 instance=ExtResource("8_4g1g5")]
+position = Vector2(-2359, 2247)
+
+[node name="Plants51" parent="OuterPlants" unique_id=188030780 instance=ExtResource("8_4g1g5")]
+position = Vector2(-2360, 3075)
+
+[node name="Plants52" parent="OuterPlants" unique_id=2028297780 instance=ExtResource("8_4g1g5")]
+position = Vector2(-2362, 3482)
+
 [node name="OuterLayer" type="Node2D" parent="." unique_id=1467002887]
 visible = false
 metadata/_edit_lock_ = true
