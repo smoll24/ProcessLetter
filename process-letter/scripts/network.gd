@@ -279,14 +279,12 @@ func _on_point_pressed(point: int):
 	buttons[selected_point-1].grab_focus()
 	
 	
-func check_solution() -> Array:
-	return [true, "test"]
 	
-#func check_solution() -> Array:
-	#for connection in filled_connections:
-		#if connection["filled"] == false:
-			#return [false, "Not all connections filled"]
-	#return [true, "Correct!"]
+func check_solution() -> Array:
+	for connection in filled_connections:
+		if connection["filled"] == false:
+			return [false, "Not all connections filled"]
+	return [true, "Correct!"]
 
 func _on_button_1_pressed() -> void:
 	_on_point_pressed(1)

@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://0j3yx4wfwp2v" path="res://assets/ui/elevator_button_pressed_pink.png" id="7_jnnt8"]
 [ext_resource type="Texture2D" uid="uid://deaa7m7ds6hkr" path="res://assets/ui/exit_button.PNG" id="7_rtkfm"]
 [ext_resource type="Texture2D" uid="uid://dwoldl1k2emt5" path="res://assets/ui/exit_pressed.PNG" id="8_ids5r"]
+[ext_resource type="Texture2D" uid="uid://dm60dqm2hwaw2" path="res://assets/ui/elevator_button_hover_pink.png" id="8_jnnt8"]
 [ext_resource type="Texture2D" uid="uid://w86672hharqj" path="res://assets/ui/exit_hover.PNG" id="9_axt1d"]
 [ext_resource type="Texture2D" uid="uid://dp1cl47lxla57" path="res://assets/ui/elevator_button_green.png" id="9_r18ew"]
 [ext_resource type="Texture2D" uid="uid://dtlhx3jbfdevl" path="res://assets/ui/elevator_button_pressed_green.png" id="10_ge0p6"]
@@ -137,7 +138,7 @@ theme_override_constants/separation = 30
 layout_mode = 2
 texture_normal = ExtResource("6_p2grd")
 texture_pressed = ExtResource("7_jnnt8")
-texture_hover = ExtResource("6_p2grd")
+texture_hover = ExtResource("8_jnnt8")
 texture_disabled = ExtResource("12_3na32")
 
 [node name="Level2" type="TextureButton" parent="VBoxContainer" unique_id=768559186]

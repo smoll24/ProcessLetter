@@ -28,6 +28,7 @@ func _process(_delta: float) -> void:
 
 func _input(event):
 	if event.is_action_pressed("pause"):
+		Globals.save_game()
 		var new_pause_state = not get_tree().paused
 		get_tree().paused = new_pause_state
 		visible = new_pause_state

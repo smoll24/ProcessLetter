@@ -211,8 +211,8 @@ type = 3
 
 [node name="InnerCharacters" type="Node2D" parent="InnerLayer" unique_id=1895807071]
 
-[node name="Pink" parent="InnerLayer/InnerCharacters" unique_id=213673184 instance=ExtResource("12_6xdca")]
-position = Vector2(1418, 3674)
+[node name="Pink" parent="InnerLayer/InnerCharacters" unique_id=1394653245 instance=ExtResource("12_6xdca")]
+position = Vector2(1351, 3581)
 level = 32
 
 [node name="Sparkle" type="Sprite2D" parent="InnerLayer" unique_id=1665183058]

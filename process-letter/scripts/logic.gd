@@ -270,58 +270,56 @@ func evaluate_gate(gate: String, a: int, b: int) -> int:
 		_:
 			return -1
 
-#func check_solution() -> bool:
-	#var phase = Globals.puzzle_phase
-	#var selected: Dictionary = gate_selections[phase]
-	#
-	#for slot in selected:
-		#if selected[slot] == "":
-			#return false
-			#
-	#var output: int = 0
-	#
-	#if phase == 0:
-		## Puzzle 1:
-		## G1(1,0) AND NOT(G2(1,0)), then AND with G3(1,0).
-		#var g1 = evaluate_gate(selected[1], 1, 0)
-		#var g2 = evaluate_gate(selected[2], 1, 0)
-		#var g3 = evaluate_gate(selected[3], 1, 0)
-		#
-		#var not_g2 = int(g2 == 0)
-		#var middle = int(g1 == 1 and not_g2 == 1)
-		#output = int(g3 == 1 and middle == 1)
-		#
-	#elif phase == 1:
-		## Puzzle 2:
-		## XOR(G1(1,1), NOT(G2(1,1))), then AND with G3(1,0).
-		#var g1 = evaluate_gate(selected[1], 1, 1)
-		#var g2 = evaluate_gate(selected[2], 1, 1)
-		#var g3 = evaluate_gate(selected[3], 1, 0)
-		#
-		#var not_g2 = int(g2 == 0)
-		#var middle = int(g1 != not_g2)
-		#output = int(middle == 1 and g3 == 1)
-	#
-	#elif phase == 2:
-		## Puzzle 3:
-		## XOR(G1(1,1), G2(1,1)) AND
-		## AND(G3(1,0), G4(1,0)).
-		#var g1 = evaluate_gate(selected[1], 1, 1)
-		#var g2 = evaluate_gate(selected[2], 1, 1)
-		#var g3 = evaluate_gate(selected[3], 1, 0)
-		#var g4 = evaluate_gate(selected[4], 1, 0)
-		#
-		#var upper = int(g1 != g2)
-		#var lower = int(g3 == 1 and g4 == 1)
-		#output = int(upper == 1 and lower == 1)
-		#
-	#if output == TARGET_OUTPUT:
-		#return true
-	#
-	#return false
-
 func check_solution() -> bool:
-	return true
+	var phase = Globals.puzzle_phase
+	var selected: Dictionary = gate_selections[phase]
+	
+	for slot in selected:
+		if selected[slot] == "":
+			return false
+			
+	var output: int = 0
+	
+	if phase == 0:
+		# Puzzle 1:
+		# G1(1,0) AND NOT(G2(1,0)), then AND with G3(1,0).
+		var g1 = evaluate_gate(selected[1], 1, 0)
+		var g2 = evaluate_gate(selected[2], 1, 0)
+		var g3 = evaluate_gate(selected[3], 1, 0)
+		
+		var not_g2 = int(g2 == 0)
+		var middle = int(g1 == 1 and not_g2 == 1)
+		output = int(g3 == 1 and middle == 1)
+		
+	elif phase == 1:
+		# Puzzle 2:
+		# XOR(G1(1,1), NOT(G2(1,1))), then AND with G3(1,0).
+		var g1 = evaluate_gate(selected[1], 1, 1)
+		var g2 = evaluate_gate(selected[2], 1, 1)
+		var g3 = evaluate_gate(selected[3], 1, 0)
+		
+		var not_g2 = int(g2 == 0)
+		var middle = int(g1 != not_g2)
+		output = int(middle == 1 and g3 == 1)
+	
+	elif phase == 2:
+		# Puzzle 3:
+		# XOR(G1(1,1), G2(1,1)) AND
+		# AND(G3(1,0), G4(1,0)).
+		var g1 = evaluate_gate(selected[1], 1, 1)
+		var g2 = evaluate_gate(selected[2], 1, 1)
+		var g3 = evaluate_gate(selected[3], 1, 0)
+		var g4 = evaluate_gate(selected[4], 1, 0)
+		
+		var upper = int(g1 != g2)
+		var lower = int(g3 == 1 and g4 == 1)
+		output = int(upper == 1 and lower == 1)
+		
+	if output == TARGET_OUTPUT:
+		return true
+	
+	return false
+
 
 func _on_reset_pressed() -> void:
 	Click.play()

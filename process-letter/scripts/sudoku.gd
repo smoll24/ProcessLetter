@@ -152,51 +152,48 @@ func create_button(pos:Vector2):
 
 
 func check_solution() -> Array:
-	return [true, "test"]
-
-#func check_solution() -> Array:
-	#var message
-	#
-	#var zero_count = 0
-	#for row in number_grid:
-		#zero_count += row.count(0) 
-	#if zero_count != 0:
-		#message = "Grid not filled"
-		#return [false, message]
-		#
-	#for i in range(9):
-		#var row_numbers = {}
-		#var column_numbers = {}
-		#
-		#for j in range(9):
-			#var row_num = number_grid[i][j]
-			#var column_num = number_grid[j][i]
-			#
-			## Duplicate in row
-			#if row_num in row_numbers:
-				#message = "Duplicate in row"
-				#return [false, message]
-			## Duplicate in column
-			#if column_num in column_numbers:
-				#message = "Duplicate in column"
-				#return [false, message]
-			#row_numbers[row_num] = true
-			#column_numbers[column_num] = true
-	#
-	## Check 3x3
-	#for box_row in range(0, 9, 3):
-		#for box_col in range(0, 9, 3):
-			#var box_numbers = {}
-			#
-			#for i in range(3):
-				#for j in range(3):
-					#var num = number_grid[box_row + i][box_col + j]
-					#if num in box_numbers:
-						#message = "Duplicate in 3x3"
-						#return [false, message]
-					#box_numbers[num] = true
-	#message = "Correct!"
-	#return [true, message]
+	var message
+	
+	var zero_count = 0
+	for row in number_grid:
+		zero_count += row.count(0) 
+	if zero_count != 0:
+		message = "Grid not filled"
+		return [false, message]
+		
+	for i in range(9):
+		var row_numbers = {}
+		var column_numbers = {}
+		
+		for j in range(9):
+			var row_num = number_grid[i][j]
+			var column_num = number_grid[j][i]
+			
+			# Duplicate in row
+			if row_num in row_numbers:
+				message = "Duplicate in row"
+				return [false, message]
+			# Duplicate in column
+			if column_num in column_numbers:
+				message = "Duplicate in column"
+				return [false, message]
+			row_numbers[row_num] = true
+			column_numbers[column_num] = true
+	
+	# Check 3x3
+	for box_row in range(0, 9, 3):
+		for box_col in range(0, 9, 3):
+			var box_numbers = {}
+			
+			for i in range(3):
+				for j in range(3):
+					var num = number_grid[box_row + i][box_col + j]
+					if num in box_numbers:
+						message = "Duplicate in 3x3"
+						return [false, message]
+					box_numbers[num] = true
+	message = "Correct!"
+	return [true, message]
 
 func change_button_number(number):
 	Click.play()
