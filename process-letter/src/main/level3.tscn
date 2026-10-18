@@ -183,7 +183,7 @@ scale = Vector2(-1, 1)
 [node name="OutCharacters" type="Node2D" parent="OuterLayer" unique_id=790197414]
 
 [node name="Pink" parent="OuterLayer/OutCharacters" unique_id=864046172 instance=ExtResource("12_6xdca")]
-position = Vector2(1310, 3315)
+position = Vector2(1457, 3348)
 level = 3
 
 [node name="OutBots" type="Node2D" parent="OuterLayer" unique_id=479377854]

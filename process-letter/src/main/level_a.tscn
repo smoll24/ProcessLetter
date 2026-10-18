@@ -240,11 +240,11 @@ type = 1
 [node name="InnerCharacters" type="Node2D" parent="InnerLayer" unique_id=1482933499]
 
 [node name="Violet" parent="InnerLayer/InnerCharacters" unique_id=864046172 instance=ExtResource("6_3dueu")]
-position = Vector2(3096, 3329)
+position = Vector2(2954, 3177)
 level = 10
 
 [node name="Purple" parent="InnerLayer/InnerCharacters" unique_id=941100547 instance=ExtResource("2_waa7u")]
-position = Vector2(3123, 3806)
+position = Vector2(3260, 3419)
 level = 10
 
 [node name="Teal" parent="InnerLayer/InnerCharacters" unique_id=565516422 instance=ExtResource("5_sr8mx")]
