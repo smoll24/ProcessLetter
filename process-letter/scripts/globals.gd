@@ -99,6 +99,8 @@ var reloading = false
 
 var cutscenes = []
 
+const SAVE_PATH = "user://savegame.json"
+
 func _process(_delta):
 	if phase < 3:
 		puzzle_phase = phase
@@ -137,11 +139,6 @@ func _process(_delta):
 		print("post4")
 		
 		
-
-
-const SAVE_PATH = "user://savegame.json"
-
-
 func save_game() -> void:
 	var save_data = {
 		"status": status,
@@ -192,62 +189,48 @@ func save_game() -> void:
 	}
 
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
-
 	if file == null:
-		push_error("Failed to open save file: " + str(FileAccess.get_open_error()))
 		return
-
 	file.store_string(JSON.stringify(save_data))
 	file.close()
-
-	print("Game saved successfully.")
-
+	print("Game saved")
 
 func _get_bot_save_data() -> Array:
 	var saved_bots: Array = []
-
 	for bot_node in bots_list:
 		if is_instance_valid(bot_node) and bot_node is Node:
 			var bot_data = {
 				"name": bot_node.name
 			}
-
 			if "bot_id" in bot_node:
 				bot_data["bot_id"] = bot_node.get("bot_id")
-
 			if bot_node is Node2D:
 				bot_data["position"] = [
 					bot_node.global_position.x,
 					bot_node.global_position.y
 				]
-
 			saved_bots.append(bot_data)
 		else:
 			if typeof(bot_node) in [
 				TYPE_STRING, TYPE_INT, TYPE_FLOAT, TYPE_BOOL
 			]:
 				saved_bots.append(bot_node)
-
 	return saved_bots
 	
 var saved_bots_list: Array = []
 
 func load_game() -> void:
 	if not FileAccess.file_exists(SAVE_PATH):
-		print("No save file found. Starting new game.")
+		print("No save file found, start new game")
 		return
-
+		
 	var file = FileAccess.open(SAVE_PATH, FileAccess.READ)
-
 	if file == null:
-		push_error("Failed to open save file.")
 		return
-
 	var data = JSON.parse_string(file.get_as_text())
 	file.close()
 
 	if not data is Dictionary:
-		push_error("Invalid save file.")
 		return
 
 	status = data.get("status", "pre2")
@@ -310,7 +293,7 @@ func load_game() -> void:
 	options = false
 	reloading = false
 
-	print("Game loaded successfully.")
+	print("Game loaded")
 
 func delete_save() -> void:
 	if FileAccess.file_exists(SAVE_PATH):
@@ -387,4 +370,4 @@ func reset_game() -> void:
 	reloading = false
 	cutscenes.clear()
 
-	print("New game started.")
+	print("New game started")

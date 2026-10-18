@@ -9,16 +9,6 @@ extends Control
 const TARGET_OUTPUT = 1
 const GATE_NAMES = ["and", "or", "xor"]
 
-#Instead of drag and drop, do more like Sudoku
-#Click the bottom button of one sets variable to "current" gate
-#Then the slots for the gates are also texture buttons whose
-#texturs change to match the "selected" gate
-#If not chosen, doesn't change texture
-
-#Draw lines between the gates, green if 1, and white if 0
-# Gate selections are stored separately for each puzzle phase.
-# A value of "" means the slot has not been filled.
-
 var gate_selections = {
 	0: {1: "", 2: "", 3: ""},
 	1: {1: "", 2: "", 3: ""},
@@ -282,7 +272,7 @@ func check_solution() -> bool:
 	
 	if phase == 0:
 		# Puzzle 1:
-		# G1(1,0) AND NOT(G2(1,0)), then AND with G3(1,0).
+		# G1(1,0) AND NOT(G2(1,0)), then AND with G3(1,0)
 		var g1 = evaluate_gate(selected[1], 1, 0)
 		var g2 = evaluate_gate(selected[2], 1, 0)
 		var g3 = evaluate_gate(selected[3], 1, 0)
@@ -293,7 +283,7 @@ func check_solution() -> bool:
 		
 	elif phase == 1:
 		# Puzzle 2:
-		# XOR(G1(1,1), NOT(G2(1,1))), then AND with G3(1,0).
+		# XOR(G1(1,1), NOT(G2(1,1))), then AND with G3(1,0)
 		var g1 = evaluate_gate(selected[1], 1, 1)
 		var g2 = evaluate_gate(selected[2], 1, 1)
 		var g3 = evaluate_gate(selected[3], 1, 0)
@@ -305,7 +295,7 @@ func check_solution() -> bool:
 	elif phase == 2:
 		# Puzzle 3:
 		# XOR(G1(1,1), G2(1,1)) AND
-		# AND(G3(1,0), G4(1,0)).
+		# AND(G3(1,0), G4(1,0))
 		var g1 = evaluate_gate(selected[1], 1, 1)
 		var g2 = evaluate_gate(selected[2], 1, 1)
 		var g3 = evaluate_gate(selected[3], 1, 0)
