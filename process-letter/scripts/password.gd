@@ -7,7 +7,7 @@ const PASSWORD = "twice"
 
 var text = ""
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	text = textbox.text
 
 func _on_next_pressed() -> void:

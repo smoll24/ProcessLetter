@@ -6,7 +6,7 @@ const BOT_ICON_SCENE = preload("res://src/ui/bot_icon.tscn")
 
 var last_bot_count: int = 0
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var current_bot_count = Globals.bots_list.size()
 	if current_bot_count != last_bot_count:
 		update_bot_ui()

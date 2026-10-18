@@ -5,7 +5,7 @@ func _ready() -> void:
 	init_slider("Sounds", "Sound")
 	init_slider("UI", "Sound")
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Globals.options:
 		self.visible = true
 	else:

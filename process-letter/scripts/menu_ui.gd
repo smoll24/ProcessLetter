@@ -15,7 +15,7 @@ func _ready():
 	
 	continue_button.disabled = not FileAccess.file_exists(Globals.SAVE_PATH)
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Globals.options:
 		options_screen.visible = true
 	else:
